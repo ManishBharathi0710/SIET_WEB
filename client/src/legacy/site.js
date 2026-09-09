@@ -4,7 +4,39 @@ let appRoot;
 const icon=(name)=>{
   if(name==='menu') return `<svg class="ui-icon-svg menu-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3.5" y1="6" x2="20.5" y2="6"></line><line x1="3.5" y1="12" x2="20.5" y2="12"></line><line x1="3.5" y1="18" x2="20.5" y2="18"></line></svg>`;
   if(name==='close') return `<svg class="ui-icon-svg close-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>`;
-  return `<span class="ui-icon" aria-hidden="true">${({home:'⌂',users:'♙',book:'▤',grad:'◇',building:'▥',quality:'✓',brief:'▣',compass:'◉',arrow:'→',down:'⌄',trophy:'♛',trend:'↗',gift:'◇',play:'▶',phone:'☎'}[name]||'◆')}</span>`;
+  if(name==='crown'||name==='trophy') return `<svg class="ui-icon-svg crown-svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 18.5h18v2.5H3zm2.5-4L2 6.5l5.5 3 4.5-6.5 4.5 6.5 5.5-3-3.5 8h-13z"/></svg>`;
+  if(name==='users') return `<svg class="ui-icon-svg users-svg" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 3s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>`;
+  if(name==='trend'||name==='arrow-up-right') return `<svg class="ui-icon-svg trend-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>`;
+  if(name==='chart') return `<svg class="ui-icon-svg chart-svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="12" width="4.5" height="9" rx="1.2"/><rect x="9.75" y="7" width="4.5" height="14" rx="1.2"/><rect x="16.5" y="3" width="4.5" height="18" rx="1.2"/></svg>`;
+  if(name==='grad') return `<svg class="ui-icon-svg grad-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>`;
+  if(name==='connect') return `<svg class="ui-icon-svg connect-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>`;
+  if(name==='star') return `<svg class="ui-icon-svg star-svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+  if(name==='home') return `<svg class="ui-icon-svg home-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>`;
+  if(name==='play') return `<svg class="ui-icon-svg play-svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>`;
+  if(name==='arrow') return `<svg class="ui-icon-svg arrow-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>`;
+  if(name==='down') return `<svg class="ui-icon-svg down-svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>`;
+  if(name==='runner') return `<svg class="ui-icon-svg runner-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="14" cy="3.5" r="2.5"/><path d="M19.5 9.5l-3.5 3.5-2.5-2.5 1-4-4.5 2-2 4.5 1.5 1 1.5-3 2.5 2.5-3 5.5-4.5-2-.5 2 5.5 2.5 3.5-6.5 3 2.5 2-3.5-1.5-1z"/></svg>`;
+  if(name==='bulb') return `<svg class="ui-icon-svg bulb-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 2.6 1.4 4.8 3.5 6v2a1.5 1.5 0 0 0 1.5 1.5h4a1.5 1.5 0 0 0 1.5-1.5v-2c2.1-1.2 3.5-3.4 3.5-6a7 7 0 0 0-7-7zm-2 19a1.5 1.5 0 0 0 1.5 1.5h1a1.5 1.5 0 0 0 1.5-1.5v-.5h-4v.5z"/></svg>`;
+  if(name==='masks') return `<svg class="ui-icon-svg masks-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10.5 3.5C5.8 3.5 2 6.8 2 11c0 3.8 3.1 7 7.2 7.4-.2.8-.7 1.6-1.5 2.2 1.8 0 3.5-.8 4.6-2.1 4.5-.4 7.7-3.8 7.7-7.5 0-4.2-3.8-7.5-8.5-7.5zm-3.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm7 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm-3.5 5.5c-2 0-3.3-1-3.5-1.2l.8-1.2c.1.1 1.1.9 2.7.9s2.6-.8 2.7-.9l.8 1.2c-.2.2-1.5 1.2-3.5 1.2z"/></svg>`;
+  if(name==='leaf') return `<svg class="ui-icon-svg leaf-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66.95-2.3c.48.17.98.3 1.34.3C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/></svg>`;
+  if(name==='cup'||name==='trophy-cup') return `<svg class="ui-icon-svg cup-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 4h-2V3a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v1H5a3 3 0 0 0-3 3v2a4 4 0 0 0 4 4h.6A6 6 0 0 0 11 16.9V19H8a1 1 0 0 0 0 2h8a1 1 0 0 0 0-2h-3v-2.1a6 6 0 0 0 4.4-3.9H18a4 4 0 0 0 4-4V7a3 3 0 0 0-3-3zM4 9V7a1 1 0 0 1 1-1h2v4.8A2 2 0 0 1 4 9zm16 0a2 2 0 0 1-3 1.8V6h2a1 1 0 0 1 1 1z"/></svg>`;
+  if(name==='flask') return `<svg class="ui-icon-svg flask-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 20L14 11V5H15V3H9V5H10V11L5 20C4.2 21.3 5.2 23 6.7 23H17.3C18.8 23 19.8 21.3 19 20ZM7.5 19L11 12.7V5H13V12.7L16.5 19H7.5Z"/></svg>`;
+  if(name==='chip'||name==='cpu') return `<svg class="ui-icon-svg chip-svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm3 4v8h6V8H9zm-5 2H2v2h2v-2zm0 4H2v2h2v-2zm16-4h2v2h-2v-2zm0 4h2v2h-2v-2zm-8-12V2h2v2h-2zm-4 0V2h2v2H8zm8 0V2h2v2h-2zm-8 16v2h2v-2H8zm4 0v2h2v-2h-2zm4 0v2h2v-2h-2z"/></svg>`;
+  if(name==='cloud') return `<svg class="ui-icon-svg cloud-svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>`;
+  if(name==='gear') return `<svg class="ui-icon-svg gear-svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.48.48 0 0 0-.48-.41h-3.84c-.24 0-.45.17-.48.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.49.49 0 0 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>`;
+  if(name==='wifi') return `<svg class="ui-icon-svg wifi-svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98A16.88 16.88 0 0 0 12 4zm0 4.5c3.27 0 6.27 1.24 8.54 3.29L12 20.3 3.46 11.79C5.73 9.74 8.73 8.5 12 8.5z"/></svg>`;
+  if(name==='vr') return `<svg class="ui-icon-svg vr-svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 5H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h4.5l2-2h3l2 2H20c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-12 8c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm8 0c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg>`;
+  if(name==='soldering'||name==='tools') return `<svg class="ui-icon-svg soldering-svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>`;
+  if(name==='bot'||name==='robot') return `<svg class="ui-icon-svg bot-svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h4a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-8a3 3 0 0 1 3-3h4V5.73A2 2 0 0 1 10 4a2 2 0 0 1 2-2zm-3 8a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm6 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm-6 6h6v-1.5H9V16z"/></svg>`;
+  if(name==='prev') return `<svg class="ui-icon-svg prev-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>`;
+  if(name==='next') return `<svg class="ui-icon-svg next-svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>`;
+  if(name==='industry') return `<svg class="ui-icon-svg industry-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 14H7v-2h4v2zm0-4H7v-2h4v2zm0-4H7V7h4v2zm6 8h-4v-2h4v2zm0-4h-4v-2h4v2zm0-4h-4V7h4v2z"/></svg>`;
+  if(name==='calendar'||name==='event') return `<svg class="ui-icon-svg calendar-svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM5 8V6h14v2H5zm2 4h5v5H7v-5z"/></svg>`;
+  if(name==='pin'||name==='location') return `<svg class="ui-icon-svg pin-svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>`;
+  if(name==='clock'||name==='time') return `<svg class="ui-icon-svg clock-svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>`;
+  if(name==='grid'||name==='all-apps') return `<svg class="ui-icon-svg grid-svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>`;
+  if(name==='music') return `<svg class="ui-icon-svg music-svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>`;
+  return `<span class="ui-icon" aria-hidden="true">${({book:'▤',building:'▥',quality:'✓',brief:'▣',compass:'◉',phone:'☎',gift:'◇'}[name]||'◆')}</span>`;
 };
 
 const pageGroups=[
@@ -18,9 +50,58 @@ const pageGroups=[
 const pageCopy={
  academics:['Academic Overview','Knowledge designed for application.','Flexible learning, strong fundamentals, laboratories, projects and industry exposure form the core of the Sri Shakthi academic experience.'],departments:['Departments','Ten disciplines. One culture of discovery.','Explore engineering and technology departments offering focused learning, laboratories, research and industry engagement.'],curriculum:['Curriculum','Current, connected and outcome-driven.','The curriculum combines disciplinary depth, professional skills, multidisciplinary electives, projects and experiential learning.'],'academic-calendar':['Academic Calendar','Plan the academic year.','Semester schedules bring together instruction, assessment, events, examinations and academic milestones.'],library:['Central Library','A connected knowledge centre.','Print and digital resources, journals, databases and focused study environments support teaching, learning and research.'],examinations:['Examinations','Clear processes. Fair assessment.','The Controller of Examinations coordinates schedules, evaluation, results and academic records for autonomous programmes.'],programmes:['UG & PG Programmes','Choose the field you want to shape.','Undergraduate and postgraduate pathways connect engineering foundations with emerging technologies and real-world practice.'],eligibility:['Eligibility','Your pathway to Sri Shakthi.','Admission eligibility follows applicable Government of Tamil Nadu, AICTE and Anna University norms.'],scholarships:['Scholarships','Talent deserves opportunity.','Merit and need-based scholarship pathways help ambitious learners access high-quality engineering education.'],fees:['Fee Information','Clear guidance for applicants.','Contact the admissions office for programme-specific fee structure, counselling and scholarship guidance.'],'campus-life':['Campus Life','Learn. Build. Belong.','A vibrant 45-acre eco-friendly campus brings together academics, culture, sport, entrepreneurship and community.'],facilities:['Facilities','Spaces made for exploration.','Advanced laboratories, collaborative classrooms, seminar halls, digital infrastructure and student support facilities.'],hostel:['Hostel','A welcoming campus home.','Student residences support safe, comfortable living, shared learning and a strong sense of community.'],transport:['Transport','Connected to Coimbatore.','College transport supports convenient travel across major routes in and around the city.'],sports:['Sports','Energy beyond academics.','With 26+ activities and a proud competitive record, sport is central to student wellbeing and leadership.'],clubs:['Student Clubs','Find your people. Build your voice.','Technical, cultural, social and professional clubs turn interests into projects, events and leadership experience.'],ncc:['NCC & NSS','Unity, discipline and service.','Student service programmes develop character, citizenship, teamwork and responsibility.'],placements:['Placements','Preparing talent for meaningful careers.','Career readiness spans aptitude, communication, technical training, internships, industry interaction and recruitment.'],training:['Career Development','Skills that move careers forward.','Dedicated training helps students build technical confidence, professional communication and placement readiness.'],research:['Research & Development','Ideas engineered into impact.','Faculty and students pursue applied research, publications, prototypes, consultancy and interdisciplinary collaboration.'],innovation:['Innovation & Incubation','From problem to prototype.','Mentoring, maker culture and entrepreneurial support help student ideas grow into useful solutions and ventures.'],'centres-of-excellence':['Centres of Excellence','Advanced tools. Industry contexts.','Specialist centres connect learners with contemporary platforms, domain expertise and practical challenges.'],accreditations:['Approvals & Accreditations','Quality recognised. Standards sustained.','An autonomous institution approved by AICTE, affiliated to Anna University, accredited by NAAC and with eligible programmes accredited by NBA.'],alumni:['Alumni','Shakthians around the world.','A growing network of 10,273+ alumni strengthens mentorship, opportunity and lifelong institutional connection.'],iqac:['IQAC & NAAC','Quality as a continuous practice.','The Internal Quality Assurance Cell supports evidence-led improvement across academics, governance and student experience.'],contact:['Contact Us','We are here to help.','Visit the campus, speak with admissions, or connect with the institute office using the details below.']
 };
-const programs=[
- ['Agricultural Engineering','Smart farming, irrigation, machinery and sustainable food systems.','/assets/images/category/cat1.jpg'],['Biomedical Engineering','Diagnostic, therapeutic and healthcare technologies.','/assets/images/category/cat2.jpg'],['Biotechnology','Bioprocessing, molecular science and industrial biotechnology.','/assets/images/category/cat3.jpg'],['Civil Engineering','Resilient infrastructure, structures and sustainable cities.','/assets/images/category/cat4.jpg'],['Computer Science & Engineering','Intelligent software, data systems and AI-powered solutions.','/assets/images/category/cat5.jpg'],['Electrical & Electronics','Power systems, renewable energy and industrial automation.','/assets/images/category/cat6.jpg'],['Electronics & Communication','Connected systems, embedded design and signal processing.','/assets/images/category/cat7.jpg'],['Food Technology','Food processing, quality, safety and product development.','/assets/images/category/cat8.jpg'],['Information Technology','Secure digital products, cloud platforms and networks.','/assets/images/course/3.jpg'],['Mechanical Engineering','Design, manufacturing, machines and mobility systems.','/assets/images/course/6.jpg'],['Artificial Intelligence & Data Science','AI, analytics and data-driven engineering.','/assets/images/course/3.jpg'],['Artificial Intelligence & Machine Learning','Intelligent automation and applied AI.','/assets/images/category/cat5.jpg'],['CSE (Cyber Security)','Secure computing and resilient networks.','/assets/images/course/3.jpg'],['VLSI Design','Semiconductor design and embedded systems.','/assets/images/category/cat7.jpg']
+const deptIcon=(k)=>{
+  const s={
+    agri:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-9"/><path d="M12 13c0-4.97 4.03-9 9-9 0 4.97-4.03 9-9 9Z"/><path d="M12 13C12 8.03 7.97 4 3 4c0 4.97 4.03 9 9 9Z"/></svg>`,
+    biomed:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H7l2-4 3 8 2-4h6.78"/></svg>`,
+    biotech:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8 8 8"/><path d="m9 5 10 10"/><path d="m5 9 10 10"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><path d="m16 8-8 8"/></svg>`,
+    civil:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16"/><path d="M6 18v-8"/><path d="M10 18v-8"/><path d="M14 18v-8"/><path d="M18 18v-8"/><path d="m3 10 9-7 9 7"/><path d="M2 22h20"/></svg>`,
+    cse:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="12" x="3" y="4" rx="2"/><line x1="2" x2="22" y1="20" y2="20"/></svg>`,
+    eee:`<svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h8l-1 8 11-12h-8l1-8Z"/></svg>`,
+    ece:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.93 19.07a10 10 0 0 1 0-14.14"/><path d="M7.76 16.24a6 6 0 0 1 0-8.48"/><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.48"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>`,
+    food:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M20 2h2v2a4 4 0 0 1-4 4h-2V6a4 4 0 0 1 4-4Z"/></svg>`,
+    it:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+    mech:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>`,
+    aids:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>`,
+    aiml:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="5" y="5" rx="2"/><path d="M9 9h6v6H9z"/><path d="M9 1v4"/><path d="M15 1v4"/><path d="M9 19v4"/><path d="M15 19v4"/><path d="M1 9h4"/><path d="M1 15h4"/><path d="M19 9h4"/><path d="M19 15h4"/></svg>`,
+    cyber:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><rect width="6" height="5" x="9" y="10" rx="1"/><path d="M10 10V8a2 2 0 0 1 4 0v2"/></svg>`,
+    vlsi:`<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><circle cx="9" cy="9" r="1" fill="currentColor"/><circle cx="15" cy="9" r="1" fill="currentColor"/><circle cx="9" cy="15" r="1" fill="currentColor"/><circle cx="15" cy="15" r="1" fill="currentColor"/><path d="M4 9H2"/><path d="M4 15H2"/><path d="M22 9h-2"/><path d="M22 15h-2"/><path d="M9 4V2"/><path d="M15 4V2"/><path d="M9 22v-2"/><path d="M15 22v-2"/></svg>`,
+    lightning:`<svg width="18" height="18" viewBox="0 0 24 24" fill="#003c24"><path d="M13 2 3 14h8l-1 8 11-12h-8l1-8Z"/></svg>`,
+    chart:`<svg width="20" height="20" viewBox="0 0 24 24" fill="#cca01d"><rect x="3" y="12" width="4" height="8" rx="1"/><rect x="10" y="7" width="4" height="13" rx="1"/><rect x="17" y="3" width="4" height="17" rx="1"/></svg>`,
+    grad:`<svg width="26" height="26" viewBox="0 0 24 24" fill="#00472b"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`
+  };
+  return s[k]||`<span>◆</span>`;
+};
+
+const ugPrograms=[
+ ['Agricultural Engineering','Sustainable solutions for a better tomorrow','agri'],
+ ['Artificial Intelligence & Data Science','From data to real-world impact','aids'],
+ ['Artificial Intelligence & Machine Learning','Building intelligent systems','aiml'],
+ ['Biomedical Engineering','Technology for healthier lives','biomed'],
+ ['Biotechnology','Innovating for a brighter future','biotech'],
+ ['Civil Engineering','Building resilient infrastructure','civil'],
+ ['Computer Science & Engineering','Driving the digital transformation','cse'],
+ ['CSE (Cyber Security)','Securing the digital tomorrow','cyber'],
+ ['Electrical & Electronics','Powering the future','eee'],
+ ['Electronics & Communication','Connecting ideas to possibilities','ece'],
+ ['Food Technology','Innovating for healthy tomorrow','food'],
+ ['Information Technology','Shaping a smarter world','it'],
+ ['Mechanical Engineering','Engineering what moves the world','mech'],
+ ['VLSI Design','Designing the next generation','vlsi']
 ];
+const pgPrograms=[
+ ['M.E. CAD / CAM','Automated digital manufacturing & robotics','mech'],
+ ['M.E. Computer Science & Engineering','Advanced computing & machine intelligence','cse'],
+ ['M.E. Embedded Systems','Smart edge devices & connected IoT','aiml'],
+ ['M.E. Structural Engineering','Resilient modern infrastructure design','civil'],
+ ['M.E. VLSI Design','Next-generation semiconductor architectures','vlsi'],
+ ['Master of Business Administration (MBA)','Strategic leadership & global enterprise management','aids'],
+ ['Master of Computer Applications (MCA)','Enterprise software architecture & development','it']
+];
+const programs=ugPrograms;
+
+const bottomBannerHtml=`<div class="programme-bottom-banner reveal"><div class="bottom-banner-cap">${deptIcon('grad')}</div><div class="bottom-banner-text"><h4>Choose a programme.</h4><p>Shape a better tomorrow.</p></div><div class="bottom-banner-line"></div><div class="bottom-banner-script">Engineers for a Better Tomorrow</div></div>`;
+
 
 function header(){return `<div class="notice"><div class="notice-track"><span><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span><span aria-hidden="true"><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span></div></div>
 <header class="institution-header-v4 exact-image-header"><div class="institution-header-shell"><a class="siet-header-image" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home"><img src="/brand/siet-exact-header.png" alt="Sri Shakthi Institute of Engineering and Technology — NBA accredited, NAAC A grade, counselling code 2727" width="2048" height="256"></a><nav class="institution-navbar" aria-label="Main navigation"><button class="institution-mobile-toggle" aria-label="Open navigation menu" type="button">${icon('menu')}</button><a class="institution-mobile-logo" href="#/" aria-label="Sri Shakthi Home"><img src="/brand/siet-logo.png" alt="Sri Shakthi" class="mobile-logo-img"><span class="mobile-logo-text"><b>SRI SHAKTHI</b><small>Autonomous Institution</small></span></a><a class="institution-home" href="#/" aria-label="Home">${icon('home')}</a><div class="institution-menu">${pageGroups.map((g,i)=>`${i===5?'<a class="institution-nav-link" href="#/placements">Placements</a>':''}<div class="institution-nav-group"><button type="button">${g.label}${icon('down')}</button><div>${g.items.map(([s,n])=>`<a href="#/${s}">${n}</a>`).join('')}</div></div>`).join('')}<a class="institution-nav-link" href="#/careers">Careers</a></div><a class="institution-nav-apply" href="#/apply">Apply Now ${icon('arrow')}</a></nav></div></header>
@@ -30,15 +111,905 @@ function header(){return `<div class="notice"><div class="notice-track"><span><b
 function footer(){return `<footer class="site-footer footer-reference"><div class="footer-top"><div class="footer-brand"><a class="mark" href="#/"><img src="/brand/siet-logo.png" alt="Sri Shakthi emblem"><span><b>SRI SHAKTHI</b><small>INSTITUTE OF ENGINEERING AND TECHNOLOGY</small><em>AUTONOMOUS · AFFILIATED TO ANNA UNIVERSITY</em></span></a><p>Powering the youth.<br>Empowering the nation.</p></div><div class="footer-sitemap">${pageGroups.map(g=>`<div class="footer-link-group"><b>${g.label}</b>${g.items.map(([s,n])=>`<a href="#/${s}"><span>›</span>${n}</a>`).join('')}</div>`).join('')}</div></div><div class="footer-legal"><small>© ${new Date().getFullYear()} Sri Shakthi Institute of Engineering &amp; Technology. All rights reserved.</small><nav><a href="#/privacy-policy">Privacy Policy</a><i></i><a href="#/terms">Terms of Use</a><i></i><a href="#/sitemap">Sitemap</a></nav></div></footer>`}
 const counter=(to,suffix='')=>`<span class="js-counter" data-to="${to}" data-suffix="${suffix}">0${suffix}</span>`;
 
-function homePage(){return `<main><section class="placement-stage placement-stage-v2"><div class="placement-v2-hero"><div class="placement-v2-container">
- <div class="placement-v2-copy reveal"><div class="placement-v2-kicker">PLACEMENT EXCELLENCE</div><div class="placement-v2-pill">CLASS OF 2027</div><h1>Powering the Youth.<em>Empowering the Nation.</em></h1><p>Focused training, industry-led preparation and a strong placement ecosystem that transforms engineering potential into meaningful careers.</p><div class="placement-v2-actions"><button type="button" class="placement-v2-btn primary js-scroll-programmes">Explore placements ${icon('arrow')}</button><button class="placement-v2-btn secondary js-video">${icon('play')} Watch placement journey</button></div></div>
- <div class="placement-v2-panel reveal"><div class="placement-v2-panel-head">2026–27 PLACEMENT HIGHLIGHTS (TILL 31ST JULY 2026)</div><div class="placement-v2-highest"><span>${icon('trophy')}</span><div><small>HIGHEST PLACED PACKAGE</small><strong>₹${counter(33)} LPA</strong></div><i></i><div class="placement-v2-record"><large>PLACEMENT RECORD</large><strong>CLASS OF 2027</strong></div></div><div class="placement-v2-stats">${[[16,'₹10 LPA+','gift'],[37,'₹8 LPA+','trend'],[82,'₹5.5 LPA+','brief']].map(([n,p,i])=>`<article><span class="placement-v2-icon">${icon(i)}</span><strong>${counter(n,n===82?'+':'')}</strong><h3>Students Placed</h3><i></i><b>${p}</b></article>`).join('')}</div></div>
-</div></div></section>
-<section class="about-premium"><div class="about-container"><div class="about-label reveal"><span>01</span><p>WHO WE ARE</p></div><div class="about-main"><div class="about-heading reveal"><h2>A campus where <span class="highlight-word">curiosity</span> becomes <span>capability.</span></h2></div><div class="about-content reveal"><span class="about-small-title">OUR PURPOSE</span><p>Sri Shakthi Institute of Engineering and Technology is an autonomous institution in Coimbatore, approved by AICTE and affiliated to Anna University.</p><p>Our industry-driven ecosystem brings engineering out of textbooks and into the real world.</p><button type="button" class="discover-link js-discover-btn">Discover our vision ${icon('arrow')}</button></div></div><div class="stats-grid">${[[4263,'Job offers','Last 5 Years'],[657,'Offers in 2026','Growing Every Year'],[10273,'Alumni Worldwide','Connected Globally'],[4452,'Students on Campus','Learning & Innovating']].map(([n,t,s],i)=>`<article class="stat-box reveal"><span class="stat-index">0${i+1}</span><h3>${counter(n,'+')}</h3><p>${t}</p><span class="stat-subtitle">${s}</span></article>`).join('')}</div></div></section>
-<section class="programmes-showcase programmes-section"><div class="programmes-container"><div class="section-kicker"><span>02</span><i></i><span>FIND YOUR FIELD</span></div><div class="programmes-hero reveal"><div class="programmes-heading"><h2>Programmes built for a <em>changing</em> world.</h2></div><div class="programmes-info"><p>Foundational rigour, advanced technology labs, industry collaboration and project-led learning.</p><div class="programme-toggle"><button class="toggle-btn active" data-level="UG">UG Programmes</button><button class="toggle-btn" data-level="PG">PG Programmes</button></div></div></div><div class="programme-area"><div class="programme-header"><div><small>EXPLORE</small><h3><span id="level-name">UG</span> Programmes</h3></div></div><div id="programme-grid" class="programme-grid">${programmeCards(programs)}</div></div></div></section>
-<section class="campus-section"><div class="campus-container"><aside class="campus-left reveal"><div class="section-kicker"><span>03</span><i></i><span>LIFE AT SRI SHAKTHI</span></div><h1>Campus Moments.<em>Student stories.</em></h1><p>Explore learning, innovation, celebrations and everyday campus experiences from the Sri Shakthi community.</p><button type="button" class="button js-explore-campus">Explore campus ${icon('arrow')}</button></aside><main class="campus-content"><div class="campus-gallery">${[['placements.png','A campus that inspires every day.'],['student-life.png','Victory is a habit here.'],['cultural.png','Culture. Tradition. Every performance.'],['innovation.png','Ideas that create impact.']].map(([img,t])=>`<div class="gallery-card reveal" role="button" tabindex="0"><img src="/brand/campus-life/${img}" alt="${t}"><div class="gallery-content"><h3>${t}</h3><span>→</span></div></div>`).join('')}</div></main></div></section></main>`}
+function homePage(){return `<main class="home-page"><section class="placement-stage placement-stage-v2"><div class="placement-v2-hero">
+ <div class="placement-v2-backdrop" aria-hidden="true">
+   <svg class="placement-hero-wave-svg" viewBox="0 0 1440 760" preserveAspectRatio="none" fill="none">
+     <path d="M0 0H520C575 80 545 170 495 250C445 330 465 410 535 470C615 540 645 620 565 690C505 740 435 760 365 760H0V0Z" fill="url(#heroYellowWaveGrad)"/>
+     <defs>
+       <linearGradient id="heroYellowWaveGrad" x1="0" y1="0" x2="640" y2="760" gradientUnits="userSpaceOnUse">
+         <stop offset="0%" stop-color="#ffce34"/>
+         <stop offset="45%" stop-color="#fbbd18"/>
+         <stop offset="100%" stop-color="#f5a810"/>
+       </linearGradient>
+     </defs>
+   </svg>
+   <div class="placement-v2-building-photo"></div>
+   <div class="placement-hero-top-mint-arc"></div>
+ </div>
+ <div class="placement-v2-container">
+  <div class="placement-v2-copy reveal">
+    <div class="placement-v2-kicker">PLACEMENT EXCELLENCE</div>
+    <div class="placement-v2-pill">CLASS OF 2027</div>
+    <h1 class="placement-v2-title">
+      <span>POWERING</span>
+      <span>THE YOUTH</span>
+      <span class="title-second-part">EMPOWERING</span>
+      <span class="title-second-part">THE NATION</span>
+    </h1>
+    <p class="placement-v2-desc">Industry-aligned training, hands-on learning and a vibrant placement ecosystem that transforms engineering potential into meaningful careers.</p>
+    <div class="placement-v2-actions-area">
+      <div class="placement-v2-actions">
+        <button type="button" class="placement-v2-btn primary js-scroll-programmes">Explore Placements ${icon('arrow')}</button>
+        <button type="button" class="placement-v2-btn secondary js-video">${icon('play')} Watch Placement Journey</button>
+      </div>
+      <div class="placement-v2-script-watermark" aria-hidden="true">
+        <span>Build</span>
+        <span>Believe</span>
+        <span>Belong</span>
+      </div>
+    </div>
+  </div>
+  <div class="placement-v2-panel reveal">
+    <div class="placement-v2-panel-head">
+      <span class="head-rule"></span>
+      <div class="head-titles">
+        <span class="head-main-title">2026–27 PLACEMENT HIGHLIGHTS</span>
+        <span class="head-sub-title">(TILL 31ST JULY 2026)</span>
+      </div>
+      <span class="head-rule"></span>
+    </div>
+    <div class="placement-v2-highest-card">
+      <div class="highest-package-col">
+        <span class="highest-crown-badge">${icon('crown')}</span>
+        <div class="highest-text-group">
+          <small class="highest-sub-label">HIGHEST PLACED PACKAGE</small>
+          <strong class="highest-package-value">₹${counter(33)} LPA</strong>
+        </div>
+      </div>
+      <i class="highest-card-divider"></i>
+      <div class="highest-record-box">
+        <small class="highest-record-label">PLACEMENT RECORD</small>
+        <strong class="highest-record-value">CLASS OF 2027</strong>
+      </div>
+    </div>
+    <div class="placement-v2-stats">
+      <article class="placement-v2-stat-col">
+        <span class="placement-v2-icon">${icon('users')}</span>
+        <strong class="stat-count">${counter(16)}</strong>
+        <span class="stat-placed-label">STUDENTS PLACED</span>
+        <span class="stat-dots" aria-hidden="true">••••••</span>
+        <b class="stat-package-amount">₹10 LPA+</b>
+        <small class="stat-package-sub">PACKAGE RANGE</small>
+      </article>
+      <article class="placement-v2-stat-col">
+        <span class="placement-v2-icon">${icon('trend')}</span>
+        <strong class="stat-count">${counter(37)}</strong>
+        <span class="stat-placed-label">STUDENTS PLACED</span>
+        <span class="stat-dots" aria-hidden="true">••••••</span>
+        <b class="stat-package-amount">₹8 LPA+</b>
+        <small class="stat-package-sub">PACKAGE RANGE</small>
+      </article>
+      <article class="placement-v2-stat-col">
+        <span class="placement-v2-icon">${icon('chart')}</span>
+        <strong class="stat-count">${counter(82, '+')}</strong>
+        <span class="stat-placed-label">STUDENTS PLACED</span>
+        <span class="stat-dots" aria-hidden="true">••••••</span>
+        <b class="stat-package-amount">₹5.5 LPA+</b>
+        <small class="stat-package-sub">PACKAGE RANGE</small>
+      </article>
+    </div>
+  </div>
+ </div>
+ <div class="placement-hero-bottom-strip">
+   <div class="placement-bottom-features">
+     <div class="bottom-feature-item">
+       <span class="feature-icon">${icon('grad')}</span>
+       <span class="feature-text">Industry Ready Workforce</span>
+     </div>
+     <i class="feature-bar-divider"></i>
+     <div class="bottom-feature-item">
+       <span class="feature-icon">${icon('connect')}</span>
+       <span class="feature-text">Strong Corporate Connect</span>
+     </div>
+     <i class="feature-bar-divider"></i>
+     <div class="bottom-feature-item">
+       <span class="feature-icon">${icon('star')}</span>
+       <span class="feature-text">Consistent Placement Growth</span>
+     </div>
+   </div>
+   <div class="placement-bottom-script" aria-hidden="true">
+     <span>Empower</span>
+     <span>Change</span>
+     <span>Lead</span>
+   </div>
+ </div>
+</div></section>
+<section class="about-premium">
+  <div class="about-glow glow-one" aria-hidden="true"></div>
+  <div class="about-glow glow-two" aria-hidden="true"></div>
+  <div class="about-container">
+    <div class="about-label reveal">
+      <span>01</span>
+      <span class="line" aria-hidden="true"></span>
+      <p>WHO WE ARE</p>
+    </div>
+    <div class="about-main">
+      <div class="about-heading reveal">
+        <h2>A campus where <span class="highlight-word">curiosity</span> becomes <span>capability.</span></h2>
+      </div>
+      <div class="about-content reveal">
+        <span class="about-small-title">OUR PURPOSE</span>
+        <p>Sri Shakthi Institute of Engineering and Technology is an autonomous institution in Coimbatore, approved by AICTE and affiliated to Anna University.</p>
+        <p>Our industry-driven ecosystem brings engineering out of textbooks and into the real world.</p>
+        <button type="button" class="discover-link js-discover-btn">
+          <span>Discover our vision</span>
+          <span class="arrow-circle">${icon('arrow')}</span>
+        </button>
+      </div>
+    </div>
+    <div class="stats-grid">
+      ${[[4263,'Job offers','Last 5 Years','chart'],[657,'Offers in 2026','Growing Every Year','trend'],[10273,'Alumni Worldwide','Connected Globally','connect'],[4452,'Students on Campus','Learning & Innovating','grad']].map(([n,t,s,ic],i)=>`
+        <article class="stat-box reveal">
+          <span class="stat-index">0${i+1}</span>
+          <span class="stat-icon" aria-hidden="true">${icon(ic)}</span>
+          <h3>${counter(n,'+')}</h3>
+          <p>${t}</p>
+          <span class="stat-subtitle">${s}</span>
+          <span class="stat-bottom-line" aria-hidden="true"></span>
+        </article>
+      `).join('')}
+    </div>
+  </div>
+  <div class="bottom-gold-line" aria-hidden="true"></div>
+</section>
+<section class="programmes-showcase programmes-section">
+  <div class="watermark-script top-script" aria-hidden="true">Innovate<br>Learn<br>Lead</div>
+  <div class="watermark-script bottom-script" aria-hidden="true">Engineers for a Better Tomorrow</div>
+  <div class="programmes-container">
+    <div class="programmes-hero-v2">
+      <div class="programmes-left-col reveal">
+        <div class="section-kicker">
+          <span>02</span>
+          <i></i>
+          <span>FIND YOUR FIELD</span>
+        </div>
+        <h2 class="programmes-main-title">
+          Programmes<br>built for a <em>changing</em> world.
+        </h2>
+        <p class="programmes-subtitle">
+          Foundational rigour, advanced technology labs, industry collaboration and project-led learning.
+        </p>
+        <div class="programme-toggle-pill">
+          <button class="toggle-btn active" data-level="UG" type="button">UG Programmes</button>
+          <button class="toggle-btn" data-level="PG" type="button">PG Programmes</button>
+        </div>
+      </div>
+      <div class="programmes-feature-card reveal">
+        <div class="feature-card-content">
+          <span class="feature-icon-badge">${deptIcon('lightning')}</span>
+          <h3 class="feature-card-title">Learn Today<br>Build Tomorrow</h3>
+          <p class="feature-card-desc">
+            Explore industry-relevant programmes designed to create future-ready engineers and innovators.
+          </p>
+          <button type="button" class="feature-action-btn js-scroll-programmes">
+            <span class="feature-arrow-btn">→</span>
+            <span>Discover Your Path</span>
+          </button>
+        </div>
+        <div class="feature-card-visual">
+          <div class="feature-arch-frame">
+            <img src="/brand/techpark-local.png" alt="Sri Shakthi Tech Park" width="360" height="270" loading="lazy">
+          </div>
+          <div class="feature-stat-pill">
+            <span class="stat-chart-icon">${deptIcon('chart')}</span>
+            <div class="stat-pill-info">
+              <strong id="prog-count-badge">14+</strong>
+              <span id="prog-level-badge">UG Programmes</span>
+              <small>Across Emerging Domains</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="programme-grid-container">
+      <div id="programme-grid" class="programme-grid-v2">
+        ${programmeCards(ugPrograms)}
+        ${bottomBannerHtml}
+      </div>
+    </div>
+  </div>
+</section>
+<section class="campus-section">
+  <!-- Top-Right Background Accent -->
+  <div class="campus-corner-pattern" aria-hidden="true">
+    <div class="campus-arc-circle arc-1"></div>
+    <div class="campus-arc-circle arc-2"></div>
+    <div class="campus-vertical-tags">
+      <span>LEARN</span>
+      <span>CONNECT</span>
+      <span>BELONG</span>
+      <span>GROW</span>
+    </div>
+  </div>
 
-function programmeCards(list){return list.map(([n,d])=>`<div class="programme-card programme-card-simple reveal" role="button" tabindex="0"><span class="programme-icon">◆</span><h4>${n}</h4><span class="arrow-btn">→</span></div>`).join('')}
+  <div class="campus-container">
+    <aside class="campus-left reveal">
+      <div class="campus-eyebrow">
+        <span class="eyebrow-num">03</span>
+        <span class="eyebrow-dash">—</span>
+        <span class="eyebrow-text">LIFE AT SRI SHAKTHI</span>
+      </div>
+      <h1 class="campus-heading">Campus<br>Moments.<br><em>Student stories.</em></h1>
+      <p class="campus-desc">Explore learning, innovation, celebrations and everyday campus experiences from the Sri Shakthi community.</p>
+      
+      <div class="campus-actions">
+        <button type="button" class="campus-btn-primary js-explore-campus">Explore campus ${icon('arrow')}</button>
+        <button type="button" class="campus-video-btn js-video">
+          <span class="video-circle-icon">${icon('play')}</span>
+          <span class="video-label-text">Watch<br>our story</span>
+        </button>
+      </div>
+
+      <div class="campus-script-watermark" aria-hidden="true">
+        <span>Same people.</span>
+        <span>Brighter tomorrows.</span>
+        <svg class="script-curve-line" width="160" height="18" viewBox="0 0 160 18" fill="none">
+          <path d="M4 11 Q80 2 156 12" stroke="#d4a300" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="campus-bottom-sketch-wrap" aria-hidden="true">
+        <div class="campus-sketch-graphic"></div>
+        <div class="campus-people-footer">PEOPLE <i>|</i> IDEAS <i>|</i> IMPACT <span class="footer-gold-bar"></span></div>
+      </div>
+    </aside>
+
+    <main class="campus-content">
+      <div class="campus-gallery-v2">
+        <!-- Card 01: Student Life -->
+        <article class="campus-card-v2 card-01 reveal" role="button" tabindex="0">
+          <span class="card-index">01</span>
+          <span class="card-floating-badge badge-green">${icon('grad')}</span>
+          <img src="/brand/campus-life/student-life.png" alt="Student Life at Sri Shakthi" loading="lazy">
+          <div class="card-bottom-overlay">
+            <div class="card-info-side">
+              <div class="card-title-row">
+                <i class="cat-accent-bar bar-mint"></i>
+                <h4 class="card-title">Student Life</h4>
+              </div>
+              <p class="card-subtitle">A campus that inspires every day.</p>
+            </div>
+            <span class="card-circle-arrow">→</span>
+          </div>
+        </article>
+
+        <!-- Card 02: Sports & Recreation -->
+        <article class="campus-card-v2 card-02 reveal" role="button" tabindex="0">
+          <span class="card-index">02</span>
+          <span class="card-floating-badge badge-sand">${icon('runner')}</span>
+          <img src="/brand/campus-life/sports.png" alt="Sports & Recreation" loading="lazy">
+          <div class="card-bottom-overlay">
+            <div class="card-info-side">
+              <div class="card-title-row">
+                <i class="cat-accent-bar bar-gold"></i>
+                <h4 class="card-title">Sports & Recreation</h4>
+              </div>
+              <p class="card-subtitle">Victory is a habit here.</p>
+            </div>
+            <span class="card-circle-arrow">→</span>
+          </div>
+        </article>
+
+        <!-- Card 03: Innovation -->
+        <article class="campus-card-v2 card-03 reveal" role="button" tabindex="0">
+          <span class="card-index">03</span>
+          <span class="card-floating-badge badge-yellow">${icon('bulb')}</span>
+          <img src="/brand/campus-life/innovation.png" alt="Innovation & Labs" loading="lazy">
+          <div class="card-bottom-overlay">
+            <div class="card-info-side">
+              <div class="card-title-row">
+                <i class="cat-accent-bar bar-amber"></i>
+                <h4 class="card-title">Innovation</h4>
+              </div>
+              <p class="card-subtitle">Ideas that create impact.</p>
+            </div>
+            <span class="card-circle-arrow">→</span>
+          </div>
+        </article>
+
+        <!-- Card 04: Culture & Arts -->
+        <article class="campus-card-v2 card-04 reveal" role="button" tabindex="0">
+          <span class="card-index">04</span>
+          <span class="card-floating-badge badge-sand">${icon('masks')}</span>
+          <img src="/brand/campus-life/cultural.png" alt="Culture & Arts" loading="lazy">
+          <div class="card-bottom-overlay">
+            <div class="card-info-side">
+              <div class="card-title-row">
+                <i class="cat-accent-bar bar-orange"></i>
+                <h4 class="card-title">Culture & Arts</h4>
+              </div>
+              <p class="card-subtitle">Tradition. Creativity. Every performance.</p>
+            </div>
+            <span class="card-circle-arrow">→</span>
+          </div>
+        </article>
+
+        <!-- Card 05: Learning & Growth -->
+        <article class="campus-card-v2 card-05 reveal" role="button" tabindex="0">
+          <span class="card-index">05</span>
+          <span class="card-floating-badge badge-mint">${icon('users')}</span>
+          <img src="/brand/campus-life/learning-growth.png" alt="Learning & Growth" loading="lazy">
+          <div class="card-bottom-overlay">
+            <div class="card-info-side">
+              <div class="card-title-row">
+                <i class="cat-accent-bar bar-mint"></i>
+                <h4 class="card-title">Learning & Growth</h4>
+              </div>
+              <p class="card-subtitle">Today's learners. Tomorrow's leaders.</p>
+            </div>
+            <span class="card-circle-arrow">→</span>
+          </div>
+        </article>
+
+        <!-- Card 06: Our Campus -->
+        <article class="campus-card-v2 card-06 reveal" role="button" tabindex="0">
+          <span class="card-index">06</span>
+          <span class="card-floating-badge badge-leaf">${icon('leaf')}</span>
+          <img src="/brand/techpark-local.png" alt="Sri Shakthi Tech Park & Campus" loading="lazy">
+          <div class="card-bottom-overlay">
+            <div class="card-info-side">
+              <div class="card-title-row">
+                <i class="cat-accent-bar bar-green"></i>
+                <h4 class="card-title">Our Campus</h4>
+              </div>
+              <p class="card-subtitle">A greener, brighter tomorrow.</p>
+            </div>
+            <span class="card-circle-arrow">→</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Bottom Floating Stats Bar (Directly underneath the 6-card grid) -->
+      <div class="campus-stats-row reveal">
+        <div class="campus-stats-pill">
+          <div class="stats-bar-item">
+            <span class="bar-icon-badge badge-green-circle">${icon('users')}</span>
+            <div class="bar-stat-text">
+              <strong>${counter(8, 'K+')}</strong>
+              <small>Students</small>
+            </div>
+          </div>
+          <span class="stats-item-divider" aria-hidden="true"></span>
+          <div class="stats-bar-item">
+            <span class="bar-icon-badge badge-green-circle">${icon('users')}</span>
+            <div class="bar-stat-text">
+              <strong>${counter(500, '+')}</strong>
+              <small>Faculty & Mentors</small>
+            </div>
+          </div>
+          <span class="stats-item-divider" aria-hidden="true"></span>
+          <div class="stats-bar-item">
+            <span class="bar-icon-badge badge-gold-cup">${icon('cup')}</span>
+            <div class="bar-stat-text">
+              <strong>${counter(100, '+')}</strong>
+              <small>Clubs & Activities</small>
+            </div>
+          </div>
+          <span class="stats-item-divider" aria-hidden="true"></span>
+          <div class="stats-bar-item">
+            <span class="bar-icon-badge badge-leaf-green">${icon('leaf')}</span>
+            <div class="bar-stat-text">
+              <strong class="green-highlight">A Greener</strong>
+              <small>Tomorrow</small>
+            </div>
+          </div>
+        </div>
+
+        <a href="#/campus-life" class="stats-bar-cta" aria-label="Explore more stories">
+          <span class="cta-circle-btn">→</span>
+          <span class="cta-text">More stories<br>to explore</span>
+          <span class="cta-gold-line" aria-hidden="true"></span>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <div class="campus-section-footer" aria-hidden="true">
+    <span>LIFE BEYOND CLASSROOMS</span>
+    <span class="footer-gold-bar"></span>
+  </div>
+</section>
+
+<!-- Section 04: Special Labs (Advanced Labs for a Brighter Tomorrow) -->
+<section class="special-labs-section" id="special-labs">
+  <div class="labs-arc-circle arc-1" aria-hidden="true"></div>
+  <div class="labs-arc-circle arc-2" aria-hidden="true"></div>
+
+  <div class="labs-vertical-tags" aria-hidden="true">
+    <span>HANDS-ON</span>
+    <span>LEARNING</span>
+    <span>REAL-WORLD</span>
+    <span>IMPACT</span>
+  </div>
+
+  <div class="labs-container">
+    <!-- Left Column: Eyebrow, Heading, Description, CTA, Watermark, Footer -->
+    <aside class="labs-left reveal">
+      <div class="labs-eyebrow">
+        <span class="eyebrow-num">04</span>
+        <span class="eyebrow-dash">—</span>
+        <span class="eyebrow-text">SPECIAL LABS</span>
+      </div>
+      <h2 class="labs-heading">
+        Advanced<br>
+        Labs for a<br>
+        <em>Brighter<br>Tomorrow.</em>
+      </h2>
+      <p class="labs-desc">
+        State-of-the-art laboratories to explore, experiment and innovate — empowering students with hands-on experience for real-world impact.
+      </p>
+
+      <div class="labs-actions">
+        <a href="#/centres-of-excellence" class="labs-btn-primary">Explore Our Labs →</a>
+      </div>
+
+      <div class="labs-script-watermark" aria-hidden="true">
+        <span>Learn &#10003;</span>
+        <span>Experiment</span>
+        <span>Innovate</span>
+        <svg class="script-curve-line" width="96" height="12" viewBox="0 0 96 12" fill="none">
+          <path d="M2 10C32 3 70 2 94 8" stroke="#d4a300" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="labs-bottom-sketch-wrap" aria-hidden="true">
+        <div class="campus-people-footer">PEOPLE <i>|</i> IDEAS <i>|</i> IMPACT <span class="footer-gold-bar"></span></div>
+      </div>
+    </aside>
+
+    <!-- Right Column: Top Bar + 8-Card 4x2 Grid + Bottom Stats Row -->
+    <main class="labs-content">
+      <!-- Top Bar: Filter Pills + Navigation Arrows -->
+      <div class="labs-top-bar reveal">
+        <div class="labs-filter-pills" role="tablist" aria-label="Lab Categories">
+          <button class="lab-pill-btn active" type="button" data-cat="all">All Labs</button>
+          <button class="lab-pill-btn" type="button" data-cat="emerging">Emerging Tech</button>
+          <span class="lab-filter-sep" aria-hidden="true">|</span>
+          <button class="lab-pill-btn" type="button" data-cat="core">Core Engineering</button>
+          <span class="lab-filter-sep" aria-hidden="true">|</span>
+          <button class="lab-pill-btn" type="button" data-cat="design">Design & Innovation</button>
+        </div>
+        <div class="labs-nav-arrows" aria-hidden="true">
+          <button type="button" class="lab-arrow-btn prev-btn" aria-label="Previous labs">${icon('prev')}</button>
+          <button type="button" class="lab-arrow-btn next-btn" aria-label="Next labs">${icon('next')}</button>
+        </div>
+      </div>
+
+      <!-- 8-Card 4x2 Gallery Grid -->
+      <div class="labs-gallery-grid">
+        <!-- Card 01: AI Lab -->
+        <article class="lab-card card-01 reveal" role="button" tabindex="0" data-cat="emerging">
+          <span class="card-index">01</span>
+          <span class="card-floating-badge badge-mint-chip" title="AI & Intelligent Systems">${icon('chip')}</span>
+          <img src="/brand/special-labs/lab-ai.jpg" alt="AI Lab" loading="lazy">
+          <div class="card-bottom-overlay">
+            <div class="card-info-side">
+              <div class="card-title-row">
+                <i class="cat-accent-bar bar-mint"></i>
+                <h4 class="card-title">AI Lab</h4>
+              </div>
+              <p class="card-subtitle">Explore intelligent solutions for tomorrow.</p>
+            </div>
+            <span class="card-circle-arrow">→</span>
+          </div>
+        </article>
+
+        <!-- Card 02: Cyber & Cloud Lab -->
+        <article class="lab-card card-02 reveal" role="button" tabindex="0" data-cat="emerging">
+          <span class="card-index">02</span>
+          <span class="card-floating-badge badge-blue-cloud" title="Cyber Security & Cloud">${icon('cloud')}</span>
+          <img src="/brand/special-labs/lab-cyber-cloud.jpg" alt="Cyber & Cloud Lab" loading="lazy">
+          <div class="card-bottom-overlay">
+            <div class="card-info-side">
+              <div class="card-title-row">
+                <i class="cat-accent-bar bar-blue"></i>
+                <h4 class="card-title">Cyber & Cloud Lab</h4>
+              </div>
+              <p class="card-subtitle">Secure today. Scale tomorrow.</p>
+            </div>
+            <span class="card-circle-arrow">→</span>
+          </div>
+        </article>
+
+        <!-- Card 03: VLSI Lab -->
+        <article class="lab-card card-03 reveal" role="button" tabindex="0" data-cat="core">
+          <span class="card-index">03</span>
+          <span class="card-floating-badge badge-yellow-chip" title="VLSI & Microelectronics">${icon('cpu')}</span>
+          <img src="/brand/special-labs/lab-vlsi.jpg" alt="VLSI Lab" loading="lazy">
+          <div class="card-bottom-overlay">
+            <div class="card-info-side">
+              <div class="card-title-row">
+                <i class="cat-accent-bar bar-gold"></i>
+                <h4 class="card-title">VLSI Lab</h4>
+              </div>
+              <p class="card-subtitle">Designing the next generation chips.</p>
+            </div>
+            <span class="card-circle-arrow">→</span>
+          </div>
+        </article>
+
+        <!-- Card 04: Embedded Systems Lab -->
+        <article class="lab-card card-04 reveal" role="button" tabindex="0" data-cat="core">
+          <span class="card-index">04</span>
+          <span class="card-floating-badge badge-mint-gear" title="Embedded Systems">${icon('gear')}</span>
+          <img src="/brand/special-labs/lab-embedded.jpg" alt="Embedded Systems Lab" loading="lazy">
+          <div class="card-bottom-overlay">
+            <div class="card-info-side">
+              <div class="card-title-row">
+                <i class="cat-accent-bar bar-emerald"></i>
+                <h4 class="card-title">Embedded Systems Lab</h4>
+              </div>
+              <p class="card-subtitle">Build. Integrate. Innovate.</p>
+            </div>
+            <span class="card-circle-arrow">→</span>
+          </div>
+        </article>
+
+        <!-- Card 05: IoT Lab -->
+        <article class="lab-card card-05 reveal" role="button" tabindex="0" data-cat="emerging">
+          <span class="card-index">05</span>
+          <span class="card-floating-badge badge-mint-wifi" title="Internet of Things">${icon('wifi')}</span>
+          <img src="/brand/special-labs/lab-iot.jpg" alt="IoT Lab" loading="lazy">
+          <div class="card-bottom-overlay">
+            <div class="card-info-side">
+              <div class="card-title-row">
+                <i class="cat-accent-bar bar-mint"></i>
+                <h4 class="card-title">IoT Lab</h4>
+              </div>
+              <p class="card-subtitle">Connect ideas to a smarter world.</p>
+            </div>
+            <span class="card-circle-arrow">→</span>
+          </div>
+        </article>
+
+        <!-- Card 06: AR & VR Lab -->
+        <article class="lab-card card-06 reveal" role="button" tabindex="0" data-cat="design">
+          <span class="card-index">06</span>
+          <span class="card-floating-badge badge-purple-vr" title="AR & VR Immersive Tech">${icon('vr')}</span>
+          <img src="/brand/special-labs/lab-ar-vr.jpg" alt="AR & VR Lab" loading="lazy">
+          <div class="card-bottom-overlay">
+            <div class="card-info-side">
+              <div class="card-title-row">
+                <i class="cat-accent-bar bar-purple"></i>
+                <h4 class="card-title">AR & VR Lab</h4>
+              </div>
+              <p class="card-subtitle">Experience. Create. Go Beyond.</p>
+            </div>
+            <span class="card-circle-arrow">→</span>
+          </div>
+        </article>
+
+        <!-- Card 07: PCB Design & Assembly Lab -->
+        <article class="lab-card card-07 reveal" role="button" tabindex="0" data-cat="core">
+          <span class="card-index">07</span>
+          <span class="card-floating-badge badge-pink-tool" title="PCB Prototyping">${icon('soldering')}</span>
+          <img src="/brand/special-labs/lab-pcb.jpg" alt="PCB Design & Assembly Lab" loading="lazy">
+          <div class="card-bottom-overlay">
+            <div class="card-info-side">
+              <div class="card-title-row">
+                <i class="cat-accent-bar bar-pink"></i>
+                <h4 class="card-title">PCB Design & Assembly Lab</h4>
+              </div>
+              <p class="card-subtitle">From design to real-world prototypes.</p>
+            </div>
+            <span class="card-circle-arrow">→</span>
+          </div>
+        </article>
+
+        <!-- Card 08: Robotics & Automation Lab -->
+        <article class="lab-card card-08 reveal" role="button" tabindex="0" data-cat="design">
+          <span class="card-index">08</span>
+          <span class="card-floating-badge badge-green-bot" title="Robotics & Industrial Automation">${icon('bot')}</span>
+          <img src="/brand/special-labs/lab-robotics.jpg" alt="Robotics & Automation Lab" loading="lazy">
+          <div class="card-bottom-overlay">
+            <div class="card-info-side">
+              <div class="card-title-row">
+                <i class="cat-accent-bar bar-teal"></i>
+                <h4 class="card-title">Robotics & Automation Lab</h4>
+              </div>
+              <p class="card-subtitle">Ideate. Build. Automate.</p>
+            </div>
+            <span class="card-circle-arrow">→</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Bottom Floating Stats Row (Centered underneath the 4-column gallery) -->
+      <div class="labs-bottom-row reveal">
+        <div class="labs-stats-pill">
+          <div class="lab-stat-item">
+            <span class="lab-stat-icon badge-flask">${icon('flask')}</span>
+            <div class="lab-stat-text">
+              <strong>8</strong>
+              <small>Specialized Labs</small>
+            </div>
+          </div>
+          <span class="stats-item-divider" aria-hidden="true"></span>
+          <div class="lab-stat-item">
+            <span class="lab-stat-icon badge-users">${icon('users')}</span>
+            <div class="lab-stat-text">
+              <strong>${counter(500, '+')}</strong>
+              <small>Students Trained</small>
+            </div>
+          </div>
+          <span class="stats-item-divider" aria-hidden="true"></span>
+          <div class="lab-stat-item">
+            <span class="lab-stat-icon badge-bulb">${icon('bulb')}</span>
+            <div class="lab-stat-text">
+              <strong>${counter(100, '+')}</strong>
+              <small>Projects & Innovations</small>
+            </div>
+          </div>
+          <span class="stats-item-divider" aria-hidden="true"></span>
+          <div class="lab-stat-item">
+            <span class="lab-stat-icon badge-industry">${icon('industry')}</span>
+            <div class="lab-stat-text">
+              <strong>${counter(20, '+')}</strong>
+              <small>Industry Collaborations</small>
+            </div>
+          </div>
+        </div>
+
+        <a href="#/centres-of-excellence" class="labs-cta-banner" aria-label="Explore labs and centres of excellence">
+          <div class="labs-banner-copy">
+            <strong>Labs Today.</strong>
+            <span>Leaders Tomorrow.</span>
+          </div>
+          <span class="labs-banner-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <div class="labs-section-footer" aria-hidden="true">
+    <span>A STRONGER TOMORROW THROUGH INNOVATION</span>
+    <span class="footer-gold-bar"></span>
+  </div>
+</section>
+
+<!-- Section 06: News & Events (What's Happening at Sri Shakthi) -->
+<section class="news-events-section" id="news-events">
+  <div class="events-arc-circle arc-1" aria-hidden="true"></div>
+
+  <div class="events-container">
+    <!-- Top Row: Left Heading & Right Featured Event Card -->
+    <div class="events-hero-row">
+      <!-- Left Column: Eyebrow, Heading, Desc, CTA, Avatars -->
+      <div class="events-left-col reveal">
+        <div class="events-eyebrow">
+          <span class="eyebrow-num">05</span>
+          <span class="eyebrow-dash">—</span>
+          <span class="eyebrow-text">NEWS &amp; EVENTS</span>
+        </div>
+        <h2 class="events-heading">
+          What's<br>
+          Happening<br>
+          <em>at Sri Shakthi.</em>
+        </h2>
+        <p class="events-desc">
+          Stay updated with the latest events, achievements and opportunities across our campus community.
+        </p>
+
+        <a href="#/campus-life" class="events-btn-primary">View All Events →</a>
+
+        <div class="events-community-pill">
+          <div class="community-avatars">
+            <img src="/brand/campus-life/student-life.png" alt="Student" class="avatar-circle">
+            <img src="/brand/campus-life/placements.png" alt="Student" class="avatar-circle">
+            <img src="/brand/campus-life/learning-growth.png" alt="Student" class="avatar-circle">
+            <span class="avatar-plus">+</span>
+          </div>
+          <div class="community-text">
+            <strong>A vibrant campus.</strong>
+            <span>A happening community.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Large Featured Event Card -->
+      <div class="events-featured-card reveal">
+        <div class="featured-bg-photo" style="background-image: url('/brand/events/featured-technovate.jpg');"></div>
+        <div class="featured-overlay-content">
+          <div class="featured-left-info">
+            <span class="featured-gold-badge">★ Featured Event</span>
+            <h3 class="featured-title">TechNovate 2026</h3>
+            <span class="featured-sub-tag">TECHNICAL SYMPOSIUM</span>
+            <p class="featured-summary">
+              A platform to ideate, innovate and build solutions for a better tomorrow. Join us for a day of learning, networking and inspiration.
+            </p>
+
+            <div class="featured-meta-list">
+              <div class="featured-meta-row">
+                <span class="meta-icon">${icon('calendar')}</span>
+                <span>28 Aug 2026</span>
+              </div>
+              <div class="featured-meta-row">
+                <span class="meta-icon">${icon('pin')}</span>
+                <span>Main Auditorium</span>
+              </div>
+              <div class="featured-meta-row">
+                <span class="meta-icon">${icon('clock')}</span>
+                <span>09:00 AM - 05:00 PM</span>
+              </div>
+            </div>
+
+            <a href="#/campus-life" class="featured-know-more-btn">Know More →</a>
+          </div>
+
+          <div class="featured-nav-controls" aria-hidden="true">
+            <button type="button" class="featured-arrow-btn prev-feat" aria-label="Previous featured event">${icon('prev')}</button>
+            <span class="featured-counter">01 / 03</span>
+            <button type="button" class="featured-arrow-btn next-feat" aria-label="Next featured event">${icon('next')}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="events-filter-bar reveal" role="tablist" aria-label="Event categories">
+      <button class="event-filter-pill active" type="button" data-cat="all">${icon('grid')} All</button>
+      <button class="event-filter-pill" type="button" data-cat="technical">${icon('gear')} Technical</button>
+      <button class="event-filter-pill" type="button" data-cat="cultural">${icon('music')} Cultural</button>
+      <button class="event-filter-pill" type="button" data-cat="workshops">${icon('users')} Workshops</button>
+      <button class="event-filter-pill" type="button" data-cat="sports">${icon('cup')} Sports</button>
+      <button class="event-filter-pill" type="button" data-cat="others">••• Others</button>
+    </div>
+
+    <!-- 3-Card Event Grid -->
+    <div class="events-cards-grid">
+      <!-- Card 1: Sangamam 2026 -->
+      <article class="event-item-card reveal" role="button" tabindex="0" data-cat="cultural others">
+        <div class="event-card-media">
+          <div class="event-date-badge">
+            <strong class="date-num">15</strong>
+            <span class="date-month">SEP</span>
+          </div>
+          <img src="/brand/events/event-sangamam.jpg" alt="Sangamam 2026 Cultural Event" loading="lazy">
+        </div>
+        <div class="event-card-body">
+          <span class="event-cat-tag tag-orange">CULTURAL EVENT</span>
+          <h4 class="event-card-title">Sangamam 2026</h4>
+          <p class="event-card-desc">Celebrating talent, tradition and togetherness.</p>
+          <div class="event-card-footer">
+            <div class="event-meta-info">
+              <div class="meta-item"><span class="meta-ico">${icon('pin')}</span><span>Open Air Theatre</span></div>
+              <div class="meta-item"><span class="meta-ico">${icon('clock')}</span><span>04:00 PM - 10:00 PM</span></div>
+            </div>
+            <span class="event-circle-arrow">→</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Industry Connect & Career Day -->
+      <article class="event-item-card reveal" role="button" tabindex="0" data-cat="technical workshops">
+        <div class="event-card-media">
+          <div class="event-date-badge">
+            <strong class="date-num">22</strong>
+            <span class="date-month">SEP</span>
+          </div>
+          <img src="/brand/events/event-industry-connect.jpg" alt="Industry Connect & Career Day" loading="lazy">
+        </div>
+        <div class="event-card-body">
+          <span class="event-cat-tag tag-gold">CAREER EVENT</span>
+          <h4 class="event-card-title">Industry Connect &amp; Career Day</h4>
+          <p class="event-card-desc">Meet industry leaders, explore opportunities and shape your future.</p>
+          <div class="event-card-footer">
+            <div class="event-meta-info">
+              <div class="meta-item"><span class="meta-ico">${icon('pin')}</span><span>Convention Centre</span></div>
+              <div class="meta-item"><span class="meta-ico">${icon('clock')}</span><span>10:00 AM - 04:00 PM</span></div>
+            </div>
+            <span class="event-circle-arrow">→</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: Inter-Department Sports Meet -->
+      <article class="event-item-card reveal" role="button" tabindex="0" data-cat="sports others">
+        <div class="event-card-media">
+          <div class="event-date-badge">
+            <strong class="date-num">03</strong>
+            <span class="date-month">OCT</span>
+          </div>
+          <img src="/brand/events/event-sports-meet.jpg" alt="Inter-Department Sports Meet" loading="lazy">
+        </div>
+        <div class="event-card-body">
+          <span class="event-cat-tag tag-orange">SPORTS EVENT</span>
+          <h4 class="event-card-title">Inter-Department Sports Meet</h4>
+          <p class="event-card-desc">Play. Compete. Build stronger bonds.</p>
+          <div class="event-card-footer">
+            <div class="event-meta-info">
+              <div class="meta-item"><span class="meta-ico">${icon('pin')}</span><span>Sports Complex</span></div>
+              <div class="meta-item"><span class="meta-ico">${icon('clock')}</span><span>08:00 AM - 06:00 PM</span></div>
+            </div>
+            <span class="event-circle-arrow">→</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Bottom Floating Stats Row & CTA Banner -->
+    <div class="events-bottom-row reveal">
+      <div class="events-script-left" aria-hidden="true">
+        <span>More</span>
+        <span>Than Events.</span>
+        <span>A Brighter</span>
+        <span>Tomorrow.</span>
+      </div>
+
+      <div class="events-stats-pill">
+        <div class="ev-stat-item">
+          <span class="ev-stat-icon badge-cal">${icon('calendar')}</span>
+          <div class="ev-stat-text">
+            <strong>${counter(50, '+')}</strong>
+            <small>Events Every Year</small>
+          </div>
+        </div>
+        <span class="stats-item-divider" aria-hidden="true"></span>
+        <div class="ev-stat-item">
+          <span class="ev-stat-icon badge-users">${icon('users')}</span>
+          <div class="ev-stat-text">
+            <strong>${counter(8, 'K+')}</strong>
+            <small>Student Participation</small>
+          </div>
+        </div>
+        <span class="stats-item-divider" aria-hidden="true"></span>
+        <div class="ev-stat-item">
+          <span class="ev-stat-icon badge-cup">${icon('cup')}</span>
+          <div class="ev-stat-text">
+            <strong>${counter(25, '+')}</strong>
+            <small>Clubs &amp; Communities</small>
+          </div>
+        </div>
+        <span class="stats-item-divider" aria-hidden="true"></span>
+        <div class="ev-stat-item">
+          <span class="ev-stat-icon badge-star">${icon('star')}</span>
+          <div class="ev-stat-text">
+            <strong>${counter(100, '+')}</strong>
+            <small>Achievements &amp; Recognitions</small>
+          </div>
+        </div>
+      </div>
+
+      <a href="#/campus-life" class="events-cta-banner" aria-label="Be part of what's next">
+        <div class="events-banner-copy">
+          <strong>Be Part</strong>
+          <span>of What's Next.</span>
+        </div>
+        <span class="events-banner-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <!-- Bottom Signature Script -->
+    <div class="events-bottom-signature" aria-hidden="true">
+      <span>Same People</span>
+      <span>Brighters Tomorrows.</span>
+    </div>
+  </div>
+</section>
+</main>`}
+
+function programmeCards(list){
+  return list.map(([n,d,ic])=>`
+    <div class="programme-card-v2 reveal" role="button" tabindex="0" data-course="${n}">
+      <div class="prog-icon-wrap">${deptIcon(ic)}</div>
+      <div class="prog-info">
+        <h4>${n}</h4>
+        <p>${d}</p>
+      </div>
+      <span class="prog-arrow-circle">→</span>
+    </div>
+  `).join('');
+}
 const slugify=s=>s.toLowerCase().replaceAll(' ','-').replaceAll('&','and').replaceAll('/','-');
 function visionPage(){
   return `<style>
@@ -452,18 +1423,29 @@ function bind(){
     }
   }));
   $$('.js-video').forEach(b=>b.addEventListener('click',()=>{document.body.insertAdjacentHTML('beforeend',videoModal());document.body.style.overflow='hidden';const modal=$('.video-modal');const close=()=>{modal?.remove();document.body.style.overflow=''};modal?.addEventListener('click',e=>e.target===modal&&close());$('.video-close',modal)?.addEventListener('click',close)}));
-  $$('.toggle-btn').forEach(b=>b.addEventListener('click',()=>{$$('.toggle-btn').forEach(x=>x.classList.toggle('active',x===b));const lvlName=$('#level-name');if(lvlName)lvlName.textContent=b.dataset.level;const progGridEl=$('#programme-grid');if(progGridEl)progGridEl.innerHTML=programmeCards(b.dataset.level==='UG'?programs:programs.slice(0,7));observe()}));
+  $$('.toggle-btn').forEach(b=>b.addEventListener('click',()=>{
+    $$('.toggle-btn').forEach(x=>x.classList.toggle('active',x===b));
+    const isUG=b.dataset.level==='UG';
+    const progGridEl=$('#programme-grid');
+    if(progGridEl){
+      progGridEl.innerHTML=programmeCards(isUG?ugPrograms:pgPrograms)+(isUG?bottomBannerHtml:'');
+    }
+    const countBadge=$('#prog-count-badge');
+    const levelBadge=$('#prog-level-badge');
+    if(countBadge)countBadge.textContent=isUG?'14+':'7+';
+    if(levelBadge)levelBadge.textContent=isUG?'UG Programmes':'PG Programmes';
+    observe();
+  }));
   const progGrid=$('#programme-grid');
   progGrid?.addEventListener('click',e=>{
-    const card=e.target.closest('.programme-card');
+    const card=e.target.closest('.programme-card-v2, .programme-card');
     if(!card)return;
-    const wasActive=card.classList.contains('active');
-    $$('.programme-card',progGrid).forEach(c=>c.classList.remove('active'));
-    if(!wasActive)card.classList.add('active');
+    const course=card.dataset.course;
+    location.hash='#/admission-enquiry';
   });
   progGrid?.addEventListener('keydown',e=>{
     if(e.key==='Enter'||e.key===' '){
-      const card=e.target.closest('.programme-card');
+      const card=e.target.closest('.programme-card-v2, .programme-card');
       if(card){e.preventDefault();card.click()}
     }
   });
@@ -479,6 +1461,116 @@ function bind(){
     $$('.vision-tab-btn').forEach(x => x.classList.toggle('active', x === btn));
     $$('.vision-content-pane').forEach(pane => pane.classList.toggle('active', pane.dataset.pane === btn.dataset.tab));
   }));
+  $$('.lab-pill-btn').forEach(btn => btn.addEventListener('click', () => {
+    $$('.lab-pill-btn').forEach(x => x.classList.toggle('active', x === btn));
+    const cat = btn.dataset.cat;
+    $$('.lab-card').forEach(card => {
+      if (cat === 'all' || card.dataset.cat === cat) {
+        card.style.display = '';
+        card.style.opacity = '1';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }));
+  $$('.lab-card').forEach(card => {
+    card.addEventListener('click', () => { location.hash = '#/centres-of-excellence'; });
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); location.hash = '#/centres-of-excellence'; }
+    });
+  });
+  $('.labs-nav-arrows .prev-btn')?.addEventListener('click', () => {
+    const active = $('.lab-pill-btn.active');
+    const pills = $$('.lab-pill-btn');
+    const idx = pills.indexOf(active);
+    const prev = pills[(idx - 1 + pills.length) % pills.length];
+    prev?.click();
+  });
+  $('.labs-nav-arrows .next-btn')?.addEventListener('click', () => {
+    const active = $('.lab-pill-btn.active');
+    const pills = $$('.lab-pill-btn');
+    const idx = pills.indexOf(active);
+    const next = pills[(idx + 1) % pills.length];
+    next?.click();
+  });
+  $$('.event-filter-pill').forEach(btn => btn.addEventListener('click', () => {
+    $$('.event-filter-pill').forEach(x => x.classList.toggle('active', x === btn));
+    const cat = btn.dataset.cat;
+    $$('.event-item-card').forEach(card => {
+      const cats = (card.dataset.cat || '').split(' ');
+      if (cat === 'all' || cats.includes(cat)) {
+        card.style.display = '';
+        card.style.opacity = '1';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }));
+  $$('.event-item-card').forEach(card => {
+    card.addEventListener('click', () => { location.hash = '#/campus-life'; });
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); location.hash = '#/campus-life'; }
+    });
+  });
+  const featuredSlides = [
+    {
+      title: 'TechNovate 2026',
+      tag: 'TECHNICAL SYMPOSIUM',
+      desc: 'A platform to ideate, innovate and build solutions for a better tomorrow. Join us for a day of learning, networking and inspiration.',
+      date: '28 Aug 2026',
+      loc: 'Main Auditorium',
+      time: '09:00 AM - 05:00 PM',
+      bg: '/brand/events/featured-technovate.jpg'
+    },
+    {
+      title: 'Hack-A-Shakthi 2026',
+      tag: 'NATIONAL HACKATHON',
+      desc: '36 hours of continuous coding, product design, and real-world industrial challenges with mentorship from top tech leaders.',
+      date: '14 Sep 2026',
+      loc: 'Innovation Centre & Techpark',
+      time: '08:30 AM - 08:30 PM',
+      bg: '/brand/techpark-hd.jpg'
+    },
+    {
+      title: 'Sangamam Gala Night',
+      tag: 'CULTURAL EXTRAVAGANZA',
+      desc: 'An electrifying evening of classical dance, fusion music, dramatic arts, and celebration of intercultural heritage.',
+      date: '16 Sep 2026',
+      loc: 'Open Air Theatre',
+      time: '05:00 PM - 10:30 PM',
+      bg: '/brand/events/event-sangamam.jpg'
+    }
+  ];
+  let featIdx = 0;
+  const updateFeatSlide = () => {
+    const card = $('.events-featured-card');
+    if (!card) return;
+    const s = featuredSlides[featIdx];
+    const bg = $('.featured-bg-photo', card);
+    const title = $('.featured-title', card);
+    const tag = $('.featured-sub-tag', card);
+    const desc = $('.featured-summary', card);
+    const counter = $('.featured-counter', card);
+    const rows = $$('.featured-meta-row span:last-child', card);
+    if (bg) bg.style.backgroundImage = `url('${s.bg}')`;
+    if (title) title.textContent = s.title;
+    if (tag) tag.textContent = s.tag;
+    if (desc) desc.textContent = s.desc;
+    if (counter) counter.textContent = `0${featIdx + 1} / 03`;
+    if (rows[0]) rows[0].textContent = s.date;
+    if (rows[1]) rows[1].textContent = s.loc;
+    if (rows[2]) rows[2].textContent = s.time;
+  };
+  $('.prev-feat')?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    featIdx = (featIdx - 1 + featuredSlides.length) % featuredSlides.length;
+    updateFeatSlide();
+  });
+  $('.next-feat')?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    featIdx = (featIdx + 1) % featuredSlides.length;
+    updateFeatSlide();
+  });
   $$('.js-form').forEach(form=>form.addEventListener('submit',submitForm));observe();
 }
 async function submitForm(e){
