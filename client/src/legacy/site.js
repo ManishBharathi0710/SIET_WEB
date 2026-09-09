@@ -35,12 +35,20 @@ const icon=(name)=>{
   if(name==='pin'||name==='location') return `<svg class="ui-icon-svg pin-svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>`;
   if(name==='clock'||name==='time') return `<svg class="ui-icon-svg clock-svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>`;
   if(name==='grid'||name==='all-apps') return `<svg class="ui-icon-svg grid-svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>`;
-  if(name==='music') return `<svg class="ui-icon-svg music-svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>`;
+  if(name==='ps-trophy-laurel') return `<svg class="ui-icon-svg ps-trophy-svg" width="66" height="66" viewBox="0 0 72 72" fill="none" aria-hidden="true"><path d="M22 49C17.5 42 16 33 18.5 22C19.5 26.5 22.5 30 26 31M19 25C17 18.5 20.5 13.5 26.5 11C25.5 16 28 20 31 22M21 37C17 32.5 17 26.5 21 21C23 25 26 27 29.5 28M24 45C20.5 41 20 35 24 30C27 34 29.5 36.5 33.5 37.5" stroke="#f6ce62" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M50 49C54.5 42 56 33 53.5 22C52.5 26.5 49.5 30 46 31M53 25C55 18.5 51.5 13.5 45.5 11C46.5 16 44 20 41 22M51 37C55 32.5 55 26.5 51 21C49 25 46 27 42.5 28M48 45C51.5 41 52 35 48 30C45 34 42.5 36.5 38.5 37.5" stroke="#f6ce62" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/><rect x="29" y="52" width="14" height="4.5" rx="1.5" fill="#f8d675"/><path d="M32.5 44H39.5V52H32.5V44Z" fill="#e5af30"/><path d="M26 19H46V31C46 36.5 41.5 41 36 41C30.5 41 26 36.5 26 31V19Z" fill="url(#trophyCupGold)"/><path d="M26 22C21.5 22 19 25.5 19 29.5C19 33.5 22.5 36 26 36M46 22C50.5 22 53 25.5 53 29.5C53 33.5 49.5 36 46 36" stroke="#f6ce62" stroke-width="2.6" stroke-linecap="round"/><path d="M36 23.5L37.4 26.3L40.5 26.7L38.2 28.9L38.8 32L36 30.5L33.2 32L33.8 28.9L31.5 26.7L34.6 26.3L36 23.5Z" fill="#01331f"/><defs><linearGradient id="trophyCupGold" x1="26" y1="19" x2="46" y2="41" gradientUnits="userSpaceOnUse"><stop stop-color="#fff4b8"/><stop offset="0.35" stop-color="#f8cf5d"/><stop offset="1" stop-color="#cc8f1a"/></linearGradient></defs></svg>`;
+  if(name==='ps-users') return `<svg class="ui-icon-svg ps-card-icon-svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="7" r="3.2"/><path d="M12 11.6C9.1 11.6 6.5 13.1 6.5 15.6V17.5H17.5V15.6C17.5 13.1 14.9 11.6 12 11.6Z"/><circle cx="6" cy="9.2" r="2.3"/><path d="M6 12.6C4.8 12.6 3 13.6 3 15.1V16.6H5.2V15.3C5.4 14.3 6.1 13.4 7.2 12.8C6.8 12.7 6.4 12.6 6 12.6Z"/><circle cx="18" cy="9.2" r="2.3"/><path d="M18 12.6C17.6 12.6 17.2 12.7 16.8 12.8C17.9 13.4 18.6 14.3 18.8 15.3V16.6H21V15.1C21 13.6 19.2 12.6 18 12.6Z"/></svg>`;
+  if(name==='ps-chart') return `<svg class="ui-icon-svg ps-card-icon-svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="3" y="14" width="4.4" height="7.2" rx="1.2"/><rect x="9.8" y="10" width="4.4" height="11.2" rx="1.2"/><rect x="16.6" y="6" width="4.4" height="15.2" rx="1.2"/><path d="M4.5 10.5L14 3M14 3H9M14 3V8" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
+  if(name==='ps-diploma') return `<svg class="ui-icon-svg ps-card-icon-svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 3.5C4 2.7 4.7 2 5.5 2H18.5C19.3 2 20 2.7 20 3.5V16.5C20 17.3 19.3 18 18.5 18H5.5C4.7 18 4 17.3 4 16.5V3.5Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><line x1="7.5" y1="6.5" x2="16.5" y2="6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="7.5" y1="10.2" x2="13.5" y2="10.2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="7.5" y1="13.8" x2="11.5" y2="13.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="16.5" cy="15.5" r="3.2" fill="currentColor"/><path d="M15 18L14 22L16.5 20.5L19 22L18 18" fill="currentColor"/></svg>`;
+  if(name==='ps-briefcase') return `<svg class="ui-icon-svg ps-card-icon-svg" width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 4.5V3C9 2.45 9.45 2 10 2H14C14.55 2 15 2.45 15 3V4.5H20C21.1 4.5 22 5.4 22 6.5V11H2V6.5C2 5.4 2.9 4.5 4 4.5H9ZM10.8 3.8H13.2V4.5H10.8V3.8ZM2 12.8V18.5C2 19.6 2.9 20.5 4 20.5H20C21.1 20.5 22 19.6 22 18.5V12.8H13.5V14.5C13.5 14.9 13.1 15.2 12.8 15.2H11.2C10.9 15.2 10.5 14.9 10.5 14.5V12.8H2Z"/></svg>`;
+  if(name==='ps-building') return `<svg class="ui-icon-svg ps-bar-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2L2 7V9H22V7L12 2ZM4 11V19H7V11H4ZM9.5 11V19H12.5V11H9.5ZM15 11V19H18V11H15ZM2 21V23H22V21H2Z"/></svg>`;
+  if(name==='ps-support') return `<svg class="ui-icon-svg ps-bar-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 13C17.9 13 21 13.7 21 15.2V17H12V15.2C12 13.7 15.1 13 16.5 13ZM16.5 11.5C15.1 11.5 14 10.4 14 9C14 7.6 15.1 6.5 16.5 6.5C17.9 6.5 19 7.6 19 9C19 10.4 17.9 11.5 16.5 11.5ZM7.5 12C9.4 12 13 13 13 15V17H2V15C2 13 5.6 12 7.5 12ZM7.5 10.5C5.8 10.5 4.5 9.2 4.5 7.5C4.5 5.8 5.8 4.5 7.5 4.5C9.2 4.5 10.5 5.8 10.5 7.5C10.5 9.2 9.2 10.5 7.5 10.5Z"/></svg>`;
+  if(name==='ps-bulb') return `<svg class="ui-icon-svg ps-bar-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9C5 11.4 6.2 13.5 8 14.7V17C8 17.6 8.4 18 9 18H15C15.6 18 16 17.6 16 17V14.7C17.8 13.5 19 11.4 19 9C19 5.1 15.9 2 12 2ZM9 20C9 20.6 9.4 21 10 21H14C14.6 21 15 20.6 15 20V19H9V20Z"/></svg>`;
+  if(name==='ps-handshake') return `<svg class="ui-icon-svg ps-bar-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 4.2C17.4 3.8 16.7 3.8 16.3 4.2L12.5 8L11.7 7.2C11.5 7 11.2 6.9 10.9 6.9C10.6 6.9 10.3 7 10.1 7.2L6.2 11.1C6 11.3 5.9 11.6 5.9 11.9C5.9 12.2 6 12.5 6.2 12.7L7.6 14.1L3.2 18.5C2.8 18.9 2.8 19.6 3.2 20C3.6 20.4 4.3 20.4 4.7 20L9.1 15.6L10.5 17C10.7 17.2 11 17.3 11.3 17.3C11.6 17.3 11.9 17.2 12.1 17L19.8 9.3C20.2 8.9 20.2 8.2 19.8 7.8L17.8 4.2ZM15.5 11.8L14.1 13.2L12.7 11.8L14.1 10.4L15.5 11.8Z"/></svg>`;
   return `<span class="ui-icon" aria-hidden="true">${({book:'▤',building:'▥',quality:'✓',brief:'▣',compass:'◉',phone:'☎',gift:'◇'}[name]||'◆')}</span>`;
 };
 
 const pageGroups=[
- {label:'About',icon:'users',items:[['vision-mission','Vision & Mission'],['chairman','Chairman’s Desk'],['principal','Principal’s Desk']]},
+ {label:'About',icon:'users',items:[['vision-mission','Vision & Mission'],['program-outcomes','Program Outcomes'],['core-values','Core Values'],['philosophy','Philosophy'],['chairman',"From Chairman's Desk"],['principal',"From Principal's Desk"]]},
  {label:'Academics',icon:'book',items:[['academics','Academic Overview'],['departments','Departments'],['curriculum','Curriculum'],['academic-calendar','Academic Calendar'],['library','Library']]},
  {label:'Admissions',icon:'grad',items:[['programmes','UG & PG Programmes'],['eligibility','Eligibility'],['scholarships','Scholarships'],['fees','Fee Information'],['admission-enquiry','Admission Enquiry']]},
  {label:'Campus',icon:'building',items:[['campus-life','Campus Life'],['facilities','Facilities'],['hostel','Hostel'],['transport','Transport'],['sports','Sports'],['clubs','Student Clubs'],['ncc','NCC & NSS']]},
@@ -111,8 +119,182 @@ function header(){return `<div class="notice"><div class="notice-track"><span><b
 function footer(){return `<footer class="site-footer footer-reference"><div class="footer-top"><div class="footer-brand"><a class="mark" href="#/"><img src="/brand/siet-logo.png" alt="Sri Shakthi emblem"><span><b>SRI SHAKTHI</b><small>INSTITUTE OF ENGINEERING AND TECHNOLOGY</small><em>AUTONOMOUS · AFFILIATED TO ANNA UNIVERSITY</em></span></a><p>Powering the youth.<br>Empowering the nation.</p></div><div class="footer-sitemap">${pageGroups.map(g=>`<div class="footer-link-group"><b>${g.label}</b>${g.items.map(([s,n])=>`<a href="#/${s}"><span>›</span>${n}</a>`).join('')}</div>`).join('')}</div></div><div class="footer-legal"><small>© ${new Date().getFullYear()} Sri Shakthi Institute of Engineering &amp; Technology. All rights reserved.</small><nav><a href="#/privacy-policy">Privacy Policy</a><i></i><a href="#/terms">Terms of Use</a><i></i><a href="#/sitemap">Sitemap</a></nav></div></footer>`}
 const counter=(to,suffix='')=>`<span class="js-counter" data-to="${to}" data-suffix="${suffix}">0${suffix}</span>`;
 
-function homePage(){return `<main class="home-page"><section class="placement-stage placement-stage-v2"><div class="placement-v2-hero">
+function placementHighlightsCardInner(){
+  return `
+    <div class="ps-ambient-glow ps-glow-1" aria-hidden="true"></div>
+    <div class="ps-ambient-glow ps-glow-2" aria-hidden="true"></div>
+
+    <!-- Top Motto Bar -->
+    <div class="ps-top-bar">
+      <span class="ps-top-pill">PEOPLE &nbsp;|&nbsp; KNOWLEDGE &nbsp;|&nbsp; OPPORTUNITIES</span>
+      <span class="ps-top-pill">LEARN &nbsp;|&nbsp; GROW &nbsp;|&nbsp; LEAD</span>
+    </div>
+
+    <!-- Main Header Area -->
+    <div class="ps-header-row">
+      <div class="ps-header-left">
+        <h2 class="ps-heading">
+          <span class="ps-word-placement">Placement</span>
+          <span class="ps-word-highlights">Highlights</span>
+        </h2>
+        <div class="ps-batch-tag">BATCH 2025 &nbsp;–&nbsp; 2026</div>
+        <p class="ps-sub-text">
+          Our students turn learning into real-world opportunities, creating a brighter tomorrow.
+        </p>
+      </div>
+
+      <div class="ps-header-right">
+        <div class="ps-record-pill-banner">
+          <div class="ps-trophy-badge" aria-label="Placement Trophy">
+            ${icon('ps-trophy-laurel')}
+          </div>
+          <div class="ps-record-meta">
+            <span class="ps-record-eyebrow">PLACEMENT RECORD</span>
+            <strong class="ps-record-main">BATCH OF 2026</strong>
+            <small class="ps-record-motto">TALENT TODAY. IMPACT TOMORROW.</small>
+          </div>
+          <div class="ps-ribbon-bookmark">
+            <div class="ps-ribbon-body">
+              <span>FROM</span>
+              <span>CAMPUS</span>
+              <span>TO A BRIGHTER</span>
+              <span>TOMORROW</span>
+            </div>
+            <div class="ps-ribbon-tail" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Middle Grid: Left Script Accent + 4 Cards -->
+    <div class="ps-middle-grid">
+      <div class="ps-script-col" aria-hidden="true">
+        <div class="ps-script-calligraphy">
+          <span>Greater</span>
+          <span>Careers</span>
+          <span>Brighter</span>
+          <span>Tomorrows</span>
+        </div>
+        <div class="ps-dot-grid-accent">
+          ${Array.from({length: 20}).map(()=>`<span></span>`).join('')}
+        </div>
+      </div>
+
+      <div class="ps-cards-track">
+        <!-- Card 01 -->
+        <article class="ps-metric-card ps-card-01">
+          <div class="ps-card-tab">01</div>
+          <div class="ps-card-icon-ring">
+            ${icon('ps-users')}
+          </div>
+          <span class="ps-card-kicker">STUDENTS PLACED</span>
+          <strong class="ps-card-number">${counter(18)}</strong>
+          <div class="ps-card-package-badge">₹10 LPA+</div>
+          <span class="ps-card-package-caption">PACKAGE RANGE</span>
+        </article>
+
+        <!-- Card 02 -->
+        <article class="ps-metric-card ps-card-02">
+          <div class="ps-card-tab">02</div>
+          <div class="ps-card-icon-ring">
+            ${icon('ps-chart')}
+          </div>
+          <span class="ps-card-kicker">STUDENTS PLACED</span>
+          <strong class="ps-card-number">${counter(42)}</strong>
+          <div class="ps-card-package-badge">₹8 LPA+</div>
+          <span class="ps-card-package-caption">PACKAGE RANGE</span>
+        </article>
+
+        <!-- Card 03 -->
+        <article class="ps-metric-card ps-card-03">
+          <div class="ps-card-tab">03</div>
+          <div class="ps-card-icon-ring">
+            ${icon('ps-diploma')}
+          </div>
+          <span class="ps-card-kicker">STUDENTS PLACED</span>
+          <strong class="ps-card-number">${counter(76)}</strong>
+          <div class="ps-card-package-badge">₹6 LPA+</div>
+          <span class="ps-card-package-caption">PACKAGE RANGE</span>
+        </article>
+
+        <!-- Card 04 -->
+        <article class="ps-metric-card ps-card-04">
+          <div class="ps-card-tab">04</div>
+          <div class="ps-card-icon-ring">
+            ${icon('ps-briefcase')}
+          </div>
+          <span class="ps-card-kicker">STUDENTS PLACED</span>
+          <strong class="ps-card-number">${counter(128)}</strong>
+          <div class="ps-card-package-badge">₹4 LPA+</div>
+          <span class="ps-card-package-caption">PACKAGE RANGE</span>
+        </article>
+      </div>
+    </div>
+
+    <!-- Bottom Feature & CTA Bar -->
+    <div class="ps-bottom-bar-shell">
+      <div class="ps-bottom-feature-item">
+        <span class="ps-bottom-icon">${icon('ps-building')}</span>
+        <div class="ps-bottom-text">
+          <strong>${counter(200, '+')}</strong>
+          <span>Recruiting Companies</span>
+        </div>
+      </div>
+      <i class="ps-bottom-divider" aria-hidden="true"></i>
+
+      <div class="ps-bottom-feature-item">
+        <span class="ps-bottom-icon">${icon('ps-support')}</span>
+        <div class="ps-bottom-text">
+          <strong>${counter(100, '%')}</strong>
+          <span>Career Support</span>
+        </div>
+      </div>
+      <i class="ps-bottom-divider" aria-hidden="true"></i>
+
+      <div class="ps-bottom-feature-item">
+        <span class="ps-bottom-icon">${icon('ps-bulb')}</span>
+        <div class="ps-bottom-text">
+          <strong>Industry-Ready</strong>
+          <span>Training &amp; Guidance</span>
+        </div>
+      </div>
+      <i class="ps-bottom-divider" aria-hidden="true"></i>
+
+      <div class="ps-bottom-feature-item">
+        <span class="ps-bottom-icon">${icon('ps-handshake')}</span>
+        <div class="ps-bottom-text">
+          <strong>Stronger Futures</strong>
+          <span>Together</span>
+        </div>
+      </div>
+
+      <button type="button" class="ps-cta-pill-btn js-scroll-programmes" aria-label="Explore Placement Opportunities">
+        <span class="ps-cta-btn-text">Explore Placement Opportunities</span>
+        <span class="ps-cta-btn-circle" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </span>
+      </button>
+    </div>
+
+    <!-- Footer Tagline & Dot Grids -->
+    <div class="ps-footer-baseline">
+      <div class="ps-footer-hairline"></div>
+      <span class="ps-footer-motto">SAME PEOPLE &nbsp;|&nbsp; BRIGHTER OPPORTUNITIES &nbsp;|&nbsp; A STRONGER TOMORROW</span>
+      <div class="ps-footer-hairline"></div>
+      <div class="ps-corner-dots-grid" aria-hidden="true">
+        ${Array.from({length: 18}).map(()=>`<span></span>`).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function homePage(){
+  return `<main class="home-page"><section class="placement-stage placement-stage-v2"><div class="placement-v2-hero">
  <div class="placement-v2-backdrop" aria-hidden="true">
+   <div class="placement-v2-building-photo"></div>
    <svg class="placement-hero-wave-svg" viewBox="0 0 1440 760" preserveAspectRatio="none" fill="none">
      <path d="M0 0H520C575 80 545 170 495 250C445 330 465 410 535 470C615 540 645 620 565 690C505 740 435 760 365 760H0V0Z" fill="url(#heroYellowWaveGrad)"/>
      <defs>
@@ -148,79 +330,9 @@ function homePage(){return `<main class="home-page"><section class="placement-st
       </div>
     </div>
   </div>
-  <div class="placement-v2-panel reveal">
-    <div class="placement-v2-panel-head">
-      <span class="head-rule"></span>
-      <div class="head-titles">
-        <span class="head-main-title">2026–27 PLACEMENT HIGHLIGHTS</span>
-        <span class="head-sub-title">(TILL 31ST JULY 2026)</span>
-      </div>
-      <span class="head-rule"></span>
-    </div>
-    <div class="placement-v2-highest-card">
-      <div class="highest-package-col">
-        <span class="highest-crown-badge">${icon('crown')}</span>
-        <div class="highest-text-group">
-          <small class="highest-sub-label">HIGHEST PLACED PACKAGE</small>
-          <strong class="highest-package-value">₹${counter(33)} LPA</strong>
-        </div>
-      </div>
-      <i class="highest-card-divider"></i>
-      <div class="highest-record-box">
-        <small class="highest-record-label">PLACEMENT RECORD</small>
-        <strong class="highest-record-value">CLASS OF 2026</strong>
-      </div>
-    </div>
-    <div class="placement-v2-stats">
-      <article class="placement-v2-stat-col">
-        <span class="placement-v2-icon">${icon('users')}</span>
-        <strong class="stat-count">${counter(16)}</strong>
-        <span class="stat-placed-label">STUDENTS PLACED</span>
-        <span class="stat-dots" aria-hidden="true">••••••</span>
-        <b class="stat-package-amount">₹10 LPA+</b>
-        <small class="stat-package-sub">PACKAGE RANGE</small>
-      </article>
-      <article class="placement-v2-stat-col">
-        <span class="placement-v2-icon">${icon('trend')}</span>
-        <strong class="stat-count">${counter(37)}</strong>
-        <span class="stat-placed-label">STUDENTS PLACED</span>
-        <span class="stat-dots" aria-hidden="true">••••••</span>
-        <b class="stat-package-amount">₹8 LPA+</b>
-        <small class="stat-package-sub">PACKAGE RANGE</small>
-      </article>
-      <article class="placement-v2-stat-col">
-        <span class="placement-v2-icon">${icon('chart')}</span>
-        <strong class="stat-count">${counter(82, '+')}</strong>
-        <span class="stat-placed-label">STUDENTS PLACED</span>
-        <span class="stat-dots" aria-hidden="true">••••••</span>
-        <b class="stat-package-amount">₹5.5 LPA+</b>
-        <small class="stat-package-sub">PACKAGE RANGE</small>
-      </article>
-    </div>
+  <div class="placement-v2-panel ps-right-card reveal">
+    ${placementHighlightsCardInner()}
   </div>
- </div>
- <div class="placement-hero-bottom-strip">
-   <div class="placement-bottom-features">
-     <div class="bottom-feature-item">
-       <span class="feature-icon">${icon('grad')}</span>
-       <span class="feature-text">Industry Ready Workforce</span>
-     </div>
-     <i class="feature-bar-divider"></i>
-     <div class="bottom-feature-item">
-       <span class="feature-icon">${icon('connect')}</span>
-       <span class="feature-text">Strong Corporate Connect</span>
-     </div>
-     <i class="feature-bar-divider"></i>
-     <div class="bottom-feature-item">
-       <span class="feature-icon">${icon('star')}</span>
-       <span class="feature-text">Consistent Placement Growth</span>
-     </div>
-   </div>
-   <div class="placement-bottom-script" aria-hidden="true">
-     <span>Empower</span>
-     <span>Change</span>
-     <span>Lead</span>
-   </div>
  </div>
 </div></section>
 <section class="about-premium">
@@ -914,240 +1026,51 @@ function programmeCards(list){
   `).join('');
 }
 const slugify=s=>s.toLowerCase().replaceAll(' ','-').replaceAll('&','and').replaceAll('/','-');
-function visionPage(){
-  return `<style>
-    .vision-sidebar { border-top: 6px solid var(--coral); background: var(--paper); padding: 28px; }
-    .vision-sidebar span { font-size: 9px; font-weight: 700; color: #44705a; letter-spacing: 0.15em; display: block; margin-bottom: 15px; }
-    .vision-tab-btn { display: flex; justify-content: space-between; align-items: center; padding: 15px 12px; border-bottom: 1px solid #d6e3da; font-weight: 600; cursor: pointer; color: var(--navy); transition: all 0.2s ease; margin-bottom: 5px; }
-    .vision-tab-btn:hover { background: #f0f7f3; }
-    .vision-tab-btn.active { border: 2px solid var(--navy); background: var(--mint); border-radius: 6px; padding: 13px 12px; }
-    .vision-tab-btn span { color: var(--coral); font-weight: bold; }
-    .vision-content-pane { display: none; }
-    .vision-content-pane.active { display: block; }
-    .outcome-list { display: flex; flex-direction: column; gap: 20px; }
-    .outcome-card { display: flex; gap: 20px; align-items: flex-start; padding: 20px; background: white; border-radius: 8px; border-left: 4px solid var(--navy); box-shadow: 0 4px 15px rgba(0,0,0,0.02); }
-    .outcome-badge { width: 32px; height: 32px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; font-size: 14px; }
-    .outcome-info h4 { margin: 0 0 8px 0; color: var(--navy); font-size: 18px; font-weight: 700; }
-    .outcome-info p { margin: 0; line-height: 1.6; color: #526b5c; font-size: 15px; }
-    .values-list { display: flex; flex-direction: column; gap: 20px; }
-    .value-card { display: flex; gap: 20px; align-items: flex-start; padding: 24px; background: white; border-radius: 8px; border-left: 4px solid var(--coral); box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
-    .value-icon { font-size: 24px; color: var(--navy); line-height: 1; }
-    .value-info h4 { margin: 0 0 8px 0; color: var(--navy); font-size: 18px; font-weight: 700; }
-    .value-info p { margin: 0; line-height: 1.6; color: #526b5c; font-size: 15px; }
-    .philosophy-section h3 { font-size: 22px; color: var(--navy); margin-bottom: 25px; }
-    .milestone { display: flex; gap: 24px; align-items: flex-start; padding: 24px; background: var(--mint); border-radius: 8px; margin-bottom: 20px; border-left: 6px solid var(--coral); }
-    .milestone-num { font-size: 32px; font-weight: 800; color: var(--navy); line-height: 1; }
-    .milestone-content h4 { margin: 0 0 8px 0; color: var(--navy); font-size: 18px; text-transform: uppercase; font-weight: 700; }
-    .milestone-content p { margin: 0; line-height: 1.6; color: #173226; font-size: 16px; }
-    @media(max-width: 900px) {
-      .vision-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
-    }
-  </style>
-  <main class="vision-page">
-    <section class="vision-chairman-section">
-      <div class="vision-chairman-wrap">
-        <div class="vision-chairman-photo reveal">
-          <img src="/brand/chairman-photo.png" alt="Dr. S. Thangavelu">
-          <div class="chairman-name-card">
-            <strong>Dr. S. Thangavelu</strong>
-            <span>Chairman</span>
-            <span>Sri Shakthi Group of Institutions</span>
-          </div>
-        </div>
-        <div class="vision-chairman-copy reveal">
-          <small>SRI SHAKTHI</small>
-          <h1>Vision &amp; Mission</h1>
-          <h2>Engineering education with purpose.</h2>
-          <p>We are committed to building a brighter future through quality education, innovation, research and ethical values.</p>
-          <a class="button" href="#/chairman">Read Full Message ${icon('arrow')}</a>
-        </div>
-      </div>
-    </section>
-    
-    <section class="page-content vision-grid" style="grid-template-columns: 320px 1fr; gap: 5vw; background: white;">
-      <aside class="vision-sidebar">
-         <span>VISION AND MISSION</span>
-         <a href="javascript:void(0)" class="vision-tab-btn active" data-tab="vision-mission">Vision and Mission <span>→</span></a>
-         <a href="javascript:void(0)" class="vision-tab-btn" data-tab="program-outcomes">Program Outcomes of the Institution <span>→</span></a>
-         <a href="javascript:void(0)" class="vision-tab-btn" data-tab="core-values">Core Values of the Institution <span>→</span></a>
-         <a href="javascript:void(0)" class="vision-tab-btn" data-tab="philosophy">Philosophy <span>→</span></a>
-      </aside>
-      
-      <div class="vision-tab-container reveal">
-         <!-- Pane 1: Vision & Mission -->
-         <div class="vision-content-pane active" data-pane="vision-mission">
-            <div class="section-no">OUR VISION</div>
-            <h2>Recognised for excellence.</h2>
-            <p>To make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p>
-            <br><br>
-            <div class="section-no">OUR MISSION</div>
-            <h2>Developing capability and creativity.</h2>
-            <p>To Provide an encouraging environment to develop the intellectual capacity, critical thinking, creativity and problem solving ability of the students.</p>
-         </div>
-         
-         <!-- Pane 2: Program Outcomes -->
-         <div class="vision-content-pane" data-pane="program-outcomes">
-            <div class="section-no">PROGRAM OUTCOMES</div>
-            <h2>Program Outcomes of the Institution</h2>
-            <div class="outcome-list">
-               <div class="outcome-card">
-                  <div class="outcome-badge">a</div>
-                  <div class="outcome-info">
-                     <h4>Engineering Knowledge</h4>
-                     <p>Apply the Knowledge of Mathematics science, engineering fundamentals, and an engineering specialization to the solution of complex engineering problems.</p>
-                  </div>
-               </div>
-               <div class="outcome-card">
-                  <div class="outcome-badge">b</div>
-                  <div class="outcome-info">
-                     <h4>Problem Analysis</h4>
-                     <p>Identify, formulate, review research literature, and analyze complex engineering problems reaching substantiated conclusion using first principles of mathematics, natural sciences, and engineering sciences.</p>
-                  </div>
-               </div>
-               <div class="outcome-card">
-                  <div class="outcome-badge">c</div>
-                  <div class="outcome-info">
-                     <h4>Design / Development of Solutions</h4>
-                     <p>Solutions for complex engineering problems and design system components or processes that meet the specified needs with appropriate consideration for the public health and safety, and the cultural, societal, and environmental considerations.</p>
-                  </div>
-               </div>
-               <div class="outcome-card">
-                  <div class="outcome-badge">d</div>
-                  <div class="outcome-info">
-                     <h4>Conduct Investigations of Complex Problems</h4>
-                     <p>Use research-based knowledge and research methods including design of experiments, analysis and interpretation of data and synthesis of the information to provide valid conclusions.</p>
-                  </div>
-               </div>
-               <div class="outcome-card">
-                  <div class="outcome-badge">e</div>
-                  <div class="outcome-info">
-                     <h4>Modern Tool Usage</h4>
-                     <p>Create, select, and apply appropriate techniques, resources, and modern engineering and IT tools including prediction and modelling to complex engineering activities with an understanding of the limitations.</p>
-                  </div>
-               </div>
-               <div class="outcome-card">
-                  <div class="outcome-badge">f</div>
-                  <div class="outcome-info">
-                     <h4>The Engineer and Society</h4>
-                     <p>Apply reasoning informed by the contextual knowledge to access societal, health, safety, legal and cultural issues and the consequent responsibilities relevant to the professional engineering practice.</p>
-                  </div>
-               </div>
-               <div class="outcome-card">
-                  <div class="outcome-badge">g</div>
-                  <div class="outcome-info">
-                     <h4>Environment and Sustainability</h4>
-                     <p>Understand the impact of the professional engineering solutions in societal and environmental contexts, and demonstrate the knowledge of, and need for sustainable development.</p>
-                  </div>
-               </div>
-               <div class="outcome-card">
-                  <div class="outcome-badge">h</div>
-                  <div class="outcome-info">
-                     <h4>Ethics</h4>
-                     <p>Apply ethical principles and commit to professional ethics and responsibilities and norms of the engineering practice.</p>
-                  </div>
-               </div>
-               <div class="outcome-card">
-                  <div class="outcome-badge">i</div>
-                  <div class="outcome-info">
-                     <h4>Individual and Team Work</h4>
-                     <p>Function effectively as an individual, and as a member or leader in diverse teams and the multidisciplinary settings.</p>
-                  </div>
-               </div>
-               <div class="outcome-card">
-                  <div class="outcome-badge">j</div>
-                  <div class="outcome-info">
-                     <h4>Communication</h4>
-                     <p>Communicate effectively on complex engineering activities with the engineering community and with society at large, such as being able to comprehend and write effective reports and design documentation, make effective presentations and give and receive clear instructions.</p>
-                  </div>
-               </div>
-               <div class="outcome-card">
-                  <div class="outcome-badge">k</div>
-                  <div class="outcome-info">
-                     <h4>Project Management and Finance</h4>
-                     <p>Demonstrate knowledge and understanding of engineering and management principles and apply these to one's own work, as a member and leader in a team, to manage projects and multidisciplinary environments.</p>
-                  </div>
-               </div>
-               <div class="outcome-card">
-                  <div class="outcome-badge">l</div>
-                  <div class="outcome-info">
-                     <h4>Lifelong Learning</h4>
-                     <p>Recognize the need for, and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         
-         <!-- Pane 3: Core Values -->
-         <div class="vision-content-pane" data-pane="core-values">
-            <div class="section-no">CORE VALUES</div>
-            <h2>Core Values of the Institution</h2>
-            <div class="values-list">
-               <div class="value-card">
-                  <div class="value-icon">★</div>
-                  <div class="value-info">
-                     <h4>Quality Education and Integrity</h4>
-                     <p>Providing quality, global education that allows the student to achieve their career goals and aspirations with ethical values; preparing responsible citizens through systematic education.</p>
-                  </div>
-               </div>
-               <div class="value-card">
-                  <div class="value-icon">★</div>
-                  <div class="value-info">
-                     <h4>Excellence in every area</h4>
-                     <p>Imparting career-focused educational programs with the highest level of academic to prepare the students with real-world experience.</p>
-                  </div>
-               </div>
-               <div class="value-card">
-                  <div class="value-icon">★</div>
-                  <div class="value-info">
-                     <h4>Bringing the best</h4>
-                     <p>Encouraging critical thinking, quantitative, ethical decision making, effective communication and social responsibility in students.</p>
-                  </div>
-               </div>
-               <div class="value-card">
-                  <div class="value-icon">★</div>
-                  <div class="value-info">
-                     <h4>Focusing on research activities</h4>
-                     <p>Creating excellent infrastructural amenities to undertake research activities, publish quality research articles and patenting the products/ technologies essential for the society.</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-         
-         <!-- Pane 4: Philosophy -->
-         <div class="vision-content-pane" data-pane="philosophy">
-            <div class="section-no">PHILOSOPHY</div>
-            <h2>Philosophy</h2>
-            <div class="philosophy-section">
-               <h3>We strongly believe...</h3>
-               <div class="milestone">
-                  <div class="milestone-num">01</div>
-                  <div class="milestone-content">
-                     <h4>GATEWAY to success</h4>
-                     <p>Achieving 100% pass is only the GATEWAY to success.</p>
-                  </div>
-               </div>
-               <div class="milestone">
-                  <div class="milestone-num">02</div>
-                  <div class="milestone-content">
-                     <h4>First MILESTONE</h4>
-                     <p>Breeding 100% employable / entrepreneurial engineers is the first MILESTONE.</p>
-                  </div>
-               </div>
-               <div class="milestone">
-                  <div class="milestone-num">03</div>
-                  <div class="milestone-content">
-                     <h4>Our DESTINATION</h4>
-                     <p>Creating 100% confident, contributing and self-realising citizens who will uphold the pride and cultural ethos of our great nation is our DESTINATION.</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-    </section>
-  </main>`;
-}
-function chairmanPage(){return `<main class="chairman-page"><section class="chairman-content"><aside class="chairman-portrait reveal"><img src="/brand/chairman-photo.png" alt="Dr. S. Thangavelu"><h2>Dr. S. Thangavelu</h2><b>Chairman</b><p>Sri Shakthi Group of Institutions</p></aside><article class="chairman-message reveal"><small>A MESSAGE FROM THE CHAIRMAN</small><h1>A dream built on equality, excellence and service.</h1><p>I have always been inspired by Dr. Martin Luther King's statement, 'I have a dream' - a dream I believe will come true - a dream that my children will one day live in a world where they will not be judged by the colour of their skin, but by the content of their character'. This need for tolerance - to create an equal society with no discrimination in Caste, Creed or Colour was best exemplified in the words of Mahatma Gandhi.</p><blockquote>“I do not want my institution to be walled off on all sides, I want the culture of all lands to be blown about my institution as freely as possible. But I refuse to be blown off by any one of them. Mine is not a religion of the prison house. It has room for the least among God's creations but it is proof against insolent pride of race, religion or colour.”</blockquote><p>And this I believe will be the watchword of each and every Shakthian.</p><p>The vision for Sri Shakthi is to make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p><strong>Dr. S. Thangavelu, Chairman</strong></article></section></main>`}
-function principalPage(){return `<main class="chairman-page principal-page"><section class="chairman-content"><aside class="chairman-portrait reveal"><img src="/brand/principal-saravana-kumar.png" alt="Principal"><h2>Dr. N. M. Saravana Kumar</h2><b>Principal, SIET</b></aside><article class="chairman-message reveal"><small>FROM THE PRINCIPAL'S DESK</small><h1>Learning that moves beyond the classroom.</h1><p>Welcome to our institution, where excellence in education, innovation, and character development form the foundation of our academic journey.</p><p>We provide a vibrant learning environment that empowers students with knowledge, technical expertise and essential life skills. Our faculty continuously strive to deliver quality education through innovative teaching, industry collaboration, research and experiential learning.</p><blockquote>We prepare graduates to become competent professionals, responsible citizens and future leaders.</blockquote><strong>Dr. N. M. Saravana Kumar, M.E., Ph.D.<br>Principal, SIET</strong></article></section></main>`}
+const vmIcon=(name)=>({
+  eye:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg>',
+  target:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.2"/><path d="m15.5 8.5 5-5M16 3.5h4.5V8"/></svg>',
+  spark:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2Z"/><path d="m19 16 .8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8L19 16Z"/></svg>',
+  compass:'<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m15.8 8.2-2.3 5.3-5.3 2.3 2.3-5.3 5.3-2.3Z"/></svg>',
+  arrow:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>',
+  education:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-5 9 5-9 5-9-5Z"/><path d="M7 12.2V16c2.5 2.5 7.5 2.5 10 0v-3.8M21 10v6"/></svg>'
+}[name]||'');
+
+function AboutHero(){return `<section class="siet-vm-hero"><div class="siet-vm-hero-grid"></div><div class="siet-vm-hero-orb orb-one"></div><div class="siet-vm-hero-orb orb-two"></div><div class="siet-vm-shell siet-vm-hero-content reveal"><p class="siet-vm-kicker"><i></i> OUR INSTITUTIONAL PURPOSE</p><h1>Vision <em>&amp;</em> Mission</h1><p class="siet-vm-intro">Shaping capable engineers through an enduring commitment to education, innovation, research and excellence.</p></div></section>`}
+function AboutSidebar(active='vision-mission'){const links=[['vision-mission','Vision & Mission','eye'],['program-outcomes','Program Outcomes','target'],['core-values','Core Values','spark'],['philosophy','Philosophy','compass']];return `<aside class="siet-vm-sidebar reveal"><div class="siet-vm-sidebar-head"><span>VISION &amp; MISSION</span><h2>Explore our<br>foundation.</h2></div><nav aria-label="Vision and Mission navigation">${links.map(([slug,label,iconName])=>`<a class="${slug===active?'is-active':''}" href="#/${slug}" ${slug===active?'aria-current="page"':`aria-label="Visit ${label}"`}><span class="siet-vm-nav-icon">${vmIcon(iconName)}</span><b>${label}</b><span class="siet-vm-nav-arrow">${vmIcon('arrow')}</span></a>`).join('')}</nav><div class="siet-vm-sidebar-note"><span>EST. 2006</span><p>Learning with purpose. Leading with impact.</p></div></aside>`}
+function VisionCard(){return `<article class="siet-vm-card siet-vm-card-vision reveal"><div class="siet-vm-card-pattern"></div><div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('eye')}</span><span class="siet-vm-card-number">01 / VISION</span></div><div class="siet-vm-card-copy"><p class="siet-vm-card-label">OUR VISION</p><h2>Engineering a future without limits.</h2><p>To make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p></div><div class="siet-vm-card-footer"><span>Nationally rooted. Globally respected.</span><i></i></div></article>`}
+function MissionCard(){return `<article class="siet-vm-card siet-vm-card-mission reveal"><div class="siet-vm-mission-lines"></div><div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('education')}</span><span class="siet-vm-card-number">02 / MISSION</span></div><div class="siet-vm-card-copy"><p class="siet-vm-card-label">OUR MISSION</p><h2>Inspiring minds to solve what matters.</h2><p>To provide an encouraging environment to develop the intellectual capacity, critical thinking, creativity and problem solving ability of the students.</p></div><div class="siet-vm-card-footer"><span>Curiosity into capability.</span><i></i></div></article>`}
+function visionPage(){return `<main class="siet-vm-page">${AboutHero()}<section class="siet-vm-content"><div class="siet-vm-shell siet-vm-layout">${AboutSidebar()}<div class="siet-vm-main"><div class="siet-vm-section-intro reveal"><p>WHAT GUIDES US</p><h2>Purpose, made <em>practical.</em></h2><span>Our vision sets the horizon. Our mission shapes the everyday learning experience that carries students towards it.</span></div><div class="siet-vm-card-grid">${VisionCard()}${MissionCard()}</div></div></div></section></main>`}
+const programmeOutcomes=[
+ ['PO 01','Engineering knowledge','Apply mathematics, science and engineering fundamentals to solve complex engineering problems.'],
+ ['PO 02','Problem analysis','Identify, formulate, review research literature and analyse complex engineering problems.'],
+ ['PO 03','Design & development','Design solutions for complex problems with appropriate consideration for public health and safety.'],
+ ['PO 04','Investigation','Use research-based knowledge, methods and data analysis to reach valid conclusions.'],
+ ['PO 05','Modern tool usage','Select and apply appropriate techniques, resources and modern engineering tools.'],
+ ['PO 06','Engineer & society','Assess societal, health, safety, legal and cultural responsibilities in engineering practice.'],
+ ['PO 07','Environment & sustainability','Understand and evaluate the impact of engineering solutions in environmental contexts.'],
+ ['PO 08','Ethics','Apply ethical principles and commit to professional responsibilities and norms.'],
+ ['PO 09','Individual & team work','Function effectively as an individual and as a member or leader in diverse teams.'],
+ ['PO 10','Communication','Communicate engineering activities effectively with the engineering community and society.'],
+ ['PO 11','Project management & finance','Apply engineering and management principles to manage projects in multidisciplinary environments.'],
+ ['PO 12','Life-long learning','Recognise the need for and engage in independent, life-long learning in a changing world.']
+];
+function programOutcomesPage(){return `<main class="siet-vm-page siet-po-page"><section class="siet-vm-hero siet-po-hero"><div class="siet-vm-hero-grid"></div><div class="siet-vm-hero-orb orb-one"></div><div class="siet-vm-hero-orb orb-two"></div><div class="siet-vm-shell siet-vm-hero-content reveal"><p class="siet-vm-kicker"><i></i> OUTCOME-BASED EDUCATION</p><h1>Program <em>Outcomes</em></h1><p class="siet-vm-intro">Building engineering graduates with the knowledge, mindset and responsibility to create meaningful impact.</p></div></section><section class="siet-vm-content"><div class="siet-vm-shell siet-vm-layout">${AboutSidebar('program-outcomes')}<div class="siet-vm-main"><div class="siet-vm-section-intro reveal"><p>THE SIET GRADUATE</p><h2>Ready to think.<br><em>Ready to build.</em></h2><span>Our programme outcomes define the capabilities every SIET graduate develops through rigorous learning, real-world practice and a commitment to responsible innovation.</span></div><div class="siet-po-grid">${programmeOutcomes.map(([number,title,copy],index)=>`<article class="siet-po-card reveal"><span class="siet-po-index">${String(index+1).padStart(2,'0')}</span><span class="siet-po-code">${number}</span><span class="siet-po-icon">${vmIcon(index%3===0?'target':index%3===1?'spark':'compass')}</span><h3>${title}</h3><p>${copy}</p><span class="siet-po-line"></span></article>`).join('')}</div></div></div></section></main>`}
+const coreValues=[
+ ['01','Excellence','We pursue high standards in learning, research and every contribution we make.','target'],
+ ['02','Integrity','We act with honesty, accountability and respect in every decision and relationship.','compass'],
+ ['03','Innovation','We nurture curiosity and the courage to turn ideas into meaningful solutions.','spark'],
+ ['04','Inclusivity','We create a welcoming community where every learner can contribute and thrive.','eye'],
+ ['05','Collaboration','We grow through shared knowledge, multidisciplinary teamwork and industry connection.','education'],
+ ['06','Social responsibility','We use engineering knowledge to serve people, society and the planet.','target']
+];
+function coreValuesPage(){return `<main class="siet-vm-page siet-cv-page"><section class="siet-vm-hero siet-cv-hero"><div class="siet-vm-hero-grid"></div><div class="siet-vm-hero-orb orb-one"></div><div class="siet-vm-hero-orb orb-two"></div><div class="siet-vm-shell siet-vm-hero-content reveal"><p class="siet-vm-kicker"><i></i> THE SIET WAY</p><h1>Core <em>Values</em></h1><p class="siet-vm-intro">The shared principles that guide how we learn, lead, innovate and contribute to the world around us.</p></div></section><section class="siet-vm-content"><div class="siet-vm-shell siet-vm-layout">${AboutSidebar('core-values')}<div class="siet-vm-main"><div class="siet-vm-section-intro reveal"><p>OUR COMMON COMPASS</p><h2>Values that shape<br><em>every possibility.</em></h2><span>At SIET, technical mastery is strengthened by character. These values create an environment where ambition is grounded in purpose.</span></div><div class="siet-cv-grid">${coreValues.map(([number,title,copy,iconName])=>`<article class="siet-cv-card reveal"><span class="siet-cv-number">${number}</span><span class="siet-cv-icon">${vmIcon(iconName)}</span><h3>${title}</h3><p>${copy}</p><span class="siet-cv-corner"></span></article>`).join('')}</div></div></div></section></main>`}
+function philosophyPage(){const principles=[['Learn by doing','Learning becomes lasting when ideas are tested, made and improved through purposeful practice.','01'],['Think beyond disciplines','The most valuable solutions emerge when engineering connects with people, society and the wider world.','02'],['Grow with responsibility','Knowledge carries purpose. We prepare students to use it ethically, sustainably and for public good.','03']];return `<main class="siet-vm-page siet-ph-page"><section class="siet-vm-hero siet-ph-hero"><div class="siet-vm-hero-grid"></div><div class="siet-vm-hero-orb orb-one"></div><div class="siet-vm-hero-orb orb-two"></div><div class="siet-vm-shell siet-vm-hero-content reveal"><p class="siet-vm-kicker"><i></i> OUR EDUCATIONAL BELIEF</p><h1>Learning with <em>purpose.</em></h1><p class="siet-vm-intro">An education that builds confident thinkers, capable creators and responsible citizens for a changing world.</p></div></section><section class="siet-vm-content"><div class="siet-vm-shell siet-vm-layout">${AboutSidebar('philosophy')}<div class="siet-vm-main"><article class="siet-ph-statement reveal"><span class="siet-ph-quote">“</span><p>We believe education should do more than prepare students for a profession. It should inspire them to question, create, collaborate and use their capabilities to make a meaningful difference.</p><span class="siet-ph-mark"><i></i> SRI SHAKTHI PHILOSOPHY</span></article><div class="siet-ph-principles">${principles.map(([title,copy,number],index)=>`<article class="siet-ph-principle reveal"><span class="siet-ph-principle-no">${number}</span><span class="siet-ph-principle-icon">${vmIcon(index===0?'education':index===1?'spark':'compass')}</span><div><h3>${title}</h3><p>${copy}</p></div></article>`).join('')}</div><div class="siet-ph-closing reveal"><div><p>OUR PROMISE</p><h2>Knowledge in action.<br><em>Character in leadership.</em></h2></div><span>Every SIET experience is designed to turn potential into a positive force for the future.</span></div></div></div></section></main>`}
+function chairmanPage(){return `<main class="siet-cd-page chairman-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/chairman-transparent-cropped.png" alt="Dr. S. Thangavelu, Chairman"></div><div class="siet-cd-name"><strong>Dr. S. Thangavelu</strong><span>Chairman</span><small>Sri Shakthi Group of Institutions</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE CHAIRMAN</p><h1>A dream built on <em>equality, excellence</em> and service.</h1><p>Building an institution where every student is encouraged to learn deeply, think boldly and contribute meaningfully.</p></div></div></div></section><section id="chairman-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>CHAIRMAN’S MESSAGE</p><h2>Education that empowers<br><em>each individual.</em></h2></div><div class="siet-cd-prose reveal"><p>I have always been inspired by Dr. Martin Luther King's statement, ‘I have a dream’ — a dream I believe will come true — a dream that my children will one day live in a world where they will not be judged by the colour of their skin, but by the content of their character. This need for tolerance — to create an equal society with no discrimination in caste, creed or colour — was best exemplified in the words of Mahatma Gandhi.</p><blockquote>“I do not want my institution to be walled off on all sides. I want the culture of all lands to be blown about my institution as freely as possible. But I refuse to be blown off by any one of them.”</blockquote><p>And this I believe will be the watchword of each and every Shakthian.</p><p>The vision for Sri Shakthi is to make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. S. Thangavelu</strong><small>Chairman, Sri Shakthi Group of Institutions</small></div></div></div></article></div></section></main>`}
+function principalPage(){return `<main class="siet-cd-page principal-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/principal-saravana-kumar.png" alt="Dr. N. M. Saravana Kumar, Principal"></div><div class="siet-cd-name"><strong>Dr. N. M. Saravana Kumar</strong><span>Principal</span><small>Sri Shakthi Institute of Engineering and Technology</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE PRINCIPAL</p><h1>Learning that builds <em>knowledge, character</em> and purpose.</h1><p>Creating an environment where every student develops the knowledge, skills and character to lead with purpose.</p></div></div></div></section><section id="principal-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>PRINCIPAL'S MESSAGE</p><h2>Education for capable,<br><em>responsible leaders.</em></h2></div><div class="siet-cd-prose reveal"><p>Welcome to our institution, where excellence in education, innovation, and character development form the foundation of our academic journey.</p><p>We provide a vibrant learning environment that empowers students with knowledge, technical expertise and essential life skills. Our faculty continuously strive to deliver quality education through innovative teaching, industry collaboration, research and experiential learning.</p><blockquote>"We prepare graduates to become competent professionals, responsible citizens and future leaders."</blockquote><p>At Sri Shakthi, we believe that every student brings unique potential. Our commitment is to nurture that potential through mentorship, opportunity, and a culture of continuous improvement — ensuring our graduates are prepared not just for careers, but for lives of meaning and contribution.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. N. M. Saravana Kumar</strong><small>Principal, Sri Shakthi Institute of Engineering and Technology</small></div></div></div></article></div></section></main>`}
+
+const departmentDetails={'Agricultural Engineering':{courses:[['B.E - Agricultural Engineering','60'],['M.Tech - Farm Machinery','18']],overview:'The department of Agricultural Engineering was started in Sri Shakthi Institute of Engineering and Technology (SSIET), Coimbatore, in 2015. The Chairman, Dr. S Thangavelu, is himself an Agricultural Engineer and a Ph. D. degree holder in Bio Energy from Tamil Nadu Agricultural University (TNAU), Coimbatore, and worked as a faculty for 28 years in TNAU. During the past years, the department has been in the journey with SSIET to fulfil the motto, “Powering the Youth, Empowering the Nation”. The department offers B. E. Agriculture Engineering, focussing on widening the practical knowledge of the students thus encouraging them to solve different practical difficulties in small-landholdings. Well-qualified faculty members are the strength of the department. The department constitutes experienced and dedicated faculty and supporting staff members with excellent academic research and industrial work experience to promote research and intervention in the existing methods. Presently, the faculty consists of experts from farm machinery and power, soil and water conservation engineering, agricultural processing, civil engineering, mechanical engineering, food technology and agriculture. Further, the practical knowledge gained by them during practical field works and industrial visits has been added advantage for new technology and innovations. The department is new in offering the degree program in the institute. Despite, about 30 students have been graduated during 2019 from the department and are well placed. At present there are 375 students are admitted in the degree program, and the department is envisage more students in the future.'},default:{courses:[],overview:'The department combines strong academic foundations with practical laboratory learning, industry exposure, project work and research. Experienced faculty members guide students to solve real-world engineering problems and build careers for a changing world.'}};
+programs.forEach(([name,description])=>{if(!departmentDetails[name])departmentDetails[name]={courses:[['B.E - '+name,'60']],overview:'The '+name+' department at Sri Shakthi Institute of Engineering and Technology develops practical expertise through laboratory learning, industry exposure, projects and research. '+description}});
+function departmentPage(dept){const detail=departmentDetails[dept]||departmentDetails.default;const courses=detail.courses.length?detail.courses:[['B.E - '+dept,'60']];const sections=['About the Department','Why '+dept+' at SIET','Unique Facilities','Vision & Mission','Programme Educational Objectives','Programme Specific Outcomes','Programme Outcomes','Faculty Profile','PAC Members','Academic Calendar','Achievements','Curriculum','Placements-Key Companies','Student Placements','Newsletter & Magazine','Alumni Corner','Feedback'];return `<main class="department-detail-page"><section class="department-detail-header"><div class="department-detail-title"><h1>${dept}</h1><div class="department-breadcrumb"><a href="#/">Home</a><span>/</span><a href="#/departments">Departments</a><span>/</span><b>${dept}</b></div></div></section><div class="department-detail-layout"><aside class="department-detail-nav" aria-label="Department sections">${sections.map((section,index)=>`<button class="${index===0?'active':''}" type="button" data-section="department-section-${index}">${section}</button>`).join('')}</aside><article class="department-detail-content"><div class="department-intake"><table><thead><tr><th>Courses Offered</th><th>Intake</th></tr></thead><tbody>${courses.map(([course,intake])=>`<tr><td>${course}</td><td>${intake}</td></tr>`).join('')}</tbody></table></div><section id="department-section-0" class="department-copy is-open"><h2>About the Department</h2><p>${detail.overview}</p></section>${sections.slice(1).map((section,index)=>`<section id="department-section-${index+1}" class="department-copy department-placeholder"><h2>${section}</h2><p>${section} information for ${dept} will be updated by the department office.</p></section>`).join('')}</article></div></main>`}
 
 const careerUnits={
   college:{
@@ -1189,6 +1112,7 @@ const careerUnits={
 function internalPage(route){
   const isDept=route.startsWith('department/');
   const deptName=isDept?titleCase(route.slice(11).replaceAll('-',' ')).replaceAll(' And ',' & '):'';
+  if(isDept&&typeof departmentPage==='function') return departmentPage(deptName);
   const data=isDept?[deptName,`Department of ${deptName}`,'Build strong engineering foundations through expert teaching, practical laboratories, industry exposure, projects, research and collaborative learning.']:(pageCopy[route]||['Sri Shakthi','Institutional information','Explore Sri Shakthi Institute of Engineering and Technology.']);
   
   const sidebarHtml=`
@@ -1245,12 +1169,12 @@ function internalPage(route){
   </div>`:'' ;
 
   return `<main class="internal-page">
-    <section class="page-hero">
+    ${route==='placements'?`<section class="placement-showcase-section" style="padding: 24px 20px 0;"><div class="ps-shell"><div class="placement-v2-panel ps-right-card reveal" style="max-width: 1180px; margin: 0 auto;">${placementHighlightsCardInner()}</div></div></section>`:`<section class="page-hero">
       <img class="page-crest" src="/brand/siet-logo.png" alt="">
       <div class="eyebrow"><span></span> SRI SHAKTHI</div>
       <h1 class="reveal">${data[0]}</h1>
       <p>${data[1]}</p>
-    </section>
+    </section>`}
     <section class="page-content">
       <div class="reveal">
         <div class="section-no">OVERVIEW</div>
@@ -1277,9 +1201,13 @@ function careersPage(){
 
 function videoModal(){return `<div class="video-modal" role="dialog" aria-modal="true"><div class="video-shell portrait"><button class="video-close" aria-label="Close video">×</button><div class="video-frame"><video controls autoplay playsinline poster="/brand/techpark-hd.jpg"><source src="/brand/siet-campus-video.mp4" type="video/mp4"></video></div></div></div>`}
 function route(){return decodeURIComponent(location.hash.replace(/^#\/?/,'')).replace(/\/$/,'')}
-function render(){if(!appRoot)return;const r=route();let content=!r?homePage():r==='vision-mission'||r==='about'?visionPage():r==='chairman'?chairmanPage():r==='principal'?principalPage():r==='admission-enquiry'||r==='apply'?enquiryPage(r==='apply'):r==='careers'?careersPage():internalPage(r);appRoot.innerHTML=header()+content+footer();document.title=`${r?titleCase(r.replaceAll('-',' ')):'Sri Shakthi'} | SIET`;bind();scrollTo(0,0)}
+function render(){if(!appRoot)return;const r=route();let content=!r?homePage():r==='vision-mission'||r==='about'?visionPage():r==='program-outcomes'?programOutcomesPage():r==='core-values'?coreValuesPage():r==='philosophy'?philosophyPage():r==='chairman'?chairmanPage():r==='principal'?principalPage():r==='admission-enquiry'||r==='apply'?enquiryPage(r==='apply'):r==='careers'?careersPage():internalPage(r);appRoot.innerHTML=header()+content+footer();document.title=`${r?titleCase(r.replaceAll('-',' ')):'Sri Shakthi'} | SIET`;bind();scrollTo(0,0)}
 
 function bind(){
+  if(route()==='chairman'){
+    $('.siet-cd-kicker')?.replaceChildren("FROM CHAIRMAN'S DESK");
+    document.title="From Chairman's Desk | SIET";
+  }
   const mobile=$('.mobile-nav'),backdrop=$('.mobile-nav-backdrop'),toggle=$('.institution-mobile-toggle'),closeBtn=$('.mobile-nav-close');
   const closeMenu=()=>{mobile?.classList.remove('open');backdrop?.classList.remove('open');if(toggle)toggle.innerHTML=icon('menu');document.body.style.overflow=''};
   const openMenu=()=>{mobile?.classList.add('open');backdrop?.classList.add('open');if(toggle)toggle.innerHTML=icon('close');document.body.style.overflow='hidden'};
@@ -1474,7 +1402,14 @@ function bind(){
     featIdx = (featIdx + 1) % featuredSlides.length;
     updateFeatSlide();
   });
-  $$('.js-form').forEach(form=>form.addEventListener('submit',submitForm));observe();
+  
+  $$('.department-detail-nav button').forEach(button=>button.addEventListener('click',()=>{
+    const target=document.getElementById(button.dataset.section);
+    if(!target)return;
+    $$('.department-detail-nav button').forEach(item=>item.classList.toggle('active',item===button));
+    $$('.department-copy').forEach(section=>section.classList.toggle('is-open',section===target));
+  }));
+$$('.js-form').forEach(form=>form.addEventListener('submit',submitForm));observe();
 }
 async function submitForm(e){
   e.preventDefault();
