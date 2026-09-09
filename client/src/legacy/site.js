@@ -123,7 +123,6 @@ function homePage(){return `<main class="home-page"><section class="placement-st
        </linearGradient>
      </defs>
    </svg>
-   <div class="placement-v2-building-photo"></div>
    <div class="placement-hero-top-mint-arc"></div>
  </div>
  <div class="placement-v2-container">
@@ -588,139 +587,43 @@ function homePage(){return `<main class="home-page"><section class="placement-st
       <!-- 8-Card 4x2 Gallery Grid -->
       <div class="labs-gallery-grid">
         <!-- Card 01: AI Lab -->
-        <article class="lab-card card-01 reveal" role="button" tabindex="0" data-cat="emerging">
-          <span class="card-index">01</span>
-          <span class="card-floating-badge badge-mint-chip" title="AI & Intelligent Systems">${icon('chip')}</span>
-          <img src="/brand/special-labs/lab-ai.jpg" alt="AI Lab" loading="lazy">
-          <div class="card-bottom-overlay">
-            <div class="card-info-side">
-              <div class="card-title-row">
-                <i class="cat-accent-bar bar-mint"></i>
-                <h4 class="card-title">AI Lab</h4>
-              </div>
-              <p class="card-subtitle">Explore intelligent solutions for tomorrow.</p>
-            </div>
-            <span class="card-circle-arrow">→</span>
-          </div>
+        <article class="lab-card card-01 reveal" role="button" tabindex="0" data-cat="emerging" aria-label="01 AI Lab - Explore intelligent solutions for tomorrow.">
+          <img src="/brand/special-labs/lab-ai.jpg" alt="01 AI Lab" loading="lazy">
         </article>
 
         <!-- Card 02: Cyber & Cloud Lab -->
-        <article class="lab-card card-02 reveal" role="button" tabindex="0" data-cat="emerging">
-          <span class="card-index">02</span>
-          <span class="card-floating-badge badge-blue-cloud" title="Cyber Security & Cloud">${icon('cloud')}</span>
-          <img src="/brand/special-labs/lab-cyber-cloud.jpg" alt="Cyber & Cloud Lab" loading="lazy">
-          <div class="card-bottom-overlay">
-            <div class="card-info-side">
-              <div class="card-title-row">
-                <i class="cat-accent-bar bar-blue"></i>
-                <h4 class="card-title">Cyber & Cloud Lab</h4>
-              </div>
-              <p class="card-subtitle">Secure today. Scale tomorrow.</p>
-            </div>
-            <span class="card-circle-arrow">→</span>
-          </div>
+        <article class="lab-card card-02 reveal" role="button" tabindex="0" data-cat="emerging" aria-label="02 Cyber & Cloud Lab - Secure today. Scale tomorrow.">
+          <img src="/brand/special-labs/lab-cyber-cloud.jpg" alt="02 Cyber & Cloud Lab" loading="lazy">
         </article>
 
         <!-- Card 03: VLSI Lab -->
-        <article class="lab-card card-03 reveal" role="button" tabindex="0" data-cat="core">
-          <span class="card-index">03</span>
-          <span class="card-floating-badge badge-yellow-chip" title="VLSI & Microelectronics">${icon('cpu')}</span>
-          <img src="/brand/special-labs/lab-vlsi.jpg" alt="VLSI Lab" loading="lazy">
-          <div class="card-bottom-overlay">
-            <div class="card-info-side">
-              <div class="card-title-row">
-                <i class="cat-accent-bar bar-gold"></i>
-                <h4 class="card-title">VLSI Lab</h4>
-              </div>
-              <p class="card-subtitle">Designing the next generation chips.</p>
-            </div>
-            <span class="card-circle-arrow">→</span>
-          </div>
+        <article class="lab-card card-03 reveal" role="button" tabindex="0" data-cat="core" aria-label="03 VLSI Lab - Designing the next generation chips.">
+          <img src="/brand/special-labs/lab-vlsi.jpg" alt="03 VLSI Lab" loading="lazy">
         </article>
 
         <!-- Card 04: Embedded Systems Lab -->
-        <article class="lab-card card-04 reveal" role="button" tabindex="0" data-cat="core">
-          <span class="card-index">04</span>
-          <span class="card-floating-badge badge-mint-gear" title="Embedded Systems">${icon('gear')}</span>
-          <img src="/brand/special-labs/lab-embedded.jpg" alt="Embedded Systems Lab" loading="lazy">
-          <div class="card-bottom-overlay">
-            <div class="card-info-side">
-              <div class="card-title-row">
-                <i class="cat-accent-bar bar-emerald"></i>
-                <h4 class="card-title">Embedded Systems Lab</h4>
-              </div>
-              <p class="card-subtitle">Build. Integrate. Innovate.</p>
-            </div>
-            <span class="card-circle-arrow">→</span>
-          </div>
+        <article class="lab-card card-04 reveal" role="button" tabindex="0" data-cat="core" aria-label="04 Embedded Systems Lab - Build. Integrate. Innovate.">
+          <img src="/brand/special-labs/lab-embedded.jpg" alt="04 Embedded Systems Lab" loading="lazy">
         </article>
 
         <!-- Card 05: IoT Lab -->
-        <article class="lab-card card-05 reveal" role="button" tabindex="0" data-cat="emerging">
-          <span class="card-index">05</span>
-          <span class="card-floating-badge badge-mint-wifi" title="Internet of Things">${icon('wifi')}</span>
-          <img src="/brand/special-labs/lab-iot.jpg" alt="IoT Lab" loading="lazy">
-          <div class="card-bottom-overlay">
-            <div class="card-info-side">
-              <div class="card-title-row">
-                <i class="cat-accent-bar bar-mint"></i>
-                <h4 class="card-title">IoT Lab</h4>
-              </div>
-              <p class="card-subtitle">Connect ideas to a smarter world.</p>
-            </div>
-            <span class="card-circle-arrow">→</span>
-          </div>
+        <article class="lab-card card-05 reveal" role="button" tabindex="0" data-cat="emerging" aria-label="05 IoT Lab - Connect ideas to a smarter world.">
+          <img src="/brand/special-labs/lab-iot.jpg" alt="05 IoT Lab" loading="lazy">
         </article>
 
         <!-- Card 06: AR & VR Lab -->
-        <article class="lab-card card-06 reveal" role="button" tabindex="0" data-cat="design">
-          <span class="card-index">06</span>
-          <span class="card-floating-badge badge-purple-vr" title="AR & VR Immersive Tech">${icon('vr')}</span>
-          <img src="/brand/special-labs/lab-ar-vr.jpg" alt="AR & VR Lab" loading="lazy">
-          <div class="card-bottom-overlay">
-            <div class="card-info-side">
-              <div class="card-title-row">
-                <i class="cat-accent-bar bar-purple"></i>
-                <h4 class="card-title">AR & VR Lab</h4>
-              </div>
-              <p class="card-subtitle">Experience. Create. Go Beyond.</p>
-            </div>
-            <span class="card-circle-arrow">→</span>
-          </div>
+        <article class="lab-card card-06 reveal" role="button" tabindex="0" data-cat="design" aria-label="06 AR & VR Lab - Experience. Create. Go Beyond.">
+          <img src="/brand/special-labs/lab-ar-vr.jpg" alt="06 AR & VR Lab" loading="lazy">
         </article>
 
         <!-- Card 07: PCB Design & Assembly Lab -->
-        <article class="lab-card card-07 reveal" role="button" tabindex="0" data-cat="core">
-          <span class="card-index">07</span>
-          <span class="card-floating-badge badge-pink-tool" title="PCB Prototyping">${icon('soldering')}</span>
-          <img src="/brand/special-labs/lab-pcb.jpg" alt="PCB Design & Assembly Lab" loading="lazy">
-          <div class="card-bottom-overlay">
-            <div class="card-info-side">
-              <div class="card-title-row">
-                <i class="cat-accent-bar bar-pink"></i>
-                <h4 class="card-title">PCB Design & Assembly Lab</h4>
-              </div>
-              <p class="card-subtitle">From design to real-world prototypes.</p>
-            </div>
-            <span class="card-circle-arrow">→</span>
-          </div>
+        <article class="lab-card card-07 reveal" role="button" tabindex="0" data-cat="core" aria-label="07 PCB Design & Assembly Lab - From design to real-world prototypes.">
+          <img src="/brand/special-labs/lab-pcb.jpg" alt="07 PCB Design & Assembly Lab" loading="lazy">
         </article>
 
         <!-- Card 08: Robotics & Automation Lab -->
-        <article class="lab-card card-08 reveal" role="button" tabindex="0" data-cat="design">
-          <span class="card-index">08</span>
-          <span class="card-floating-badge badge-green-bot" title="Robotics & Industrial Automation">${icon('bot')}</span>
-          <img src="/brand/special-labs/lab-robotics.jpg" alt="Robotics & Automation Lab" loading="lazy">
-          <div class="card-bottom-overlay">
-            <div class="card-info-side">
-              <div class="card-title-row">
-                <i class="cat-accent-bar bar-teal"></i>
-                <h4 class="card-title">Robotics & Automation Lab</h4>
-              </div>
-              <p class="card-subtitle">Ideate. Build. Automate.</p>
-            </div>
-            <span class="card-circle-arrow">→</span>
-          </div>
+        <article class="lab-card card-08 reveal" role="button" tabindex="0" data-cat="design" aria-label="08 Robotics & Automation Lab - Ideate. Build. Automate.">
+          <img src="/brand/special-labs/lab-robotics.jpg" alt="08 Robotics & Automation Lab" loading="lazy">
         </article>
       </div>
 
