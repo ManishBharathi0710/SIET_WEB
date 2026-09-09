@@ -128,7 +128,7 @@ function homePage(){return `<main class="home-page"><section class="placement-st
  <div class="placement-v2-container">
   <div class="placement-v2-copy reveal">
     <div class="placement-v2-kicker">PLACEMENT EXCELLENCE</div>
-    <div class="placement-v2-pill">CLASS OF 2027</div>
+    <div class="placement-v2-pill">CLASS OF 2026</div>
     <h1 class="placement-v2-title">
       <span>POWERING</span>
       <span>THE YOUTH</span>
@@ -168,7 +168,7 @@ function homePage(){return `<main class="home-page"><section class="placement-st
       <i class="highest-card-divider"></i>
       <div class="highest-record-box">
         <small class="highest-record-label">PLACEMENT RECORD</small>
-        <strong class="highest-record-value">CLASS OF 2027</strong>
+        <strong class="highest-record-value">CLASS OF 2026</strong>
       </div>
     </div>
     <div class="placement-v2-stats">
