@@ -326,11 +326,6 @@ function homePage() {
         <button type="button" class="placement-v2-btn primary js-scroll-programmes">Explore Placements ${icon('arrow')}</button>
         <button type="button" class="placement-v2-btn secondary js-video">${icon('play')} Watch Placement Journey</button>
       </div>
-      <div class="placement-v2-script-watermark" aria-hidden="true">
-        <span>Build</span>
-        <span>Believe</span>
-        <span>Belong</span>
-      </div>
     </div>
   </div>
   <div class="placement-v2-panel ps-right-card reveal">
@@ -377,7 +372,6 @@ function homePage() {
   <div class="bottom-gold-line" aria-hidden="true"></div>
 </section>
 <section class="programmes-showcase programmes-section">
-  <div class="watermark-script top-script" aria-hidden="true">Innovate<br>Learn<br>Lead</div>
   <div class="watermark-script bottom-script" aria-hidden="true">Engineers for a Better Tomorrow</div>
   <div class="programmes-container">
     <div class="programmes-hero-v2">
@@ -462,14 +456,6 @@ function homePage() {
           <span class="video-circle-icon">${icon('play')}</span>
           <span class="video-label-text">Watch<br>our story</span>
         </button>
-      </div>
-
-      <div class="campus-script-watermark" aria-hidden="true">
-        <span>Same people.</span>
-        <span>Brighter tomorrows.</span>
-        <svg class="script-curve-line" width="160" height="18" viewBox="0 0 160 18" fill="none">
-          <path d="M4 11 Q80 2 156 12" stroke="#d4a300" stroke-width="2.5" stroke-linecap="round"/>
-        </svg>
       </div>
 
       <div class="campus-bottom-sketch-wrap" aria-hidden="true">
@@ -626,11 +612,6 @@ function homePage() {
         </a>
       </div>
     </main>
-  </div>
-
-  <div class="campus-section-footer" aria-hidden="true">
-    <span>LIFE BEYOND CLASSROOMS</span>
-    <span class="footer-gold-bar"></span>
   </div>
 </section>
 
@@ -957,12 +938,6 @@ function homePage() {
 
     <!-- Bottom Floating Stats Row & CTA Banner -->
     <div class="events-bottom-row reveal">
-      <div class="events-script-left" aria-hidden="true">
-        <span>More</span>
-        <span>Than Events.</span>
-        <span>A Brighter</span>
-        <span>Tomorrow.</span>
-      </div>
 
       <div class="events-stats-pill">
         <div class="ev-stat-item">
@@ -1005,12 +980,6 @@ function homePage() {
         </div>
         <span class="events-banner-arrow" aria-hidden="true">→</span>
       </a>
-    </div>
-
-    <!-- Bottom Signature Script -->
-    <div class="events-bottom-signature" aria-hidden="true">
-      <span>Same People</span>
-      <span>Brighters Tomorrows.</span>
     </div>
   </div>
 </section>
@@ -1130,8 +1099,8 @@ function coreBeliefsPage() {
   </section>
  </main>`;
 }
-function chairmanPage() { return `<main class="siet-cd-page chairman-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/updated-chairman-photo.png" alt="Dr. S. Thangavelu, Chairman"></div><div class="siet-cd-name"><strong>Dr. S. Thangavelu</strong><span>Chairman</span><small>Sri Shakthi Group of Institutions</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE CHAIRMAN</p><h1>A dream built on <em>equality, excellence</em> and service.</h1><p>Building an institution where every student is encouraged to learn deeply, think boldly and contribute meaningfully.</p></div></div></div></section><section id="chairman-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>CHAIRMAN’S MESSAGE</p><h2>Education that empowers<br><em>each individual.</em></h2></div><div class="siet-cd-prose reveal"><p>I have always been inspired by Dr. Martin Luther King's statement, ‘I have a dream’ — a dream I believe will come true — a dream that my children will one day live in a world where they will not be judged by the colour of their skin, but by the content of their character. This need for tolerance — to create an equal society with no discrimination in caste, creed or colour — was best exemplified in the words of Mahatma Gandhi.</p><blockquote>“I do not want my institution to be walled off on all sides. I want the culture of all lands to be blown about my institution as freely as possible. But I refuse to be blown off by any one of them.”</blockquote><p>And this I believe will be the watchword of each and every Shakthian.</p><p>The vision for Sri Shakthi is to make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. S. Thangavelu</strong><small>Chairman, Sri Shakthi Group of Institutions</small></div></div></div></article></div></section></main>` }
-function principalPage() { return `<main class="siet-cd-page principal-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/principal-saravana-kumar.png" alt="Dr. N. M. Saravana Kumar, Principal"></div><div class="siet-cd-name"><strong>Dr. N. M. Saravana Kumar</strong><span>Principal</span><small>Sri Shakthi Institute of Engineering and Technology</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE PRINCIPAL</p><h1>Learning that builds <em>knowledge, character</em> and purpose.</h1><p>Creating an environment where every student develops the knowledge, skills and character to lead with purpose.</p></div></div></div></section><section id="principal-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>PRINCIPAL'S MESSAGE</p><h2>Education for capable,<br><em>responsible leaders.</em></h2></div><div class="siet-cd-prose reveal"><p>Welcome to our institution, where excellence in education, innovation, and character development form the foundation of our academic journey.</p><p>We provide a vibrant learning environment that empowers students with knowledge, technical expertise and essential life skills. Our faculty continuously strive to deliver quality education through innovative teaching, industry collaboration, research and experiential learning.</p><blockquote>"We prepare graduates to become competent professionals, responsible citizens and future leaders."</blockquote><p>At Sri Shakthi, we believe that every student brings unique potential. Our commitment is to nurture that potential through mentorship, opportunity, and a culture of continuous improvement — ensuring our graduates are prepared not just for careers, but for lives of meaning and contribution.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. N. M. Saravana Kumar</strong><small>Principal, Sri Shakthi Institute of Engineering and Technology</small></div></div></div></article></div></section></main>` }
+function chairmanPage(){return `<main class="siet-cd-page chairman-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/chairman-passport.png" alt="Dr. S. Thangavelu, Chairman"></div><div class="siet-cd-name"><strong>Dr. S. Thangavelu</strong><span>Chairman</span><small>Sri Shakthi Group of Institutions</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE CHAIRMAN</p><h1>A dream built on <em>equality, excellence</em> and service.</h1><p>Building an institution where every student is encouraged to learn deeply, think boldly and contribute meaningfully.</p></div></div></div></section><section id="chairman-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>CHAIRMAN’S MESSAGE</p><h2>Education that empowers<br><em>each individual.</em></h2></div><div class="siet-cd-prose reveal"><p>I have always been inspired by Dr. Martin Luther King's statement, ‘I have a dream’ — a dream I believe will come true — a dream that my children will one day live in a world where they will not be judged by the colour of their skin, but by the content of their character. This need for tolerance — to create an equal society with no discrimination in caste, creed or colour — was best exemplified in the words of Mahatma Gandhi as follows.</p><blockquote>“I do not want my institution to be walled off on all sides. I want the culture of all lands to be blown about my institution as freely as possible. But I refuse to be blown off by any one of them.”</blockquote><p>And this I believe will be the watchword of each and every Shakthian.</p><p>The vision for Sri Shakthi is to make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. S. Thangavelu</strong><small>Chairman, Sri Shakthi Group of Institutions</small></div></div></div></article></div></section></main>`}
+function principalPage(){return `<main class="siet-cd-page principal-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/principal-saravana-kumar.png" alt="Dr. N. M. Saravana Kumar, Principal"></div><div class="siet-cd-name"><strong>Dr. N. M. Saravana Kumar</strong><span>Principal</span><small>Sri Shakthi Institute of Engineering and Technology</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE PRINCIPAL</p><h1>Learning that builds <em>knowledge, character</em> and purpose.</h1><p>Creating an environment where every student develops the knowledge, skills and character to lead with purpose.</p></div></div></div></section><section id="principal-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>PRINCIPAL'S MESSAGE</p><h2>Education for capable,<br><em>responsible leaders.</em></h2></div><div class="siet-cd-prose reveal"><p>Welcome to our institution, where excellence in education, innovation, and character development form the foundation of our academic journey.</p><p>We provide a vibrant learning environment that empowers students with knowledge, technical expertise and essential life skills. Our faculty continuously strive to deliver quality education through innovative teaching, industry collaboration, research and experiential learning.</p><blockquote>"We prepare graduates to become competent professionals, responsible citizens and future leaders."</blockquote><p>At Sri Shakthi, we believe that every student brings unique potential. Our commitment is to nurture that potential through mentorship, opportunity, and a culture of continuous improvement — ensuring our graduates are prepared not just for careers, but for lives of meaning and contribution.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. N. M. Saravana Kumar</strong><small>Principal, Sri Shakthi Institute of Engineering and Technology</small></div></div></div></article></div></section></main>`}
 
 const departmentDetails = { 'Agricultural Engineering': { courses: [['B.E - Agricultural Engineering', '60'], ['M.Tech - Farm Machinery', '18']], overview: 'The department of Agricultural Engineering was started in Sri Shakthi Institute of Engineering and Technology (SSIET), Coimbatore, in 2015. The Chairman, Dr. S Thangavelu, is himself an Agricultural Engineer and a Ph. D. degree holder in Bio Energy from Tamil Nadu Agricultural University (TNAU), Coimbatore, and worked as a faculty for 28 years in TNAU. During the past years, the department has been in the journey with SSIET to fulfil the motto, “Powering the Youth, Empowering the Nation”. The department offers B. E. Agriculture Engineering, focussing on widening the practical knowledge of the students thus encouraging them to solve different practical difficulties in small-landholdings. Well-qualified faculty members are the strength of the department. The department constitutes experienced and dedicated faculty and supporting staff members with excellent academic research and industrial work experience to promote research and intervention in the existing methods. Presently, the faculty consists of experts from farm machinery and power, soil and water conservation engineering, agricultural processing, civil engineering, mechanical engineering, food technology and agriculture. Further, the practical knowledge gained by them during practical field works and industrial visits has been added advantage for new technology and innovations. The department is new in offering the degree program in the institute. Despite, about 30 students have been graduated during 2019 from the department and are well placed. At present there are 375 students are admitted in the degree program, and the department is envisage more students in the future.' }, default: { courses: [], overview: 'The department combines strong academic foundations with practical laboratory learning, industry exposure, project work and research. Experienced faculty members guide students to solve real-world engineering problems and build careers for a changing world.' } };
 programs.forEach(([name, description]) => { if (!departmentDetails[name]) departmentDetails[name] = { courses: [['B.E - ' + name, '60']], overview: 'The ' + name + ' department at Sri Shakthi Institute of Engineering and Technology develops practical expertise through laboratory learning, industry exposure, projects and research. ' + description } });
