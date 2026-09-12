@@ -124,196 +124,174 @@ const counter = (to, suffix = '') => `<span class="js-counter" data-to="${to}" d
 
 function placementHighlightsCardInner() {
   return `
-    <div class="ps-ambient-glow ps-glow-1" aria-hidden="true"></div>
-    <div class="ps-ambient-glow ps-glow-2" aria-hidden="true"></div>
-
-    <!-- Top Motto Bar -->
-    <div class="ps-top-bar">
-      <span class="ps-top-pill">PEOPLE &nbsp;|&nbsp; KNOWLEDGE &nbsp;|&nbsp; OPPORTUNITIES</span>
-      <span class="ps-top-pill">LEARN &nbsp;|&nbsp; GROW &nbsp;|&nbsp; LEAD</span>
-    </div>
-
-    <!-- Main Header Area -->
-    <div class="ps-header-row">
-      <div class="ps-header-left">
-        <h2 class="ps-heading">
-          <span class="ps-word-placement">Placement</span>
-          <span class="ps-word-highlights">Highlights</span>
-        </h2>
-        <div class="ps-batch-tag">BATCH 2025 &nbsp;–&nbsp; 2026</div>
-        <p class="ps-sub-text">
-          Our students turn learning into real-world opportunities, creating a brighter tomorrow.
-        </p>
-      </div>
-
-      <div class="ps-header-right">
-        <div class="ps-record-pill-banner">
-          <div class="ps-trophy-badge" aria-label="Placement Trophy">
-            ${icon('ps-trophy-laurel')}
-          </div>
-          <div class="ps-record-meta">
-            <span class="ps-record-eyebrow">PLACEMENT RECORD</span>
-            <strong class="ps-record-main">BATCH OF 2026</strong>
-            <small class="ps-record-motto">TALENT TODAY. IMPACT TOMORROW.</small>
-          </div>
-          <div class="ps-ribbon-bookmark">
-            <div class="ps-ribbon-body">
-              <span>FROM</span>
-              <span>CAMPUS</span>
-              <span>TO A BRIGHTER</span>
-              <span>TOMORROW</span>
-            </div>
-            <div class="ps-ribbon-tail" aria-hidden="true"></div>
-          </div>
-        </div>
+    <div class="placement-highlights-tab">
+      <h2 class="highlights-tab-title">2025–26 Placement Highlights</h2>
+      <div class="highlights-tab-sub-row">
+        <span class="tab-sub-line" aria-hidden="true"></span>
+        <span class="highlights-tab-sub">(BATCH 2025–2026)</span>
+        <span class="tab-sub-line" aria-hidden="true"></span>
       </div>
     </div>
-
-    <!-- Middle Grid: Left Script Accent + 4 Cards -->
-    <div class="ps-middle-grid">
-      <div class="ps-script-col" aria-hidden="true">
-        <div class="ps-script-calligraphy">
-          <span>Greater</span>
-          <span>Careers</span>
-          <span>Brighter</span>
-          <span>Tomorrows</span>
+    <div class="placement-card-frame">
+      <!-- Top Cream Placement Record Banner -->
+      <div class="ps-record-cream-banner">
+        <div class="ps-banner-cap-badge" aria-label="Placement Record">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
+          </svg>
         </div>
-        <div class="ps-dot-grid-accent">
-          ${Array.from({ length: 20 }).map(() => `<span></span>`).join('')}
+        <div class="ps-banner-divider" aria-hidden="true"></div>
+        <div class="ps-banner-info">
+          <span class="ps-banner-eyebrow">PLACEMENT RECORD</span>
+          <strong class="ps-banner-title">BATCH OF 2026</strong>
+          <div class="ps-banner-motto-row">
+            <span class="ps-banner-dash" aria-hidden="true"></span>
+            <span class="ps-banner-motto">TODAY. IMPACT TOMORROW.</span>
+          </div>
         </div>
       </div>
 
-      <div class="ps-cards-track">
+      <!-- 4 Metric Cards Grid -->
+      <div class="ps-metric-cards-grid">
         <!-- Card 01 -->
-        <article class="ps-metric-card ps-card-01">
-          <div class="ps-card-tab">01</div>
-          <div class="ps-card-icon-ring">
+        <article class="ps-col-card">
+          <span class="ps-col-index">01</span>
+          <div class="ps-col-icon-circle">
             ${icon('ps-users')}
           </div>
-          <span class="ps-card-kicker">STUDENTS PLACED</span>
-          <strong class="ps-card-number">${counter(18)}</strong>
-          <div class="ps-card-package-badge">₹10 LPA+</div>
-          <span class="ps-card-package-caption">PACKAGE RANGE</span>
+          <span class="ps-col-label">STUDENTS PLACED</span>
+          <strong class="ps-col-count">${counter(18)}</strong>
+          <div class="ps-col-pill">₹10 LPA+</div>
+          <span class="ps-col-caption">PACKAGE RANGE</span>
         </article>
 
         <!-- Card 02 -->
-        <article class="ps-metric-card ps-card-02">
-          <div class="ps-card-tab">02</div>
-          <div class="ps-card-icon-ring">
+        <article class="ps-col-card">
+          <span class="ps-col-index">02</span>
+          <div class="ps-col-icon-circle">
             ${icon('ps-chart')}
           </div>
-          <span class="ps-card-kicker">STUDENTS PLACED</span>
-          <strong class="ps-card-number">${counter(42)}</strong>
-          <div class="ps-card-package-badge">₹8 LPA+</div>
-          <span class="ps-card-package-caption">PACKAGE RANGE</span>
+          <span class="ps-col-label">STUDENTS PLACED</span>
+          <strong class="ps-col-count">${counter(42)}</strong>
+          <div class="ps-col-pill">₹8 LPA+</div>
+          <span class="ps-col-caption">PACKAGE RANGE</span>
         </article>
 
         <!-- Card 03 -->
-        <article class="ps-metric-card ps-card-03">
-          <div class="ps-card-tab">03</div>
-          <div class="ps-card-icon-ring">
+        <article class="ps-col-card">
+          <span class="ps-col-index">03</span>
+          <div class="ps-col-icon-circle">
             ${icon('ps-diploma')}
           </div>
-          <span class="ps-card-kicker">STUDENTS PLACED</span>
-          <strong class="ps-card-number">${counter(76)}</strong>
-          <div class="ps-card-package-badge">₹6 LPA+</div>
-          <span class="ps-card-package-caption">PACKAGE RANGE</span>
+          <span class="ps-col-label">STUDENTS PLACED</span>
+          <strong class="ps-col-count">${counter(76)}</strong>
+          <div class="ps-col-pill">₹6 LPA+</div>
+          <span class="ps-col-caption">PACKAGE RANGE</span>
         </article>
 
         <!-- Card 04 -->
-        <article class="ps-metric-card ps-card-04">
-          <div class="ps-card-tab">04</div>
-          <div class="ps-card-icon-ring">
+        <article class="ps-col-card">
+          <span class="ps-col-index">04</span>
+          <div class="ps-col-icon-circle">
             ${icon('ps-briefcase')}
           </div>
-          <span class="ps-card-kicker">STUDENTS PLACED</span>
-          <strong class="ps-card-number">${counter(128)}</strong>
-          <div class="ps-card-package-badge">₹4 LPA+</div>
-          <span class="ps-card-package-caption">PACKAGE RANGE</span>
+          <span class="ps-col-label">STUDENTS PLACED</span>
+          <strong class="ps-col-count">${counter(128)}</strong>
+          <div class="ps-col-pill">₹4 LPA+</div>
+          <span class="ps-col-caption">PACKAGE RANGE</span>
         </article>
-      </div>
-    </div>
-
-    <!-- Bottom Feature & CTA Bar -->
-    <div class="ps-bottom-bar-shell">
-      <div class="ps-bottom-feature-item">
-        <span class="ps-bottom-icon">${icon('ps-building')}</span>
-        <div class="ps-bottom-text">
-          <strong>${counter(200, '+')}</strong>
-          <span>Recruiting Companies</span>
-        </div>
-      </div>
-      <i class="ps-bottom-divider" aria-hidden="true"></i>
-
-      <div class="ps-bottom-feature-item">
-        <span class="ps-bottom-icon">${icon('ps-support')}</span>
-        <div class="ps-bottom-text">
-          <strong>${counter(100, '%')}</strong>
-          <span>Career Support</span>
-        </div>
-      </div>
-      <i class="ps-bottom-divider" aria-hidden="true"></i>
-
-      <div class="ps-bottom-feature-item">
-        <span class="ps-bottom-icon">${icon('ps-bulb')}</span>
-        <div class="ps-bottom-text">
-          <strong>Industry-Ready</strong>
-          <span>Training &amp; Guidance</span>
-        </div>
-      </div>
-      <i class="ps-bottom-divider" aria-hidden="true"></i>
-
-      <div class="ps-bottom-feature-item">
-        <span class="ps-bottom-icon">${icon('ps-handshake')}</span>
-        <div class="ps-bottom-text">
-          <strong>Stronger Futures</strong>
-          <span>Together</span>
-        </div>
-      </div>
-
-      <button type="button" class="ps-cta-pill-btn js-scroll-programmes" aria-label="Explore Placement Opportunities">
-        <span class="ps-cta-btn-text">Explore Placement Opportunities</span>
-        <span class="ps-cta-btn-circle" aria-hidden="true">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </span>
-      </button>
-    </div>
-
-    <!-- Footer Tagline & Dot Grids -->
-    <div class="ps-footer-baseline">
-      <div class="ps-footer-hairline"></div>
-      <span class="ps-footer-motto">SAME PEOPLE &nbsp;|&nbsp; BRIGHTER OPPORTUNITIES &nbsp;|&nbsp; A STRONGER TOMORROW</span>
-      <div class="ps-footer-hairline"></div>
-      <div class="ps-corner-dots-grid" aria-hidden="true">
-        ${Array.from({ length: 18 }).map(() => `<span></span>`).join('')}
       </div>
     </div>
   `;
 }
 
+const placementLogosRow1 = [
+  { name: 'Abluva', file: 'Abluva-logo.png' },
+  { name: 'Adya', file: 'Adya-logo.png' },
+  { name: 'Auriseg', file: 'Auriseg-logo.png' },
+  { name: 'Cognizant', file: 'Cognizant-logo.png' },
+  { name: 'ConverSight', file: 'Conver-sight-logo.png' },
+  { name: 'Nallas', file: 'nallas-logo.png' },
+  { name: 'nference', file: 'nference-logo.png' },
+  { name: 'Retail AI', file: 'Retail-ai-logo.png' },
+  { name: 'Vakilsearch', file: 'Vakil-search-logo.png' }
+];
+
+const placementLogosRow2 = [
+  { name: 'Conserve', file: 'conserve-logo.png' },
+  { name: 'ITC Limited', file: 'ITC-limited-logo.png' },
+  { name: 'Mr. Copper', file: 'mr-copper-logo.png' },
+  { name: 'Presidio', file: 'Presido-logo.png' },
+  { name: 'ServiceNow', file: 'servicenow-logo.png' },
+  { name: 'Vendasta', file: 'vendasta-logo.png' },
+  { name: 'Zentron Labs', file: 'Zentron-labs-logo.png' },
+  { name: 'Zoho', file: 'zoho-logo.png' },
+  { name: 'ZyNerd', file: 'Zynerd-logo.png' }
+];
+
+function placementMarqueeSection() {
+  const renderLogos = (items, row) => items.map(item => `
+    <div class="placement-marquee-item" data-logo="${item.file.replace('-logo.png', '').toLowerCase()}">
+      <img src="/brand/placement-company-logo/line-${row}/${item.file}" alt="${item.name} logo" class="placement-marquee-logo" loading="eager" decoding="async">
+    </div>
+  `).join('');
+
+  const row1Html = renderLogos(placementLogosRow1, 1);
+  const row2Html = renderLogos(placementLogosRow2, 2);
+
+  return `
+    <section class="placement-marquee-section" aria-label="Recruiting Partners and Placement Companies">
+      <div class="placement-marquee-shell">
+        <div class="placement-marquee-row placement-marquee-row-1" aria-label="Partner Companies Line 1">
+          <div class="placement-marquee-track placement-marquee-track-1">
+            <div class="placement-marquee-group">
+              ${row1Html}
+              ${row1Html}
+            </div>
+            <div class="placement-marquee-group" aria-hidden="true">
+              ${row1Html}
+              ${row1Html}
+            </div>
+          </div>
+        </div>
+
+        <div class="placement-marquee-row placement-marquee-row-2" aria-label="Partner Companies Line 2">
+          <div class="placement-marquee-track placement-marquee-track-2">
+            <div class="placement-marquee-group">
+              ${row2Html}
+              ${row2Html}
+            </div>
+            <div class="placement-marquee-group" aria-hidden="true">
+              ${row2Html}
+              ${row2Html}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
 function homePage() {
   return `<main class="home-page"><section class="placement-stage placement-stage-v2"><div class="placement-v2-hero">
- <div class="placement-v2-backdrop" aria-hidden="true">
-   <div class="placement-v2-building-photo"></div>
-   <div class="placement-hero-top-mint-arc"></div>
- </div>
- <div class="placement-v2-container">
-   <svg class="placement-hero-wave-svg" viewBox="0 0 1440 760" preserveAspectRatio="none" fill="none" aria-hidden="true">
-     <path d="M0 0H520C575 80 545 170 495 250C445 330 465 410 535 470C615 540 645 620 565 690C505 740 435 760 365 760H0V0Z" fill="url(#heroYellowWaveGrad)"/>
-     <defs>
-       <linearGradient id="heroYellowWaveGrad" x1="0" y1="0" x2="640" y2="760" gradientUnits="userSpaceOnUse">
-         <stop offset="0%" stop-color="#ffce34"/>
-         <stop offset="45%" stop-color="#fbbd18"/>
-         <stop offset="100%" stop-color="#f5a810"/>
-       </linearGradient>
-     </defs>
-   </svg>
+  <div class="placement-v2-backdrop" aria-hidden="true">
+    <div class="placement-v2-building-photo"></div>
+    <svg class="placement-hero-wave-svg" viewBox="0 0 1000 760" preserveAspectRatio="none" fill="none" aria-hidden="true">
+      <path d="M0 0H940C995 130 965 270 925 390C885 510 955 620 990 690C1005 720 990 748 960 760H0V0Z" fill="url(#heroYellowWaveGrad)"/>
+      <defs>
+        <linearGradient id="heroYellowWaveGrad" x1="0" y1="0" x2="1000" y2="760" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#ffce34"/>
+          <stop offset="45%" stop-color="#fbbd18"/>
+          <stop offset="100%" stop-color="#f5a810"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <div class="placement-hero-top-mint-arc"></div>
+  </div>
+  <div class="placement-v2-container">
   <div class="placement-v2-copy reveal">
     <div class="placement-v2-kicker">PLACEMENT EXCELLENCE</div>
-    <div class="placement-v2-pill">CLASS OF 2026</div>
+    <div class="placement-v2-pill">CLASS OF 2027</div>
     <h1 class="placement-v2-title">
       <span>POWERING</span>
       <span>THE YOUTH</span>
@@ -333,11 +311,35 @@ function homePage() {
       </div>
     </div>
   </div>
-  <div class="placement-v2-panel ps-right-card reveal">
+  <div class="placement-card-container reveal">
     ${placementHighlightsCardInner()}
   </div>
  </div>
+ <div class="placement-hero-bottom-strip reveal">
+   <div class="placement-bottom-features">
+     <div class="bottom-feature-item">
+       <span class="feature-icon">${icon('ps-building')}</span>
+       <span>Industry Ready Workforce</span>
+     </div>
+     <span class="feature-bar-divider" aria-hidden="true"></span>
+     <div class="bottom-feature-item">
+       <span class="feature-icon">${icon('star')}</span>
+       <span>Strong Corporate Connect</span>
+     </div>
+     <span class="feature-bar-divider" aria-hidden="true"></span>
+     <div class="bottom-feature-item">
+       <span class="feature-icon">${icon('star')}</span>
+       <span>Consistent Placement Growth</span>
+     </div>
+   </div>
+   <div class="placement-bottom-script" aria-hidden="true">
+     <span>Empower</span>
+     <span>Change</span>
+     <span>Lead</span>
+   </div>
+ </div>
 </div></section>
+ ${placementMarqueeSection()}
 <section class="about-premium">
   <div class="about-glow glow-one" aria-hidden="true"></div>
   <div class="about-glow glow-two" aria-hidden="true"></div>
@@ -1234,7 +1236,7 @@ function internalPage(route) {
   </div>`: '';
 
   return `<main class="internal-page">
-    ${route === 'placements' ? `<section class="placement-showcase-section" style="padding: 24px 20px 0;"><div class="ps-shell"><div class="placement-v2-panel ps-right-card reveal" style="max-width: 1180px; margin: 0 auto;">${placementHighlightsCardInner()}</div></div></section>` : `<section class="page-hero">
+    ${route === 'placements' ? `<section class="placement-showcase-section" style="padding: 24px 20px 0;"><div class="ps-shell"><div class="placement-v2-panel ps-right-card reveal" style="max-width: 1180px; margin: 0 auto;">${placementHighlightsCardInner()}</div></div></section>${placementMarqueeSection()}` : `<section class="page-hero">
       <img class="page-crest" src="/brand/siet-logo.png" alt="">
       <div class="eyebrow"><span></span> SRI SHAKTHI</div>
       <h1 class="reveal">${data[0]}</h1>
