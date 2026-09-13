@@ -125,11 +125,6 @@ const counter = (to, suffix = '') => `<span class="js-counter" data-to="${to}" d
 function placementHighlightsCardInner() {
   return `
     <!-- Top Script Flourish as in Reference Image 2 -->
-    <div class="placement-script-flourish" aria-hidden="true">
-      <span>A Brighter</span>
-      <span>Tomorrow</span>
-      <span>Together</span>
-    </div>
 
     <!-- Centered Heading Group -->
     <div class="placement-heading-group">
