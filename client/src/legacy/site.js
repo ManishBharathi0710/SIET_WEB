@@ -124,146 +124,121 @@ const counter = (to, suffix = '') => `<span class="js-counter" data-to="${to}" d
 
 function placementHighlightsCardInner() {
   return `
-    <div class="placement-highlights-tab">
-      <h2 class="highlights-tab-title">2025–26 Placement Highlights</h2>
-      <div class="highlights-tab-sub-row">
-        <span class="tab-sub-line" aria-hidden="true"></span>
-        <span class="highlights-tab-sub">(BATCH 2025–2026)</span>
-        <span class="tab-sub-line" aria-hidden="true"></span>
-      </div>
+    <!-- Top Script Flourish as in Reference Image 2 -->
+    <div class="placement-script-flourish" aria-hidden="true">
+      <span>A Brighter</span>
+      <span>Tomorrow</span>
+      <span>Together</span>
     </div>
-    <div class="placement-card-frame">
-      <!-- Top Cream Placement Record Banner -->
-      <div class="ps-record-cream-banner">
-        <div class="ps-banner-cap-badge" aria-label="Placement Record">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/>
-          </svg>
-        </div>
-        <div class="ps-banner-divider" aria-hidden="true"></div>
-        <div class="ps-banner-info">
-          <span class="ps-banner-eyebrow">PLACEMENT RECORD</span>
-          <strong class="ps-banner-title">BATCH OF 2026</strong>
-          <div class="ps-banner-motto-row">
-            <span class="ps-banner-dash" aria-hidden="true"></span>
-            <span class="ps-banner-motto">TODAY. IMPACT TOMORROW.</span>
-          </div>
-        </div>
+
+    <!-- Centered Heading Group -->
+    <div class="placement-heading-group">
+      <h2 class="placement-main-heading">
+        <span class="heading-green">Placement</span> <span class="heading-gold">Highlights</span>
+      </h2>
+      <div class="placement-subheading-row">
+        <span class="subheading-gold-line" aria-hidden="true"></span>
+        <span class="subheading-batch">2025 – 2026</span>
+        <span class="subheading-batch-tag">( BATCH 2025–2026 )</span>
+        <span class="subheading-gold-line" aria-hidden="true"></span>
       </div>
+      <div class="placement-heading-motto">TODAY. IMPACT TOMORROW.</div>
+    </div>
 
-      <!-- 4 Metric Cards Grid -->
-      <div class="ps-metric-cards-grid">
-        <!-- Card 01 -->
-        <article class="ps-col-card">
-          <span class="ps-col-index">01</span>
-          <div class="ps-col-icon-circle">
-            ${icon('ps-users')}
-          </div>
-          <span class="ps-col-label">STUDENTS PLACED</span>
-          <strong class="ps-col-count">${counter(18)}</strong>
-          <div class="ps-col-pill">₹10 LPA+</div>
-          <span class="ps-col-caption">PACKAGE RANGE</span>
-        </article>
+    <!-- 4 Standalone Statistic Cards in one row -->
+    <div class="ps-standalone-cards-row">
+      <!-- Card 01 -->
+      <article class="ps-stat-card">
+        <div class="ps-stat-icon-circle">
+          ${icon('ps-users')}
+        </div>
+        <div class="ps-stat-pill">₹10 LPA+</div>
+        <strong class="ps-stat-count">${counter(18)}</strong>
+        <span class="ps-stat-label">STUDENTS PLACED</span>
+      </article>
 
-        <!-- Card 02 -->
-        <article class="ps-col-card">
-          <span class="ps-col-index">02</span>
-          <div class="ps-col-icon-circle">
-            ${icon('ps-chart')}
-          </div>
-          <span class="ps-col-label">STUDENTS PLACED</span>
-          <strong class="ps-col-count">${counter(42)}</strong>
-          <div class="ps-col-pill">₹8 LPA+</div>
-          <span class="ps-col-caption">PACKAGE RANGE</span>
-        </article>
+      <!-- Card 02 -->
+      <article class="ps-stat-card">
+        <div class="ps-stat-icon-circle">
+          ${icon('ps-chart')}
+        </div>
+        <div class="ps-stat-pill">₹8 LPA+</div>
+        <strong class="ps-stat-count">${counter(42)}</strong>
+        <span class="ps-stat-label">STUDENTS PLACED</span>
+      </article>
 
-        <!-- Card 03 -->
-        <article class="ps-col-card">
-          <span class="ps-col-index">03</span>
-          <div class="ps-col-icon-circle">
-            ${icon('ps-diploma')}
-          </div>
-          <span class="ps-col-label">STUDENTS PLACED</span>
-          <strong class="ps-col-count">${counter(76)}</strong>
-          <div class="ps-col-pill">₹6 LPA+</div>
-          <span class="ps-col-caption">PACKAGE RANGE</span>
-        </article>
+      <!-- Card 03 -->
+      <article class="ps-stat-card">
+        <div class="ps-stat-icon-circle">
+          ${icon('ps-diploma')}
+        </div>
+        <div class="ps-stat-pill">₹6 LPA+</div>
+        <strong class="ps-stat-count">${counter(76)}</strong>
+        <span class="ps-stat-label">STUDENTS PLACED</span>
+      </article>
 
-        <!-- Card 04 -->
-        <article class="ps-col-card">
-          <span class="ps-col-index">04</span>
-          <div class="ps-col-icon-circle">
-            ${icon('ps-briefcase')}
-          </div>
-          <span class="ps-col-label">STUDENTS PLACED</span>
-          <strong class="ps-col-count">${counter(128)}</strong>
-          <div class="ps-col-pill">₹4 LPA+</div>
-          <span class="ps-col-caption">PACKAGE RANGE</span>
-        </article>
-      </div>
+      <!-- Card 04 -->
+      <article class="ps-stat-card">
+        <div class="ps-stat-icon-circle">
+          ${icon('ps-briefcase')}
+        </div>
+        <div class="ps-stat-pill">₹4 LPA+</div>
+        <strong class="ps-stat-count">${counter(128)}</strong>
+        <span class="ps-stat-label">STUDENTS PLACED</span>
+      </article>
+    </div>
+
+    <!-- Centered Text Below Cards -->
+    <div class="placement-cards-footer-text">
+      <span>SAME PEOPLE</span>
+      <span class="footer-sep" aria-hidden="true">|</span>
+      <span>BRIGHTER OPPORTUNITIES</span>
+      <span class="footer-sep" aria-hidden="true">|</span>
+      <span>A STRONGER TOMORROW</span>
     </div>
   `;
 }
 
-const placementLogosRow1 = [
-  { name: 'Abluva', file: 'Abluva-logo.png' },
-  { name: 'Adya', file: 'Adya-logo.png' },
-  { name: 'Auriseg', file: 'Auriseg-logo.png' },
-  { name: 'Cognizant', file: 'Cognizant-logo.png' },
-  { name: 'ConverSight', file: 'Conver-sight-logo.png' },
-  { name: 'Nallas', file: 'nallas-logo.png' },
-  { name: 'nference', file: 'nference-logo.png' },
-  { name: 'Retail AI', file: 'Retail-ai-logo.png' },
-  { name: 'Vakilsearch', file: 'Vakil-search-logo.png' }
-];
-
-const placementLogosRow2 = [
-  { name: 'Conserve', file: 'conserve-logo.png' },
-  { name: 'ITC Limited', file: 'ITC-limited-logo.png' },
-  { name: 'Mr. Copper', file: 'mr-copper-logo.png' },
-  { name: 'Presidio', file: 'Presido-logo.png' },
-  { name: 'ServiceNow', file: 'servicenow-logo.png' },
-  { name: 'Vendasta', file: 'vendasta-logo.png' },
-  { name: 'Zentron Labs', file: 'Zentron-labs-logo.png' },
-  { name: 'Zoho', file: 'zoho-logo.png' },
-  { name: 'ZyNerd', file: 'Zynerd-logo.png' }
+const placementLogos = [
+  { name: 'Cognizant', file: 'Cognizant-logo.png', line: 1 },
+  { name: 'Zoho', file: 'zoho-logo.png', line: 2 },
+  { name: 'ConverSight', file: 'Conver-sight-logo.png', line: 1 },
+  { name: 'Presidio', file: 'Presido-logo.png', line: 2 },
+  { name: 'ServiceNow', file: 'servicenow-logo.png', line: 2 },
+  { name: 'Nallas', file: 'nallas-logo.png', line: 1 },
+  { name: 'ITC Limited', file: 'ITC-limited-logo.png', line: 2 },
+  { name: 'nference', file: 'nference-logo.png', line: 1 },
+  { name: 'ZyNerd', file: 'Zynerd-logo.png', line: 2 },
+  { name: 'Retail AI', file: 'Retail-ai-logo.png', line: 1 },
+  { name: 'Mr. Copper', file: 'mr-copper-logo.png', line: 2 },
+  { name: 'Vakilsearch', file: 'Vakil-search-logo.png', line: 1 },
+  { name: 'Conserve', file: 'conserve-logo.png', line: 2 },
+  { name: 'Vendasta', file: 'vendasta-logo.png', line: 2 },
+  { name: 'Abluva', file: 'Abluva-logo.png', line: 1 },
+  { name: 'Zentron Labs', file: 'Zentron-labs-logo.png', line: 2 },
+  { name: 'Adya', file: 'Adya-logo.png', line: 1 },
+  { name: 'Auriseg', file: 'Auriseg-logo.png', line: 1 }
 ];
 
 function placementMarqueeSection() {
-  const renderLogos = (items, row) => items.map(item => `
+  const renderLogos = (items) => items.map(item => `
     <div class="placement-marquee-item" data-logo="${item.file.replace('-logo.png', '').toLowerCase()}">
-      <img src="/brand/placement-company-logo/line-${row}/${item.file}" alt="${item.name} logo" class="placement-marquee-logo" loading="eager" decoding="async">
+      <img src="/brand/placement-company-logo/line-${item.line}/${item.file}" alt="${item.name} logo" class="placement-marquee-logo" loading="eager" decoding="async">
     </div>
   `).join('');
 
-  const row1Html = renderLogos(placementLogosRow1, 1);
-  const row2Html = renderLogos(placementLogosRow2, 2);
+  const logosHtml = renderLogos(placementLogos);
 
   return `
     <section class="placement-marquee-section" aria-label="Recruiting Partners and Placement Companies">
       <div class="placement-marquee-shell">
-        <div class="placement-marquee-row placement-marquee-row-1" aria-label="Partner Companies Line 1">
-          <div class="placement-marquee-track placement-marquee-track-1">
+        <div class="placement-marquee-row placement-marquee-single-line" aria-label="Partner Companies">
+          <div class="placement-marquee-track">
             <div class="placement-marquee-group">
-              ${row1Html}
-              ${row1Html}
+              ${logosHtml}
             </div>
             <div class="placement-marquee-group" aria-hidden="true">
-              ${row1Html}
-              ${row1Html}
-            </div>
-          </div>
-        </div>
-
-        <div class="placement-marquee-row placement-marquee-row-2" aria-label="Partner Companies Line 2">
-          <div class="placement-marquee-track placement-marquee-track-2">
-            <div class="placement-marquee-group">
-              ${row2Html}
-              ${row2Html}
-            </div>
-            <div class="placement-marquee-group" aria-hidden="true">
-              ${row2Html}
-              ${row2Html}
+              ${logosHtml}
             </div>
           </div>
         </div>
@@ -276,63 +251,64 @@ function homePage() {
   return `<main class="home-page"><section class="placement-stage placement-stage-v2"><div class="placement-v2-hero">
   <div class="placement-v2-backdrop" aria-hidden="true">
     <div class="placement-v2-building-photo"></div>
-    <svg class="placement-hero-wave-svg" viewBox="0 0 1000 760" preserveAspectRatio="none" fill="none" aria-hidden="true">
-      <path d="M0 0H940C995 130 965 270 925 390C885 510 955 620 990 690C1005 720 990 748 960 760H0V0Z" fill="url(#heroYellowWaveGrad)"/>
+    <div class="placement-v2-photo-overlay"></div>
+    <svg class="placement-hero-wave-svg" viewBox="0 0 1000 800" preserveAspectRatio="none" fill="none" aria-hidden="true">
+      <path d="M0 0H740C790 140 690 260 670 360C640 460 760 520 840 590C920 660 920 740 820 800H0V0Z" fill="url(#heroYellowWaveGrad)"/>
       <defs>
-        <linearGradient id="heroYellowWaveGrad" x1="0" y1="0" x2="1000" y2="760" gradientUnits="userSpaceOnUse">
-          <stop offset="0%" stop-color="#ffce34"/>
-          <stop offset="45%" stop-color="#fbbd18"/>
-          <stop offset="100%" stop-color="#f5a810"/>
+        <linearGradient id="heroYellowWaveGrad" x1="0" y1="0" x2="800" y2="800" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#ffcd29"/>
+          <stop offset="55%" stop-color="#fbbd18"/>
+          <stop offset="100%" stop-color="#f5a60e"/>
         </linearGradient>
       </defs>
     </svg>
     <div class="placement-hero-top-mint-arc"></div>
   </div>
   <div class="placement-v2-container">
-  <div class="placement-v2-copy reveal">
-    <div class="placement-v2-kicker">PLACEMENT EXCELLENCE</div>
-    <div class="placement-v2-pill">CLASS OF 2027</div>
-    <h1 class="placement-v2-title">
-      <span>POWERING</span>
-      <span>THE YOUTH</span>
-      <span class="title-second-part">EMPOWERING</span>
-      <span class="title-second-part">THE NATION</span>
-    </h1>
-    <p class="placement-v2-desc">Industry-aligned training, hands-on learning and a vibrant placement ecosystem that transforms engineering potential into meaningful careers.</p>
-    <div class="placement-v2-actions-area">
-      <div class="placement-v2-actions">
-        <button type="button" class="placement-v2-btn primary js-scroll-programmes">Explore Placements ${icon('arrow')}</button>
-        <button type="button" class="placement-v2-btn secondary js-video">${icon('play')} Watch Placement Journey</button>
+    <div class="placement-v2-copy reveal">
+      <div class="placement-v2-kicker">PLACEMENT EXCELLENCE</div>
+      <div class="placement-v2-pill">CLASS OF 2027</div>
+      <h1 class="placement-v2-title">
+        <span>POWERING</span>
+        <span>THE YOUTH</span>
+        <span class="title-second-part">EMPOWERING</span>
+        <span class="title-second-part">THE NATION</span>
+      </h1>
+      <p class="placement-v2-desc">Industry-aligned training, hands-on learning and a vibrant placement ecosystem that transforms engineering potential into meaningful careers.</p>
+      <div class="placement-v2-actions-area">
+        <div class="placement-v2-actions">
+          <button type="button" class="placement-v2-btn primary js-scroll-programmes">Explore Placements ${icon('arrow')}</button>
+          <button type="button" class="placement-v2-btn secondary js-video">${icon('play')} Watch Placement Journey</button>
+        </div>
       </div>
     </div>
+    <div class="placement-right-section reveal">
+      ${placementHighlightsCardInner()}
+    </div>
   </div>
-  <div class="placement-card-container reveal">
-    ${placementHighlightsCardInner()}
+  <div class="placement-hero-bottom-strip reveal">
+    <div class="placement-bottom-features">
+      <div class="bottom-feature-item">
+        <span class="feature-icon">${icon('ps-building')}</span>
+        <span>Industry Ready Workforce</span>
+      </div>
+      <span class="feature-bar-divider" aria-hidden="true"></span>
+      <div class="bottom-feature-item">
+        <span class="feature-icon">${icon('star')}</span>
+        <span>Strong Corporate Connect</span>
+      </div>
+      <span class="feature-bar-divider" aria-hidden="true"></span>
+      <div class="bottom-feature-item">
+        <span class="feature-icon">${icon('chart')}</span>
+        <span>Consistent Placement Growth</span>
+      </div>
+    </div>
+    <div class="placement-bottom-script" aria-hidden="true">
+      <span>Empower</span>
+      <span>Change</span>
+      <span>Lead</span>
+    </div>
   </div>
- </div>
- <div class="placement-hero-bottom-strip reveal">
-   <div class="placement-bottom-features">
-     <div class="bottom-feature-item">
-       <span class="feature-icon">${icon('ps-building')}</span>
-       <span>Industry Ready Workforce</span>
-     </div>
-     <span class="feature-bar-divider" aria-hidden="true"></span>
-     <div class="bottom-feature-item">
-       <span class="feature-icon">${icon('star')}</span>
-       <span>Strong Corporate Connect</span>
-     </div>
-     <span class="feature-bar-divider" aria-hidden="true"></span>
-     <div class="bottom-feature-item">
-       <span class="feature-icon">${icon('star')}</span>
-       <span>Consistent Placement Growth</span>
-     </div>
-   </div>
-   <div class="placement-bottom-script" aria-hidden="true">
-     <span>Empower</span>
-     <span>Change</span>
-     <span>Lead</span>
-   </div>
- </div>
 </div></section>
  ${placementMarqueeSection()}
 <section class="about-premium">
