@@ -274,7 +274,7 @@ function homePage() {
         <span class="title-second-part">EMPOWERING</span>
         <span class="title-second-part">THE NATION</span>
       </h1>
-      <p class="placement-v2-desc">Industry-aligned training, hands-on learning and a vibrant placement ecosystem that transforms engineering potential into meaningful careers.</p>
+      <p class="placement-v2-desc">Industry-aligned training, hands-on learning and a <br> vibrant placement ecosystem that transforms engineering potential into meaningful careers.</p>
       <div class="placement-v2-actions-area">
         <div class="placement-v2-actions">
           <button type="button" class="placement-v2-btn primary js-scroll-programmes">Explore Placements ${icon('arrow')}</button>
@@ -407,16 +407,6 @@ function homePage() {
 </section>
 <section class="campus-section">
   <!-- Top-Right Background Accent -->
-  <div class="campus-corner-pattern" aria-hidden="true">
-    <div class="campus-arc-circle arc-1"></div>
-    <div class="campus-arc-circle arc-2"></div>
-    <div class="campus-vertical-tags">
-      <span>LEARN</span>
-      <span>CONNECT</span>
-      <span>BELONG</span>
-      <span>GROW</span>
-    </div>
-  </div>
 
   <div class="campus-container">
     <aside class="campus-left reveal">
@@ -547,63 +537,12 @@ function homePage() {
         </article>
       </div>
 
-      <!-- Bottom Floating Stats Bar (Directly underneath the 6-card grid) -->
-      <div class="campus-stats-row reveal">
-        <div class="campus-stats-pill">
-          <div class="stats-bar-item">
-            <span class="bar-icon-badge badge-green-circle">${icon('users')}</span>
-            <div class="bar-stat-text">
-              <strong>${counter(8, 'K+')}</strong>
-              <small>Students</small>
-            </div>
-          </div>
-          <span class="stats-item-divider" aria-hidden="true"></span>
-          <div class="stats-bar-item">
-            <span class="bar-icon-badge badge-green-circle">${icon('users')}</span>
-            <div class="bar-stat-text">
-              <strong>${counter(500, '+')}</strong>
-              <small>Faculty & Mentors</small>
-            </div>
-          </div>
-          <span class="stats-item-divider" aria-hidden="true"></span>
-          <div class="stats-bar-item">
-            <span class="bar-icon-badge badge-gold-cup">${icon('cup')}</span>
-            <div class="bar-stat-text">
-              <strong>${counter(100, '+')}</strong>
-              <small>Clubs & Activities</small>
-            </div>
-          </div>
-          <span class="stats-item-divider" aria-hidden="true"></span>
-          <div class="stats-bar-item">
-            <span class="bar-icon-badge badge-leaf-green">${icon('leaf')}</span>
-            <div class="bar-stat-text">
-              <strong class="green-highlight">A Greener</strong>
-              <small>Tomorrow</small>
-            </div>
-          </div>
-        </div>
-
-        <a href="#/campus-life" class="stats-bar-cta" aria-label="Explore more stories">
-          <span class="cta-circle-btn">→</span>
-          <span class="cta-text">More stories<br>to explore</span>
-          <span class="cta-gold-line" aria-hidden="true"></span>
-        </a>
-      </div>
     </main>
   </div>
 </section>
 
 <!-- Section 04: Special Labs (Advanced Labs for a Brighter Tomorrow) -->
 <section class="special-labs-section" id="special-labs">
-  <div class="labs-arc-circle arc-1" aria-hidden="true"></div>
-  <div class="labs-arc-circle arc-2" aria-hidden="true"></div>
-
-  <div class="labs-vertical-tags" aria-hidden="true">
-    <span>HANDS-ON</span>
-    <span>LEARNING</span>
-    <span>REAL-WORLD</span>
-    <span>IMPACT</span>
-  </div>
 
   <div class="labs-container">
     <!-- Left Column: Eyebrow, Heading, Description, CTA, Watermark, Footer -->
@@ -642,62 +581,46 @@ function homePage() {
 
     <!-- Right Column: Top Bar + 8-Card 4x2 Grid + Bottom Stats Row -->
     <main class="labs-content">
-      <!-- Top Bar: Filter Pills + Navigation Arrows -->
-      <div class="labs-top-bar reveal">
-        <div class="labs-filter-pills" role="tablist" aria-label="Lab Categories">
-          <button class="lab-pill-btn active" type="button" data-cat="all">All Labs</button>
-          <button class="lab-pill-btn" type="button" data-cat="emerging">Emerging Tech</button>
-          <span class="lab-filter-sep" aria-hidden="true">|</span>
-          <button class="lab-pill-btn" type="button" data-cat="core">Core Engineering</button>
-          <span class="lab-filter-sep" aria-hidden="true">|</span>
-          <button class="lab-pill-btn" type="button" data-cat="design">Design & Innovation</button>
-        </div>
-        <div class="labs-nav-arrows" aria-hidden="true">
-          <button type="button" class="lab-arrow-btn prev-btn" aria-label="Previous labs">${icon('prev')}</button>
-          <button type="button" class="lab-arrow-btn next-btn" aria-label="Next labs">${icon('next')}</button>
-        </div>
-      </div>
-
       <!-- 8-Card 4x2 Gallery Grid -->
       <div class="labs-gallery-grid">
         <!-- Card 01: AI Lab -->
         <article class="lab-card card-01 reveal" role="button" tabindex="0" data-cat="emerging" aria-label="01 AI Lab - Explore intelligent solutions for tomorrow.">
-          <img src="/brand/special-labs/lab-ai.jpg" alt="01 AI Lab" loading="lazy">
+          <img src="/brand/special-labs/lab-ai-hd.jpg" alt="01 AI Lab" loading="lazy" decoding="async">
         </article>
 
         <!-- Card 02: Cyber & Cloud Lab -->
         <article class="lab-card card-02 reveal" role="button" tabindex="0" data-cat="emerging" aria-label="02 Cyber & Cloud Lab - Secure today. Scale tomorrow.">
-          <img src="/brand/special-labs/lab-cyber-cloud.jpg" alt="02 Cyber & Cloud Lab" loading="lazy">
+          <img src="/brand/special-labs/lab-cyber-cloud-hd.jpg" alt="02 Cyber & Cloud Lab" loading="lazy" decoding="async">
         </article>
 
         <!-- Card 03: VLSI Lab -->
         <article class="lab-card card-03 reveal" role="button" tabindex="0" data-cat="core" aria-label="03 VLSI Lab - Designing the next generation chips.">
-          <img src="/brand/special-labs/lab-vlsi.jpg" alt="03 VLSI Lab" loading="lazy">
+          <img src="/brand/special-labs/lab-vlsi-hd.jpg" alt="03 VLSI Lab" loading="lazy" decoding="async">
         </article>
 
         <!-- Card 04: Embedded Systems Lab -->
         <article class="lab-card card-04 reveal" role="button" tabindex="0" data-cat="core" aria-label="04 Embedded Systems Lab - Build. Integrate. Innovate.">
-          <img src="/brand/special-labs/lab-embedded.jpg" alt="04 Embedded Systems Lab" loading="lazy">
+          <img src="/brand/special-labs/lab-embedded-hd.jpg" alt="04 Embedded Systems Lab" loading="lazy" decoding="async">
         </article>
 
         <!-- Card 05: IoT Lab -->
         <article class="lab-card card-05 reveal" role="button" tabindex="0" data-cat="emerging" aria-label="05 IoT Lab - Connect ideas to a smarter world.">
-          <img src="/brand/special-labs/lab-iot.jpg" alt="05 IoT Lab" loading="lazy">
+          <img src="/brand/special-labs/lab-iot-hd.jpg" alt="05 IoT Lab" loading="lazy" decoding="async">
         </article>
 
         <!-- Card 06: AR & VR Lab -->
         <article class="lab-card card-06 reveal" role="button" tabindex="0" data-cat="design" aria-label="06 AR & VR Lab - Experience. Create. Go Beyond.">
-          <img src="/brand/special-labs/lab-ar-vr.jpg" alt="06 AR & VR Lab" loading="lazy">
+          <img src="/brand/special-labs/lab-ar-vr-hd.jpg" alt="06 AR & VR Lab" loading="lazy" decoding="async">
         </article>
 
         <!-- Card 07: PCB Design & Assembly Lab -->
         <article class="lab-card card-07 reveal" role="button" tabindex="0" data-cat="core" aria-label="07 PCB Design & Assembly Lab - From design to real-world prototypes.">
-          <img src="/brand/special-labs/lab-pcb.jpg" alt="07 PCB Design & Assembly Lab" loading="lazy">
+          <img src="/brand/special-labs/lab-pcb-hd.jpg" alt="07 PCB Design & Assembly Lab" loading="lazy" decoding="async">
         </article>
 
         <!-- Card 08: Robotics & Automation Lab -->
         <article class="lab-card card-08 reveal" role="button" tabindex="0" data-cat="design" aria-label="08 Robotics & Automation Lab - Ideate. Build. Automate.">
-          <img src="/brand/special-labs/lab-robotics.jpg" alt="08 Robotics & Automation Lab" loading="lazy">
+          <img src="/brand/special-labs/lab-robotics-hd.jpg" alt="08 Robotics & Automation Lab" loading="lazy" decoding="async">
         </article>
       </div>
 
