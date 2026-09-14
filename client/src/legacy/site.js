@@ -122,10 +122,152 @@ function header() {
 function footer() { return `<footer class="site-footer footer-reference"><div class="footer-top"><div class="footer-brand"><a class="mark" href="#/"><img src="/brand/siet-logo.png" alt="Sri Shakthi emblem"><span><b>SRI SHAKTHI</b><small>INSTITUTE OF ENGINEERING AND TECHNOLOGY</small><em>AUTONOMOUS · AFFILIATED TO ANNA UNIVERSITY</em></span></a><p>Powering the youth.<br>Empowering the nation.</p></div><div class="footer-sitemap">${pageGroups.map(g => `<div class="footer-link-group"><b>${g.label}</b>${g.items.map(([s, n]) => `<a href="#/${s}"><span>›</span>${n}</a>`).join('')}</div>`).join('')}</div></div><div class="footer-legal"><small>© ${new Date().getFullYear()} Sri Shakthi Institute of Engineering &amp; Technology. All rights reserved.</small><nav><a href="#/privacy-policy">Privacy Policy</a><i></i><a href="#/terms">Terms of Use</a><i></i><a href="#/sitemap">Sitemap</a></nav></div></footer>` }
 const counter = (to, suffix = '') => `<span class="js-counter" data-to="${to}" data-suffix="${suffix}">0${suffix}</span>`;
 
+const placementTierData = {
+  '10': {
+    tier: '₹10 LPA+',
+    name: 'Super Dream Offers',
+    count: 18,
+    badge: 'Tier 1 • Super Dream Category',
+    highlight: 'Highest offer of ₹24 LPA with an average of ₹12.4 LPA',
+    desc: 'Elite product engineering, AI systems, cloud architecture, and mission-critical cybersecurity roles.',
+    roles: ['Cloud Solutions Architect', 'AI/ML Research Engineer', 'Senior Full Stack Specialist', 'Core Security Analyst'],
+    companies: ['Zoho', 'Presidio', 'ConverSight', 'Cognizant', 'Zentron Labs', 'Auriseg'],
+    statBox: { label: 'Highest Package', value: '₹24 LPA' }
+  },
+  '8': {
+    tier: '₹8 LPA+',
+    name: 'Marquee Offers',
+    count: 42,
+    badge: 'Tier 2 • Marquee Category',
+    highlight: 'Average package of ₹8.6 LPA across engineering disciplines',
+    desc: 'Specialized enterprise technology, data engineering, full stack development, and embedded systems.',
+    roles: ['DevOps & Cloud Engineer', 'Enterprise Application Developer', 'Data Platform Engineer', 'Firmware Engineer'],
+    companies: ['Presidio', 'Cognizant', 'Auriseg', 'nference', 'ZyNerd', 'Retail AI'],
+    statBox: { label: 'Average Package', value: '₹8.6 LPA' }
+  },
+  '6': {
+    tier: '₹6 LPA+',
+    name: 'Premier Offers',
+    count: 76,
+    badge: 'Tier 3 • Premier Category',
+    highlight: 'Average package of ₹6.4 LPA with over 76 confirmed placements',
+    desc: 'Core software engineering, robotics automation, smart infrastructure, and digital transformation.',
+    roles: ['Software Development Engineer', 'Embedded Systems Specialist', 'Automation & QA Engineer', 'Digital Solutions Analyst'],
+    companies: ['Cognizant', 'Zoho', 'Nallas', 'Retail AI', 'ITC Limited', 'Vendasta'],
+    statBox: { label: 'Average Package', value: '₹6.4 LPA' }
+  },
+  '4': {
+    tier: '₹4 LPA+',
+    name: 'Core & IT Offers',
+    count: 128,
+    badge: 'Tier 4 • Core & IT Category',
+    highlight: 'Over 128 career starts with 100% industry placement track record',
+    desc: 'Fundamental engineering roles spanning software engineering, hardware validation, and IoT development.',
+    roles: ['Associate Software Engineer', 'IoT Solutions Associate', 'VLSI Design Trainee', 'Process Engineering Analyst'],
+    companies: ['Abluva', 'Adya', 'Conserve', 'Mr. Copper', 'Vakilsearch', 'ServiceNow'],
+    statBox: { label: 'Placement Success', value: '100%' }
+  }
+};
+
+function placementDetailsModal(tierKey = '10') {
+  const current = placementTierData[tierKey] || placementTierData['10'];
+  return `
+    <div class="placement-modal" role="dialog" aria-modal="true" aria-label="Placement Tier Details">
+      <div class="placement-modal-backdrop"></div>
+      <div class="placement-modal-window">
+        <button class="placement-modal-close" aria-label="Close placement details modal">×</button>
+        
+        <div class="pm-header">
+          <div class="pm-eyebrow">
+            <span class="pm-dot" aria-hidden="true"></span>
+            PLACEMENT RECORD · BATCH OF 2025–2026
+          </div>
+          <h3 class="pm-title">
+            <span class="pm-title-green">Placement</span> <span class="pm-title-gold">Breakdown</span>
+          </h3>
+          <p class="pm-subtitle">Select a package tier to explore placed students, key recruiters, and career tracks.</p>
+        </div>
+
+        <!-- Interactive Tier Switcher Tabs -->
+        <div class="pm-tier-tabs" role="tablist" aria-label="Placement Salary Tiers">
+          ${Object.keys(placementTierData).map(k => {
+            const t = placementTierData[k];
+            const isActive = k === tierKey ? 'active' : '';
+            return `
+              <button class="pm-tab-btn ${isActive}" type="button" role="tab" data-tier="${k}" aria-selected="${k === tierKey ? 'true' : 'false'}">
+                <span class="pm-tab-pill">${t.tier}</span>
+                <span class="pm-tab-count"><b>${t.count}</b> Placed</span>
+              </button>
+            `;
+          }).join('')}
+        </div>
+
+        <!-- Tier Detail Body -->
+        <div class="pm-body">
+          <div class="pm-hero-card">
+            <div class="pm-hero-left">
+              <div class="pm-badge">${current.badge}</div>
+              <h4 class="pm-tier-name">${current.name}</h4>
+              <div class="pm-highlight-row">
+                <span class="pm-highlight-icon">${icon('star')}</span>
+                <span class="pm-highlight-text">${current.highlight}</span>
+              </div>
+              <p class="pm-desc">${current.desc}</p>
+            </div>
+            <div class="pm-hero-stat">
+              <span class="pm-stat-num">${current.count}</span>
+              <span class="pm-stat-lbl">STUDENTS PLACED</span>
+              <span class="pm-stat-badge">${current.statBox.label}: <b>${current.statBox.value}</b></span>
+            </div>
+          </div>
+
+          <div class="pm-details-grid">
+            <div class="pm-col">
+              <h5><span class="pm-col-icon">${icon('ps-building')}</span> Key Recruiting Companies</h5>
+              <div class="pm-company-tags">
+                ${current.companies.map(c => `
+                  <span class="pm-company-tag">
+                    <span class="pm-tag-check" aria-hidden="true">✓</span>
+                    <span>${c}</span>
+                  </span>
+                `).join('')}
+              </div>
+            </div>
+
+            <div class="pm-col">
+              <h5><span class="pm-col-icon">${icon('ps-briefcase')}</span> Roles & Engineering Profiles</h5>
+              <div class="pm-roles-list">
+                ${current.roles.map(r => `
+                  <div class="pm-role-item">
+                    <span class="pm-role-bullet" aria-hidden="true">›</span>
+                    <span>${r}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pm-footer">
+          <div class="pm-footer-stats">
+            <span>Batch Placement: <b>98.4%</b></span>
+            <span class="pm-footer-sep" aria-hidden="true">|</span>
+            <span>Highest Offer: <b>₹24 LPA</b></span>
+            <span class="pm-footer-sep" aria-hidden="true">|</span>
+            <span>Median Package: <b>₹6.8 LPA</b></span>
+          </div>
+          <div class="pm-footer-actions">
+            <a href="#/admission-enquiry" class="pm-cta-btn primary">Enquire For Admissions ${icon('arrow')}</a>
+            <button type="button" class="pm-cta-btn secondary js-close-pm">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function placementHighlightsCardInner() {
   return `
-    <!-- Top Script Flourish as in Reference Image 2 -->
-
     <!-- Centered Heading Group -->
     <div class="placement-heading-group">
       <h2 class="placement-main-heading">
@@ -140,46 +282,66 @@ function placementHighlightsCardInner() {
       <div class="placement-heading-motto">TODAY. IMPACT TOMORROW.</div>
     </div>
 
-    <!-- 4 Standalone Statistic Cards in one row -->
-    <div class="ps-standalone-cards-row">
+    <!-- 4 Standalone Interactive Statistic Cards in one row -->
+    <div class="ps-standalone-cards-row" role="region" aria-label="Placement statistics by salary tier">
       <!-- Card 01 -->
-      <article class="ps-stat-card">
+      <article class="ps-stat-card" role="button" tabindex="0" data-tier="10" aria-haspopup="dialog" aria-label="₹10 LPA+ Tier: 18 Students Placed. Click to explore offers and recruiters">
+        <div class="ps-stat-card-glow" aria-hidden="true"></div>
         <div class="ps-stat-icon-circle">
           ${icon('ps-users')}
         </div>
         <div class="ps-stat-pill">₹10 LPA+</div>
         <strong class="ps-stat-count">${counter(18)}</strong>
         <span class="ps-stat-label">STUDENTS PLACED</span>
+        <span class="ps-stat-action">
+          <span>Explore Tier</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </span>
       </article>
 
       <!-- Card 02 -->
-      <article class="ps-stat-card">
+      <article class="ps-stat-card" role="button" tabindex="0" data-tier="8" aria-haspopup="dialog" aria-label="₹8 LPA+ Tier: 42 Students Placed. Click to explore offers and recruiters">
+        <div class="ps-stat-card-glow" aria-hidden="true"></div>
         <div class="ps-stat-icon-circle">
           ${icon('ps-chart')}
         </div>
         <div class="ps-stat-pill">₹8 LPA+</div>
         <strong class="ps-stat-count">${counter(42)}</strong>
         <span class="ps-stat-label">STUDENTS PLACED</span>
+        <span class="ps-stat-action">
+          <span>Explore Tier</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </span>
       </article>
 
       <!-- Card 03 -->
-      <article class="ps-stat-card">
+      <article class="ps-stat-card" role="button" tabindex="0" data-tier="6" aria-haspopup="dialog" aria-label="₹6 LPA+ Tier: 76 Students Placed. Click to explore offers and recruiters">
+        <div class="ps-stat-card-glow" aria-hidden="true"></div>
         <div class="ps-stat-icon-circle">
           ${icon('ps-diploma')}
         </div>
         <div class="ps-stat-pill">₹6 LPA+</div>
         <strong class="ps-stat-count">${counter(76)}</strong>
         <span class="ps-stat-label">STUDENTS PLACED</span>
+        <span class="ps-stat-action">
+          <span>Explore Tier</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </span>
       </article>
 
       <!-- Card 04 -->
-      <article class="ps-stat-card">
+      <article class="ps-stat-card" role="button" tabindex="0" data-tier="4" aria-haspopup="dialog" aria-label="₹4 LPA+ Tier: 128 Students Placed. Click to explore offers and recruiters">
+        <div class="ps-stat-card-glow" aria-hidden="true"></div>
         <div class="ps-stat-icon-circle">
           ${icon('ps-briefcase')}
         </div>
         <div class="ps-stat-pill">₹4 LPA+</div>
         <strong class="ps-stat-count">${counter(128)}</strong>
         <span class="ps-stat-label">STUDENTS PLACED</span>
+        <span class="ps-stat-action">
+          <span>Explore Tier</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </span>
       </article>
     </div>
 
@@ -248,7 +410,7 @@ function homePage() {
     <div class="placement-v2-building-photo"></div>
     <div class="placement-v2-photo-overlay"></div>
     <svg class="placement-hero-wave-svg" viewBox="0 0 1000 800" preserveAspectRatio="none" fill="none" aria-hidden="true">
-      <path d="M0 0H740C790 140 690 260 670 360C640 460 760 520 840 590C920 660 920 740 820 800H0V0Z" fill="url(#heroYellowWaveGrad)"/>
+      <path d="M0,0 H840 C910,130 950,240 940,360 C930,480 970,580 940,680 C910,740 870,780 820,800 H0 V0 Z" fill="url(#heroYellowWaveGrad)"/>
       <defs>
         <linearGradient id="heroYellowWaveGrad" x1="0" y1="0" x2="800" y2="800" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stop-color="#ffcd29"/>
@@ -272,12 +434,17 @@ function homePage() {
       <p class="placement-v2-desc">Industry-aligned training, hands-on learning and a <br> vibrant placement ecosystem that transforms engineering potential into meaningful careers.</p>
       <div class="placement-v2-actions-area">
         <div class="placement-v2-actions">
-          <button type="button" class="placement-v2-btn primary js-scroll-programmes">Explore Placements ${icon('arrow')}</button>
+          <button type="button" class="placement-v2-btn primary js-explore-placements">Explore Placements ${icon('arrow')}</button>
           <button type="button" class="placement-v2-btn secondary js-video">${icon('play')} Watch Placement Journey</button>
         </div>
       </div>
+      <div class="placement-v2-bottom-curve" aria-hidden="true">
+        <svg viewBox="0 0 1200 60" preserveAspectRatio="none" fill="none">
+          <path d="M0,0 C320,55 640,60 1200,15 L1200,0 Z" fill="url(#heroYellowWaveGrad)"/>
+        </svg>
+      </div>
     </div>
-    <div class="placement-right-section reveal">
+    <div class="placement-right-section reveal" id="placement-highlights">
       ${placementHighlightsCardInner()}
     </div>
   </div>
@@ -995,8 +1162,8 @@ function coreBeliefsPage() {
   </section>
  </main>`;
 }
-function chairmanPage(){return `<main class="siet-cd-page chairman-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/chairman-passport.png" alt="Dr. S. Thangavelu, Chairman"></div><div class="siet-cd-name"><strong>Dr. S. Thangavelu</strong><span>Chairman</span><small>Sri Shakthi Group of Institutions</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE CHAIRMAN</p><h1>A dream built on <em>equality, excellence</em> and service.</h1><p>Building an institution where every student is encouraged to learn deeply, think boldly and contribute meaningfully.</p></div></div></div></section><section id="chairman-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>CHAIRMAN’S MESSAGE</p><h2>Education that empowers<br><em>each individual.</em></h2></div><div class="siet-cd-prose reveal"><p>I have always been inspired by Dr. Martin Luther King's statement, ‘I have a dream’ — a dream I believe will come true — a dream that my children will one day live in a world where they will not be judged by the colour of their skin, but by the content of their character. This need for tolerance — to create an equal society with no discrimination in caste, creed or colour — was best exemplified in the words of Mahatma Gandhi as follows.</p><blockquote>“I do not want my institution to be walled off on all sides. I want the culture of all lands to be blown about my institution as freely as possible. But I refuse to be blown off by any one of them.”</blockquote><p>And this I believe will be the watchword of each and every Shakthian.</p><p>The vision for Sri Shakthi is to make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. S. Thangavelu</strong><small>Chairman, Sri Shakthi Group of Institutions</small></div></div></div></article></div></section></main>`}
-function principalPage(){return `<main class="siet-cd-page principal-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/principal-saravana-kumar.png" alt="Dr. N. M. Saravana Kumar, Principal"></div><div class="siet-cd-name"><strong>Dr. N. M. Saravana Kumar</strong><span>Principal</span><small>Sri Shakthi Institute of Engineering and Technology</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE PRINCIPAL</p><h1>Learning that builds <em>knowledge, character</em> and purpose.</h1><p>Creating an environment where every student develops the knowledge, skills and character to lead with purpose.</p></div></div></div></section><section id="principal-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>PRINCIPAL'S MESSAGE</p><h2>Education for capable,<br><em>responsible leaders.</em></h2></div><div class="siet-cd-prose reveal"><p>Welcome to our institution, where excellence in education, innovation, and character development form the foundation of our academic journey.</p><p>We provide a vibrant learning environment that empowers students with knowledge, technical expertise and essential life skills. Our faculty continuously strive to deliver quality education through innovative teaching, industry collaboration, research and experiential learning.</p><blockquote>"We prepare graduates to become competent professionals, responsible citizens and future leaders."</blockquote><p>At Sri Shakthi, we believe that every student brings unique potential. Our commitment is to nurture that potential through mentorship, opportunity, and a culture of continuous improvement — ensuring our graduates are prepared not just for careers, but for lives of meaning and contribution.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. N. M. Saravana Kumar</strong><small>Principal, Sri Shakthi Institute of Engineering and Technology</small></div></div></div></article></div></section></main>`}
+function chairmanPage() { return `<main class="siet-cd-page chairman-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/chairman-passport.png" alt="Dr. S. Thangavelu, Chairman"></div><div class="siet-cd-name"><strong>Dr. S. Thangavelu</strong><span>Chairman</span><small>Sri Shakthi Group of Institutions</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE CHAIRMAN</p><h1>A dream built on <em>equality, excellence</em> and service.</h1><p>Building an institution where every student is encouraged to learn deeply, think boldly and contribute meaningfully.</p></div></div></div></section><section id="chairman-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>CHAIRMAN’S MESSAGE</p><h2>Education that empowers<br><em>each individual.</em></h2></div><div class="siet-cd-prose reveal"><p>I have always been inspired by Dr. Martin Luther King's statement, ‘I have a dream’ — a dream I believe will come true — a dream that my children will one day live in a world where they will not be judged by the colour of their skin, but by the content of their character. This need for tolerance — to create an equal society with no discrimination in caste, creed or colour — was best exemplified in the words of Mahatma Gandhi as follows.</p><blockquote>“I do not want my institution to be walled off on all sides. I want the culture of all lands to be blown about my institution as freely as possible. But I refuse to be blown off by any one of them.”</blockquote><p>And this I believe will be the watchword of each and every Shakthian.</p><p>The vision for Sri Shakthi is to make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. S. Thangavelu</strong><small>Chairman, Sri Shakthi Group of Institutions</small></div></div></div></article></div></section></main>` }
+function principalPage() { return `<main class="siet-cd-page principal-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/principal-saravana-kumar.png" alt="Dr. N. M. Saravana Kumar, Principal"></div><div class="siet-cd-name"><strong>Dr. N. M. Saravana Kumar</strong><span>Principal</span><small>Sri Shakthi Institute of Engineering and Technology</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE PRINCIPAL</p><h1>Learning that builds <em>knowledge, character</em> and purpose.</h1><p>Creating an environment where every student develops the knowledge, skills and character to lead with purpose.</p></div></div></div></section><section id="principal-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>PRINCIPAL'S MESSAGE</p><h2>Education for capable,<br><em>responsible leaders.</em></h2></div><div class="siet-cd-prose reveal"><p>Welcome to our institution, where excellence in education, innovation, and character development form the foundation of our academic journey.</p><p>We provide a vibrant learning environment that empowers students with knowledge, technical expertise and essential life skills. Our faculty continuously strive to deliver quality education through innovative teaching, industry collaboration, research and experiential learning.</p><blockquote>"We prepare graduates to become competent professionals, responsible citizens and future leaders."</blockquote><p>At Sri Shakthi, we believe that every student brings unique potential. Our commitment is to nurture that potential through mentorship, opportunity, and a culture of continuous improvement — ensuring our graduates are prepared not just for careers, but for lives of meaning and contribution.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. N. M. Saravana Kumar</strong><small>Principal, Sri Shakthi Institute of Engineering and Technology</small></div></div></div></article></div></section></main>` }
 
 const departmentDetails = { 'Agricultural Engineering': { courses: [['B.E - Agricultural Engineering', '60'], ['M.Tech - Farm Machinery', '18']], overview: 'The department of Agricultural Engineering was started in Sri Shakthi Institute of Engineering and Technology (SSIET), Coimbatore, in 2015. The Chairman, Dr. S Thangavelu, is himself an Agricultural Engineer and a Ph. D. degree holder in Bio Energy from Tamil Nadu Agricultural University (TNAU), Coimbatore, and worked as a faculty for 28 years in TNAU. During the past years, the department has been in the journey with SSIET to fulfil the motto, “Powering the Youth, Empowering the Nation”. The department offers B. E. Agriculture Engineering, focussing on widening the practical knowledge of the students thus encouraging them to solve different practical difficulties in small-landholdings. Well-qualified faculty members are the strength of the department. The department constitutes experienced and dedicated faculty and supporting staff members with excellent academic research and industrial work experience to promote research and intervention in the existing methods. Presently, the faculty consists of experts from farm machinery and power, soil and water conservation engineering, agricultural processing, civil engineering, mechanical engineering, food technology and agriculture. Further, the practical knowledge gained by them during practical field works and industrial visits has been added advantage for new technology and innovations. The department is new in offering the degree program in the institute. Despite, about 30 students have been graduated during 2019 from the department and are well placed. At present there are 375 students are admitted in the degree program, and the department is envisage more students in the future.' }, default: { courses: [], overview: 'The department combines strong academic foundations with practical laboratory learning, industry exposure, project work and research. Experienced faculty members guide students to solve real-world engineering problems and build careers for a changing world.' } };
 programs.forEach(([name, description]) => { if (!departmentDetails[name]) departmentDetails[name] = { courses: [['B.E - ' + name, '60']], overview: 'The ' + name + ' department at Sri Shakthi Institute of Engineering and Technology develops practical expertise through laboratory learning, industry exposure, projects and research. ' + description } });
@@ -1216,6 +1383,106 @@ function bind() {
       if (card) { e.preventDefault(); card.click() }
     }
   });
+  // Open Placement Modal helper
+  function openPlacementModal(tierKey = '10') {
+    const existing = $('.placement-modal');
+    if (existing) existing.remove();
+    document.body.insertAdjacentHTML('beforeend', placementDetailsModal(tierKey));
+    document.body.style.overflow = 'hidden';
+    const modal = $('.placement-modal');
+    if (!modal) return;
+    
+    const closeModal = () => {
+      modal.classList.add('closing');
+      setTimeout(() => {
+        modal.remove();
+        document.body.style.overflow = '';
+      }, 180);
+    };
+
+    $('.placement-modal-close', modal)?.addEventListener('click', closeModal);
+    $('.js-close-pm', modal)?.addEventListener('click', closeModal);
+    $('.placement-modal-backdrop', modal)?.addEventListener('click', closeModal);
+
+    // Tab switching inside modal
+    $$('.pm-tab-btn', modal).forEach(btn => {
+      btn.addEventListener('click', () => {
+        const nextTier = btn.dataset.tier;
+        if (nextTier) openPlacementModal(nextTier);
+      });
+    });
+  }
+
+  // Placement Stat Cards Interactivity
+  $$('.ps-stat-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const tier = card.dataset.tier || '10';
+      openPlacementModal(tier);
+    });
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const tier = card.dataset.tier || '10';
+        openPlacementModal(tier);
+      }
+    });
+    // Hover highlight effect on marquee logos
+    card.addEventListener('mouseenter', () => {
+      const tierKey = card.dataset.tier;
+      const companies = placementTierData[tierKey]?.companies || [];
+      const lowerNames = companies.map(c => c.toLowerCase().replace(/[^a-z0-9]/g, ''));
+      $$('.placement-marquee-item').forEach(item => {
+        const logoName = (item.dataset.logo || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        const isMatch = lowerNames.some(c => logoName.includes(c) || c.includes(logoName));
+        item.classList.toggle('highlighted-by-card', isMatch);
+      });
+    });
+    card.addEventListener('mouseleave', () => {
+      $$('.placement-marquee-item').forEach(item => item.classList.remove('highlighted-by-card'));
+    });
+  });
+
+  // Explore Placements CTA
+  $('.js-explore-placements')?.addEventListener('click', () => {
+    const section = $('#placement-highlights') || $('.placement-right-section');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      $$('.ps-stat-card').forEach(c => {
+        c.classList.add('pulse-highlight');
+        setTimeout(() => c.classList.remove('pulse-highlight'), 1600);
+      });
+    }
+  });
+
+  // Dynamic responsive yellow background wave tracking
+  function updatePlacementHeroWave() {
+    const copyEl = $('.placement-v2-copy');
+    const heroEl = $('.placement-v2-hero');
+    const waveSvg = $('.placement-hero-wave-svg');
+    if (!copyEl || !heroEl || !waveSvg) return;
+    if (window.innerWidth > 860) {
+      const copyRect = copyEl.getBoundingClientRect();
+      const heroRect = heroEl.getBoundingClientRect();
+      const contentRight = copyRect.right - heroRect.left;
+      // SVG path right edge minimum is ~82% of SVG width.
+      // Setting width = (contentRight + 40) / 0.82 ensures at least 40px of yellow margin past the copy right edge
+      const targetWidth = Math.max(460, Math.round((contentRight + 42) / 0.82));
+      waveSvg.style.width = `${targetWidth}px`;
+      waveSvg.style.display = 'block';
+    } else {
+      waveSvg.style.width = '';
+      waveSvg.style.display = 'none';
+    }
+  }
+  updatePlacementHeroWave();
+  window.addEventListener('resize', updatePlacementHeroWave);
+  if (typeof ResizeObserver !== 'undefined') {
+    const heroContainer = $('.placement-v2-container');
+    const heroCopy = $('.placement-v2-copy');
+    if (heroContainer) new ResizeObserver(updatePlacementHeroWave).observe(heroContainer);
+    if (heroCopy) new ResizeObserver(updatePlacementHeroWave).observe(heroCopy);
+  }
+
   $('.js-scroll-programmes')?.addEventListener('click', () => { $('.programmes-section')?.scrollIntoView({ behavior: 'smooth' }) });
   $('.js-discover-btn')?.addEventListener('click', () => { $('.programmes-section')?.scrollIntoView({ behavior: 'smooth' }) });
   $('.js-explore-campus')?.addEventListener('click', () => { $('.campus-gallery')?.scrollIntoView({ behavior: 'smooth' }) });
@@ -1381,7 +1648,7 @@ async function submitForm(e) {
 }
 function observe() { const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches; const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (!entry.isIntersecting) return; entry.target.classList.add('is-visible'); if (entry.target.classList.contains('js-counter')) animateCounter(entry.target); observer.unobserve(entry.target) }), { threshold: .18 }); $$('.reveal,.js-counter').forEach(el => reduce ? (el.classList.add('is-visible'), el.classList.contains('js-counter') && animateCounter(el)) : observer.observe(el)) }
 function animateCounter(el) { const to = Number(el.dataset.to), suffix = el.dataset.suffix || '', start = performance.now(), duration = 1500; function tick(now) { const p = Math.min((now - start) / duration, 1), v = Math.round(to * (1 - (1 - p) ** 3)); el.textContent = v.toLocaleString('en-IN') + suffix; if (p < 1) requestAnimationFrame(tick) } requestAnimationFrame(tick) }
-const handleEscape = e => { if (e.key === 'Escape') { $('.video-close')?.click(); $('.mobile-nav-close')?.click() } };
+const handleEscape = e => { if (e.key === 'Escape') { $('.video-close')?.click(); $('.mobile-nav-close')?.click(); $('.placement-modal-close')?.click(); } };
 const handleDocClick = e => { if (!e.target.closest('.institution-nav-group')) { $$('.institution-nav-group').forEach(g => { g.classList.remove('open'); g.querySelector('button')?.setAttribute('aria-expanded', 'false') }) } };
 
 export function mountSite(root) {
