@@ -410,7 +410,7 @@ function homePage() {
     <div class="placement-v2-building-photo"></div>
     <div class="placement-v2-photo-overlay"></div>
     <svg class="placement-hero-wave-svg" viewBox="0 0 1000 800" preserveAspectRatio="none" fill="none" aria-hidden="true">
-      <path d="M0,0 H840 C910,130 950,240 940,360 C930,480 970,580 940,680 C910,740 870,780 820,800 H0 V0 Z" fill="url(#heroYellowWaveGrad)"/>
+      <path d="M0 0H740C790 140 690 260 670 360C640 460 760 520 840 590C920 660 920 740 820 800H0V0Z" fill="url(#heroYellowWaveGrad)"/>
       <defs>
         <linearGradient id="heroYellowWaveGrad" x1="0" y1="0" x2="800" y2="800" gradientUnits="userSpaceOnUse">
           <stop offset="0%" stop-color="#ffcd29"/>
@@ -437,11 +437,6 @@ function homePage() {
           <button type="button" class="placement-v2-btn primary js-explore-placements">Explore Placements ${icon('arrow')}</button>
           <button type="button" class="placement-v2-btn secondary js-video">${icon('play')} Watch Placement Journey</button>
         </div>
-      </div>
-      <div class="placement-v2-bottom-curve" aria-hidden="true">
-        <svg viewBox="0 0 1200 60" preserveAspectRatio="none" fill="none">
-          <path d="M0,0 C320,55 640,60 1200,15 L1200,0 Z" fill="url(#heroYellowWaveGrad)"/>
-        </svg>
       </div>
     </div>
     <div class="placement-right-section reveal" id="placement-highlights">
@@ -1453,35 +1448,6 @@ function bind() {
       });
     }
   });
-
-  // Dynamic responsive yellow background wave tracking
-  function updatePlacementHeroWave() {
-    const copyEl = $('.placement-v2-copy');
-    const heroEl = $('.placement-v2-hero');
-    const waveSvg = $('.placement-hero-wave-svg');
-    if (!copyEl || !heroEl || !waveSvg) return;
-    if (window.innerWidth > 860) {
-      const copyRect = copyEl.getBoundingClientRect();
-      const heroRect = heroEl.getBoundingClientRect();
-      const contentRight = copyRect.right - heroRect.left;
-      // SVG path right edge minimum is ~82% of SVG width.
-      // Setting width = (contentRight + 40) / 0.82 ensures at least 40px of yellow margin past the copy right edge
-      const targetWidth = Math.max(460, Math.round((contentRight + 42) / 0.82));
-      waveSvg.style.width = `${targetWidth}px`;
-      waveSvg.style.display = 'block';
-    } else {
-      waveSvg.style.width = '';
-      waveSvg.style.display = 'none';
-    }
-  }
-  updatePlacementHeroWave();
-  window.addEventListener('resize', updatePlacementHeroWave);
-  if (typeof ResizeObserver !== 'undefined') {
-    const heroContainer = $('.placement-v2-container');
-    const heroCopy = $('.placement-v2-copy');
-    if (heroContainer) new ResizeObserver(updatePlacementHeroWave).observe(heroContainer);
-    if (heroCopy) new ResizeObserver(updatePlacementHeroWave).observe(heroCopy);
-  }
 
   $('.js-scroll-programmes')?.addEventListener('click', () => { $('.programmes-section')?.scrollIntoView({ behavior: 'smooth' }) });
   $('.js-discover-btn')?.addEventListener('click', () => { $('.programmes-section')?.scrollIntoView({ behavior: 'smooth' }) });

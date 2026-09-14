@@ -33223,8 +33223,192 @@ button.button.js-explore-campus {
   }
 }
 
-/* Placement hero responsive styles are unified at the end of this file */
+@media (max-width: 1024px) {
+  .home-page .placement-v2-hero {
+    min-height: 0;
+    height: auto;
+    padding: 0 0 30px;
+  }
 
+  .home-page .placement-v2-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  .home-page .placement-v2-copy {
+    width: 100%;
+    max-width: none;
+    min-height: 520px;
+    padding: 54px clamp(24px, 7vw, 72px) 48px;
+  }
+
+  .home-page .placement-hero-wave-svg {
+    width: 112%;
+    min-width: 0;
+    height: 535px;
+    transform: none;
+  }
+
+  .home-page .placement-right-section {
+    width: 100%;
+    max-width: none;
+    padding: 42px clamp(22px, 5vw, 52px) 0;
+  }
+
+  .home-page .placement-script-flourish {
+    position: absolute;
+    top: 20px;
+    right: clamp(18px, 4vw, 42px);
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .home-page .ps-standalone-cards-row {
+    max-width: 820px;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page .placement-v2-copy {
+    min-height: 500px;
+    padding: 44px 24px 40px;
+  }
+
+  .home-page .placement-hero-wave-svg {
+    width: 135%;
+    height: 515px;
+  }
+
+  .home-page .placement-v2-title {
+    font-size: clamp(38px, 10vw, 54px);
+  }
+
+  .home-page .placement-right-section {
+    padding: 38px 16px 0;
+  }
+
+  .home-page .placement-heading-group {
+    margin-bottom: 24px;
+    padding-inline: 54px;
+  }
+
+  .home-page .placement-main-heading {
+    font-size: clamp(29px, 7vw, 40px);
+  }
+
+  .home-page .ps-standalone-cards-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 520px;
+    gap: 14px;
+  }
+
+  .home-page .ps-stat-card {
+    min-height: 190px;
+  }
+
+  .home-page .placement-cards-footer-text {
+    max-width: 520px;
+    margin-inline: auto;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 520px) {
+  .home-page .placement-v2-copy {
+    min-height: 470px;
+    padding: 36px 18px 34px;
+  }
+
+  .home-page .placement-hero-wave-svg {
+    width: 175%;
+    height: 485px;
+  }
+
+  .home-page .placement-v2-kicker {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .home-page .placement-v2-title {
+    font-size: clamp(34px, 10.5vw, 46px);
+  }
+
+  .home-page .placement-v2-desc {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .home-page .placement-v2-actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .home-page .placement-v2-btn {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  .home-page .placement-right-section {
+    padding: 32px 10px 0;
+  }
+
+  .home-page .placement-script-flourish {
+    display: none;
+  }
+
+  .home-page .placement-heading-group {
+    padding-inline: 0;
+  }
+
+  .home-page .placement-main-heading {
+    font-size: clamp(27px, 8.5vw, 36px);
+  }
+
+  .home-page .placement-subheading-row {
+    gap: 8px;
+  }
+
+  .home-page .subheading-gold-line {
+    width: 24px;
+  }
+
+  .home-page .ps-standalone-cards-row {
+    gap: 8px;
+  }
+
+  .home-page .ps-stat-card {
+    min-height: 180px;
+    padding: 14px 6px;
+  }
+
+  .home-page .ps-stat-pill {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .home-page .ps-stat-count {
+    font-size: 28px;
+  }
+
+  .home-page .ps-stat-action {
+    font-size: 9px;
+    padding: 3px 7px;
+  }
+
+  .home-page .placement-cards-footer-text {
+    font-size: 11px;
+    letter-spacing: .8px;
+    white-space: normal;
+  }
+}
 
 @media (max-width: 360px) {
   .home-page .placement-v2-actions {
@@ -34888,5 +35072,320 @@ button.button.js-explore-campus {
   .home-page .ps-stat-action {
     font-size: 9px !important;
     padding: 3px 7px !important;
+  }
+}
+
+/* ==========================================================================
+   Mobile & Tablet Centered Editorial Layout for Stacked Sections (<= 1024px)
+   Matches the exact centered design of Section 03 Campus Moments (Referenced by User)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  /* Placement Hero Copy (.placement-v2-copy) */
+  .home-page .placement-v2-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .home-page .placement-v2-kicker {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .home-page .placement-v2-pill {
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .home-page .placement-v2-title {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-inline: auto !important;
+  }
+
+  .home-page .placement-v2-title span {
+    text-align: center !important;
+    display: block !important;
+  }
+
+  .home-page .placement-v2-desc {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 480px !important;
+  }
+
+  .home-page .placement-v2-actions-area {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-inline: auto !important;
+  }
+
+  .home-page .placement-v2-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-inline: auto !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
+
+  .home-page .placement-v2-btn {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Section 01: Who We Are (.about-premium) */
+  .about-premium {
+    text-align: center !important;
+  }
+
+  .about-premium .stat-icon {
+    margin-inline: auto !important;
+  }
+
+  .about-label {
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .about-main {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 20px !important;
+    margin-top: 24px !important;
+  }
+
+  .about-heading {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .about-heading h2 {
+    text-align: center !important;
+    margin-inline: auto !important;
+    font-size: clamp(34px, 8.5vw, 56px) !important;
+    line-height: 1.05 !important;
+  }
+
+  .about-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding-bottom: 0 !important;
+  }
+
+  .about-small-title {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .about-content p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 520px !important;
+    font-size: 14.5px !important;
+    line-height: 1.65 !important;
+  }
+
+  .discover-link {
+    justify-content: center !important;
+    margin: 18px auto 0 !important;
+  }
+
+  /* Section 02: Programmes (.programmes-showcase) */
+  .programmes-hero-v2 {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  .programmes-left-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .programmes-left-col .section-kicker {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .programmes-main-title {
+    text-align: center !important;
+    margin-inline: auto !important;
+    font-size: clamp(34px, 8.5vw, 54px) !important;
+  }
+
+  .programmes-subtitle {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 500px !important;
+  }
+
+  .programme-toggle-pill {
+    margin-inline: auto !important;
+    justify-content: center !important;
+  }
+
+  /* Section 03: Life at Sri Shakthi (.campus-section) - Reference Standard */
+  .campus-left {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .campus-eyebrow {
+    display: flex !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .campus-heading {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .campus-desc {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 500px !important;
+  }
+
+  .campus-actions {
+    display: flex !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .campus-people-footer {
+    display: flex !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  /* Section 04: Special Labs (.special-labs-section) */
+  .labs-left {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .labs-eyebrow {
+    display: flex !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .labs-heading {
+    text-align: center !important;
+    margin-inline: auto !important;
+    font-size: clamp(34px, 8.5vw, 54px) !important;
+  }
+
+  .labs-desc {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 500px !important;
+  }
+
+  .labs-actions {
+    display: flex !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .labs-btn-primary {
+    margin-inline: auto !important;
+  }
+
+  .labs-script-watermark {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .labs-bottom-sketch-wrap {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-inline: auto !important;
+    width: 100% !important;
+  }
+
+  .labs-bottom-sketch-wrap .campus-people-footer {
+    display: flex !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  /* Section 05: News & Events (.news-events-section) */
+  .events-left-col {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .events-eyebrow {
+    display: flex !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .events-heading {
+    text-align: center !important;
+    margin-inline: auto !important;
+    font-size: clamp(34px, 8.5vw, 54px) !important;
+  }
+
+  .events-desc {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 500px !important;
+  }
+
+  .events-btn-primary {
+    margin-inline: auto !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+  }
+
+  .events-community-pill {
+    margin-inline: auto !important;
+    justify-content: center !important;
+  }
+
+  .events-filter-bar {
+    justify-content: center !important;
   }
 }
