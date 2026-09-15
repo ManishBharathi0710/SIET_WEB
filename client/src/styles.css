@@ -35390,14 +35390,60 @@ button.button.js-explore-campus {
   }
 
   /* ==========================================================================
-     About Pages: Vision & Mission, Core Beliefs, Values, Philosophy (<= 1024px)
+     About Pages & Mobile Reveal Visibility Fixes (<= 1024px)
      ========================================================================== */
+  .reveal,
+  .siet-vm-page .reveal,
+  .siet-cd-page .reveal,
+  .siet-cd-prose,
+  .siet-cd-message-head,
+  .siet-vm-card,
+  .siet-cb-card,
+  .siet-po-card,
+  .siet-cv-card,
+  .siet-ph-principle,
+  .siet-ph-statement,
+  .siet-ph-closing {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+
+  /* Centered kickers without asymmetric single-side line */
+  .siet-vm-kicker,
+  .siet-cd-kicker,
+  .siet-ph-mark {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    width: 100% !important;
+    font-size: 12px !important;
+    letter-spacing: .12em !important;
+  }
+
+  .siet-vm-kicker i,
+  .siet-cd-kicker i,
+  .siet-ph-mark i {
+    display: none !important;
+  }
+
+  /* Vision & Mission, Core Beliefs, Values, Philosophy */
+  .siet-vm-hero {
+    min-height: auto !important;
+    padding-top: 24px !important;
+    padding-bottom: 12px !important;
+  }
+
   .siet-vm-hero-content {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
     margin-inline: auto !important;
+    width: 100% !important;
+    padding: 16px 0 !important;
   }
 
   .siet-vm-hero-content .siet-cb-breadcrumbs {
@@ -35407,16 +35453,10 @@ button.button.js-explore-campus {
     text-align: center !important;
   }
 
-  .siet-vm-kicker {
-    display: flex !important;
-    justify-content: center !important;
-    margin-inline: auto !important;
-    text-align: center !important;
-  }
-
   .siet-vm-hero h1 {
     text-align: center !important;
     margin-inline: auto !important;
+    font-size: clamp(30px, 8.5vw, 42px) !important;
   }
 
   .siet-vm-intro {
@@ -35424,6 +35464,86 @@ button.button.js-explore-campus {
     margin-left: auto !important;
     margin-right: auto !important;
     max-width: 580px !important;
+    font-size: 15.5px !important;
+  }
+
+  .siet-vm-layout {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .siet-vm-sidebar {
+    position: static !important;
+    border-radius: 16px !important;
+    width: 100% !important;
+    max-width: 580px !important;
+    margin: 0 auto 24px !important;
+    box-shadow: 0 10px 30px rgba(0, 59, 37, .06) !important;
+  }
+
+  .siet-vm-sidebar-head {
+    text-align: center !important;
+    padding: 18px 16px 14px !important;
+  }
+
+  .siet-vm-sidebar-head span {
+    display: block !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-vm-sidebar-head h2 {
+    text-align: center !important;
+    margin-inline: auto !important;
+    font-size: 20px !important;
+  }
+
+  .siet-vm-sidebar nav {
+    display: flex !important;
+    flex-direction: column !important;
+    overflow-x: visible !important;
+    padding: 10px !important;
+    gap: 6px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .siet-vm-sidebar nav a {
+    display: grid !important;
+    grid-template-columns: 28px minmax(0, 1fr) 18px !important;
+    gap: 12px !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 46px !important;
+    padding: 9px 14px !important;
+    margin: 0 !important;
+    border-radius: 10px !important;
+    box-sizing: border-box !important;
+    text-align: left !important;
+    flex-shrink: 0 !important;
+  }
+
+  .siet-vm-sidebar nav a b {
+    white-space: normal !important;
+    word-break: break-word !important;
+    font-size: 13.5px !important;
+    line-height: 1.35 !important;
+  }
+
+  .siet-vm-nav-arrow {
+    display: grid !important;
+    place-items: center !important;
+    opacity: .6 !important;
+  }
+
+  .siet-vm-nav-arrow svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .siet-vm-sidebar-note {
+    display: none !important;
   }
 
   .siet-vm-section-intro {
@@ -35433,6 +35553,7 @@ button.button.js-explore-campus {
     text-align: center !important;
     margin-inline: auto !important;
     max-width: 620px !important;
+    margin-bottom: 20px !important;
   }
 
   .siet-vm-section-intro > p {
@@ -35443,6 +35564,7 @@ button.button.js-explore-campus {
   .siet-vm-section-intro h2 {
     text-align: center !important;
     margin-inline: auto !important;
+    font-size: clamp(28px, 8vw, 36px) !important;
   }
 
   .siet-vm-section-intro > span {
@@ -35450,14 +35572,32 @@ button.button.js-explore-campus {
     margin-left: auto !important;
     margin-right: auto !important;
     max-width: 540px !important;
+    font-size: 14px !important;
   }
 
-  .siet-vm-sidebar-head {
-    text-align: center !important;
+  .siet-vm-card-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 480px !important;
+    margin-inline: auto !important;
+    gap: 16px !important;
   }
 
-  .siet-vm-sidebar-head h2 {
-    text-align: center !important;
+  .siet-vm-card {
+    min-height: 0 !important;
+    padding: 22px 18px 20px !important;
+    border-radius: 16px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .siet-cb-list {
+    max-width: 620px !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-cb-card {
+    max-width: 100% !important;
     margin-inline: auto !important;
   }
 
@@ -35466,6 +35606,8 @@ button.button.js-explore-campus {
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
+    margin-inline: auto !important;
+    max-width: 600px !important;
   }
 
   .siet-cb-closing-text {
@@ -35487,11 +35629,28 @@ button.button.js-explore-campus {
     margin-inline: auto !important;
   }
 
+  .siet-po-grid,
+  .siet-cv-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    max-width: 520px !important;
+    margin-inline: auto !important;
+    gap: 14px !important;
+  }
+
+  .siet-po-card,
+  .siet-cv-card {
+    max-width: 100% !important;
+    margin-inline: auto !important;
+  }
+
   .siet-ph-statement {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
+    margin-inline: auto !important;
+    max-width: 620px !important;
   }
 
   .siet-ph-statement p {
@@ -35499,10 +35658,9 @@ button.button.js-explore-campus {
     margin-inline: auto !important;
   }
 
-  .siet-ph-mark {
-    justify-content: center !important;
+  .siet-ph-principles {
+    max-width: 620px !important;
     margin-inline: auto !important;
-    text-align: center !important;
   }
 
   .siet-ph-closing {
@@ -35510,57 +35668,112 @@ button.button.js-explore-campus {
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
-  }
-
-  .siet-ph-closing h2 {
-    text-align: center !important;
     margin-inline: auto !important;
   }
 
+  .siet-ph-closing h2,
   .siet-ph-closing span {
     text-align: center !important;
     margin-inline: auto !important;
   }
 
-  /* ==========================================================================
-     About Pages: Chairman & Principal Desks (<= 1024px)
-     ========================================================================== */
-  .siet-cd-hero-layout {
+  /* Chairman & Principal Desks */
+  .siet-cd-hero {
+    min-height: auto !important;
+    padding-top: 20px !important;
+    padding-bottom: 12px !important;
+  }
+
+  .siet-cd-hero-layout,
+  .chairman-page .siet-cd-hero-layout,
+  .principal-page .siet-cd-hero-layout {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     text-align: center !important;
+    width: 100% !important;
+    gap: 18px !important;
+    min-height: auto !important;
   }
 
-  .siet-cd-portrait {
-    margin-inline: auto !important;
-  }
-
-  .siet-cd-hero-copy {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    margin-inline: auto !important;
-  }
-
-  .siet-cd-kicker {
+  .siet-cd-portrait,
+  .chairman-page .siet-cd-portrait,
+  .principal-page .siet-cd-portrait {
     display: flex !important;
     justify-content: center !important;
-    margin-inline: auto !important;
-    text-align: center !important;
+    align-items: flex-end !important;
+    margin: 0 auto !important;
+    max-width: 280px !important;
+    height: 195px !important;
   }
 
-  .siet-cd-hero-copy h1 {
-    text-align: center !important;
-    margin-inline: auto !important;
+  .siet-cd-portrait-frame,
+  .chairman-page .siet-cd-portrait-frame,
+  .principal-page .siet-cd-portrait-frame {
+    max-height: 195px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: flex-end !important;
   }
 
-  .siet-cd-hero-copy > p {
+  .siet-cd-portrait-frame > img,
+  .chairman-page .siet-cd-portrait-frame > img,
+  .principal-page .siet-cd-portrait-frame > img {
+    max-height: 195px !important;
+    width: auto !important;
+    transform: none !important;
+  }
+
+  .siet-cd-name,
+  .chairman-page .siet-cd-name,
+  .principal-page .siet-cd-name {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 0 !important;
+    min-width: 160px !important;
+    padding: 6px 14px !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    border-left: 0 !important;
+    border-bottom: 3px solid #82bc56 !important;
+    border-radius: 8px !important;
+  }
+
+  .siet-cd-hero-copy,
+  .chairman-page .siet-cd-hero-copy,
+  .principal-page .siet-cd-hero-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    width: 100% !important;
+    max-width: 620px !important;
+    padding: 8px 0 14px !important;
+  }
+
+  .siet-cd-hero-copy h1,
+  .chairman-page .siet-cd-hero-copy h1,
+  .principal-page .siet-cd-hero-copy h1 {
+    text-align: center !important;
+    margin-inline: auto !important;
+    font-size: clamp(28px, 7.5vw, 38px) !important;
+  }
+
+  .siet-cd-hero-copy > p,
+  .chairman-page .siet-cd-hero-copy > p,
+  .principal-page .siet-cd-hero-copy > p {
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
     max-width: 580px !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+  }
+
+  .siet-cd-layout {
+    max-width: 100% !important;
   }
 
   .siet-cd-message-head {
@@ -35569,6 +35782,7 @@ button.button.js-explore-campus {
     align-items: center !important;
     text-align: center !important;
     margin-inline: auto !important;
+    width: 100% !important;
   }
 
   .siet-cd-message-head p {
@@ -35579,11 +35793,40 @@ button.button.js-explore-campus {
   .siet-cd-message-head h2 {
     text-align: center !important;
     margin-inline: auto !important;
+    font-size: clamp(28px, 7.5vw, 36px) !important;
+  }
+
+  .siet-cd-prose {
+    max-width: 680px !important;
+    margin-inline: auto !important;
+    padding-top: 18px !important;
+    padding-inline: 10px !important;
+  }
+
+  .siet-cd-prose > p {
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 16px !important;
+  }
+
+  .siet-cd-prose blockquote {
+    margin: 18px 0 !important;
+    padding: 14px 16px 14px 18px !important;
+    font-size: 16px !important;
   }
 
   .siet-cd-signoff {
-    justify-content: center !important;
-    margin-inline: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
     text-align: center !important;
+    margin-inline: auto !important;
+    margin-top: 20px !important;
+    gap: 10px !important;
+  }
+
+  .siet-cd-signoff > span {
+    margin-inline: auto !important;
   }
 }
+
