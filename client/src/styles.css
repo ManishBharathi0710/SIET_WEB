@@ -35589,6 +35589,66 @@ button.button.js-explore-campus {
     border-radius: 16px !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .siet-vm-card-top {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+
+  .siet-vm-card-number {
+    order: -1 !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-vm-card-icon {
+    margin-inline: auto !important;
+  }
+
+  .siet-vm-card-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    margin-top: 14px !important;
+    padding-top: 0 !important;
+  }
+
+  .siet-vm-card-label {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-vm-card h2 {
+    text-align: center !important;
+    margin-inline: auto !important;
+    max-width: 100% !important;
+  }
+
+  .siet-vm-card-copy > p:last-child {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 100% !important;
+  }
+
+  .siet-vm-card-footer {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    width: 100% !important;
   }
 
   .siet-cb-list {
