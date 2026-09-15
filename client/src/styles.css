@@ -35388,4 +35388,202 @@ button.button.js-explore-campus {
   .events-filter-bar {
     justify-content: center !important;
   }
+
+  /* ==========================================================================
+     About Pages: Vision & Mission, Core Beliefs, Values, Philosophy (<= 1024px)
+     ========================================================================== */
+  .siet-vm-hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-vm-hero-content .siet-cb-breadcrumbs {
+    display: flex !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .siet-vm-kicker {
+    display: flex !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .siet-vm-hero h1 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-vm-intro {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 580px !important;
+  }
+
+  .siet-vm-section-intro {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+    max-width: 620px !important;
+  }
+
+  .siet-vm-section-intro > p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-vm-section-intro h2 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-vm-section-intro > span {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 540px !important;
+  }
+
+  .siet-vm-sidebar-head {
+    text-align: center !important;
+  }
+
+  .siet-vm-sidebar-head h2 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-cb-closing {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .siet-cb-closing-text {
+    text-align: center !important;
+  }
+
+  .siet-cb-closing-text h3 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-cb-closing-text p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-cb-closing-cta {
+    justify-content: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-ph-statement {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .siet-ph-statement p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-ph-mark {
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .siet-ph-closing {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .siet-ph-closing h2 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-ph-closing span {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  /* ==========================================================================
+     About Pages: Chairman & Principal Desks (<= 1024px)
+     ========================================================================== */
+  .siet-cd-hero-layout {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .siet-cd-portrait {
+    margin-inline: auto !important;
+  }
+
+  .siet-cd-hero-copy {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-cd-kicker {
+    display: flex !important;
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
+
+  .siet-cd-hero-copy h1 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-cd-hero-copy > p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 580px !important;
+  }
+
+  .siet-cd-message-head {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-cd-message-head p {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-cd-message-head h2 {
+    text-align: center !important;
+    margin-inline: auto !important;
+  }
+
+  .siet-cd-signoff {
+    justify-content: center !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+  }
 }
