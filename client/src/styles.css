@@ -2572,7 +2572,7 @@ header {
 }
 
 .tour:before {
-  background-image: url('/brand/hero-techpark-latest.png');
+  background-image: url('/brand/techpark-local.png');
   opacity: .12
 }
 
@@ -4312,7 +4312,7 @@ body {
 
 /* Edge-to-edge stage background; independent from content padding. */
 .placement-stage>.placement-lead {
-  background-image: linear-gradient(90deg, #002419e8 0%, #033c28bd 43%, #002b1d70 72%, #001e15b8 100%), url('/brand/hero-techpark-latest.png');
+  background-image: linear-gradient(90deg, #002419e8 0%, #033c28bd 43%, #002b1d70 72%, #001e15b8 100%), url('/brand/techpark-local.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat
@@ -17937,7 +17937,7 @@ header nav,
 .placement-v2-building-photo {
   position: absolute;
   inset: 0;
-  background: url('/brand/hero-techpark-latest.png') 65% 30% / cover no-repeat;
+  background: url('/brand/techpark-local.png') 65% 30% / cover no-repeat;
   opacity: 0.85;
   pointer-events: none;
   filter: saturate(1.15) brightness(1.02);
@@ -23886,7 +23886,7 @@ article.chairman-message,
 .placement-v2-hero {
   background:
     linear-gradient(90deg, rgba(250, 248, 232, .96) 0%, rgba(235, 243, 226, .91) 42%, rgba(220, 233, 217, .74) 67%, rgba(211, 225, 207, .58) 100%),
-    url('/brand/hero-techpark-latest.png') center/cover no-repeat !important;
+    url('/brand/techpark-local.png') center/cover no-repeat !important;
 }
 
 .placement-v2-hero:after {
@@ -33184,9 +33184,11 @@ button.button.js-explore-campus {
 .home-page .placement-v2-building-photo {
   opacity: 1;
   filter: none;
-  background-image: url('/brand/hero-techpark-latest.png');
-  background-position: center;
+  background-image: url('/brand/techpark-local.png');
+  background-position: center top;
   background-size: cover;
+  left: clamp(70px, 8.5vw, 150px);
+  width: 100%;
 }
 
 .home-page .placement-v2-photo-overlay {
@@ -33198,6 +33200,7 @@ button.button.js-explore-campus {
   bottom: 0;
   height: 100%;
   max-width: none;
+  width: clamp(400px, 35vw, 580px);
 }
 
 .home-page .placement-v2-container {
@@ -33310,6 +33313,11 @@ button.button.js-explore-campus {
     max-width: none;
     min-height: 520px;
     padding: 54px clamp(24px, 7vw, 72px) 48px;
+  }
+
+  .home-page .placement-v2-building-photo {
+    left: 0;
+    width: 100%;
   }
 
   .home-page .placement-hero-wave-svg {
