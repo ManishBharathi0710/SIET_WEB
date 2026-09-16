@@ -25654,15 +25654,41 @@ article.chairman-message,
   width: 235px;
   padding: 8px;
   display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   transform: translateX(-50%);
   border-top: 3px solid #efbf24;
   border-radius: 4px 4px 12px 12px;
   background: #fff;
-  box-shadow: 0 20px 42px rgba(0, 45, 28, .2)
+  box-shadow: 0 20px 42px rgba(0, 45, 28, .2);
+}
+
+/* Seamless bridge so cursor never drops hover between button and dropdown */
+.institution-nav-group>div::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: 0;
+  right: 0;
+  height: 14px;
+  background: transparent;
+  pointer-events: auto;
 }
 
 .institution-nav-group.open>div {
-  display: grid
+  display: grid !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+
+.institution-nav-group:not(.open)>div {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .institution-nav-group>div a {
@@ -26621,15 +26647,38 @@ article.chairman-message,
     transition: transform .2s !important;
   }
 
+  .institution-nav-group.open>div,
   .institution-nav-group:hover>div {
     display: grid !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateX(-50%) translateY(0) !important;
   }
 
+  .institution-nav-group:not(.open):not(:hover)>div {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  /* Strict guard: Never allow more than one dropdown to display at once */
+  .institution-menu:has(.institution-nav-group:hover) .institution-nav-group:not(:hover)>div,
+  .institution-menu:has(.institution-nav-link:hover) .institution-nav-group>div {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  .institution-nav-group.open>button,
   .institution-nav-group:hover>button,
   .institution-nav-link:hover {
     color: #ffd865 !important;
   }
 
+  .institution-nav-group.open>button svg,
   .institution-nav-group:hover>button svg {
     transform: rotate(180deg) !important;
   }

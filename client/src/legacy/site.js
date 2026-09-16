@@ -2625,19 +2625,92 @@ function bind() {
     $$('.mobile-nav-group').forEach(g => { g.classList.remove('open'); g.querySelector('.mobile-nav-group-toggle')?.setAttribute('aria-expanded', 'false') });
     if (!wasOpen && group) { group.classList.add('open'); btn.setAttribute('aria-expanded', 'true') }
   }));
-  $$('.institution-nav-group>button').forEach(btn => btn.addEventListener('click', e => {
-    e.stopPropagation();
-    const group = btn.parentElement;
-    const willOpen = !group?.classList.contains('open');
+  let navCloseTimer = null;
+  const closeAllNavGroups = () => {
+    if (navCloseTimer) {
+      clearTimeout(navCloseTimer);
+      navCloseTimer = null;
+    }
     $$('.institution-nav-group').forEach(x => {
       x.classList.remove('open');
       x.querySelector('button')?.setAttribute('aria-expanded', 'false');
     });
-    if (willOpen && group) {
-      group.classList.add('open');
-      btn.setAttribute('aria-expanded', 'true');
+  };
+
+  const openNavGroup = (group) => {
+    if (navCloseTimer) {
+      clearTimeout(navCloseTimer);
+      navCloseTimer = null;
     }
-  }));
+    $$('.institution-nav-group').forEach(x => {
+      if (x !== group) {
+        x.classList.remove('open');
+        x.querySelector('button')?.setAttribute('aria-expanded', 'false');
+      }
+    });
+    if (group) {
+      group.classList.add('open');
+      group.querySelector('button')?.setAttribute('aria-expanded', 'true');
+    }
+  };
+
+  $$('.institution-nav-group').forEach(group => {
+    const btn = group.querySelector('button');
+
+    group.addEventListener('mouseenter', () => {
+      openNavGroup(group);
+    });
+
+    group.addEventListener('mouseleave', () => {
+      if (navCloseTimer) clearTimeout(navCloseTimer);
+      navCloseTimer = setTimeout(() => {
+        group.classList.remove('open');
+        btn?.setAttribute('aria-expanded', 'false');
+      }, 140);
+    });
+
+    btn?.addEventListener('click', e => {
+      e.stopPropagation();
+      const isCurrentlyOpen = group.classList.contains('open');
+      if (navCloseTimer) clearTimeout(navCloseTimer);
+      if (isCurrentlyOpen) {
+        group.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        openNavGroup(group);
+      }
+    });
+
+    group.addEventListener('focusin', () => {
+      openNavGroup(group);
+    });
+
+    group.addEventListener('focusout', e => {
+      if (!group.contains(e.relatedTarget)) {
+        group.classList.remove('open');
+        btn?.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  $$('.institution-nav-link, .institution-home, .institution-nav-apply, .institution-mobile-logo, .siet-header-image').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      closeAllNavGroups();
+    });
+  });
+
+  $('.institution-navbar')?.addEventListener('mouseleave', () => {
+    if (navCloseTimer) clearTimeout(navCloseTimer);
+    navCloseTimer = setTimeout(() => {
+      closeAllNavGroups();
+    }, 140);
+  });
+
+  $$('.institution-nav-group>div a').forEach(link => {
+    link.addEventListener('click', () => {
+      closeAllNavGroups();
+    });
+  });
   $$('.career-tabs button').forEach(btn => btn.addEventListener('click', () => {
     $$('.career-tabs button').forEach(b => b.classList.toggle('active', b === btn));
     const unitKey = btn.dataset.unit || 'college';
@@ -2949,8 +3022,27 @@ async function submitForm(e) {
 }
 function observe() { const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches; const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (!entry.isIntersecting) return; entry.target.classList.add('is-visible'); if (entry.target.classList.contains('js-counter')) animateCounter(entry.target); observer.unobserve(entry.target) }), { threshold: .18 }); $$('.reveal,.js-counter').forEach(el => reduce ? (el.classList.add('is-visible'), el.classList.contains('js-counter') && animateCounter(el)) : observer.observe(el)) }
 function animateCounter(el) { const to = Number(el.dataset.to), suffix = el.dataset.suffix || '', start = performance.now(), duration = 1500; function tick(now) { const p = Math.min((now - start) / duration, 1), v = Math.round(to * (1 - (1 - p) ** 3)); el.textContent = v.toLocaleString('en-IN') + suffix; if (p < 1) requestAnimationFrame(tick) } requestAnimationFrame(tick) }
-const handleEscape = e => { if (e.key === 'Escape') { $('.video-close')?.click(); $('.mobile-nav-close')?.click(); $('.placement-modal-close')?.click(); $('.js-lib-modal-close')?.click(); $('.js-curr-modal-close')?.click(); } };
-const handleDocClick = e => { if (!e.target.closest('.institution-nav-group')) { $$('.institution-nav-group').forEach(g => { g.classList.remove('open'); g.querySelector('button')?.setAttribute('aria-expanded', 'false') }) } };
+const handleEscape = e => {
+  if (e.key === 'Escape') {
+    $('.video-close')?.click();
+    $('.mobile-nav-close')?.click();
+    $('.placement-modal-close')?.click();
+    $('.js-lib-modal-close')?.click();
+    $('.js-curr-modal-close')?.click();
+    $$('.institution-nav-group').forEach(g => {
+      g.classList.remove('open');
+      g.querySelector('button')?.setAttribute('aria-expanded', 'false');
+    });
+  }
+};
+const handleDocClick = e => {
+  if (!e.target.closest('.institution-nav-group>button')) {
+    $$('.institution-nav-group').forEach(g => {
+      g.classList.remove('open');
+      g.querySelector('button')?.setAttribute('aria-expanded', 'false');
+    });
+  }
+};
 
 export function mountSite(root) {
   appRoot = root;
