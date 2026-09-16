@@ -33193,6 +33193,7 @@ button.button.js-explore-campus {
 
 .home-page .placement-v2-photo-overlay {
   background: linear-gradient(90deg, rgba(0, 65, 43, .4), rgba(0, 54, 37, .7) 45%, rgba(0, 50, 35, .8));
+  opacity: 0.45;
 }
 
 .home-page .placement-hero-wave-svg {
@@ -33245,11 +33246,13 @@ button.button.js-explore-campus {
 .home-page .placement-cards-footer-text,
 .home-page .placement-script-flourish {
   color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 32, 20, 0.7);
 }
 
 .home-page .placement-main-heading .heading-gold,
 .home-page .footer-sep {
   color: #f4c20d;
+  text-shadow: 0 2px 10px rgba(0, 32, 20, 0.7);
 }
 
 .home-page .subheading-batch-tag {
