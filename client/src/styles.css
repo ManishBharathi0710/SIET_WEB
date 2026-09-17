@@ -5058,7 +5058,7 @@ header nav>.nav-placement {
   }
 }
 
-/* Campus introduction — balanced editorial layout */
+/* Campus introduction â€” balanced editorial layout */
 #campus-intro.hero {
   height: auto;
   min-height: 760px;
@@ -8177,7 +8177,7 @@ header nav>.nav-placement {
   }
 }
 
-/* Programme motion system — continuous, staggered and interaction-aware */
+/* Programme motion system â€” continuous, staggered and interaction-aware */
 @keyframes programmeAmbient {
 
   0%,
@@ -9847,7 +9847,7 @@ header nav>.nav-placement {
   }
 }
 
-/* Programmes aligned with the editorial “Who We Are” template */
+/* Programmes aligned with the editorial â€œWho We Areâ€ template */
 @media(min-width:1101px) {
   .programmes-section {
     height: 100svh;
@@ -10144,7 +10144,7 @@ header nav>.nav-placement {
   }
 }
 
-/* Final supplied Programme template — isolated from legacy layouts */
+/* Final supplied Programme template â€” isolated from legacy layouts */
 .programmes-section {
   --green: #00643e;
   --green-dark: #003f2a;
@@ -10950,7 +10950,7 @@ header nav>.nav-placement {
   }
 }
 
-/* Exact 1305 × 640 desktop programme container */
+/* Exact 1305 Ã— 640 desktop programme container */
 @media(min-width:1200px) {
   .programmes-section .programmes-container {
     height: 640px;
@@ -11227,7 +11227,7 @@ header nav>.nav-placement {
   }
 }
 
-/* Life at Sri Shakthi — editorial gallery */
+/* Life at Sri Shakthi â€” editorial gallery */
 .campus-section {
   --campus-green: #00643e;
   --campus-dark: #003f2a;
@@ -11701,7 +11701,7 @@ header nav>.nav-placement {
   }
 }
 
-/* Life at Sri Shakthi — single desktop viewport */
+/* Life at Sri Shakthi â€” single desktop viewport */
 @media(min-width:1025px) {
   .campus-section {
     height: 100svh;
@@ -12494,7 +12494,7 @@ header nav>.nav-placement {
   }
 }
 
-/* Programmes — viewport showcase */
+/* Programmes â€” viewport showcase */
 .programmes-showcase .programme-toggle svg {
   width: 17px;
   height: 17px;
@@ -15263,7 +15263,7 @@ header>.menu {
   }
 }
 
-/* Final header composition — one aligned responsive row */
+/* Final header composition â€” one aligned responsive row */
 header {
   min-height: 112px;
   height: 112px;
@@ -18409,12 +18409,15 @@ header nav,
     gap: 24px;
     width: calc(100% - 36px);
   }
+
   .placement-hero-bottom-strip {
     width: calc(100% - 36px);
   }
+
   .ps-standalone-cards-row {
     gap: 10px;
   }
+
   .placement-script-flourish {
     font-size: 20px;
   }
@@ -18662,6 +18665,7 @@ header nav,
   0% {
     transform: translate3d(0, 0, 0);
   }
+
   100% {
     transform: translate3d(-50%, 0, 0);
   }
@@ -18832,7 +18836,7 @@ header nav,
 }
 
 .placement-feature-card li:before {
-  content: '✓';
+  content: 'âœ“';
   position: absolute;
   left: 0;
   color: #75d63e;
@@ -18840,7 +18844,7 @@ header nav,
 }
 
 .placement-feature-card.recruiters li:before {
-  content: '→';
+  content: 'â†’';
   color: #d3a100
 }
 
@@ -19307,7 +19311,7 @@ header .nav-group>div{top:60px}.header-accreditations+ .counselling-code{align-s
 .admission-hero h1{margin:16px 0 8px;font:800 clamp(50px,6vw,86px)/.95 'Montserrat',sans-serif;letter-spacing:-.05em}.admission-hero h2{margin:0 0 12px;color:#f4c515;font:700 clamp(20px,2vw,29px) 'Montserrat',sans-serif}.admission-hero p{max-width:720px;margin:0;color:#e1eee7;font-size:16px;line-height:1.65}
 .admission-hero aside{padding:20px 22px;border-top:5px solid #f4c515;border-radius:8px;background:#fffefa;color:#173d2c;box-shadow:0 18px 45px #00241959}.admission-hero aside>b{display:block;margin-bottom:8px;font-size:10px;letter-spacing:.1em}.admission-hero aside a{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid #dce6df;font-size:12px;font-weight:700}.admission-hero aside a:last-child{border:0}.admission-hero aside svg{width:14px}
 .admission-enquiry-first{padding:58px max(7vw,40px);background:#fff}.admission-form-heading{max-width:800px;margin-bottom:25px}.admission-form-heading small,.why-heading small{color:#a37d00;font-weight:900;letter-spacing:.12em}.admission-form-heading h2{margin:7px 0 8px;color:#075b36;font:800 clamp(30px,3vw,48px) 'Montserrat',sans-serif}.admission-form-heading p{color:#586f63;line-height:1.6}
-.admission-form-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,.8fr);gap:28px;align-items:start}.admission-form-layout form{padding:28px;border:1px solid #dce7df;border-top:5px solid #f4c515;border-radius:8px;box-shadow:0 12px 35px #00492d0c}.admission-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 20px}.admission-submit{float:right;min-width:240px;background:#00643e}.admission-support{padding:26px;border:1px solid #dce7df;border-radius:8px;background:linear-gradient(145deg,#fff,#f6faef);box-shadow:0 12px 35px #00492d0c}.admission-support h3{display:flex;align-items:center;gap:10px;color:#075b36;font-size:16px}.admission-support h3 svg{width:24px;color:#c89c00}.admission-support ul{list-style:'✓  ';padding-left:20px;line-height:2;color:#405e4e;font-size:12px}.admission-support li::marker{color:#08734a;font-weight:900}.admission-support>div{display:flex;flex-direction:column;gap:7px;margin-top:20px;padding:18px;border-radius:7px;background:#eaf5e9}.admission-support small{color:#a17c00;font-weight:900}.admission-support strong{font-size:17px}.admission-support a{color:#00643e;font-weight:800}
+.admission-form-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,.8fr);gap:28px;align-items:start}.admission-form-layout form{padding:28px;border:1px solid #dce7df;border-top:5px solid #f4c515;border-radius:8px;box-shadow:0 12px 35px #00492d0c}.admission-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 20px}.admission-submit{float:right;min-width:240px;background:#00643e}.admission-support{padding:26px;border:1px solid #dce7df;border-radius:8px;background:linear-gradient(145deg,#fff,#f6faef);box-shadow:0 12px 35px #00492d0c}.admission-support h3{display:flex;align-items:center;gap:10px;color:#075b36;font-size:16px}.admission-support h3 svg{width:24px;color:#c89c00}.admission-support ul{list-style:'âœ“  ';padding-left:20px;line-height:2;color:#405e4e;font-size:12px}.admission-support li::marker{color:#08734a;font-weight:900}.admission-support>div{display:flex;flex-direction:column;gap:7px;margin-top:20px;padding:18px;border-radius:7px;background:#eaf5e9}.admission-support small{color:#a17c00;font-weight:900}.admission-support strong{font-size:17px}.admission-support a{color:#00643e;font-weight:800}
 .why-siet{padding:50px max(7vw,40px) 70px;background:linear-gradient(180deg,#fffdf7,#faf8ed)}.why-heading{text-align:center;margin-bottom:30px}.why-heading h2{margin:8px 0;color:#607267;font:500 17px 'Montserrat',sans-serif}.why-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}.why-grid article{min-height:205px;padding:25px 18px;text-align:center;border:1px solid #e3e7dc;border-radius:9px;background:#fff;box-shadow:0 8px 25px #003f2810}.why-grid svg{width:42px;height:42px;color:#087447}.why-grid h3{margin:16px 0 9px;color:#075b36;font-size:13px}.why-grid p{margin:0;color:#586b61;font-size:11px;line-height:1.6}
 
 @media(max-width:1200px){header{grid-template-columns:minmax(330px,1fr) auto 96px 120px!important;padding-inline:24px!important;gap:0 12px!important}.header-accreditations img{width:68px}.admission-fields{grid-template-columns:repeat(2,1fr)}.why-grid{grid-template-columns:repeat(3,1fr)}}
@@ -19315,7 +19319,7 @@ header .nav-group>div{top:60px}.header-accreditations+ .counselling-code{align-s
 @media(max-width:560px){.institutional-topbar>strong{font-size:11px}.admission-hero{min-height:0;padding:36px 20px}.admission-hero h1{font-size:44px}.admission-hero aside{display:none}.admission-enquiry-first,.why-siet{padding:42px 18px}.admission-fields{grid-template-columns:1fr}.admission-form-layout form{padding:20px}.admission-submit{float:none;width:100%}.why-grid{grid-template-columns:1fr}.why-grid article{min-height:0}header .counselling-code{display:none!important}}
 */
 
-/* Admission enquiry — dedicated reference layout */
+/* Admission enquiry â€” dedicated reference layout */
 .enquiry-page-v3 {
   background: #fffefa;
   color: #173b2c;
@@ -19464,7 +19468,7 @@ header .nav-group>div{top:60px}.header-accreditations+ .counselling-code{align-s
 .support-card-v3 ul {
   margin: 0;
   padding: 0 0 0 18px;
-  list-style: '✓  ';
+  list-style: 'âœ“  ';
   font-size: 9px;
   line-height: 1.85
 }
@@ -20382,7 +20386,7 @@ header nav .nav-group>a {
   text-shadow: none;
 }
 
-/* Vision & Mission — chairman-led internal page */
+/* Vision & Mission â€” chairman-led internal page */
 .vision-page {
   padding: 24px clamp(18px, 3.2vw, 54px) 48px;
   background: linear-gradient(180deg, #f7faf8, #fff);
@@ -21838,7 +21842,7 @@ article.chairman-message,
   }
 }
 
-/* Isolated Vision & Mission chairman hero — supplied composition */
+/* Isolated Vision & Mission chairman hero â€” supplied composition */
 .vision-chairman-section {
   width: 100%;
   padding: clamp(16px, 2vw, 30px);
@@ -23753,7 +23757,7 @@ article.chairman-message,
   }
 }
 
-/* Keep the complete desktop institution header within the requested 200–250px range. */
+/* Keep the complete desktop institution header within the requested 200â€“250px range. */
 @media(min-width:1251px) {
   .institution-header-v4 {
     min-height: 240px !important;
@@ -24136,7 +24140,7 @@ article.chairman-message,
   align-items: center
 }
 
-/* Careers at SIET — recruitment page */
+/* Careers at SIET â€” recruitment page */
 .careers-page {
   background: linear-gradient(145deg, #fffdf5, #f3faf5);
   min-height: 100vh
@@ -26528,7 +26532,7 @@ article.chairman-message,
   }
 }
 
-/* Final override: render the exact supplied 2048 × 256 header artwork. */
+/* Final override: render the exact supplied 2048 Ã— 256 header artwork. */
 .institution-header-v4.exact-image-header {
   width: 100% !important;
   min-height: 0 !important;
@@ -26738,7 +26742,7 @@ article.chairman-message,
     display: none !important;
   }
 
-  /* Mobile Navbar Bar: [☰ Three-line tab] on the left, [Logo] next to it */
+  /* Mobile Navbar Bar: [â˜° Three-line tab] on the left, [Logo] next to it */
   .institution-header-v4.exact-image-header .institution-navbar,
   .institution-header-v4 .institution-navbar {
     display: flex !important;
@@ -26756,7 +26760,7 @@ article.chairman-message,
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2) !important;
   }
 
-  /* ☰ Three-line Hamburger Button on the LEFT */
+  /* â˜° Three-line Hamburger Button on the LEFT */
   .institution-header-v4 .institution-mobile-toggle,
   .exact-image-header .institution-mobile-toggle,
   .institution-navbar .institution-mobile-toggle,
@@ -27199,7 +27203,7 @@ button.button.js-explore-campus {
 }
 
 /* ==========================================================================
-   Campus Moments Section — Match Exact 6-Card Reference Template
+   Campus Moments Section â€” Match Exact 6-Card Reference Template
    ========================================================================== */
 
 .campus-section {
@@ -30188,7 +30192,7 @@ button.button.js-explore-campus {
 }
 
 .department-detail-nav button.active:after {
-  content: '−'
+  content: 'âˆ’'
 }
 
 .department-copy {
@@ -31052,7 +31056,7 @@ button.button.js-explore-campus {
 }
 
 .department-detail-header .department-detail-title:before {
-  content: '◈';
+  content: 'â—ˆ';
   position: absolute;
   left: -30px;
   top: 50%;
@@ -31082,7 +31086,7 @@ button.button.js-explore-campus {
 }
 
 .department-detail-nav:after {
-  content: '17 SECTIONS  •  NAV ACTIVE';
+  content: '17 SECTIONS  â€¢  NAV ACTIVE';
   color: #75d8bd
 }
 
@@ -31138,7 +31142,7 @@ button.button.js-explore-campus {
 }
 
 .department-copy:after {
-  content: '◌';
+  content: 'â—Œ';
   display: grid;
   place-items: center;
   width: 76px;
@@ -31317,7 +31321,7 @@ button.button.js-explore-campus {
   }
 }
 
-/* Vision & Mission — isolated premium About page */
+/* Vision & Mission â€” isolated premium About page */
 .siet-vm-page {
   --vm-green: #00854a;
   --vm-deep: #00281b;
@@ -31992,7 +31996,7 @@ button.button.js-explore-campus {
   }
 }
 
-/* Program Outcomes — shares the About visual system while using an outcome grid. */
+/* Program Outcomes â€” shares the About visual system while using an outcome grid. */
 .siet-po-hero {
   position: relative;
   min-height: 300px;
@@ -32153,7 +32157,7 @@ button.button.js-explore-campus {
   }
 }
 
-/* Core Values — a warm, editorial treatment within the shared About layout. */
+/* Core Values â€” a warm, editorial treatment within the shared About layout. */
 .siet-cv-hero {
   position: relative;
   min-height: 300px;
@@ -32291,7 +32295,7 @@ button.button.js-explore-campus {
   }
 }
 
-/* Philosophy — a quieter, narrative-led page within the shared About system. */
+/* Philosophy â€” a quieter, narrative-led page within the shared About system. */
 .siet-ph-hero {
   position: relative;
   min-height: 300px;
@@ -32537,7 +32541,7 @@ button.button.js-explore-campus {
   }
 }
 
-/* Core Beliefs — guided five-pillar roadmap within the About visual system */
+/* Core Beliefs â€” guided five-pillar roadmap within the About visual system */
 .siet-cb-hero {
   position: relative;
   min-height: 300px;
@@ -32816,7 +32820,7 @@ button.button.js-explore-campus {
   }
 }
 
-/* Chairman's Desk & Principal's Desk — compact leadership hero with original photo proportions */
+/* Chairman's Desk & Principal's Desk â€” compact leadership hero with original photo proportions */
 .siet-cd-page {
   --cd-deep: #00281b;
   --cd-green: #00854a;
@@ -33150,7 +33154,7 @@ button.button.js-explore-campus {
 }
 
 .siet-cd-prose blockquote:before {
-  content: '“';
+  content: 'â€œ';
   position: absolute;
   left: 10px;
   top: 4px;
@@ -33909,6 +33913,7 @@ button.button.js-explore-campus {
 }
 
 @media (max-width: 1200px) {
+
   .home-page .campus-container,
   .home-page .labs-container {
     grid-template-columns: minmax(0, 1fr) !important;
@@ -33934,6 +33939,7 @@ button.button.js-explore-campus {
 }
 
 @media (max-width: 900px) {
+
   .home-page .campus-section,
   .home-page .special-labs-section {
     padding-inline: clamp(16px, 4vw, 32px) !important;
@@ -33951,6 +33957,7 @@ button.button.js-explore-campus {
 }
 
 @media (max-width: 580px) {
+
   .home-page .campus-section,
   .home-page .special-labs-section {
     padding-inline: 14px !important;
@@ -34199,7 +34206,7 @@ button.button.js-explore-campus {
   transform: none !important;
 }
 
-.home-page .campus-stats-row > * {
+.home-page .campus-stats-row>* {
   align-self: stretch;
 }
 
@@ -34233,6 +34240,7 @@ button.button.js-explore-campus {
 }
 
 @media (min-width: 961px) and (max-width: 1400px) {
+
   .home-page .campus-section,
   .home-page .special-labs-section {
     padding-inline: clamp(24px, 3vw, 44px) !important;
@@ -34271,6 +34279,7 @@ button.button.js-explore-campus {
 }
 
 @media (max-width: 960px) {
+
   .home-page .campus-container,
   .home-page .labs-container {
     grid-template-columns: minmax(0, 1fr) !important;
@@ -34323,6 +34332,7 @@ button.button.js-explore-campus {
 }
 
 @media (max-width: 580px) {
+
   .home-page .campus-section,
   .home-page .special-labs-section {
     padding-inline: 14px !important;
@@ -35103,46 +35113,76 @@ button.button.js-explore-campus {
 }
 
 @keyframes pmBackdropFadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes pmBackdropFadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes pmWindowScaleIn {
-  from { opacity: 0; transform: scale(0.94) translateY(12px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 @keyframes pmWindowScaleOut {
-  from { opacity: 1; transform: scale(1) translateY(0); }
-  to { opacity: 0; transform: scale(0.95) translateY(8px); }
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0.95) translateY(8px);
+  }
 }
 
 @media (max-width: 680px) {
   .pm-tier-tabs {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .pm-hero-card {
     flex-direction: column;
     text-align: center;
   }
+
   .pm-hero-stat {
     width: 100%;
   }
+
   .pm-details-grid {
     grid-template-columns: 1fr;
   }
+
   .pm-footer {
     flex-direction: column;
     align-items: stretch;
   }
+
   .pm-footer-actions {
     justify-content: stretch;
   }
+
   .pm-cta-btn {
     flex: 1;
     justify-content: center;
@@ -35361,6 +35401,7 @@ button.button.js-explore-campus {
    ========================================================================== */
 
 @media (max-width: 1024px) {
+
   /* Placement Hero Copy (.placement-v2-copy) */
   .home-page .placement-v2-copy {
     display: flex !important;
@@ -36316,7 +36357,7 @@ button.button.js-explore-campus {
     margin-bottom: 20px !important;
   }
 
-  .siet-vm-section-intro > p {
+  .siet-vm-section-intro>p {
     text-align: center !important;
     margin-inline: auto !important;
   }
@@ -36327,7 +36368,7 @@ button.button.js-explore-campus {
     font-size: clamp(28px, 8vw, 36px) !important;
   }
 
-  .siet-vm-section-intro > span {
+  .siet-vm-section-intro>span {
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -36395,7 +36436,7 @@ button.button.js-explore-campus {
     max-width: 100% !important;
   }
 
-  .siet-vm-card-copy > p:last-child {
+  .siet-vm-card-copy>p:last-child {
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -36642,7 +36683,7 @@ button.button.js-explore-campus {
     margin-inline: auto !important;
   }
 
-  .siet-ph-principle > div {
+  .siet-ph-principle>div {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -36668,7 +36709,7 @@ button.button.js-explore-campus {
     margin-inline: auto !important;
   }
 
-  .siet-ph-closing > div {
+  .siet-ph-closing>div {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -36721,9 +36762,9 @@ button.button.js-explore-campus {
     align-items: flex-end !important;
   }
 
-  .siet-cd-portrait-frame > img,
-  .chairman-page .siet-cd-portrait-frame > img,
-  .principal-page .siet-cd-portrait-frame > img {
+  .siet-cd-portrait-frame>img,
+  .chairman-page .siet-cd-portrait-frame>img,
+  .principal-page .siet-cd-portrait-frame>img {
     max-height: 195px !important;
     width: auto !important;
     transform: none !important;
@@ -36766,9 +36807,9 @@ button.button.js-explore-campus {
     font-size: clamp(28px, 7.5vw, 38px) !important;
   }
 
-  .siet-cd-hero-copy > p,
-  .chairman-page .siet-cd-hero-copy > p,
-  .principal-page .siet-cd-hero-copy > p {
+  .siet-cd-hero-copy>p,
+  .chairman-page .siet-cd-hero-copy>p,
+  .principal-page .siet-cd-hero-copy>p {
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -36817,7 +36858,7 @@ button.button.js-explore-campus {
     text-align: center !important;
   }
 
-  .siet-cd-prose > p {
+  .siet-cd-prose>p {
     font-size: 15px !important;
     line-height: 1.7 !important;
     margin-bottom: 16px !important;
@@ -36847,11 +36888,11 @@ button.button.js-explore-campus {
     gap: 10px !important;
   }
 
-  .siet-cd-signoff > span {
+  .siet-cd-signoff>span {
     margin-inline: auto !important;
   }
 
-  .siet-cd-signoff > div {
+  .siet-cd-signoff>div {
     text-align: center !important;
   }
 
@@ -36882,7 +36923,7 @@ button.button.js-explore-campus {
   align-items: center;
   padding: clamp(36px, 4vw, 56px) clamp(24px, 5.5vw, 85px);
   background: linear-gradient(90deg, rgba(3, 38, 23, 0.95) 0%, rgba(3, 40, 24, 0.90) 42%, rgba(2, 45, 27, 0.65) 75%, rgba(2, 35, 21, 0.82) 100%),
-              url('/brand/library-hero.jpg') center right/cover no-repeat;
+    url('/brand/library-hero.jpg') center right/cover no-repeat;
   box-sizing: border-box;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(2, 35, 20, 0.18);
@@ -37577,39 +37618,40 @@ button.button.js-explore-campus {
     grid-template-columns: 290px 1fr 300px;
     gap: 24px;
   }
-  
+
   .siet-lib-features-container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 992px) {
+
   .siet-lib-layout,
   .siet-lib-layout-duo {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  
+
   .siet-lib-photo-card {
     min-height: 320px;
     max-height: 440px;
   }
-  
+
   .siet-lib-hero-script {
     position: static;
     margin-top: 24px;
     align-items: flex-start;
   }
-  
+
   .siet-lib-hero-script .script-words {
     text-align: left;
     transform: rotate(-1deg);
   }
-  
+
   .siet-lib-hero-script .script-flourish {
     transform: rotate(-1deg);
   }
-  
+
   .siet-lib-hero-container {
     flex-direction: column;
     align-items: flex-start;
@@ -37621,15 +37663,15 @@ button.button.js-explore-campus {
     min-height: auto;
     padding: 34px 20px 42px;
     background: linear-gradient(180deg, rgba(3, 38, 23, 0.96) 0%, rgba(3, 40, 24, 0.92) 100%),
-                url('/brand/library-hero.jpg') center/cover no-repeat;
+      url('/brand/library-hero.jpg') center/cover no-repeat;
   }
-  
+
   .siet-lib-features-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
     padding: 18px 16px;
   }
-  
+
   .siet-lib-photo-card {
     min-height: 260px;
     max-height: 340px;
@@ -37640,14 +37682,14 @@ button.button.js-explore-campus {
   .siet-lib-features-container {
     grid-template-columns: 1fr;
   }
-  
+
   .siet-lib-search-form {
     border-radius: 16px;
     flex-direction: column;
     padding: 8px 12px;
     align-items: stretch;
   }
-  
+
   .siet-lib-search-btn {
     width: 100%;
     margin-top: 6px;
@@ -37673,7 +37715,7 @@ button.button.js-explore-campus {
   align-items: center;
   padding: clamp(32px, 3.8vw, 50px) clamp(24px, 5vw, 85px);
   background: linear-gradient(90deg, rgba(3, 38, 23, 0.96) 0%, rgba(3, 42, 25, 0.90) 42%, rgba(2, 40, 24, 0.65) 70%, rgba(3, 40, 24, 0.3) 100%),
-              url('/brand/curriculum-hero.jpg') center right/cover no-repeat;
+    url('/brand/curriculum-hero.jpg') center right/cover no-repeat;
   box-sizing: border-box;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(2, 35, 20, 0.15);
@@ -38272,7 +38314,7 @@ a.siet-curr-navlink {
     grid-template-columns: 240px minmax(0, 1fr);
     gap: 20px;
   }
-  
+
   .curr-sem-tabs {
     flex-wrap: wrap;
   }
@@ -38282,7 +38324,7 @@ a.siet-curr-navlink {
   .siet-curr-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .siet-curr-sidebar {
     max-width: 100%;
   }
@@ -38292,21 +38334,21 @@ a.siet-curr-navlink {
   .siet-curr-body {
     padding: 24px 14px 50px;
   }
-  
+
   .siet-curr-center {
     padding: 20px 16px;
   }
-  
+
   .siet-curr-hero {
     padding: 28px 18px;
   }
-  
+
   .curr-dept-tabs,
   .curr-sem-tabs {
     gap: 6px;
     margin-bottom: 16px;
   }
-  
+
   .curr-dept-tab,
   .curr-sem-tab {
     padding: 6.5px 11px;
@@ -38465,6 +38507,7 @@ a.siet-curr-navlink {
 }
 
 @media (max-width: 900px) {
+
   .siet-hud-header,
   .department-detail-header {
     min-height: auto !important;
@@ -38584,7 +38627,7 @@ a.siet-curr-navlink {
 
 /* Ensure all headers under Academics and Admissions topics are in block letters (uppercase) */
 .page-hero h1,
-.internal-page > .page-hero h1,
+.internal-page>.page-hero h1,
 .enquiry-page-v3 .page-hero h1,
 .referral-page .page-hero h1,
 .enquiry-heading-v3 h1,
@@ -38599,7 +38642,7 @@ a.siet-curr-navlink {
 .siet-sem-card-head h3,
 .siet-lib-feature-item h3,
 .siet-lib-section-head h2,
-.institution-nav-group > div a,
+.institution-nav-group>div a,
 .mobile-nav-sublink {
   text-transform: uppercase !important;
 }
@@ -38610,7 +38653,7 @@ a.siet-curr-navlink {
   background: linear-gradient(rgba(247, 250, 246, .7), rgba(247, 250, 246, .82)), url('/brand/departments-campus.jpg') center/cover fixed;
 }
 
-.departments-page .programme-content > * {
+.departments-page .programme-content>* {
   position: relative;
   z-index: 1;
 }
@@ -38624,6 +38667,7 @@ a.siet-curr-navlink {
     opacity: 0;
     transform: translateY(-4px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -39023,6 +39067,7 @@ a.siet-curr-navlink {
   .siet-prog-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .siet-prog-cta-banner {
     flex-direction: column;
     align-items: flex-start;
@@ -39034,18 +39079,1485 @@ a.siet-curr-navlink {
   .siet-prog-grid {
     grid-template-columns: 1fr;
   }
+
   .siet-prog-controls {
     flex-direction: column;
     align-items: flex-start;
   }
+
   .siet-prog-filter-tabs {
     width: 100%;
     justify-content: space-between;
   }
+
   .siet-prog-filter-btn {
     flex: 1;
     justify-content: center;
     padding: 9px 8px;
     font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+
+/* =========================================================
+
+/* =========================================================
+
+/* =========================================================
+/* =========================================================
+   PLACEMENT EXCELLENCE & STAR PLACEMENTS DASHBOARD
+   Styled with SIET About / Home Page Typography & Brand Colors
+   (#00281b, #005a39, #00854a, #f3c515, #f8fbf8)
+========================================================= */
+
+.siet-pe-page {
+  background: #f8fbf8;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #17372a;
+  overflow-x: hidden;
+}
+
+/* ── 1. STAR PLACEMENTS / TOP ACHIEVERS (Yellow & Green Honors Arena) ─── */
+.siet-sp-section {
+  padding: 0 0 44px 0;
+  margin: 0;
+  background: radial-gradient(ellipse at 50% -10%, rgba(243, 197, 21, 0.22) 0%, transparent 65%),
+    linear-gradient(180deg, #002216 0%, #003622 40%, #004d31 75%, #00281b 100%);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.siet-sp-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(243, 197, 21, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(243, 197, 21, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, #000 50%, transparent 90%);
+  pointer-events: none;
+}
+
+/* Full-width header bar directly below dark green navbar */
+.siet-sp-header-bar {
+  width: 100%;
+  margin: 0 0 28px 0;
+  background: transparent;
+  padding: 22px 0 16px 0;
+  border-radius: 0;
+  border-top: none;
+  border-bottom: 2px solid rgba(243, 197, 21, 0.4);
+  position: relative;
+  z-index: 2;
+}
+
+.siet-sp-header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+.siet-sp-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+.siet-sp-container {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+  position: relative;
+}
+
+.siet-sp-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.siet-sp-thumb-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(243, 197, 21, 0.16);
+  border: 1.5px solid rgba(243, 197, 21, 0.5);
+  color: #f3c515;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 12px rgba(0, 40, 27, 0.25);
+  flex-shrink: 0;
+}
+
+.siet-sp-thumb-badge svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.siet-sp-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.siet-sp-kicker {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #f3c515;
+  text-transform: uppercase;
+}
+
+.siet-sp-banner-title {
+  font: 900 clamp(18px, 2.2vw, 24px)/1 'Plus Jakarta Sans', sans-serif;
+  color: #ffffff;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.siet-sp-banner-title i {
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  background: #f3c515;
+  border-radius: 2px;
+}
+
+.siet-sp-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(243, 197, 21, 0.12);
+  border: 1px solid rgba(243, 197, 21, 0.45);
+  color: #f3c515;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.siet-sp-tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f3c515;
+  box-shadow: 0 0 8px rgba(243, 197, 21, 0.8);
+}
+
+.siet-sp-header-accent-line {
+  flex: 1;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(243, 197, 21, 0.85) 0%, rgba(255, 255, 255, 0.2) 100%);
+  border-radius: 2px;
+  margin-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .siet-sp-header-accent-line {
+    display: none;
+  }
+}
+
+/* Students Body */
+.siet-sp-body {
+  position: relative;
+  background: transparent;
+  padding: 0;
+  overflow: visible;
+}
+
+.siet-sp-students-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+@media (max-width: 960px) {
+  .siet-sp-students-row {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+  }
+}
+
+.siet-sp-card {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfdfb 55%, #f4f9f4 100%);
+  border: 2px solid #f3c515;
+  border-radius: 20px;
+  padding: 18px 18px 16px;
+  text-align: center;
+  box-shadow: 0 16px 36px rgba(0, 24, 14, 0.35);
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.siet-sp-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 52px rgba(0, 20, 10, 0.45), 0 0 20px rgba(243, 197, 21, 0.35);
+}
+
+.siet-sp-card.is-top {
+  border: 2.5px solid #f3c515;
+  background: linear-gradient(180deg, #fffef5 0%, #ffffff 50%, #f7fbf6 100%);
+  box-shadow: 0 20px 48px rgba(243, 197, 21, 0.28), 0 0 0 1px #f3c515;
+}
+
+.siet-sp-card.is-top:hover {
+  box-shadow: 0 24px 56px rgba(243, 197, 21, 0.4), 0 0 0 2px #f3c515;
+}
+
+.siet-sp-ctc-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.siet-sp-ctc-lbl {
+  font: 800 10.5px 'Plus Jakarta Sans', sans-serif;
+  color: #005a39;
+  letter-spacing: 0.1em;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.siet-sp-ctc-ribbon {
+  background: linear-gradient(135deg, #005a39 0%, #00854a 100%);
+  color: #ffffff;
+  font: 900 17px/1 'Plus Jakarta Sans', sans-serif;
+  padding: 7px 22px;
+  border-radius: 4px;
+  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+  box-shadow: 0 4px 14px rgba(0, 90, 57, 0.25);
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(243, 197, 21, 0.5);
+}
+
+.siet-sp-ctc-ribbon.is-gold,
+.siet-sp-card.is-top .siet-sp-ctc-ribbon {
+  background: linear-gradient(135deg, #f3c515 0%, #e5b200 100%);
+  color: #00281b;
+  border: none;
+  box-shadow: 0 4px 18px rgba(243, 197, 21, 0.45);
+}
+
+/* Organic Photo Blending with Compact Height */
+.siet-sp-img-box {
+  width: 100%;
+  height: 155px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 12px;
+  position: relative;
+  background: radial-gradient(circle at 50% 65%, rgba(243, 197, 21, 0.22) 0%, rgba(0, 133, 74, 0.1) 50%, transparent 75%);
+  border-radius: 14px;
+}
+
+.siet-sp-img-box img {
+  max-height: 155px;
+  width: auto;
+  max-width: 90%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  -webkit-mask-image: linear-gradient(to bottom, #000 68%, transparent 98%);
+  mask-image: linear-gradient(to bottom, #000 68%, transparent 98%);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), filter 0.35s ease;
+}
+
+.siet-sp-card:hover .siet-sp-img-box img {
+  transform: scale(1.08);
+}
+
+.siet-sp-name {
+  font: 800 17px/1.25 'Plus Jakarta Sans', sans-serif;
+  color: #00281b;
+  margin: 0 0 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.siet-sp-dept {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 600;
+  color: #00854a;
+  margin: 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.siet-sp-company-box {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  background: #f4faf5;
+  border: 1.5px solid rgba(0, 92, 58, 0.16);
+  border-radius: 8px;
+  padding: 4px 18px;
+  transition: all 0.25s ease;
+}
+
+.siet-sp-card:hover .siet-sp-company-box {
+  background: #eaf7ed;
+  border-color: rgba(243, 197, 21, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 90, 57, 0.12);
+}
+
+.siet-sp-company-box svg {
+  max-height: 28px;
+  max-width: 120px;
+}
+
+.siet-sp-batch {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #005a39;
+  letter-spacing: 0.04em;
+}
+
+/* Footer Pagination Band (Floating Pill Container) */
+.siet-sp-footer-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 26px;
+}
+
+.siet-sp-footer-band {
+  background: rgba(0, 36, 23, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(243, 197, 21, 0.35);
+  border-radius: 30px;
+  padding: 10px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  box-shadow: 0 8px 24px rgba(0, 20, 10, 0.35);
+}
+
+.siet-sp-nav-arrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(243, 197, 21, 0.5);
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.siet-sp-nav-arrow:hover {
+  background: #f3c515;
+  color: #00281b;
+  border-color: #f3c515;
+}
+
+.siet-sp-dashes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.siet-sp-dash {
+  width: 22px;
+  height: 3.5px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.siet-sp-dash.is-active {
+  width: 36px;
+  background: #f3c515;
+  box-shadow: 0 1px 6px rgba(243, 197, 21, 0.6);
+}
+
+/* ── 2. THE PLACEMENT JOURNEY HERO SECTION (Replaces Placement Excellence) ── */
+.siet-pj-hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #002216 0%, #003824 45%, #005234 80%, #006842 100%);
+  color: #ffffff;
+  padding: 48px 24px 44px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 40, 27, 0.18);
+  border-top: 2px solid rgba(243, 197, 21, 0.35);
+  border-bottom: 2px solid rgba(243, 197, 21, 0.35);
+}
+
+.siet-pj-hero-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.16;
+  background-image: linear-gradient(rgba(255, 255, 255, .15) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .15) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(circle at center, #000 40%, transparent 85%);
+  pointer-events: none;
+}
+
+.siet-pj-hero-orb-1 {
+  position: absolute;
+  top: -100px;
+  left: 20%;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(243, 197, 21, 0.12);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.siet-pj-hero-orb-2 {
+  position: absolute;
+  bottom: -80px;
+  right: 15%;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(0, 133, 74, 0.25);
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+.siet-pj-shell {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.siet-pj-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f3c515;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.siet-pj-kicker i {
+  display: inline-block;
+  width: 24px;
+  height: 2.5px;
+  background: #f3c515;
+  border-radius: 2px;
+}
+
+.siet-pj-title {
+  font: 800 clamp(30px, 3.5vw, 44px)/1.15 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.03em;
+  margin: 0 0 10px;
+  color: #ffffff;
+}
+
+.siet-pj-title em {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  font-style: italic;
+  color: #f3c515;
+  text-shadow: 0 1px 3px rgba(0, 40, 27, 0.4);
+}
+
+.siet-pj-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(13.5px, 1.1vw, 16px);
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0 auto 36px;
+  max-width: 680px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+/* 6-Stage Steps Grid */
+.siet-pj-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  margin-bottom: 34px;
+}
+
+@media (max-width: 1150px) {
+  .siet-pj-steps-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 650px) {
+  .siet-pj-steps-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.siet-pj-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  padding: 22px 14px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.siet-pj-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.14);
+  border-color: #f3c515;
+  box-shadow: 0 10px 24px rgba(0, 40, 27, 0.35);
+}
+
+.siet-pj-card.is-final {
+  border: 1.5px solid #f3c515;
+  background: rgba(243, 197, 21, 0.1);
+}
+
+.siet-pj-step-num {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font: 800 12px 'Plus Jakarta Sans', sans-serif;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.siet-pj-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1.5px solid rgba(243, 197, 21, 0.5);
+  color: #f3c515;
+  display: grid;
+  place-items: center;
+  margin-bottom: 12px;
+}
+
+.siet-pj-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.siet-pj-card-title {
+  font: 800 14px/1.25 'Plus Jakarta Sans', sans-serif;
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+
+.siet-pj-card-desc {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.45;
+  margin: 0 0 14px;
+  flex: 1;
+}
+
+.siet-pj-pill {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.04em;
+}
+
+.siet-pj-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .siet-pj-actions {
+    flex-direction: column;
+  }
+}
+
+/* ── 3. TOP RECRUITERS & INDUSTRY PARTNERS SECTION ───────────── */
+.siet-tr-section {
+  background: #ffffff;
+  padding: 56px 24px 52px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 92, 58, 0.1);
+  border-bottom: 1px solid rgba(0, 92, 58, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.siet-tr-shell {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
+.siet-tr-header-box {
+  max-width: 820px;
+  margin: 0 auto 22px;
+}
+
+.siet-tr-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #00854a;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.siet-tr-kicker i {
+  display: inline-block;
+  width: 20px;
+  height: 2.5px;
+  background: #f3c515;
+  border-radius: 1px;
+}
+
+.siet-tr-title {
+  font: 800 clamp(28px, 2.8vw, 40px)/1.2 'Plus Jakarta Sans', sans-serif;
+  color: #00281b;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+
+.siet-tr-title em {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  font-style: italic;
+  color: #00854a;
+}
+
+.siet-tr-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(13.5px, 1.1vw, 15.5px);
+  color: #507060;
+  line-height: 1.55;
+  margin: 0 auto;
+}
+
+/* Institutional Milestone Strip */
+.siet-tr-stats-bar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8faf8;
+  border: 1px solid rgba(0, 92, 58, 0.12);
+  border-radius: 30px;
+  padding: 10px 32px;
+  margin-bottom: 28px;
+  gap: 28px;
+  box-shadow: 0 4px 14px rgba(0, 50, 30, 0.04);
+  flex-wrap: wrap;
+}
+
+.siet-tr-sbar-item {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+
+.siet-tr-sbar-num {
+  font: 800 16px/1 'Plus Jakarta Sans', sans-serif;
+  color: #00281b;
+}
+
+.siet-tr-sbar-lbl {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11.5px;
+  color: #647b6e;
+  font-weight: 600;
+}
+
+.siet-tr-sbar-sep {
+  width: 1px;
+  height: 16px;
+  background: rgba(0, 92, 58, 0.15);
+}
+
+/* Dual Marquee Tracks Container */
+.siet-tr-marquee-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.siet-tr-marquee-wrap {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 90px, #000 calc(100% - 90px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 90px, #000 calc(100% - 90px), transparent 100%);
+}
+
+.siet-tr-track {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  animation: sietTopRecruiterScroll 36s linear infinite;
+  flex-shrink: 0;
+  will-change: transform;
+  padding: 4px 0;
+}
+
+.siet-tr-track.is-reverse {
+  animation: sietTopRecruiterScrollRev 38s linear infinite;
+}
+
+/* Pause on Hover on any part of the marquee */
+.siet-tr-marquee-wrap:hover .siet-tr-track {
+  animation-play-state: paused;
+}
+
+@keyframes sietTopRecruiterScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes sietTopRecruiterScrollRev {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ── Ultra-Professional Recruiter Logo Card (Enlarged & Single Line) ── */
+.siet-tr-logo-card {
+  position: relative;
+  height: 122px;
+  min-width: 250px;
+  padding: 14px 26px 12px;
+  background: #ffffff;
+  border: 1.8px solid rgba(0, 92, 58, 0.14);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 6px 18px rgba(0, 45, 25, 0.04);
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.siet-tr-logo-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(0, 133, 74, 0.04) 0%, rgba(243, 197, 21, 0.07) 100%);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+  pointer-events: none;
+}
+
+.siet-tr-cat-tag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #005a39;
+  background: #f0f7f2;
+  padding: 2.5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 92, 58, 0.12);
+  transition: all 0.25s ease;
+  align-self: flex-start;
+}
+
+.siet-tr-logo-inner {
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 2px 0 4px;
+}
+
+.siet-tr-logo-inner img {
+  max-height: 52px;
+  max-width: 165px;
+  object-fit: contain;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.06));
+}
+
+.siet-tr-logo-inner svg {
+  max-height: 48px;
+  max-width: 165px;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+
+.siet-tr-hover-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.8;
+  transition: opacity 0.25s ease;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.siet-tr-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #00854a;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.siet-tr-co-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #00281b;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+/* ── Interactive Hover State for Recruiter Card ── */
+.siet-tr-logo-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  border-color: #f3c515;
+  box-shadow: 0 16px 36px rgba(0, 45, 25, 0.14), 0 0 0 2px #f3c515;
+  background: #ffffff;
+}
+
+.siet-tr-logo-card:hover::before {
+  opacity: 1;
+}
+
+.siet-tr-logo-card:hover .siet-tr-cat-tag {
+  color: #005a39;
+  background: #eaf7ed;
+  border-color: rgba(0, 133, 74, 0.25);
+}
+
+.siet-tr-logo-card:hover .siet-tr-logo-inner img,
+.siet-tr-logo-card:hover .siet-tr-logo-inner svg {
+  transform: scale(1.12);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.12));
+}
+
+.siet-tr-logo-card:hover .siet-tr-hover-bar {
+  opacity: 1;
+}
+
+.siet-tr-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 24px auto 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11.5px;
+  color: #647b6e;
+  font-weight: 600;
+}
+
+/* ── 2. YEAR-WISE HIGHLIGHTS & GROWTH RECORD SECTION (Sri Shakthi Theme) ── */
+.siet-yw-section {
+  width: 100%;
+  padding: 56px 0 62px;
+  background: radial-gradient(ellipse at 50% -10%, rgba(243, 197, 21, 0.22) 0%, transparent 65%),
+    linear-gradient(180deg, #002216 0%, #003622 40%, #004d31 75%, #00281b 100%);
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid #f3c515;
+  border-bottom: 3px solid #f3c515;
+}
+
+.siet-yw-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(243, 197, 21, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(243, 197, 21, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, #000 60%, transparent 95%);
+  pointer-events: none;
+}
+
+.siet-sp-lower-shell {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  position: relative;
+  z-index: 2;
+}
+
+.siet-sp-section-head {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 12px;
+}
+
+.siet-sp-section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #f3c515;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.siet-sp-section-kicker i {
+  display: inline-block;
+  width: 22px;
+  height: 3px;
+  background: #f3c515;
+  border-radius: 2px;
+}
+
+.siet-sp-section-title {
+  font: 800 clamp(28px, 3.2vw, 42px)/1.2 'Plus Jakarta Sans', sans-serif;
+  color: #ffffff;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+
+.siet-sp-section-title em {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  font-style: italic;
+  color: #f3c515;
+  text-shadow: 0 2px 10px rgba(0, 30, 18, 0.5);
+}
+
+.siet-sp-section-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(14px, 1.1vw, 16px);
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.55;
+  margin: 0 auto;
+}
+
+.siet-tmpl-row1 {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+@media (max-width: 1080px) {
+  .siet-tmpl-row1 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Left Card: Cohort Performance Highlights ── */
+.siet-tmpl-highlights-card {
+  background: #ffffff;
+  border: 2.5px solid #f3c515;
+  border-radius: 20px;
+  padding: 26px 28px 22px;
+  box-shadow: 0 20px 48px rgba(0, 20, 10, 0.42);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.siet-tmpl-hl-top {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.siet-tmpl-hl-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.siet-tmpl-verified-tag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 3px 10px;
+  background: #eaf7ed;
+  color: #00854a;
+  border: 1px solid rgba(0, 133, 74, 0.22);
+  border-radius: 12px;
+  letter-spacing: 0.02em;
+}
+
+.siet-tmpl-year-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.siet-tmpl-ytab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 20px;
+  background: #f0f7f2;
+  color: #507060;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid rgba(0, 92, 58, 0.1);
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.siet-tmpl-ytab:hover {
+  background: #dff0e3;
+  color: #00854a;
+  border-color: rgba(0, 133, 74, 0.25);
+  transform: translateY(-1px);
+}
+
+.siet-tmpl-ytab.is-active {
+  background: #003824;
+  color: #ffffff;
+  border-color: #f3c515;
+  box-shadow: 0 4px 14px rgba(0, 56, 36, 0.28);
+}
+
+.siet-tmpl-ytab-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f3c515;
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(243, 197, 21, 0.8);
+}
+
+/* 6-Metric Stat Tiles Grid */
+.siet-tmpl-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  transition: opacity 0.15s ease;
+}
+
+@media (max-width: 600px) {
+  .siet-tmpl-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.siet-tmpl-stat-card {
+  background: #f9fbf9;
+  border: 1px solid rgba(0, 92, 58, 0.09);
+  border-radius: 12px;
+  padding: 14px 14px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.22s ease;
+}
+
+.siet-tmpl-stat-card:hover {
+  transform: translateY(-2.5px);
+  background: #ffffff;
+  border-color: rgba(0, 133, 74, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 50, 30, 0.06);
+}
+
+.siet-tmpl-stat-card.is-highlight {
+  background: linear-gradient(145deg, #ffffff 0%, #fffdf0 100%);
+  border: 1.8px solid #f3c515;
+}
+
+.siet-tmpl-stat-card.is-highlight:hover {
+  border-color: #f3c515;
+  box-shadow: 0 8px 24px rgba(243, 197, 21, 0.25);
+}
+
+.siet-tmpl-sc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.siet-tmpl-sitem-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #eaf5e9;
+  color: #00854a;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(0, 133, 74, 0.15);
+  box-shadow: 0 2px 6px rgba(0, 90, 57, 0.06);
+}
+
+.siet-tmpl-sitem-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.siet-tmpl-trend-pill {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 2.5px 7px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.siet-tmpl-trend-pill.is-green {
+  background: #e7f6eb;
+  color: #00854a;
+  border: 1px solid rgba(0, 133, 74, 0.18);
+}
+
+.siet-tmpl-trend-pill.is-gold {
+  background: #fef7de;
+  color: #946900;
+  border: 1px solid rgba(243, 197, 21, 0.35);
+}
+
+.siet-tmpl-trend-pill.is-blue {
+  background: #eaf3fe;
+  color: #1a62bf;
+  border: 1px solid rgba(26, 98, 191, 0.2);
+}
+
+.siet-tmpl-sc-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.siet-tmpl-sitem-lbl {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  color: #647b6e;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.siet-tmpl-sitem-val {
+  font: 800 21px/1.1 'Plus Jakarta Sans', sans-serif;
+  color: #00281b;
+  letter-spacing: -0.02em;
+}
+
+.siet-tmpl-card-footer-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 92, 58, 0.08);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  color: #647b6e;
+  font-style: italic;
+}
+
+.siet-tmpl-cf-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00854a;
+  flex-shrink: 0;
+}
+
+/* ── Right Card: Enhanced Growth Chart ── */
+.siet-tmpl-chart-card {
+  background: #ffffff;
+  border: 2.5px solid #f3c515;
+  border-radius: 20px;
+  padding: 26px 28px 22px;
+  box-shadow: 0 20px 48px rgba(0, 20, 10, 0.42);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.siet-tmpl-chart-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.siet-tmpl-ct-title-box {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.siet-tmpl-chart-title {
+  font: 800 15px/1.2 'Plus Jakarta Sans', sans-serif;
+  color: #00281b;
+  letter-spacing: -0.01em;
+}
+
+.siet-tmpl-chart-sub {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  color: #647b6e;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.siet-chart-badge-wrap {
+  flex-shrink: 0;
+}
+
+.siet-chart-growth-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  background: linear-gradient(135deg, #f3c515 0%, #e0ab00 100%);
+  color: #00281b;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(243, 197, 21, 0.35);
+  white-space: nowrap;
+}
+
+/* Legend */
+.siet-tmpl-chart-legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #507060;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.siet-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.siet-legend-item i {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+/* High Resolution Chart SVG */
+.siet-chart-svg-wrap {
+  width: 100%;
+  position: relative;
+  margin: 6px 0 10px;
+}
+
+.siet-chart-svg {
+  width: 100%;
+  height: auto;
+  max-height: 220px;
+  display: block;
+  overflow: visible;
+}
+
+.siet-chart-col-group {
+  transition: all 0.25s ease;
+}
+
+.siet-chart-col-bg {
+  transition: all 0.22s ease;
+}
+
+.siet-chart-col-group:hover .siet-chart-col-bg {
+  fill: rgba(0, 133, 74, 0.06);
+}
+
+.siet-chart-col-group.is-active .siet-chart-col-bg {
+  fill: rgba(0, 133, 74, 0.08);
+  stroke: rgba(0, 133, 74, 0.28);
+  stroke-width: 1.5;
+}
+
+.siet-cbar-student,
+.siet-cbar-company {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.siet-chart-col-group:hover .siet-cbar-student {
+  filter: brightness(1.08);
+}
+
+.siet-chart-col-group:hover .siet-cbar-company {
+  filter: brightness(1.08);
+}
+
+/* KPI Summary Ribbon */
+.siet-chart-kpi-ribbon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 92, 58, 0.09);
+  flex-wrap: wrap;
+}
+
+.siet-chart-kpi-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  color: #507060;
+}
+
+.siet-chart-kpi-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.siet-chart-kpi-val {
+  color: #00281b;
+  font-weight: 800;
+}
+
+.siet-tmpl-btn-gold {
+  background: #f3c515;
+  color: #00281b;
+  font: 800 12px 'Plus Jakarta Sans', sans-serif;
+  padding: 10px 22px;
+  border-radius: 22px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(243, 197, 21, 0.35);
+}
+
+.siet-tmpl-btn-gold:hover {
+  background: #ffcc00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(243, 197, 21, 0.45);
+}
+
+.siet-tmpl-btn-outline {
+  background: transparent;
+  color: #ffffff;
+  font: 700 11.5px 'Plus Jakarta Sans', sans-serif;
+  padding: 9px 22px;
+  border-radius: 22px;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.siet-tmpl-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Sub-page cards */
+.siet-tmpl-sub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 14px;
+}
+
+@media (max-width: 768px) {
+  .siet-tmpl-sub-grid {
+    grid-template-columns: 1fr;
   }
 }

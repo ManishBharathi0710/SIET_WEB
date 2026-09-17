@@ -45,7 +45,7 @@ const icon = (name) => {
   if (name === 'ps-support') return `<svg class="ui-icon-svg ps-bar-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 13C17.9 13 21 13.7 21 15.2V17H12V15.2C12 13.7 15.1 13 16.5 13ZM16.5 11.5C15.1 11.5 14 10.4 14 9C14 7.6 15.1 6.5 16.5 6.5C17.9 6.5 19 7.6 19 9C19 10.4 17.9 11.5 16.5 11.5ZM7.5 12C9.4 12 13 13 13 15V17H2V15C2 13 5.6 12 7.5 12ZM7.5 10.5C5.8 10.5 4.5 9.2 4.5 7.5C4.5 5.8 5.8 4.5 7.5 4.5C9.2 4.5 10.5 5.8 10.5 7.5C10.5 9.2 9.2 10.5 7.5 10.5Z"/></svg>`;
   if (name === 'ps-bulb') return `<svg class="ui-icon-svg ps-bar-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9C5 11.4 6.2 13.5 8 14.7V17C8 17.6 8.4 18 9 18H15C15.6 18 16 17.6 16 17V14.7C17.8 13.5 19 11.4 19 9C19 5.1 15.9 2 12 2ZM9 20C9 20.6 9.4 21 10 21H14C14.6 21 15 20.6 15 20V19H9V20Z"/></svg>`;
   if (name === 'ps-handshake') return `<svg class="ui-icon-svg ps-bar-icon-svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.8 4.2C17.4 3.8 16.7 3.8 16.3 4.2L12.5 8L11.7 7.2C11.5 7 11.2 6.9 10.9 6.9C10.6 6.9 10.3 7 10.1 7.2L6.2 11.1C6 11.3 5.9 11.6 5.9 11.9C5.9 12.2 6 12.5 6.2 12.7L7.6 14.1L3.2 18.5C2.8 18.9 2.8 19.6 3.2 20C3.6 20.4 4.3 20.4 4.7 20L9.1 15.6L10.5 17C10.7 17.2 11 17.3 11.3 17.3C11.6 17.3 11.9 17.2 12.1 17L19.8 9.3C20.2 8.9 20.2 8.2 19.8 7.8L17.8 4.2ZM15.5 11.8L14.1 13.2L12.7 11.8L14.1 10.4L15.5 11.8Z"/></svg>`;
-  return `<span class="ui-icon" aria-hidden="true">${({ book: '▤', building: '▥', quality: '✓', brief: '▣', compass: '◉', phone: '☎', gift: '◇' }[name] || '◆')}</span>`;
+  return `<span class="ui-icon" aria-hidden="true">${({ book: 'â–¤', building: 'â–¥', quality: 'âœ“', brief: 'â–£', compass: 'â—‰', phone: 'â˜Ž', gift: 'â—‡' }[name] || 'â—†')}</span>`;
 };
 
 const pageGroups = [
@@ -81,7 +81,7 @@ const deptIcon = (k) => {
     chart: `<svg width="20" height="20" viewBox="0 0 24 24" fill="#cca01d"><rect x="3" y="12" width="4" height="8" rx="1"/><rect x="10" y="7" width="4" height="13" rx="1"/><rect x="17" y="3" width="4" height="17" rx="1"/></svg>`,
     grad: `<svg width="26" height="26" viewBox="0 0 24 24" fill="#00472b"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>`
   };
-  return s[k] || `<span>◆</span>`;
+  return s[k] || `<span>â—†</span>`;
 };
 
 const ugPrograms = [
@@ -142,54 +142,170 @@ const bottomBannerHtml = `<div class="programme-bottom-banner reveal"><div class
 
 
 function header() {
-  return `<div class="notice"><div class="notice-track"><span><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span><span aria-hidden="true"><b>ADMISSIONS 2026–27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span></div></div>
-<header class="institution-header-v4 exact-image-header"><div class="institution-header-shell"><a class="siet-header-image" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home"><img src="/brand/siet-exact-header.png" alt="Sri Shakthi Institute of Engineering and Technology — NBA accredited, NAAC A grade, counselling code 2727" width="2048" height="256"></a><nav class="institution-navbar" aria-label="Main navigation"><button class="institution-mobile-toggle" aria-label="Open navigation menu" type="button">${icon('menu')}</button><a class="institution-mobile-logo" href="#/" aria-label="Sri Shakthi Home"><img src="/brand/siet-logo.png" alt="Sri Shakthi" class="mobile-logo-img"><span class="mobile-logo-text"><b>SRI SHAKTHI</b><small>Autonomous Institution</small></span></a><a class="institution-home" href="#/" aria-label="Home">${icon('home')}</a><div class="institution-menu">${pageGroups.map((g, i) => `${i === 5 ? '<a class="institution-nav-link" href="#/placements">Placements</a>' : ''}<div class="institution-nav-group"><button type="button">${g.label}${icon('down')}</button><div>${g.items.map(([s, n]) => `<a href="#/${s}">${n}</a>`).join('')}</div></div>`).join('')}<a class="institution-nav-link" href="#/careers">Careers</a></div><a class="institution-nav-apply" href="#/apply">Apply Now ${icon('arrow')}</a></nav></div></header>
+  const desktopNav = `
+    <div class="institution-nav-group">
+      <button type="button">About Us${icon('down')}</button>
+      <div>
+        <a href="#/vision-mission">Vision And Mission</a>
+        <a href="#/chairman">The Chairman's desk</a>
+        <a href="#/principal">From the Principal</a>
+      </div>
+    </div>
+    <div class="institution-nav-group">
+      <button type="button">Admissions${icon('down')}</button>
+      <div>
+        <a href="#/programmes">UG & PG Programmes</a>
+        <a href="#/admission-enquiry">Admission Enquiry</a>
+        <a href="#/admission-referral">Admission Referral</a>
+      </div>
+    </div>
+    <div class="institution-nav-group">
+      <button type="button">Academics${icon('down')}</button>
+      <div>
+        <a href="#/academics">Academic Overview</a>
+        <a href="#/departments">Departments</a>
+        <a href="#/curriculum">Curriculum</a>
+        <a href="#/academic-calendar">Academic Calendar</a>
+        <a href="#/library">Library</a>
+      </div>
+    </div>
+    <div class="institution-nav-group placements-nav-group">
+      <button type="button">Placements${icon('down')}</button>
+      <div>
+        <a href="#/placements">Job Placements</a>
+        <a href="#/placements/entrepreneurship">Entrepreneurship</a>
+        <a href="#/placements/higher-education">Higher Education</a>
+        <a href="#/placements/government-services">Government Services</a>
+      </div>
+    </div>
+    <div class="institution-nav-group">
+      <button type="button">#LifeatSriShakthi${icon('down')}</button>
+      <div>
+        <a href="#/campus-life">Campus Life</a>
+        <a href="#/facilities">Facilities</a>
+        <a href="#/hostel">Hostel</a>
+        <a href="#/transport">Transport</a>
+        <a href="#/sports">Sports</a>
+        <a href="#/clubs">Student Clubs</a>
+        <a href="#/ncc">NCC & NSS</a>
+      </div>
+    </div>
+    <a class="institution-nav-link" href="#/research">Research</a>
+    <div class="institution-nav-group">
+      <button type="button">COE${icon('down')}</button>
+      <div>
+        <a href="#/centres-of-excellence">Centres of Excellence</a>
+      </div>
+    </div>
+    <a class="institution-nav-link" href="#/accreditations">Accreditation</a>
+  `;
+
+  const mobileNav = `
+    <div class="mobile-nav-group">
+      <button type="button" class="mobile-nav-group-toggle" aria-expanded="false"><span>About Us</span>${icon('down')}</button>
+      <div class="mobile-nav-subitems">
+        <a href="#/vision-mission" class="mobile-nav-sublink">Vision And Mission</a>
+        <a href="#/chairman" class="mobile-nav-sublink">The Chairman's desk</a>
+        <a href="#/principal" class="mobile-nav-sublink">From the Principal</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button type="button" class="mobile-nav-group-toggle" aria-expanded="false"><span>Admissions</span>${icon('down')}</button>
+      <div class="mobile-nav-subitems">
+        <a href="#/programmes" class="mobile-nav-sublink">UG & PG Programmes</a>
+        <a href="#/admission-enquiry" class="mobile-nav-sublink">Admission Enquiry</a>
+        <a href="#/admission-referral" class="mobile-nav-sublink">Admission Referral</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button type="button" class="mobile-nav-group-toggle" aria-expanded="false"><span>Academics</span>${icon('down')}</button>
+      <div class="mobile-nav-subitems">
+        <a href="#/academics" class="mobile-nav-sublink">Academic Overview</a>
+        <a href="#/departments" class="mobile-nav-sublink">Departments</a>
+        <a href="#/curriculum" class="mobile-nav-sublink">Curriculum</a>
+        <a href="#/academic-calendar" class="mobile-nav-sublink">Academic Calendar</a>
+        <a href="#/library" class="mobile-nav-sublink">Library</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group placements-nav-group">
+      <button type="button" class="mobile-nav-group-toggle" aria-expanded="false"><span>Placements</span>${icon('down')}</button>
+      <div class="mobile-nav-subitems">
+        <a href="#/placements" class="mobile-nav-sublink">Job Placements</a>
+        <a href="#/placements/entrepreneurship" class="mobile-nav-sublink">Entrepreneurship</a>
+        <a href="#/placements/higher-education" class="mobile-nav-sublink">Higher Education</a>
+        <a href="#/placements/government-services" class="mobile-nav-sublink">Government Services</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button type="button" class="mobile-nav-group-toggle" aria-expanded="false"><span>#LifeatSriShakthi</span>${icon('down')}</button>
+      <div class="mobile-nav-subitems">
+        <a href="#/campus-life" class="mobile-nav-sublink">Campus Life</a>
+        <a href="#/facilities" class="mobile-nav-sublink">Facilities</a>
+        <a href="#/hostel" class="mobile-nav-sublink">Hostel</a>
+        <a href="#/transport" class="mobile-nav-sublink">Transport</a>
+        <a href="#/sports" class="mobile-nav-sublink">Sports</a>
+        <a href="#/clubs" class="mobile-nav-sublink">Student Clubs</a>
+        <a href="#/ncc" class="mobile-nav-sublink">NCC & NSS</a>
+      </div>
+    </div>
+    <a class="mobile-nav-link" href="#/research">Research</a>
+    <div class="mobile-nav-group">
+      <button type="button" class="mobile-nav-group-toggle" aria-expanded="false"><span>COE</span>${icon('down')}</button>
+      <div class="mobile-nav-subitems">
+        <a href="#/centres-of-excellence" class="mobile-nav-sublink">Centres of Excellence</a>
+      </div>
+    </div>
+    <a class="mobile-nav-link" href="#/accreditations">Accreditation</a>
+  `;
+
+  return `<div class="notice"><div class="notice-track"><span><b>ADMISSIONS 2026â€“27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span><span aria-hidden="true"><b>ADMISSIONS 2026â€“27 NOW OPEN</b><i></i> Applications are invited for undergraduate and postgraduate engineering programmes <i></i> Begin your journey at Sri Shakthi <i></i> TNEA Counselling Code: 2727</span></div></div>
+<header class="institution-header-v4 exact-image-header"><div class="institution-header-shell"><a class="siet-header-image" href="#/" aria-label="Sri Shakthi Institute of Engineering and Technology home"><img src="/brand/siet-exact-header.png" alt="Sri Shakthi Institute of Engineering and Technology â€” NBA accredited, NAAC A grade, counselling code 2727" width="2048" height="256"></a><nav class="institution-navbar" aria-label="Main navigation"><button class="institution-mobile-toggle" aria-label="Open navigation menu" type="button">${icon('menu')}</button><a class="institution-mobile-logo" href="#/" aria-label="Sri Shakthi Home"><img src="/brand/siet-logo.png" alt="Sri Shakthi" class="mobile-logo-img"><span class="mobile-logo-text"><b>SRI SHAKTHI</b><small>Autonomous Institution</small></span></a><a class="institution-home" href="#/" aria-label="Home">${icon('home')}</a><div class="institution-menu">${desktopNav}</div><a class="institution-nav-apply" href="#/apply">Apply Now ${icon('arrow')}</a></nav></div></header>
 <div class="mobile-nav-backdrop"></div>
-<aside class="mobile-nav" aria-label="Mobile Navigation"><div class="mobile-nav-header"><a href="#/" class="mobile-nav-brand"><img src="/brand/siet-logo.png" alt="Sri Shakthi"><div><strong>SRI SHAKTHI</strong><small>Autonomous Institution</small></div></a><button class="mobile-nav-close" aria-label="Close menu">${icon('close')}</button></div><div class="mobile-nav-body"><a href="#/" class="mobile-nav-link mobile-nav-home">${icon('home')} Home</a><div class="mobile-nav-accordion">${pageGroups.map((g, i) => `${i === 5 ? '<a class="mobile-nav-link" href="#/placements">Placements</a>' : ''}<div class="mobile-nav-group"><button type="button" class="mobile-nav-group-toggle" aria-expanded="false"><span>${g.label}</span>${icon('down')}</button><div class="mobile-nav-subitems">${g.items.map(([s, n]) => `<a href="#/${s}" class="mobile-nav-sublink">${n}</a>`).join('')}</div></div>`).join('')}<a class="mobile-nav-link" href="#/careers">Careers @ SIET</a></div></div><div class="mobile-nav-footer"><a class="mobile-apply-link" href="#/apply">Apply Now ${icon('arrow')}</a></div></aside>`
+<aside class="mobile-nav" aria-label="Mobile Navigation"><div class="mobile-nav-header"><a href="#/" class="mobile-nav-brand"><img src="/brand/siet-logo.png" alt="Sri Shakthi"><div><strong>SRI SHAKTHI</strong><small>Autonomous Institution</small></div></a><button class="mobile-nav-close" aria-label="Close menu">${icon('close')}</button></div><div class="mobile-nav-body"><a href="#/" class="mobile-nav-link mobile-nav-home">${icon('home')} Home</a><div class="mobile-nav-accordion">${mobileNav}</div></div><div class="mobile-nav-footer"><a class="mobile-apply-link" href="#/apply">Apply Now ${icon('arrow')}</a></div></aside>`
 }
 
-function footer() { return `<footer class="site-footer footer-reference"><div class="footer-top"><div class="footer-brand"><a class="mark" href="#/"><img src="/brand/siet-logo.png" alt="Sri Shakthi emblem"><span><b>SRI SHAKTHI</b><small>INSTITUTE OF ENGINEERING AND TECHNOLOGY</small><em>AUTONOMOUS · AFFILIATED TO ANNA UNIVERSITY</em></span></a><p>Powering the youth.<br>Empowering the nation.</p></div><div class="footer-sitemap">${pageGroups.map(g => `<div class="footer-link-group"><b>${g.label}</b>${g.items.map(([s, n]) => `<a href="#/${s}"><span>›</span>${n}</a>`).join('')}</div>`).join('')}</div></div><div class="footer-legal"><small>© ${new Date().getFullYear()} Sri Shakthi Institute of Engineering &amp; Technology. All rights reserved.</small><nav><a href="#/privacy-policy">Privacy Policy</a><i></i><a href="#/terms">Terms of Use</a><i></i><a href="#/sitemap">Sitemap</a></nav></div></footer>` }
+function footer() { return `<footer class="site-footer footer-reference"><div class="footer-top"><div class="footer-brand"><a class="mark" href="#/"><img src="/brand/siet-logo.png" alt="Sri Shakthi emblem"><span><b>SRI SHAKTHI</b><small>INSTITUTE OF ENGINEERING AND TECHNOLOGY</small><em>AUTONOMOUS Â· AFFILIATED TO ANNA UNIVERSITY</em></span></a><p>Powering the youth.<br>Empowering the nation.</p></div><div class="footer-sitemap">${pageGroups.map(g => `<div class="footer-link-group"><b>${g.label}</b>${g.items.map(([s, n]) => `<a href="#/${s}"><span>â€º</span>${n}</a>`).join('')}</div>`).join('')}</div></div><div class="footer-legal"><small>Â© ${new Date().getFullYear()} Sri Shakthi Institute of Engineering &amp; Technology. All rights reserved.</small><nav><a href="#/privacy-policy">Privacy Policy</a><i></i><a href="#/terms">Terms of Use</a><i></i><a href="#/sitemap">Sitemap</a></nav></div></footer>` }
 const counter = (to, suffix = '') => `<span class="js-counter" data-to="${to}" data-suffix="${suffix}">0${suffix}</span>`;
 
 const placementTierData = {
   '10': {
-    tier: '₹10 LPA+',
+    tier: 'â‚¹10 LPA+',
     name: 'Super Dream Offers',
     count: 18,
-    badge: 'Tier 1 • Super Dream Category',
-    highlight: 'Highest offer of ₹24 LPA with an average of ₹12.4 LPA',
+    badge: 'Tier 1 â€¢ Super Dream Category',
+    highlight: 'Highest offer of â‚¹24 LPA with an average of â‚¹12.4 LPA',
     desc: 'Elite product engineering, AI systems, cloud architecture, and mission-critical cybersecurity roles.',
     roles: ['Cloud Solutions Architect', 'AI/ML Research Engineer', 'Senior Full Stack Specialist', 'Core Security Analyst'],
     companies: ['Zoho', 'Presidio', 'ConverSight', 'Cognizant', 'Zentron Labs', 'Auriseg'],
-    statBox: { label: 'Highest Package', value: '₹24 LPA' }
+    statBox: { label: 'Highest Package', value: 'â‚¹24 LPA' }
   },
   '8': {
-    tier: '₹8 LPA+',
+    tier: 'â‚¹8 LPA+',
     name: 'Marquee Offers',
     count: 42,
-    badge: 'Tier 2 • Marquee Category',
-    highlight: 'Average package of ₹8.6 LPA across engineering disciplines',
+    badge: 'Tier 2 â€¢ Marquee Category',
+    highlight: 'Average package of â‚¹8.6 LPA across engineering disciplines',
     desc: 'Specialized enterprise technology, data engineering, full stack development, and embedded systems.',
     roles: ['DevOps & Cloud Engineer', 'Enterprise Application Developer', 'Data Platform Engineer', 'Firmware Engineer'],
     companies: ['Presidio', 'Cognizant', 'Auriseg', 'nference', 'ZyNerd', 'Retail AI'],
-    statBox: { label: 'Average Package', value: '₹8.6 LPA' }
+    statBox: { label: 'Average Package', value: 'â‚¹8.6 LPA' }
   },
   '6': {
-    tier: '₹6 LPA+',
+    tier: 'â‚¹6 LPA+',
     name: 'Premier Offers',
     count: 76,
-    badge: 'Tier 3 • Premier Category',
-    highlight: 'Average package of ₹6.4 LPA with over 76 confirmed placements',
+    badge: 'Tier 3 â€¢ Premier Category',
+    highlight: 'Average package of â‚¹6.4 LPA with over 76 confirmed placements',
     desc: 'Core software engineering, robotics automation, smart infrastructure, and digital transformation.',
     roles: ['Software Development Engineer', 'Embedded Systems Specialist', 'Automation & QA Engineer', 'Digital Solutions Analyst'],
     companies: ['Cognizant', 'Zoho', 'Nallas', 'Retail AI', 'ITC Limited', 'Vendasta'],
-    statBox: { label: 'Average Package', value: '₹6.4 LPA' }
+    statBox: { label: 'Average Package', value: 'â‚¹6.4 LPA' }
   },
   '4': {
-    tier: '₹4 LPA+',
+    tier: 'â‚¹4 LPA+',
     name: 'Core & IT Offers',
     count: 128,
-    badge: 'Tier 4 • Core & IT Category',
+    badge: 'Tier 4 â€¢ Core & IT Category',
     highlight: 'Over 128 career starts with 100% industry placement track record',
     desc: 'Fundamental engineering roles spanning software engineering, hardware validation, and IoT development.',
     roles: ['Associate Software Engineer', 'IoT Solutions Associate', 'VLSI Design Trainee', 'Process Engineering Analyst'],
@@ -204,12 +320,12 @@ function placementDetailsModal(tierKey = '10') {
     <div class="placement-modal" role="dialog" aria-modal="true" aria-label="Placement Tier Details">
       <div class="placement-modal-backdrop"></div>
       <div class="placement-modal-window">
-        <button class="placement-modal-close" aria-label="Close placement details modal">×</button>
+        <button class="placement-modal-close" aria-label="Close placement details modal">Ã—</button>
         
         <div class="pm-header">
           <div class="pm-eyebrow">
             <span class="pm-dot" aria-hidden="true"></span>
-            PLACEMENT RECORD · BATCH OF 2025–2026
+            PLACEMENT RECORD Â· BATCH OF 2025â€“2026
           </div>
           <h3 class="pm-title">
             <span class="pm-title-green">Placement</span> <span class="pm-title-gold">Breakdown</span>
@@ -256,7 +372,7 @@ function placementDetailsModal(tierKey = '10') {
               <div class="pm-company-tags">
                 ${current.companies.map(c => `
                   <span class="pm-company-tag">
-                    <span class="pm-tag-check" aria-hidden="true">✓</span>
+                    <span class="pm-tag-check" aria-hidden="true">âœ“</span>
                     <span>${c}</span>
                   </span>
                 `).join('')}
@@ -268,7 +384,7 @@ function placementDetailsModal(tierKey = '10') {
               <div class="pm-roles-list">
                 ${current.roles.map(r => `
                   <div class="pm-role-item">
-                    <span class="pm-role-bullet" aria-hidden="true">›</span>
+                    <span class="pm-role-bullet" aria-hidden="true">â€º</span>
                     <span>${r}</span>
                   </div>
                 `).join('')}
@@ -281,9 +397,9 @@ function placementDetailsModal(tierKey = '10') {
           <div class="pm-footer-stats">
             <span>Batch Placement: <b>98.4%</b></span>
             <span class="pm-footer-sep" aria-hidden="true">|</span>
-            <span>Highest Offer: <b>₹24 LPA</b></span>
+            <span>Highest Offer: <b>â‚¹24 LPA</b></span>
             <span class="pm-footer-sep" aria-hidden="true">|</span>
-            <span>Median Package: <b>₹6.8 LPA</b></span>
+            <span>Median Package: <b>â‚¹6.8 LPA</b></span>
           </div>
           <div class="pm-footer-actions">
             <a href="#/admission-enquiry" class="pm-cta-btn primary">Enquire For Admissions ${icon('arrow')}</a>
@@ -304,8 +420,8 @@ function placementHighlightsCardInner() {
       </h2>
       <div class="placement-subheading-row">
         <span class="subheading-gold-line" aria-hidden="true"></span>
-        <span class="subheading-batch">2025 – 2026</span>
-        <span class="subheading-batch-tag">( BATCH 2025–2026 )</span>
+        <span class="subheading-batch">2025 â€“ 2026</span>
+        <span class="subheading-batch-tag">( BATCH 2025â€“2026 )</span>
         <span class="subheading-gold-line" aria-hidden="true"></span>
       </div>
       <div class="placement-heading-motto">TODAY. IMPACT TOMORROW.</div>
@@ -314,12 +430,12 @@ function placementHighlightsCardInner() {
     <!-- 4 Standalone Interactive Statistic Cards in one row -->
     <div class="ps-standalone-cards-row" role="region" aria-label="Placement statistics by salary tier">
       <!-- Card 01 -->
-      <article class="ps-stat-card" role="button" tabindex="0" data-tier="10" aria-haspopup="dialog" aria-label="₹10 LPA+ Tier: 18 Students Placed. Click to explore offers and recruiters">
+      <article class="ps-stat-card" role="button" tabindex="0" data-tier="10" aria-haspopup="dialog" aria-label="â‚¹10 LPA+ Tier: 18 Students Placed. Click to explore offers and recruiters">
         <div class="ps-stat-card-glow" aria-hidden="true"></div>
         <div class="ps-stat-icon-circle">
           ${icon('ps-users')}
         </div>
-        <div class="ps-stat-pill">₹10 LPA+</div>
+        <div class="ps-stat-pill">â‚¹10 LPA+</div>
         <strong class="ps-stat-count">${counter(18)}</strong>
         <span class="ps-stat-label">STUDENTS PLACED</span>
         <span class="ps-stat-action">
@@ -329,12 +445,12 @@ function placementHighlightsCardInner() {
       </article>
 
       <!-- Card 02 -->
-      <article class="ps-stat-card" role="button" tabindex="0" data-tier="8" aria-haspopup="dialog" aria-label="₹8 LPA+ Tier: 42 Students Placed. Click to explore offers and recruiters">
+      <article class="ps-stat-card" role="button" tabindex="0" data-tier="8" aria-haspopup="dialog" aria-label="â‚¹8 LPA+ Tier: 42 Students Placed. Click to explore offers and recruiters">
         <div class="ps-stat-card-glow" aria-hidden="true"></div>
         <div class="ps-stat-icon-circle">
           ${icon('ps-chart')}
         </div>
-        <div class="ps-stat-pill">₹8 LPA+</div>
+        <div class="ps-stat-pill">â‚¹8 LPA+</div>
         <strong class="ps-stat-count">${counter(42)}</strong>
         <span class="ps-stat-label">STUDENTS PLACED</span>
         <span class="ps-stat-action">
@@ -344,12 +460,12 @@ function placementHighlightsCardInner() {
       </article>
 
       <!-- Card 03 -->
-      <article class="ps-stat-card" role="button" tabindex="0" data-tier="6" aria-haspopup="dialog" aria-label="₹6 LPA+ Tier: 76 Students Placed. Click to explore offers and recruiters">
+      <article class="ps-stat-card" role="button" tabindex="0" data-tier="6" aria-haspopup="dialog" aria-label="â‚¹6 LPA+ Tier: 76 Students Placed. Click to explore offers and recruiters">
         <div class="ps-stat-card-glow" aria-hidden="true"></div>
         <div class="ps-stat-icon-circle">
           ${icon('ps-diploma')}
         </div>
-        <div class="ps-stat-pill">₹6 LPA+</div>
+        <div class="ps-stat-pill">â‚¹6 LPA+</div>
         <strong class="ps-stat-count">${counter(76)}</strong>
         <span class="ps-stat-label">STUDENTS PLACED</span>
         <span class="ps-stat-action">
@@ -359,12 +475,12 @@ function placementHighlightsCardInner() {
       </article>
 
       <!-- Card 04 -->
-      <article class="ps-stat-card" role="button" tabindex="0" data-tier="4" aria-haspopup="dialog" aria-label="₹4 LPA+ Tier: 128 Students Placed. Click to explore offers and recruiters">
+      <article class="ps-stat-card" role="button" tabindex="0" data-tier="4" aria-haspopup="dialog" aria-label="â‚¹4 LPA+ Tier: 128 Students Placed. Click to explore offers and recruiters">
         <div class="ps-stat-card-glow" aria-hidden="true"></div>
         <div class="ps-stat-icon-circle">
           ${icon('ps-briefcase')}
         </div>
-        <div class="ps-stat-pill">₹4 LPA+</div>
+        <div class="ps-stat-pill">â‚¹4 LPA+</div>
         <strong class="ps-stat-count">${counter(128)}</strong>
         <span class="ps-stat-label">STUDENTS PLACED</span>
         <span class="ps-stat-action">
@@ -567,7 +683,7 @@ function homePage() {
             Explore industry-relevant programmes designed to create future-ready engineers and innovators.
           </p>
           <button type="button" class="feature-action-btn js-scroll-programmes">
-            <span class="feature-arrow-btn">→</span>
+            <span class="feature-arrow-btn">â†’</span>
             <span>Discover Your Path</span>
           </button>
         </div>
@@ -601,7 +717,7 @@ function homePage() {
     <aside class="campus-left reveal">
       <div class="campus-eyebrow">
         <span class="eyebrow-num">03</span>
-        <span class="eyebrow-dash">—</span>
+        <span class="eyebrow-dash">â€”</span>
         <span class="eyebrow-text">LIFE AT SRI SHAKTHI</span>
       </div>
       <h1 class="campus-heading">Campus<br>Moments.<br><em>Student stories.</em></h1>
@@ -636,7 +752,7 @@ function homePage() {
               </div>
               <p class="card-subtitle">A campus that inspires every day.</p>
             </div>
-            <span class="card-circle-arrow">→</span>
+            <span class="card-circle-arrow">â†’</span>
           </div>
         </article>
 
@@ -653,7 +769,7 @@ function homePage() {
               </div>
               <p class="card-subtitle">Victory is a habit here.</p>
             </div>
-            <span class="card-circle-arrow">→</span>
+            <span class="card-circle-arrow">â†’</span>
           </div>
         </article>
 
@@ -670,7 +786,7 @@ function homePage() {
               </div>
               <p class="card-subtitle">Ideas that create impact.</p>
             </div>
-            <span class="card-circle-arrow">→</span>
+            <span class="card-circle-arrow">â†’</span>
           </div>
         </article>
 
@@ -687,7 +803,7 @@ function homePage() {
               </div>
               <p class="card-subtitle">Tradition. Creativity. Every performance.</p>
             </div>
-            <span class="card-circle-arrow">→</span>
+            <span class="card-circle-arrow">â†’</span>
           </div>
         </article>
 
@@ -704,7 +820,7 @@ function homePage() {
               </div>
               <p class="card-subtitle">Today's learners. Tomorrow's leaders.</p>
             </div>
-            <span class="card-circle-arrow">→</span>
+            <span class="card-circle-arrow">â†’</span>
           </div>
         </article>
 
@@ -721,7 +837,7 @@ function homePage() {
               </div>
               <p class="card-subtitle">A greener, brighter tomorrow.</p>
             </div>
-            <span class="card-circle-arrow">→</span>
+            <span class="card-circle-arrow">â†’</span>
           </div>
         </article>
       </div>
@@ -738,7 +854,7 @@ function homePage() {
     <aside class="labs-left reveal">
       <div class="labs-eyebrow">
         <span class="eyebrow-num">04</span>
-        <span class="eyebrow-dash">—</span>
+        <span class="eyebrow-dash">â€”</span>
         <span class="eyebrow-text">SPECIAL LABS</span>
       </div>
       <h2 class="labs-heading">
@@ -747,11 +863,11 @@ function homePage() {
         <em>Brighter<br>Tomorrow.</em>
       </h2>
       <p class="labs-desc">
-        State-of-the-art laboratories to explore, experiment and innovate — empowering students with hands-on experience for real-world impact.
+        State-of-the-art laboratories to explore, experiment and innovate â€” empowering students with hands-on experience for real-world impact.
       </p>
 
       <div class="labs-actions">
-        <a href="#/centres-of-excellence" class="labs-btn-primary">Explore Our Labs →</a>
+        <a href="#/centres-of-excellence" class="labs-btn-primary">Explore Our Labs â†’</a>
       </div>
 
       <div class="labs-script-watermark" aria-hidden="true">
@@ -854,7 +970,7 @@ function homePage() {
             <strong>Labs Today.</strong>
             <span>Leaders Tomorrow.</span>
           </div>
-          <span class="labs-banner-arrow" aria-hidden="true">→</span>
+          <span class="labs-banner-arrow" aria-hidden="true">â†’</span>
         </a>
       </div>
     </main>
@@ -877,7 +993,7 @@ function homePage() {
       <div class="events-left-col reveal">
         <div class="events-eyebrow">
           <span class="eyebrow-num">05</span>
-          <span class="eyebrow-dash">—</span>
+          <span class="eyebrow-dash">â€”</span>
           <span class="eyebrow-text">NEWS &amp; EVENTS</span>
         </div>
         <h2 class="events-heading">
@@ -889,7 +1005,7 @@ function homePage() {
           Stay updated with the latest events, achievements and opportunities across our campus community.
         </p>
 
-        <a href="#/campus-life" class="events-btn-primary">View All Events →</a>
+        <a href="#/campus-life" class="events-btn-primary">View All Events â†’</a>
 
         <div class="events-community-pill">
           <div class="community-avatars">
@@ -910,7 +1026,7 @@ function homePage() {
         <div class="featured-bg-photo" style="background-image: url('/brand/events/featured-technovate.jpg');"></div>
         <div class="featured-overlay-content">
           <div class="featured-left-info">
-            <span class="featured-gold-badge">★ Featured Event</span>
+            <span class="featured-gold-badge">â˜… Featured Event</span>
             <h3 class="featured-title">TechNovate 2026</h3>
             <span class="featured-sub-tag">TECHNICAL SYMPOSIUM</span>
             <p class="featured-summary">
@@ -932,7 +1048,7 @@ function homePage() {
               </div>
             </div>
 
-            <a href="#/campus-life" class="featured-know-more-btn">Know More →</a>
+            <a href="#/campus-life" class="featured-know-more-btn">Know More â†’</a>
           </div>
 
           <div class="featured-nav-controls" aria-hidden="true">
@@ -951,7 +1067,7 @@ function homePage() {
       <button class="event-filter-pill" type="button" data-cat="cultural">${icon('music')} Cultural</button>
       <button class="event-filter-pill" type="button" data-cat="workshops">${icon('users')} Workshops</button>
       <button class="event-filter-pill" type="button" data-cat="sports">${icon('cup')} Sports</button>
-      <button class="event-filter-pill" type="button" data-cat="others">••• Others</button>
+      <button class="event-filter-pill" type="button" data-cat="others">â€¢â€¢â€¢ Others</button>
     </div>
 
     <!-- 3-Card Event Grid -->
@@ -974,7 +1090,7 @@ function homePage() {
               <div class="meta-item"><span class="meta-ico">${icon('pin')}</span><span>Open Air Theatre</span></div>
               <div class="meta-item"><span class="meta-ico">${icon('clock')}</span><span>04:00 PM - 10:00 PM</span></div>
             </div>
-            <span class="event-circle-arrow">→</span>
+            <span class="event-circle-arrow">â†’</span>
           </div>
         </div>
       </article>
@@ -997,7 +1113,7 @@ function homePage() {
               <div class="meta-item"><span class="meta-ico">${icon('pin')}</span><span>Convention Centre</span></div>
               <div class="meta-item"><span class="meta-ico">${icon('clock')}</span><span>10:00 AM - 04:00 PM</span></div>
             </div>
-            <span class="event-circle-arrow">→</span>
+            <span class="event-circle-arrow">â†’</span>
           </div>
         </div>
       </article>
@@ -1020,7 +1136,7 @@ function homePage() {
               <div class="meta-item"><span class="meta-ico">${icon('pin')}</span><span>Sports Complex</span></div>
               <div class="meta-item"><span class="meta-ico">${icon('clock')}</span><span>08:00 AM - 06:00 PM</span></div>
             </div>
-            <span class="event-circle-arrow">→</span>
+            <span class="event-circle-arrow">â†’</span>
           </div>
         </div>
       </article>
@@ -1068,7 +1184,7 @@ function homePage() {
           <strong>Be Part</strong>
           <span>of What's Next.</span>
         </div>
-        <span class="events-banner-arrow" aria-hidden="true">→</span>
+        <span class="events-banner-arrow" aria-hidden="true">â†’</span>
       </a>
     </div>
   </div>
@@ -1083,7 +1199,7 @@ function programmeCards(list) {
         <h4>${n}</h4>
         <p>${d}</p>
       </div>
-      <span class="prog-arrow-circle">→</span>
+      <span class="prog-arrow-circle">â†’</span>
     </div>
   `).join('');
 }
@@ -1126,7 +1242,7 @@ const coreValues = [
   ['06', 'Social responsibility', 'We use engineering knowledge to serve people, society and the planet.', 'target']
 ];
 function coreValuesPage() { return `<main class="siet-vm-page siet-cv-page"><section class="siet-vm-hero siet-cv-hero"><div class="siet-vm-hero-grid"></div><div class="siet-vm-hero-orb orb-one"></div><div class="siet-vm-hero-orb orb-two"></div><div class="siet-vm-shell siet-vm-hero-content reveal"><p class="siet-vm-kicker"><i></i> THE SIET WAY</p><h1>Core <em>Values</em></h1><p class="siet-vm-intro">The shared principles that guide how we learn, lead, innovate and contribute to the world around us.</p></div></section><section class="siet-vm-content"><div class="siet-vm-shell siet-vm-layout">${AboutSidebar('core-values')}<div class="siet-vm-main"><div class="siet-vm-section-intro reveal"><p>OUR COMMON COMPASS</p><h2>Values that shape<br><em>every possibility.</em></h2><span>At SIET, technical mastery is strengthened by character. These values create an environment where ambition is grounded in purpose.</span></div><div class="siet-cv-grid">${coreValues.map(([number, title, copy, iconName]) => `<article class="siet-cv-card reveal"><span class="siet-cv-number">${number}</span><span class="siet-cv-icon">${vmIcon(iconName)}</span><h3>${title}</h3><p>${copy}</p><span class="siet-cv-corner"></span></article>`).join('')}</div></div></div></section></main>` }
-function philosophyPage() { const principles = [['Learn by doing', 'Learning becomes lasting when ideas are tested, made and improved through purposeful practice.', '01'], ['Think beyond disciplines', 'The most valuable solutions emerge when engineering connects with people, society and the wider world.', '02'], ['Grow with responsibility', 'Knowledge carries purpose. We prepare students to use it ethically, sustainably and for public good.', '03']]; return `<main class="siet-vm-page siet-ph-page"><section class="siet-vm-hero siet-ph-hero"><div class="siet-vm-hero-grid"></div><div class="siet-vm-hero-orb orb-one"></div><div class="siet-vm-hero-orb orb-two"></div><div class="siet-vm-shell siet-vm-hero-content reveal"><p class="siet-vm-kicker"><i></i> OUR EDUCATIONAL BELIEF</p><h1>Learning with <em>purpose.</em></h1><p class="siet-vm-intro">An education that builds confident thinkers, capable creators and responsible citizens for a changing world.</p></div></section><section class="siet-vm-content"><div class="siet-vm-shell siet-vm-layout">${AboutSidebar('philosophy')}<div class="siet-vm-main"><article class="siet-ph-statement reveal"><span class="siet-ph-quote">“</span><p>We believe education should do more than prepare students for a profession. It should inspire them to question, create, collaborate and use their capabilities to make a meaningful difference.</p><span class="siet-ph-mark"><i></i> SRI SHAKTHI PHILOSOPHY</span></article><div class="siet-ph-principles">${principles.map(([title, copy, number], index) => `<article class="siet-ph-principle reveal"><span class="siet-ph-principle-no">${number}</span><span class="siet-ph-principle-icon">${vmIcon(index === 0 ? 'education' : index === 1 ? 'spark' : 'compass')}</span><div><h3>${title}</h3><p>${copy}</p></div></article>`).join('')}</div><div class="siet-ph-closing reveal"><div><p>OUR PROMISE</p><h2>Knowledge in action.<br><em>Character in leadership.</em></h2></div><span>Every SIET experience is designed to turn potential into a positive force for the future.</span></div></div></div></section></main>` }
+function philosophyPage() { const principles = [['Learn by doing', 'Learning becomes lasting when ideas are tested, made and improved through purposeful practice.', '01'], ['Think beyond disciplines', 'The most valuable solutions emerge when engineering connects with people, society and the wider world.', '02'], ['Grow with responsibility', 'Knowledge carries purpose. We prepare students to use it ethically, sustainably and for public good.', '03']]; return `<main class="siet-vm-page siet-ph-page"><section class="siet-vm-hero siet-ph-hero"><div class="siet-vm-hero-grid"></div><div class="siet-vm-hero-orb orb-one"></div><div class="siet-vm-hero-orb orb-two"></div><div class="siet-vm-shell siet-vm-hero-content reveal"><p class="siet-vm-kicker"><i></i> OUR EDUCATIONAL BELIEF</p><h1>Learning with <em>purpose.</em></h1><p class="siet-vm-intro">An education that builds confident thinkers, capable creators and responsible citizens for a changing world.</p></div></section><section class="siet-vm-content"><div class="siet-vm-shell siet-vm-layout">${AboutSidebar('philosophy')}<div class="siet-vm-main"><article class="siet-ph-statement reveal"><span class="siet-ph-quote">â€œ</span><p>We believe education should do more than prepare students for a profession. It should inspire them to question, create, collaborate and use their capabilities to make a meaningful difference.</p><span class="siet-ph-mark"><i></i> SRI SHAKTHI PHILOSOPHY</span></article><div class="siet-ph-principles">${principles.map(([title, copy, number], index) => `<article class="siet-ph-principle reveal"><span class="siet-ph-principle-no">${number}</span><span class="siet-ph-principle-icon">${vmIcon(index === 0 ? 'education' : index === 1 ? 'spark' : 'compass')}</span><div><h3>${title}</h3><p>${copy}</p></div></article>`).join('')}</div><div class="siet-ph-closing reveal"><div><p>OUR PROMISE</p><h2>Knowledge in action.<br><em>Character in leadership.</em></h2></div><span>Every SIET experience is designed to turn potential into a positive force for the future.</span></div></div></div></section></main>` }
 const coreBeliefs = [
   ['01', 'GATEWAY', 'Achieving 100% academic success pass for our students is only the <mark class="siet-cb-highlight">GATEWAY</mark> to success', 'Academic excellence is the threshold. We empower every student with deep subject mastery and strong conceptual foundations.', 'ACADEMIC FOUNDATION'],
   ['02', 'MILESTONE', 'Breeding 100% employable and entrepreneurial engineers is the first <mark class="siet-cb-highlight">MILESTONE</mark>', 'Bridging the gap between academia and industry through hands-on practice, multidisciplinary projects, and entrepreneurial mindsets.', 'PROFESSIONAL READINESS'],
@@ -1154,7 +1270,7 @@ function coreBeliefsPage() {
         <div class="siet-vm-section-intro reveal">
           <p>WHAT WE BELIEVE</p>
           <h2>CORE <em>BELIEFS</em></h2>
-          <span>Our educational philosophy is anchored in five essential convictions — from gateway academic success to world-changing leadership.</span>
+          <span>Our educational philosophy is anchored in five essential convictions â€” from gateway academic success to world-changing leadership.</span>
         </div>
         <div class="siet-cb-list">
           ${coreBeliefs.map(([num, tag, text, desc, kicker], index) => `
@@ -1190,9 +1306,9 @@ function coreBeliefsPage() {
  </main>`;
 }
 
-function chairmanPage() { return `<main class="siet-cd-page chairman-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/chairman-passport.png" alt="Dr. S. Thangavelu, Chairman"></div><div class="siet-cd-name"><strong>Dr. S. Thangavelu</strong><span>Chairman</span><small>Sri Shakthi Group of Institutions</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE CHAIRMAN</p><h1>A dream built on <em>equality, excellence</em> and service.</h1><p>Building an institution where every student is encouraged to learn deeply, think boldly and contribute meaningfully.</p></div></div></div></section><section id="chairman-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>CHAIRMAN’S MESSAGE</p><h2>Education that empowers<br><em>each individual.</em></h2></div><div class="siet-cd-prose reveal"><p>I have always been inspired by Dr. Martin Luther King's statement, ‘I have a dream’ — a dream I believe will come true — a dream that my children will one day live in a world where they will not be judged by the colour of their skin, but by the content of their character. This need for tolerance — to create an equal society with no discrimination in caste, creed or colour — was best exemplified in the words of Mahatma Gandhi as follows.</p><blockquote>“I do not want my institution to be walled off on all sides. I want the culture of all lands to be blown about my institution as freely as possible. But I refuse to be blown off by any one of them.”</blockquote><p>And this I believe will be the watchword of each and every Shakthian.</p><p>The vision for Sri Shakthi is to make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. S. Thangavelu</strong><small>Chairman, Sri Shakthi Group of Institutions</small></div></div></div></article></div></section></main>` }
+function chairmanPage() { return `<main class="siet-cd-page chairman-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/chairman-passport.png" alt="Dr. S. Thangavelu, Chairman"></div><div class="siet-cd-name"><strong>Dr. S. Thangavelu</strong><span>Chairman</span><small>Sri Shakthi Group of Institutions</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE CHAIRMAN</p><h1>A dream built on <em>equality, excellence</em> and service.</h1><p>Building an institution where every student is encouraged to learn deeply, think boldly and contribute meaningfully.</p></div></div></div></section><section id="chairman-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>CHAIRMANâ€™S MESSAGE</p><h2>Education that empowers<br><em>each individual.</em></h2></div><div class="siet-cd-prose reveal"><p>I have always been inspired by Dr. Martin Luther King's statement, â€˜I have a dreamâ€™ â€” a dream I believe will come true â€” a dream that my children will one day live in a world where they will not be judged by the colour of their skin, but by the content of their character. This need for tolerance â€” to create an equal society with no discrimination in caste, creed or colour â€” was best exemplified in the words of Mahatma Gandhi as follows.</p><blockquote>â€œI do not want my institution to be walled off on all sides. I want the culture of all lands to be blown about my institution as freely as possible. But I refuse to be blown off by any one of them.â€</blockquote><p>And this I believe will be the watchword of each and every Shakthian.</p><p>The vision for Sri Shakthi is to make the institution one of our nation's great engineering schools, recognized nationally and internationally for excellence in teaching, research and public service. We seek to be the preferred destination for students, practitioners seeking an engineering education, employers hiring engineering graduates and organizations seeking engineering knowledge.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. S. Thangavelu</strong><small>Chairman, Sri Shakthi Group of Institutions</small></div></div></div></article></div></section></main>` }
 
-function principalPage() { return `<main class="siet-cd-page principal-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/principal-saravana-kumar.png" alt="Dr. N. M. Saravana Kumar, Principal"></div><div class="siet-cd-name"><strong>Dr. N. M. Saravana Kumar</strong><span>Principal</span><small>Sri Shakthi Institute of Engineering and Technology</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE PRINCIPAL</p><h1>Learning that builds <em>knowledge, character</em> and purpose.</h1><p>Creating an environment where every student develops the knowledge, skills and character to lead with purpose.</p></div></div></div></section><section id="principal-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>PRINCIPAL'S MESSAGE</p><h2>Education for capable,<br><em>responsible leaders.</em></h2></div><div class="siet-cd-prose reveal"><p>Welcome to our institution, where excellence in education, innovation, and character development form the foundation of our academic journey.</p><p>We provide a vibrant learning environment that empowers students with knowledge, technical expertise and essential life skills. Our faculty continuously strive to deliver quality education through innovative teaching, industry collaboration, research and experiential learning.</p><blockquote>"We prepare graduates to become competent professionals, responsible citizens and future leaders."</blockquote><p>At Sri Shakthi, we believe that every student brings unique potential. Our commitment is to nurture that potential through mentorship, opportunity, and a culture of continuous improvement — ensuring our graduates are prepared not just for careers, but for lives of meaning and contribution.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. N. M. Saravana Kumar</strong><small>Principal, Sri Shakthi Institute of Engineering and Technology</small></div></div></div></article></div></section></main>` }
+function principalPage() { return `<main class="siet-cd-page principal-page"><section class="siet-cd-hero"><div class="siet-cd-grid"></div><div class="siet-cd-hero-glow"></div><div class="siet-cd-shell"><div class="siet-cd-hero-layout"><div class="siet-cd-portrait reveal"><div class="siet-cd-portrait-frame"><div class="siet-cd-portrait-ring"></div><img src="/brand/principal-saravana-kumar.png" alt="Dr. N. M. Saravana Kumar, Principal"></div><div class="siet-cd-name"><strong>Dr. N. M. Saravana Kumar</strong><span>Principal</span><small>Sri Shakthi Institute of Engineering and Technology</small></div></div><div class="siet-cd-hero-copy reveal"><p class="siet-cd-kicker"><i></i> A MESSAGE FROM THE PRINCIPAL</p><h1>Learning that builds <em>knowledge, character</em> and purpose.</h1><p>Creating an environment where every student develops the knowledge, skills and character to lead with purpose.</p></div></div></div></section><section id="principal-message" class="siet-cd-content"><div class="siet-cd-shell siet-cd-layout"><article class="siet-cd-message"><div class="siet-cd-message-head reveal"><p>PRINCIPAL'S MESSAGE</p><h2>Education for capable,<br><em>responsible leaders.</em></h2></div><div class="siet-cd-prose reveal"><p>Welcome to our institution, where excellence in education, innovation, and character development form the foundation of our academic journey.</p><p>We provide a vibrant learning environment that empowers students with knowledge, technical expertise and essential life skills. Our faculty continuously strive to deliver quality education through innovative teaching, industry collaboration, research and experiential learning.</p><blockquote>"We prepare graduates to become competent professionals, responsible citizens and future leaders."</blockquote><p>At Sri Shakthi, we believe that every student brings unique potential. Our commitment is to nurture that potential through mentorship, opportunity, and a culture of continuous improvement â€” ensuring our graduates are prepared not just for careers, but for lives of meaning and contribution.</p><div class="siet-cd-signoff"><span></span><div><strong>Dr. N. M. Saravana Kumar</strong><small>Principal, Sri Shakthi Institute of Engineering and Technology</small></div></div></div></article></div></section></main>` }
 
 const departmentDetails = {
   'Agricultural Engineering': {
@@ -3342,6 +3458,10 @@ function departmentPage(dept) {
 }
 
 function internalPage(route) {
+  if (route.startsWith('placements')) {
+    return placementsDashboardPage(route);
+  }
+
   const isDept = route.startsWith('department/');
   const deptName = isDept ? titleCase(route.slice(11).replaceAll('-', ' ')).replaceAll(' And ', ' & ') : '';
   if (isDept && typeof departmentPage === 'function') return departmentPage(deptName);
@@ -3357,13 +3477,13 @@ function internalPage(route) {
       <span class="sidebar-kicker">EXPLORE SRI SHAKTHI</span>
       <h3>Quick Navigation</h3>
       <nav class="sidebar-nav">
-        <a href="#/programmes">UG &amp; PG Programmes <span>→</span></a>
-        <a href="#/departments">All Departments <span>→</span></a>
-        <a href="#/eligibility">Admission Eligibility <span>→</span></a>
-        <a href="#/scholarships">Scholarship Pathways <span>→</span></a>
-        <a href="#/campus-life">Campus Life &amp; Facilities <span>→</span></a>
-        <a href="#/placements">Placement Highlights <span>→</span></a>
-        <a href="#/research">Research &amp; Innovation <span>→</span></a>
+        <a href="#/programmes">UG &amp; PG Programmes <span>â†’</span></a>
+        <a href="#/departments">All Departments <span>â†’</span></a>
+        <a href="#/eligibility">Admission Eligibility <span>â†’</span></a>
+        <a href="#/scholarships">Scholarship Pathways <span>â†’</span></a>
+        <a href="#/campus-life">Campus Life &amp; Facilities <span>â†’</span></a>
+        <a href="#/placements">Placement Highlights <span>â†’</span></a>
+        <a href="#/research">Research &amp; Innovation <span>â†’</span></a>
       </nav>
     </div>
     <div class="sidebar-box contact-card-box">
@@ -3371,9 +3491,9 @@ function internalPage(route) {
       <h3>Plan Your Journey</h3>
       <p>Speak directly with our academic counsellors for programme guidance and scholarships.</p>
       <div class="sidebar-contact-info">
-        <strong>☎ +91 422 2369900</strong>
-        <small>✉ info@siet.ac.in</small>
-        <small>📍 L&amp;T Bypass, Chinniyampalayam, Coimbatore</small>
+        <strong>â˜Ž +91 422 2369900</strong>
+        <small>âœ‰ info@siet.ac.in</small>
+        <small>ðŸ“ L&amp;T Bypass, Chinniyampalayam, Coimbatore</small>
       </div>
       <a href="#/admission-enquiry" class="button sidebar-btn">Enquire for Admission ${icon('arrow')}</a>
     </div>
@@ -3422,7 +3542,7 @@ function internalPage(route) {
   </div>`: '';
 
   return `<main class="internal-page ${isDepts ? 'departments-page departments-index-page' : ''}">
-    ${route === 'placements' ? `<section class="placement-showcase-section" style="padding: 24px 20px 0;"><div class="ps-shell"><div class="placement-v2-panel ps-right-card reveal" style="max-width: 1180px; margin: 0 auto;">${placementHighlightsCardInner()}</div></div></section>${placementMarqueeSection()}` : (isDepts ? sietHudHeader('Departments', 'Departments') : `<section class="page-hero">
+    ${(isDepts ? sietHudHeader('Departments', 'Departments') : `<section class="page-hero">
       <img class="page-crest" src="/brand/siet-logo.png" alt="">
       <div class="eyebrow"><span></span> SRI SHAKTHI</div>
       <h1 class="reveal">${data[0]}</h1>
@@ -3434,12 +3554,12 @@ function internalPage(route) {
         <h2>${data[1]}</h2>
         <p>${data[2]}</p>
         ${deptExtras}
-        ${route === 'contact' ? '<div class="contact-panel"><b>Sri Shakthi Institute of Engineering & Technology</b><p>Sri Shakthi Nagar, L&T By-Pass, Chinniyampalayam, Coimbatore – 641062</p><p>+91 422 2369900 · info@siet.ac.in</p></div>' : ''}
+        ${route === 'contact' ? '<div class="contact-panel"><b>Sri Shakthi Institute of Engineering & Technology</b><p>Sri Shakthi Nagar, L&T By-Pass, Chinniyampalayam, Coimbatore â€“ 641062</p><p>+91 422 2369900 Â· info@siet.ac.in</p></div>' : ''}
         <div style="margin-top: 32px;"><a class="button" href="#/admission-enquiry">Enquire now ${icon('arrow')}</a></div>
       </div>
       ${sidebarHtml}
     </section>
-    ${['departments', 'programmes'].includes(route) ? `<section class="page-content programme-content"><div class="section-no">PROGRAMMES &amp; DEPARTMENTS</div><div>${programs.map(([n, d, img]) => `<a class="flip-card" href="#/department/${slugify(n)}"><span class="flip-card-inner"><span class="flip-front"><small>DEPARTMENT</small><b>${n}</b><p>${d}</p><span>Explore department →</span></span><span class="flip-back" style="background-image:linear-gradient(180deg,transparent,rgba(3,45,27,.94)),url('${img}')"><b>${n}</b></span></span></a>`).join('')}</div></section>` : ''}
+    ${['departments', 'programmes'].includes(route) ? `<section class="page-content programme-content"><div class="section-no">PROGRAMMES &amp; DEPARTMENTS</div><div>${programs.map(([n, d, img]) => `<a class="flip-card" href="#/department/${slugify(n)}"><span class="flip-card-inner"><span class="flip-front"><small>DEPARTMENT</small><b>${n}</b><p>${d}</p><span>Explore department â†’</span></span><span class="flip-back" style="background-image:linear-gradient(180deg,transparent,rgba(3,45,27,.94)),url('${img}')"><b>${n}</b></span></span></a>`).join('')}</div></section>` : ''}
   </main>`;
 }
 const titleCase = s => s.replace(/\b\w/g, c => c.toUpperCase());
@@ -3451,7 +3571,7 @@ function sietHudHeader(title, breadcrumbName = title) {
   return `<section class="department-detail-header siet-hud-header">
     <div class="department-detail-title">
       <div class="hud-title-group">
-        <span class="hud-diamond" aria-hidden="true">◈</span>
+        <span class="hud-diamond" aria-hidden="true">â—ˆ</span>
         <h1>${title.toUpperCase()}</h1>
       </div>
       <div class="department-breadcrumb">
@@ -3566,7 +3686,7 @@ function programmesPage() {
       <!-- ADMISSIONS CTA BANNER -->
       <section class="siet-prog-cta-banner reveal">
         <div>
-          <small>ADMISSIONS 2026–27</small>
+          <small>ADMISSIONS 2026â€“27</small>
           <h2>Begin your engineering journey at Sri Shakthi</h2>
           <p>Applications are open for undergraduate (TNEA Counselling Code: 2727) and postgraduate engineering admissions.</p>
         </div>
@@ -3668,7 +3788,7 @@ function departmentsPage() {
       <!-- ADMISSIONS CTA BANNER -->
       <div class="siet-prog-cta-banner reveal">
         <div>
-          <small>ADMISSIONS 2026–27</small>
+          <small>ADMISSIONS 2026â€“27</small>
           <h2>Ready to Choose Your Department?</h2>
           <p>Talk to our admissions counselors to find the ideal department aligned with your engineering aspirations, TNEA code 2727 and scholarship opportunities.</p>
         </div>
@@ -3681,7 +3801,7 @@ function departmentsPage() {
   </main>`;
 }
 
-function referralPage() { return `<main class="enquiry-page-v3 referral-page">${sietPageHeader('Admission Referral', 'Recommend an aspiring student for admissions to Sri Shakthi Institute of Engineering & Technology.', 'SRI SHAKTHI &bull; REFERRAL PROGRAMME')}<section class="enquiry-main-v3"><div class="enquiry-heading-v3"><small>REFERRAL PROGRAMME</small><h1>STUDENT ADMISSION REFERRAL</h1><p style="color:#52695c;margin-top:6px;font-size:15px;line-height:1.5">Alumni, students, parents, faculty, and well-wishers can refer candidates for undergraduate and postgraduate engineering admissions.</p></div><form class="enquiry-form-v3 js-form"><div style="font-weight:700;color:#0b3d20;font-size:15px;border-bottom:2px solid #e0ece4;padding-bottom:8px;margin-bottom:14px;letter-spacing:0.02em">REFERRER DETAILS (YOUR INFORMATION)</div><div class="enquiry-fields-v3">${field('Your Full Name', 'referrer_name', 'text', 'Enter your full name')}${field('Your Mobile Number', 'referrer_phone', 'tel', 'Enter your 10 digit mobile number')}${field('Your Email Address', 'referrer_email', 'email', 'Enter your email address')}${selectField('Your Relationship with SIET', 'referrer_relation', ['Alumni', 'Current Student', 'Faculty / Staff', 'Parent', 'Industry Partner', 'Well-wisher'])}<label id="referrer-reg-no-wrapper" class="referral-reg-no-field" style="display:none">Current Student Register Number <b>*</b><input type="text" name="referrer_reg_no" id="referrer_reg_no" placeholder="Enter current student register number" autocomplete="off"></label></div><div style="font-weight:700;color:#0b3d20;font-size:15px;border-bottom:2px solid #e0ece4;padding-bottom:8px;margin-top:18px;margin-bottom:14px;letter-spacing:0.02em">CANDIDATE DETAILS (STUDENT BEING REFERRED)</div><div class="enquiry-fields-v3">${field('Candidate Full Name', 'candidate_name', 'text', 'Enter candidate\'s full name')}${field('Candidate Mobile Number', 'candidate_phone', 'tel', 'Enter candidate\'s 10 digit mobile number')}${field('Candidate Email Address', 'candidate_email', 'email', 'Enter candidate\'s email')} ${selectField('Preferred Course Level', 'candidate_level', ['UG', 'PG'])}${programSelectHtml('Preferred Department', 'candidate_course')}${field('Current Qualification / School', 'candidate_qualification', 'text', 'Class 12 / Diploma / Degree')}</div><label>Message / Reason for Referral<textarea name="remarks" rows="3" placeholder="Tell us about the candidate's achievements, interests, or any specific guidance needed..."></textarea></label><button class="button" type="submit">Submit Referral →</button><p class="status" aria-live="polite"></p></form></section></main>` }
+function referralPage() { return `<main class="enquiry-page-v3 referral-page">${sietPageHeader('Admission Referral', 'Recommend an aspiring student for admissions to Sri Shakthi Institute of Engineering & Technology.', 'SRI SHAKTHI &bull; REFERRAL PROGRAMME')}<section class="enquiry-main-v3"><div class="enquiry-heading-v3"><small>REFERRAL PROGRAMME</small><h1>STUDENT ADMISSION REFERRAL</h1><p style="color:#52695c;margin-top:6px;font-size:15px;line-height:1.5">Alumni, students, parents, faculty, and well-wishers can refer candidates for undergraduate and postgraduate engineering admissions.</p></div><form class="enquiry-form-v3 js-form"><div style="font-weight:700;color:#0b3d20;font-size:15px;border-bottom:2px solid #e0ece4;padding-bottom:8px;margin-bottom:14px;letter-spacing:0.02em">REFERRER DETAILS (YOUR INFORMATION)</div><div class="enquiry-fields-v3">${field('Your Full Name', 'referrer_name', 'text', 'Enter your full name')}${field('Your Mobile Number', 'referrer_phone', 'tel', 'Enter your 10 digit mobile number')}${field('Your Email Address', 'referrer_email', 'email', 'Enter your email address')}${selectField('Your Relationship with SIET', 'referrer_relation', ['Alumni', 'Current Student', 'Faculty / Staff', 'Parent', 'Industry Partner', 'Well-wisher'])}<label id="referrer-reg-no-wrapper" class="referral-reg-no-field" style="display:none">Current Student Register Number <b>*</b><input type="text" name="referrer_reg_no" id="referrer_reg_no" placeholder="Enter current student register number" autocomplete="off"></label></div><div style="font-weight:700;color:#0b3d20;font-size:15px;border-bottom:2px solid #e0ece4;padding-bottom:8px;margin-top:18px;margin-bottom:14px;letter-spacing:0.02em">CANDIDATE DETAILS (STUDENT BEING REFERRED)</div><div class="enquiry-fields-v3">${field('Candidate Full Name', 'candidate_name', 'text', 'Enter candidate\'s full name')}${field('Candidate Mobile Number', 'candidate_phone', 'tel', 'Enter candidate\'s 10 digit mobile number')}${field('Candidate Email Address', 'candidate_email', 'email', 'Enter candidate\'s email')} ${selectField('Preferred Course Level', 'candidate_level', ['UG', 'PG'])}${programSelectHtml('Preferred Department', 'candidate_course')}${field('Current Qualification / School', 'candidate_qualification', 'text', 'Class 12 / Diploma / Degree')}</div><label>Message / Reason for Referral<textarea name="remarks" rows="3" placeholder="Tell us about the candidate's achievements, interests, or any specific guidance needed..."></textarea></label><button class="button" type="submit">Submit Referral â†’</button><p class="status" aria-live="polite"></p></form></section></main>` }
 
 const libIcons = {
   search: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`,
@@ -3738,8 +3858,8 @@ const libModalData = {
     content: `
       <h4>Working Hours</h4>
       <ul>
-        <li><b>Monday to Saturday:</b> 8:00 AM – 8:00 PM (Issue &amp; Return: 8:30 AM – 6:30 PM)</li>
-        <li><b>Sundays &amp; Holidays:</b> 9:00 AM – 4:00 PM (Reading Room &amp; Digital Lab)</li>
+        <li><b>Monday to Saturday:</b> 8:00 AM â€“ 8:00 PM (Issue &amp; Return: 8:30 AM â€“ 6:30 PM)</li>
+        <li><b>Sundays &amp; Holidays:</b> 9:00 AM â€“ 4:00 PM (Reading Room &amp; Digital Lab)</li>
         <li><b>Exam Season:</b> Extended timings till 10:00 PM</li>
       </ul>
       <h4>Borrowing Entitlements</h4>
@@ -3761,16 +3881,16 @@ const libModalData = {
     `
   },
   arrivals: {
-    title: 'New Arrivals — 2026 Academic Year',
+    title: 'New Arrivals â€” 2026 Academic Year',
     content: `
       <p>Latest textbook additions, international conference proceedings, and technical monographs added to our collection:</p>
       <ul>
-        <li><b>Artificial Intelligence: A Modern Approach (4th Edition)</b> — Stuart Russell &amp; Peter Norvig</li>
-        <li><b>Deep Learning with Python &amp; PyTorch (Latest Release)</b> — François Chollet</li>
-        <li><b>Modern VLSI Design: IP-Based System Design</b> — Wayne Wolf</li>
-        <li><b>Renewable Energy Systems: Technology &amp; Economics</b> — Z. Sen</li>
-        <li><b>Agricultural IoT &amp; Precision Farming Engineering</b> — Springer Nature</li>
-        <li><b>Biomedical Instrumentation &amp; Clinical Measurement</b> — R. S. Khandpur</li>
+        <li><b>Artificial Intelligence: A Modern Approach (4th Edition)</b> â€” Stuart Russell &amp; Peter Norvig</li>
+        <li><b>Deep Learning with Python &amp; PyTorch (Latest Release)</b> â€” FranÃ§ois Chollet</li>
+        <li><b>Modern VLSI Design: IP-Based System Design</b> â€” Wayne Wolf</li>
+        <li><b>Renewable Energy Systems: Technology &amp; Economics</b> â€” Z. Sen</li>
+        <li><b>Agricultural IoT &amp; Precision Farming Engineering</b> â€” Springer Nature</li>
+        <li><b>Biomedical Instrumentation &amp; Clinical Measurement</b> â€” R. S. Khandpur</li>
       </ul>
       <p>Visit the <i>New Arrivals Display Showcase</i> on the ground floor to browse these copies before they enter regular shelf circulation.</p>
     `
@@ -3874,7 +3994,7 @@ function libraryPage() {
     <div class="siet-lib-modal-box">
       <div class="siet-lib-modal-header">
         <h3 class="js-lib-modal-title">Library Information</h3>
-        <button type="button" class="siet-lib-modal-close js-lib-modal-close" aria-label="Close modal">×</button>
+        <button type="button" class="siet-lib-modal-close js-lib-modal-close" aria-label="Close modal">Ã—</button>
       </div>
       <div class="siet-lib-modal-body js-lib-modal-body"></div>
     </div>
@@ -3900,7 +4020,7 @@ function getCurrModalData(target, deptId = 'cse') {
 
   if (target === 'curriculum-r2024') {
     return {
-      title: `${deptFullName} — Autonomous Curriculum (R2024)`,
+      title: `${deptFullName} â€” Autonomous Curriculum (R2024)`,
       content: `
         <p>The Autonomous Curriculum (Regulations 2024) for <b>${deptFullName}</b> of Sri Shakthi Institute of Engineering and Technology is outcome-driven and structured across <b>168 total credits</b>.</p>
         <h4>Credit Distribution Across Categories</h4>
@@ -3920,7 +4040,7 @@ function getCurrModalData(target, deptId = 'cse') {
 
   if (target === 'syllabus-r2024') {
     return {
-      title: `${deptFullName} — Detailed Syllabus (R2024)`,
+      title: `${deptFullName} â€” Detailed Syllabus (R2024)`,
       content: `
         <p>Each syllabus outlines course educational objectives, unit-wise topic descriptions, laboratory experiments, modern tool requirements, textbooks, and reference volumes for <b>${deptFullName}</b>.</p>
         <h4>Specialization Focus</h4>
@@ -3945,7 +4065,7 @@ function getCurrModalData(target, deptId = 'cse') {
           <li><b>Attendance:</b> A candidate must secure a minimum of <b>75% attendance</b> in each course to be eligible for End Semester Examinations.</li>
           <li><b>Evaluation System:</b> Continuous Internal Assessment (CIA) carries 40% and End Semester Examination (ESE) carries 60%.</li>
           <li><b>Relative Grading:</b> Performance is evaluated on a 10-point letter grading system (O, A+, A, B+, B, C, U).</li>
-          <li><b>Fast-Track Semester:</b> High-performing students (CGPA ≥ 8.5) may complete electives in semesters 5–7 and undertake full-time industry capstone in semester 8.</li>
+          <li><b>Fast-Track Semester:</b> High-performing students (CGPA â‰¥ 8.5) may complete electives in semesters 5â€“7 and undertake full-time industry capstone in semester 8.</li>
         </ul>
       `
     };
@@ -3953,7 +4073,7 @@ function getCurrModalData(target, deptId = 'cse') {
 
   if (target === 'scheme-exam') {
     return {
-      title: `Scheme of Examination — ${deptFullName}`,
+      title: `Scheme of Examination â€” ${deptFullName}`,
       content: `
         <h4>Internal Assessment (40 Marks)</h4>
         <ul>
@@ -3977,7 +4097,7 @@ function getCurrModalData(target, deptId = 'cse') {
         <b>Location:</b> Administrative Block, Ground Floor (Room A-108)<br>
         <b>Direct Phone:</b> +91 422 2369900 (Ext. 215)<br>
         <b>Email:</b> <a href="mailto:academics@siet.ac.in">academics@siet.ac.in</a></p>
-        <p><b>Student Hours:</b> Monday to Friday, 3:30 PM – 5:00 PM</p>
+        <p><b>Student Hours:</b> Monday to Friday, 3:30 PM â€“ 5:00 PM</p>
       `
     };
   }
@@ -4084,35 +4204,35 @@ function curriculumPage() {
                   <span class="navlink-icon">${libIcons.book}</span>
                   <span>Curriculum</span>
                 </span>
-                <span class="navlink-arrow">›</span>
+                <span class="navlink-arrow">â€º</span>
               </a>
               <a href="#/academic-calendar" class="siet-curr-navlink">
                 <span class="navlink-content">
                   <span class="navlink-icon">${currIcons.calendar}</span>
                   <span>Academic Calendar</span>
                 </span>
-                <span class="navlink-arrow">›</span>
+                <span class="navlink-arrow">â€º</span>
               </a>
               <button type="button" class="siet-curr-navlink js-curr-modal-trigger" data-target="syllabus-r2024">
                 <span class="navlink-content">
                   <span class="navlink-icon">${libIcons.document}</span>
                   <span>Syllabus</span>
                 </span>
-                <span class="navlink-arrow">›</span>
+                <span class="navlink-arrow">â€º</span>
               </button>
               <button type="button" class="siet-curr-navlink js-curr-modal-trigger" data-target="regulations-r2024">
                 <span class="navlink-content">
                   <span class="navlink-icon">${currIcons.shield}</span>
                   <span>Regulations</span>
                 </span>
-                <span class="navlink-arrow">›</span>
+                <span class="navlink-arrow">â€º</span>
               </button>
               <button type="button" class="siet-curr-navlink js-curr-modal-trigger" data-target="curriculum-r2024">
                 <span class="navlink-content">
                   <span class="navlink-icon">${currIcons.database}</span>
                   <span>Academic Resources</span>
                 </span>
-                <span class="navlink-arrow">›</span>
+                <span class="navlink-arrow">â€º</span>
               </button>
             </nav>
           </div>
@@ -4191,7 +4311,7 @@ function curriculumPage() {
     <div class="siet-lib-modal-box">
       <div class="siet-lib-modal-header">
         <h3 class="js-curr-modal-title">Academic Document</h3>
-        <button type="button" class="siet-lib-modal-close js-curr-modal-close" aria-label="Close modal">×</button>
+        <button type="button" class="siet-lib-modal-close js-curr-modal-close" aria-label="Close modal">Ã—</button>
       </div>
       <div class="siet-lib-modal-body js-curr-modal-body"></div>
     </div>
@@ -4222,28 +4342,28 @@ function academicCalendarPage() {
                   <span class="navlink-icon">${libIcons.book}</span>
                   <span>Curriculum</span>
                 </span>
-                <span class="navlink-arrow">›</span>
+                <span class="navlink-arrow">â€º</span>
               </a>
               <a href="#/academic-calendar" class="siet-curr-navlink is-active">
                 <span class="navlink-content">
                   <span class="navlink-icon">${currIcons.calendar}</span>
                   <span>Academic Calendar</span>
                 </span>
-                <span class="navlink-arrow">›</span>
+                <span class="navlink-arrow">â€º</span>
               </a>
               <button type="button" class="siet-curr-navlink js-curr-modal-trigger" data-target="syllabus-r2024">
                 <span class="navlink-content">
                   <span class="navlink-icon">${libIcons.document}</span>
                   <span>Syllabus</span>
                 </span>
-                <span class="navlink-arrow">›</span>
+                <span class="navlink-arrow">â€º</span>
               </button>
               <button type="button" class="siet-curr-navlink js-curr-modal-trigger" data-target="regulations-r2024">
                 <span class="navlink-content">
                   <span class="navlink-icon">${currIcons.shield}</span>
                   <span>Regulations</span>
                 </span>
-                <span class="navlink-arrow">›</span>
+                <span class="navlink-arrow">â€º</span>
               </button>
             </nav>
           </div>
@@ -4254,12 +4374,12 @@ function academicCalendarPage() {
           <div class="siet-calendar-card reveal">
             <div class="siet-calendar-header">
               <div>
-                <span class="curr-badge">AUTONOMOUS 2025–2026</span>
+                <span class="curr-badge">AUTONOMOUS 2025â€“2026</span>
                 <h2>Autonomous Academic Schedule &amp; Calendar</h2>
                 <p>Detailed timeline for class commencement, continuous internal assessments, model examinations, end-semester practicals, and theory examinations.</p>
               </div>
               <div class="calendar-actions">
-                <a href="#/curriculum" class="dept-curriculum-action">View Full Curriculum →</a>
+                <a href="#/curriculum" class="dept-curriculum-action">View Full Curriculum â†’</a>
               </div>
             </div>
 
@@ -4284,14 +4404,14 @@ function academicCalendarPage() {
                     </tr>
                     <tr>
                       <td class="td-num">2</td>
-                      <td class="td-title">Continuous Internal Assessment – I (CIA I)</td>
-                      <td class="td-code">25 Aug 2025 – 01 Sep 2025</td>
+                      <td class="td-title">Continuous Internal Assessment â€“ I (CIA I)</td>
+                      <td class="td-code">25 Aug 2025 â€“ 01 Sep 2025</td>
                       <td><span class="cal-status cal-open">Completed</span></td>
                     </tr>
                     <tr>
                       <td class="td-num">3</td>
-                      <td class="td-title">Continuous Internal Assessment – II (CIA II)</td>
-                      <td class="td-code">06 Oct 2025 – 13 Oct 2025</td>
+                      <td class="td-title">Continuous Internal Assessment â€“ II (CIA II)</td>
+                      <td class="td-code">06 Oct 2025 â€“ 13 Oct 2025</td>
                       <td><span class="cal-status cal-active">Active</span></td>
                     </tr>
                     <tr>
@@ -4303,13 +4423,13 @@ function academicCalendarPage() {
                     <tr>
                       <td class="td-num">5</td>
                       <td class="td-title">End Semester Practical Examinations</td>
-                      <td class="td-code">10 Nov 2025 – 18 Nov 2025</td>
+                      <td class="td-code">10 Nov 2025 â€“ 18 Nov 2025</td>
                       <td><span class="cal-status">Scheduled</span></td>
                     </tr>
                     <tr>
                       <td class="td-num">6</td>
                       <td class="td-title">End Semester Theory Examinations</td>
-                      <td class="td-code">24 Nov 2025 – 15 Dec 2025</td>
+                      <td class="td-code">24 Nov 2025 â€“ 15 Dec 2025</td>
                       <td><span class="cal-status">Scheduled</span></td>
                     </tr>
                   </tbody>
@@ -4336,14 +4456,14 @@ function academicCalendarPage() {
                     </tr>
                     <tr>
                       <td class="td-num">2</td>
-                      <td class="td-title">Continuous Internal Assessment – I (CIA I)</td>
-                      <td class="td-code">16 Feb 2026 – 23 Feb 2026</td>
+                      <td class="td-title">Continuous Internal Assessment â€“ I (CIA I)</td>
+                      <td class="td-code">16 Feb 2026 â€“ 23 Feb 2026</td>
                       <td><span class="cal-status">Upcoming</span></td>
                     </tr>
                     <tr>
                       <td class="td-num">3</td>
-                      <td class="td-title">Continuous Internal Assessment – II (CIA II)</td>
-                      <td class="td-code">23 Mar 2026 – 30 Mar 2026</td>
+                      <td class="td-title">Continuous Internal Assessment â€“ II (CIA II)</td>
+                      <td class="td-code">23 Mar 2026 â€“ 30 Mar 2026</td>
                       <td><span class="cal-status">Upcoming</span></td>
                     </tr>
                     <tr>
@@ -4355,13 +4475,13 @@ function academicCalendarPage() {
                     <tr>
                       <td class="td-num">5</td>
                       <td class="td-title">End Semester Practical Examinations</td>
-                      <td class="td-code">27 Apr 2026 – 06 May 2026</td>
+                      <td class="td-code">27 Apr 2026 â€“ 06 May 2026</td>
                       <td><span class="cal-status">Upcoming</span></td>
                     </tr>
                     <tr>
                       <td class="td-num">6</td>
                       <td class="td-title">End Semester Theory Examinations</td>
-                      <td class="td-code">11 May 2026 – 02 Jun 2026</td>
+                      <td class="td-code">11 May 2026 â€“ 02 Jun 2026</td>
                       <td><span class="cal-status">Upcoming</span></td>
                     </tr>
                   </tbody>
@@ -4387,15 +4507,15 @@ function academicCalendarPage() {
 </main>`;
 }
 
-function enquiryPage(apply = false) { return `<main class="enquiry-page-v3"><section class="enquiry-hero-v3"><img src="/brand/siet-logo.png" alt=""><div class="eyebrow"><span></span> SRI SHAKTHI</div><h1>${apply ? 'Apply for Sri Shakthi' : 'Admission Enquiry'}</h1><h2>Let’s plan your <em>next step.</em></h2><p>Share your interests and contact details. Our admissions team will guide you in choosing the right programme.</p></section><section class="enquiry-main-v3"><div class="enquiry-heading-v3"><small>ENQUIRY FORM</small><h1>Start your engineering journey with SIET</h1></div><form class="enquiry-form-v3 js-form"><div class="enquiry-fields-v3">${field('Full Name', 'name', 'text', 'Enter your full name')}${field('Mobile Number', 'phone', 'tel', 'Enter 10 digit mobile number')}${field('Email Address', 'email', 'email', 'Enter your email address')}${selectField('Course Level', 'level', ['UG', 'PG'])}${programSelectHtml('Preferred Department', 'course')}${field('Academic Qualification / Marks', 'qualification', 'text', 'Qualification and marks')}</div><label>Message / Any Specific Query <b>*</b><textarea name="message" rows="4" required minlength="10"></textarea></label><button class="button" type="submit">${apply ? 'Submit Application' : 'Send Enquiry'} →</button><p class="status" aria-live="polite"></p></form></section></main>` }
+function enquiryPage(apply = false) { return `<main class="enquiry-page-v3"><section class="enquiry-hero-v3"><img src="/brand/siet-logo.png" alt=""><div class="eyebrow"><span></span> SRI SHAKTHI</div><h1>${apply ? 'Apply for Sri Shakthi' : 'Admission Enquiry'}</h1><h2>Letâ€™s plan your <em>next step.</em></h2><p>Share your interests and contact details. Our admissions team will guide you in choosing the right programme.</p></section><section class="enquiry-main-v3"><div class="enquiry-heading-v3"><small>ENQUIRY FORM</small><h1>Start your engineering journey with SIET</h1></div><form class="enquiry-form-v3 js-form"><div class="enquiry-fields-v3">${field('Full Name', 'name', 'text', 'Enter your full name')}${field('Mobile Number', 'phone', 'tel', 'Enter 10 digit mobile number')}${field('Email Address', 'email', 'email', 'Enter your email address')}${selectField('Course Level', 'level', ['UG', 'PG'])}${programSelectHtml('Preferred Department', 'course')}${field('Academic Qualification / Marks', 'qualification', 'text', 'Qualification and marks')}</div><label>Message / Any Specific Query <b>*</b><textarea name="message" rows="4" required minlength="10"></textarea></label><button class="button" type="submit">${apply ? 'Submit Application' : 'Send Enquiry'} â†’</button><p class="status" aria-live="polite"></p></form></section></main>` }
 const field = (label, name, type, placeholder) => `<label>${label} <b>*</b><input type="${type}" name="${name}" placeholder="${placeholder}" required></label>`;
 const selectField = (label, name, opts) => `<label>${label} <b>*</b><select name="${name}" required><option value="">Select ${label}</option>${opts.map(o => `<option>${o}</option>`).join('')}</select></label>`;
 function careersPage() {
   const unit = careerUnits.college;
-  return `<main class="careers-page"><section class="career-hero"><small>WORK WITH US</small><h1>Faculty Recruitment</h1><h2>Build careers that <em>shape futures.</em></h2><p>Join a community of educators, researchers and professionals committed to powering the youth and empowering the nation.</p></section><section class="career-main"><div class="career-tabs"><button class="active" data-unit="college" type="button">Engineering College</button><button data-unit="school" type="button">CBSE School</button><button data-unit="lab" type="button">Food Testing Lab</button></div><div class="career-intro"><img src="/brand/siet-logo.png" alt=""><div><small>${unit.subtitle}</small><h2>Sri Shakthi ${unit.name}</h2><p>${unit.desc}</p></div></div><div class="career-application-layout"><form class="career-form js-form"><div class="career-form-head"><small>APPLICATION FORM</small><h2>Faculty &amp; Professional Recruitment</h2></div><div class="career-fields">${field('Full Name', 'name', 'text', 'Enter your full name')}${field('Mobile Number', 'phone', 'tel', 'Enter mobile number')}${field('Email Address', 'email', 'email', 'Enter email')}${selectField('Application Category', 'category', unit.cats.map(c => c[0]))}${field('Position', 'position', 'text', 'Position you would like to apply')}${field('Highest Qualification', 'qualification', 'text', 'Enter highest degree')}<label class="career-wide">Why are you looking for a change?<textarea name="message" rows="4"></textarea></label><label class="career-wide career-file">Upload Resume <b>*</b><input type="file" name="resume" accept=".pdf,.doc,.docx,.rtf" required></label></div><button class="career-submit" type="submit">Submit Application →</button><p class="status" aria-live="polite"></p></form><aside class="career-categories"><div class="career-side-title"><small>EXPLORE OPENINGS</small><h2>${unit.name} Openings</h2></div>${unit.cats.map((c, i) => `<details ${i === 0 ? 'open' : ''}><summary>${c[0]} ${icon('down')}</summary><div>${c[1].map(r => `<span>→ ${r}</span>`).join('')}</div></details>`).join('')}<div class="career-contact"><small>RECRUITMENT QUERIES</small><h3>Let’s build the future together.</h3><a href="mailto:careers@siet.ac.in">careers@siet.ac.in</a></div></aside></div></section></main>`;
+  return `<main class="careers-page"><section class="career-hero"><small>WORK WITH US</small><h1>Faculty Recruitment</h1><h2>Build careers that <em>shape futures.</em></h2><p>Join a community of educators, researchers and professionals committed to powering the youth and empowering the nation.</p></section><section class="career-main"><div class="career-tabs"><button class="active" data-unit="college" type="button">Engineering College</button><button data-unit="school" type="button">CBSE School</button><button data-unit="lab" type="button">Food Testing Lab</button></div><div class="career-intro"><img src="/brand/siet-logo.png" alt=""><div><small>${unit.subtitle}</small><h2>Sri Shakthi ${unit.name}</h2><p>${unit.desc}</p></div></div><div class="career-application-layout"><form class="career-form js-form"><div class="career-form-head"><small>APPLICATION FORM</small><h2>Faculty &amp; Professional Recruitment</h2></div><div class="career-fields">${field('Full Name', 'name', 'text', 'Enter your full name')}${field('Mobile Number', 'phone', 'tel', 'Enter mobile number')}${field('Email Address', 'email', 'email', 'Enter email')}${selectField('Application Category', 'category', unit.cats.map(c => c[0]))}${field('Position', 'position', 'text', 'Position you would like to apply')}${field('Highest Qualification', 'qualification', 'text', 'Enter highest degree')}<label class="career-wide">Why are you looking for a change?<textarea name="message" rows="4"></textarea></label><label class="career-wide career-file">Upload Resume <b>*</b><input type="file" name="resume" accept=".pdf,.doc,.docx,.rtf" required></label></div><button class="career-submit" type="submit">Submit Application â†’</button><p class="status" aria-live="polite"></p></form><aside class="career-categories"><div class="career-side-title"><small>EXPLORE OPENINGS</small><h2>${unit.name} Openings</h2></div>${unit.cats.map((c, i) => `<details ${i === 0 ? 'open' : ''}><summary>${c[0]} ${icon('down')}</summary><div>${c[1].map(r => `<span>â†’ ${r}</span>`).join('')}</div></details>`).join('')}<div class="career-contact"><small>RECRUITMENT QUERIES</small><h3>Letâ€™s build the future together.</h3><a href="mailto:careers@siet.ac.in">careers@siet.ac.in</a></div></aside></div></section></main>`;
 }
 
-function videoModal() { return `<div class="video-modal" role="dialog" aria-modal="true"><div class="video-shell portrait"><button class="video-close" aria-label="Close video">×</button><div class="video-frame"><video controls autoplay playsinline poster="/brand/techpark-hd.jpg"><source src="/brand/siet-campus-video.mp4" type="video/mp4"></video></div></div></div>` }
+function videoModal() { return `<div class="video-modal" role="dialog" aria-modal="true"><div class="video-shell portrait"><button class="video-close" aria-label="Close video">Ã—</button><div class="video-frame"><video controls autoplay playsinline poster="/brand/techpark-hd.jpg"><source src="/brand/siet-campus-video.mp4" type="video/mp4"></video></div></div></div>` }
 function route() {
   const raw = decodeURIComponent(location.hash.replace(/^#\/?/, '')).replace(/\/$/, '');
   return raw.split('?')[0];
@@ -4434,6 +4554,18 @@ function bind() {
   }
   if (route() === 'programmes') {
     document.title = "UG & PG Programmes | Sri Shakthi Institute of Engineering & Technology";
+  }
+  if (route()?.startsWith('placements')) {
+    const r = route();
+    if (r === 'placements/entrepreneurship') {
+      document.title = "Entrepreneurship & Incubation | Sri Shakthi Institute of Engineering & Technology";
+    } else if (r === 'placements/higher-education') {
+      document.title = "Higher Education & Global Admissions | Sri Shakthi Institute of Engineering & Technology";
+    } else if (r === 'placements/government-services') {
+      document.title = "Civil Services & Government Careers | Sri Shakthi Institute of Engineering & Technology";
+    } else {
+      document.title = "Placements & Career Excellence | Sri Shakthi Institute of Engineering & Technology";
+    }
   }
 
   // Filter tabs on Programmes page
@@ -4563,10 +4695,10 @@ function bind() {
       <p>Searching Central Library OPAC &amp; digital collections for <b>${query || 'all subjects'}</b>:</p>
       <h4>Matching Records &amp; Availability:</h4>
       <ul>
-        <li><span class="siet-lib-resource-badge">Print Volume</span> <b>Artificial Intelligence: A Modern Approach</b> — <i>Available (Shelf 4B, 3 copies)</i></li>
-        <li><span class="siet-lib-resource-badge">E-Journal</span> <b>IEEE Transactions on Pattern Analysis and Machine Intelligence</b> — <i>Full-text Online</i></li>
-        <li><span class="siet-lib-resource-badge">Research Project</span> <b>Smart Agro-Robotics &amp; Drone Systems (2025-26)</b> — <i>Reference Section R-08</i></li>
-        <li><span class="siet-lib-resource-badge">Textbook</span> <b>Data Structures and Algorithm Analysis in C++ (Mark Allen Weiss)</b> — <i>Available (Shelf 2A)</i></li>
+        <li><span class="siet-lib-resource-badge">Print Volume</span> <b>Artificial Intelligence: A Modern Approach</b> â€” <i>Available (Shelf 4B, 3 copies)</i></li>
+        <li><span class="siet-lib-resource-badge">E-Journal</span> <b>IEEE Transactions on Pattern Analysis and Machine Intelligence</b> â€” <i>Full-text Online</i></li>
+        <li><span class="siet-lib-resource-badge">Research Project</span> <b>Smart Agro-Robotics &amp; Drone Systems (2025-26)</b> â€” <i>Reference Section R-08</i></li>
+        <li><span class="siet-lib-resource-badge">Textbook</span> <b>Data Structures and Algorithm Analysis in C++ (Mark Allen Weiss)</b> â€” <i>Available (Shelf 2A)</i></li>
       </ul>
       <p style="margin-top:14px;color:#537563;font-size:13px">Present your institutional Smart ID card at the circulation counter to reserve or issue physical books.</p>
     `;
@@ -4781,8 +4913,8 @@ function bind() {
     const catAside = $('.career-categories');
     if (catAside) {
       catAside.innerHTML = `<div class="career-side-title"><small>EXPLORE OPENINGS</small><h2>${unit.name} Openings</h2></div>` +
-        unit.cats.map((c, i) => `<details ${i === 0 ? 'open' : ''}><summary>${c[0]} ${icon('down')}</summary><div>${c[1].map(r => `<span>→ ${r}</span>`).join('')}</div></details>`).join('') +
-        `<div class="career-contact"><small>RECRUITMENT QUERIES</small><h3>Let’s build the future together.</h3><a href="mailto:careers@siet.ac.in">careers@siet.ac.in</a></div>`;
+        unit.cats.map((c, i) => `<details ${i === 0 ? 'open' : ''}><summary>${c[0]} ${icon('down')}</summary><div>${c[1].map(r => `<span>â†’ ${r}</span>`).join('')}</div></details>`).join('') +
+        `<div class="career-contact"><small>RECRUITMENT QUERIES</small><h3>Letâ€™s build the future together.</h3><a href="mailto:careers@siet.ac.in">careers@siet.ac.in</a></div>`;
     }
   }));
   $$('.js-video').forEach(b => b.addEventListener('click', () => { document.body.insertAdjacentHTML('beforeend', videoModal()); document.body.style.overflow = 'hidden'; const modal = $('.video-modal'); const close = () => { modal?.remove(); document.body.style.overflow = '' }; modal?.addEventListener('click', e => e.target === modal && close()); $('.video-close', modal)?.addEventListener('click', close) }));
@@ -5045,7 +5177,7 @@ async function submitForm(e) {
   const form = e.currentTarget;
   const status = $('.status', form);
   const btn = $('button[type="submit"], .career-submit', form);
-  if (status) { status.textContent = 'Submitting details…'; status.style.color = '#0b7a48' }
+  if (status) { status.textContent = 'Submitting detailsâ€¦'; status.style.color = '#0b7a48' }
   if (btn) btn.disabled = true;
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
@@ -5114,3 +5246,928 @@ export function mountSite(root) {
     appRoot = null;
   };
 }
+
+const placementDataYears = {
+  '2025 - 26': {
+    placed: 285,
+    companies: '120+',
+    highest: '₹12 LPA',
+    average: '₹5.2 LPA',
+    multiple: 45,
+    rate: '94%',
+    tags: {
+      placed: '↑ 14% YoY',
+      companies: 'Tier-1 & MNCs',
+      highest: 'Marquee Offer',
+      average: 'Core & IT Mix',
+      multiple: 'Dual Offers',
+      rate: 'Eligible Cohort'
+    }
+  },
+  '2024 - 25': {
+    placed: 250,
+    companies: '110+',
+    highest: '₹10 LPA',
+    average: '₹4.8 LPA',
+    multiple: 38,
+    rate: '92%',
+    tags: {
+      placed: '↑ 19% YoY',
+      companies: 'Fortune 500s',
+      highest: 'Product Tier',
+      average: 'Consistent Rise',
+      multiple: 'Super Dream',
+      rate: 'NBA Accredited'
+    }
+  },
+  '2023 - 24': {
+    placed: 210,
+    companies: '90+',
+    highest: '₹9 LPA',
+    average: '₹4.5 LPA',
+    multiple: 32,
+    rate: '90%',
+    tags: {
+      placed: '↑ 16% YoY',
+      companies: 'Global Recruits',
+      highest: 'Tier-1 Marquee',
+      average: 'Benchmark Level',
+      multiple: 'Dual Offers',
+      rate: 'Core Disciplines'
+    }
+  },
+  '2022 - 23': {
+    placed: 180,
+    companies: '75+',
+    highest: '₹8 LPA',
+    average: '₹4.1 LPA',
+    multiple: 27,
+    rate: '88%',
+    tags: {
+      placed: 'Foundation Year',
+      companies: 'National Drives',
+      highest: 'Top Tier',
+      average: 'Steady Growth',
+      multiple: 'Multiple Drives',
+      rate: 'Strong Benchmark'
+    }
+  }
+};
+
+// All Featured Star Achievers
+const starAchievers = [
+  { name: 'Nithya Sri K', dept: 'Information Technology', company: 'TCS', ctc: '₹12 LPA', top: true, batch: 'Batch 2026', img: '/brand/achievers/nithya-sri-k.jpg' },
+  { name: 'Aravind S', dept: 'Computer Science and Engineering', company: 'Infosys', ctc: '₹10 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/aravind-s.jpg' },
+  { name: 'Priya Dharshini R', dept: 'Electronics and Communication', company: 'Wipro', ctc: '₹9.5 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/priya-dharshini-r.jpg' },
+  { name: 'Karthik V', dept: 'Mechanical Engineering', company: 'Cognizant', ctc: '₹8.5 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/karthik-v.jpg' },
+  { name: 'Sowmiya M', dept: 'Civil Engineering', company: 'Zoho', ctc: '₹7.5 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/sowmiya-m.jpg' }
+];
+
+// Top Recruiters Row 1 (Product Leaders, Cloud & Enterprise IT)
+const topRecruitersRow1 = [
+  { name: 'ZOHO', type: 'img', src: '/brand/placement-company-logo/line-2/zoho-logo.png', category: 'Product & SaaS' },
+  { name: 'J.P.Morgan', type: 'custom', html: '<text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="18" fill="#2d2926">J.P.Morgan</text>', category: 'Investment Bank' },
+  { name: 'AUTODESK', type: 'custom', html: '<text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="17" letter-spacing="1.5" fill="#0696d7">▲ AUTODESK</text>', category: '3D Design Tech' },
+  { name: 'JUSPAY', type: 'custom', html: '<circle cx="20" cy="14" r="6" fill="#0077ff"/><text x="62%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="17" letter-spacing="0.5" fill="#172a3a">JUSPAY</text>', category: 'FinTech Unicorn' },
+  { name: 'TCS', type: 'svg', category: 'Global IT Leader' },
+  { name: 'Cognizant', type: 'img', src: '/brand/placement-company-logo/line-1/Cognizant-logo.png', category: 'Digital Solutions' },
+  { name: 'ServiceNow', type: 'img', src: '/brand/placement-company-logo/line-2/servicenow-logo.png', category: 'Enterprise Cloud' },
+  { name: 'Presidio', type: 'img', src: '/brand/placement-company-logo/line-2/Presido-logo.png', category: 'Cyber Security' },
+  { name: 'ConverSight', type: 'img', src: '/brand/placement-company-logo/line-1/Conver-sight-logo.png', category: 'AI & Analytics' },
+  { name: 'Abluva', type: 'img', src: '/brand/placement-company-logo/line-1/Abluva-logo.png', category: 'Data Security AI' },
+  { name: 'Retail AI', type: 'img', src: '/brand/placement-company-logo/line-1/Retail-ai-logo.png', category: 'Autonomous Tech' }
+];
+
+// Top Recruiters Row 2 (Global MNCs, Core Engineering & DeepTech)
+const topRecruitersRow2 = [
+  { name: 'Infosys', type: 'svg', category: 'Technology Consulting' },
+  { name: 'Amazon', type: 'svg', category: 'Cloud & Tech Giant' },
+  { name: 'Accenture', type: 'svg', category: 'Strategy & Consulting' },
+  { name: 'Wipro', type: 'svg', category: 'Global IT Enterprise' },
+  { name: 'ITC Limited', type: 'img', src: '/brand/placement-company-logo/line-2/ITC-limited-logo.png', category: 'Conglomerate & FMCG' },
+  { name: 'Zentron Labs', type: 'img', src: '/brand/placement-company-logo/line-2/Zentron-labs-logo.png', category: 'Robotics & Vision' },
+  { name: 'Zynerd', type: 'img', src: '/brand/placement-company-logo/line-2/Zynerd-logo.png', category: 'EdTech Platform' },
+  { name: 'Vakilsearch', type: 'img', src: '/brand/placement-company-logo/line-1/Vakil-search-logo.png', category: 'LegalTech & FinTech' },
+  { name: 'Conserve', type: 'img', src: '/brand/placement-company-logo/line-2/conserve-logo.png', category: 'Green Engineering' },
+  { name: 'Nallas', type: 'img', src: '/brand/placement-company-logo/line-1/nallas-logo.png', category: 'Enterprise IT' },
+  { name: 'nference', type: 'img', src: '/brand/placement-company-logo/line-1/nference-logo.png', category: 'BioMedical AI' }
+];
+
+function getRecruiterSvg(name) {
+  if (name === 'TCS') {
+    return `<text x="50%" y="42%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="900" font-size="14" fill="#e61c24">tcs </text><text x="50%" y="76%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="8" fill="#1f4277">CONSULTANCY</text>`;
+  }
+  if (name === 'Infosys') {
+    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="17" fill="#007cc3">Infosys</text>`;
+  }
+  if (name === 'wipro') {
+    return `<circle cx="20" cy="14" r="5" fill="#f3c515"/><circle cx="28" cy="14" r="3.5" fill="#e61c24"/><text x="64%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="16" fill="#341f97">wipro</text>`;
+  }
+  if (name === 'accenture') {
+    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="15" fill="#000000">accenture<tspan fill="#a100ff" font-weight="900">&gt;</tspan></text>`;
+  }
+  if (name === 'ZOHO') {
+    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="900" font-size="18" letter-spacing="2" fill="#cc2427">ZO<tspan fill="#00854a">H</tspan><tspan fill="#f3c515">O</tspan></text>`;
+  }
+  if (name === 'amazon') {
+    return `<text x="50%" y="48%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="16" fill="#232f3e">amazon</text><path d="M 24 20 Q 50 27 76 20" stroke="#ff9900" stroke-width="2" fill="none"/>`;
+  }
+  return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="15" fill="#005a39">${name}</text>`;
+}
+
+function renderRecruiterCard(r) {
+  let logoContent = '';
+  if (r.type === 'img') {
+    logoContent = `<img src="${r.src}" alt="${r.name} logo" loading="lazy">`;
+  } else if (r.type === 'custom') {
+    logoContent = `<svg viewBox="0 0 130 28" xmlns="http://www.w3.org/2000/svg">${r.html}</svg>`;
+  } else {
+    logoContent = `<svg viewBox="0 0 110 28" xmlns="http://www.w3.org/2000/svg">${getRecruiterSvg(r.name)}</svg>`;
+  }
+  return `
+    <div class="siet-tr-logo-card" title="${r.name} · ${r.category}">
+      <span class="siet-tr-cat-tag">${r.category}</span>
+      <div class="siet-tr-logo-inner">
+        ${logoContent}
+      </div>
+      <div class="siet-tr-hover-bar">
+        <span class="siet-tr-dot"></span>
+        <span class="siet-tr-co-name">${r.name}</span>
+      </div>
+    </div>
+  `;
+}
+
+function placementsDashboardPage(route) {
+  const activeRoute = route || 'placements';
+  const isEnt = activeRoute.includes('entrepreneurship');
+  const isHigh = activeRoute.includes('higher-education');
+  const isGov = activeRoute.includes('government-services');
+
+  // Subpage: Entrepreneurship
+  if (isEnt) {
+    return `
+      <main class="siet-pe-page">
+        <section class="siet-pj-hero-section">
+          <div class="siet-pj-hero-grid"></div>
+          <div class="siet-pj-hero-orb-1"></div>
+          <div class="siet-pj-hero-orb-2"></div>
+          <div class="siet-pj-shell">
+            <h1 class="siet-pj-title">Entrepreneurship <em>&amp; Startups</em></h1>
+            <p class="siet-pj-subtitle">Nurturing student entrepreneurs, deep-tech venture incubation, and patent commercialization at Sri Shakthi.</p>
+          </div>
+        </section>
+        <div class="siet-sp-lower-shell">
+          <div class="siet-tmpl-sub-grid">
+            <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
+              <div class="siet-vm-card-pattern"></div>
+              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('spark')}</span><span class="siet-vm-card-number">01 / INCUBATOR</span></div>
+              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">MSME APPROVED INCUBATOR</p><h2>Shakthi Innovation &amp; Techpark</h2><p>Dedicated co-working spaces, fabrication equipment, IoT testbeds, and cloud resources accessible 24/7 for student founders.</p></div>
+              <div class="siet-vm-card-footer"><span>25+ Startups Incubated</span><i></i></div>
+            </article>
+            <article class="siet-vm-card siet-vm-card-mission reveal" style="min-height:240px;padding:22px;">
+              <div class="siet-vm-mission-lines"></div>
+              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('target')}</span><span class="siet-vm-card-number">02 / CAPITAL</span></div>
+              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">SEED FUNDING CORPUS</p><h2>₹50 Lakhs Institutional Seed Fund</h2><p>Direct equity-free grants and early prototyping seed capital provided by Management to validate proofs-of-concept.</p></div>
+              <div class="siet-vm-card-footer"><span>Venture Capital Mentorship</span><i></i></div>
+            </article>
+          </div>
+        </div>
+      </main>
+    `;
+  }
+
+  // Subpage: Higher Education
+  if (isHigh) {
+    return `
+      <main class="siet-pe-page">
+        <section class="siet-pj-hero-section">
+          <div class="siet-pj-hero-grid"></div>
+          <div class="siet-pj-hero-orb-1"></div>
+          <div class="siet-pj-hero-orb-2"></div>
+          <div class="siet-pj-shell">
+            <h1 class="siet-pj-title">Higher Education <em>&amp; Admissions</em></h1>
+            <p class="siet-pj-subtitle">Guiding graduates towards post-graduate admissions at premier international universities and Indian institutes.</p>
+          </div>
+        </section>
+        <div class="siet-sp-lower-shell">
+          <div class="siet-tmpl-sub-grid">
+            <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
+              <div class="siet-vm-card-pattern"></div>
+              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('education')}</span><span class="siet-vm-card-number">01 / ENTRANCE</span></div>
+              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">IN-HOUSE COACHING</p><h2>GATE, GRE, CAT &amp; IELTS</h2><p>Structured preparation integrated into student schedules with faculty mentors and external trainers for national and global exams.</p></div>
+              <div class="siet-vm-card-footer"><span>Comprehensive Exam Training</span><i></i></div>
+            </article>
+            <article class="siet-vm-card siet-vm-card-mission reveal" style="min-height:240px;padding:22px;">
+              <div class="siet-vm-mission-lines"></div>
+              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('target')}</span><span class="siet-vm-card-number">02 / PREMIER INSTITUTES</span></div>
+              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">INDIAN EXCELLENCE</p><h2>IISc, IITs, NITs &amp; IIMs</h2><p>Our students consistently qualify GATE and CAT to enter M.Tech, MS, and MBA programs at IISc Bangalore, IIT Madras, and top NITs.</p></div>
+              <div class="siet-vm-card-footer"><span>National Top-Rankers</span><i></i></div>
+            </article>
+          </div>
+        </div>
+      </main>
+    `;
+  }
+
+  // Subpage: Government Services
+  if (isGov) {
+    return `
+      <main class="siet-pe-page">
+        <section class="siet-pj-hero-section">
+          <div class="siet-pj-hero-grid"></div>
+          <div class="siet-pj-hero-orb-1"></div>
+          <div class="siet-pj-hero-orb-2"></div>
+          <div class="siet-pj-shell">
+            <h1 class="siet-pj-title">Civil Services <em>&amp; Public Sector</em></h1>
+            <p class="siet-pj-subtitle">Mentoring disciplined graduates for careers in Indian administrative services, defense research, and public enterprises.</p>
+          </div>
+        </section>
+        <div class="siet-sp-lower-shell">
+          <div class="siet-tmpl-sub-grid">
+            <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
+              <div class="siet-vm-card-pattern"></div>
+              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('target')}</span><span class="siet-vm-card-number">01 / ACADEMY</span></div>
+              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">CIVIL SERVICES WING</p><h2>Sri Shakthi IAS Academy</h2><p>Foundation batches for UPSC Civil Services, TNPSC Group 1 &amp; 2, with regular mock test series and guest lectures by serving officers.</p></div>
+              <div class="siet-vm-card-footer"><span>Officers in the Making</span><i></i></div>
+            </article>
+            <article class="siet-vm-card siet-vm-card-mission reveal" style="min-height:240px;padding:22px;">
+              <div class="siet-vm-mission-lines"></div>
+              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('education')}</span><span class="siet-vm-card-number">02 / ENGINEERING</span></div>
+              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">TECHNICAL SERVICES</p><h2>Indian Engineering Services (IES)</h2><p>Intensive coaching in core engineering disciplines for UPSC ESE, preparing graduates for central government engineering executive roles.</p></div>
+              <div class="siet-vm-card-footer"><span>Technical Civil Services</span><i></i></div>
+            </article>
+          </div>
+        </div>
+      </main>
+    `;
+  }
+
+  // 1. Top Recruiters Marquee Cards (Dual Tracks)
+  const marqueeRow1Html = topRecruitersRow1.map(renderRecruiterCard).join('');
+  const marqueeRow2Html = topRecruitersRow2.map(renderRecruiterCard).join('');
+
+  // 2. Year Tabs
+  const tabsHtml = Object.keys(placementDataYears).map((year, i) => `
+    <button type="button" class="siet-tmpl-ytab ${i === 0 ? 'is-active' : ''}" data-year="${year}">
+      ${i === 0 ? '<span class="siet-tmpl-ytab-dot"></span>' : ''}
+      ${year}
+    </button>
+  `).join('');
+
+  return `
+    <main class="siet-pe-page">
+
+      <!-- ══════════════════════════════════════════════════════════
+           1. TOP PLACEMENT ACHIEVERS (Featured Students)
+           ══════════════════════════════════════════════════════════ -->
+      <section class="siet-sp-section">
+        <!-- Full-width Blended Header Bar touching navbar directly -->
+        <div class="siet-sp-header-bar">
+          <div class="siet-sp-header-inner">
+            <div class="siet-sp-header-left">
+              <div class="siet-sp-thumb-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+              </div>
+              <div class="siet-sp-title-group">
+                <span class="siet-sp-kicker">SRI SHAKTHI PRIDE · CLASS OF 2026</span>
+                <h2 class="siet-sp-banner-title"><i></i> TOP PLACEMENT ACHIEVERS</h2>
+              </div>
+            </div>
+            <div class="siet-sp-tag-badge">
+              <span class="siet-sp-tag-dot"></span>
+              <span>TIER-1 RECRUITS &amp; MARQUEE OFFERS</span>
+            </div>
+            <div class="siet-sp-header-accent-line"></div>
+          </div>
+        </div>
+
+        <div class="siet-sp-shell">
+          <div class="siet-sp-students-row" id="siet-sp-cards-track">
+            <!-- Student 1 (Top) -->
+            <div class="siet-sp-card is-top">
+              <div class="siet-sp-ctc-wrap">
+                <span class="siet-sp-ctc-lbl">HIGHEST PACKAGE</span>
+                <div class="siet-sp-ctc-ribbon is-gold">₹12 LPA</div>
+              </div>
+              <div class="siet-sp-img-box">
+                <img src="/brand/achievers/nithya-sri-k.jpg" alt="Nithya Sri K" loading="lazy">
+              </div>
+              <h3 class="siet-sp-name">Nithya Sri K</h3>
+              <p class="siet-sp-dept">Information Technology</p>
+              <div class="siet-sp-company-box">
+                <svg viewBox="0 0 100 28" xmlns="http://www.w3.org/2000/svg">${getRecruiterSvg('TCS')}</svg>
+              </div>
+              <span class="siet-sp-batch">Batch 2026</span>
+            </div>
+
+            <!-- Student 2 -->
+            <div class="siet-sp-card">
+              <div class="siet-sp-ctc-wrap">
+                <span class="siet-sp-ctc-lbl">ANNUAL PACKAGE</span>
+                <div class="siet-sp-ctc-ribbon">₹10 LPA</div>
+              </div>
+              <div class="siet-sp-img-box">
+                <img src="/brand/achievers/aravind-s.jpg" alt="Aravind S" loading="lazy">
+              </div>
+              <h3 class="siet-sp-name">Aravind S</h3>
+              <p class="siet-sp-dept">Computer Science and Engineering</p>
+              <div class="siet-sp-company-box">
+                <svg viewBox="0 0 100 28" xmlns="http://www.w3.org/2000/svg">${getRecruiterSvg('Infosys')}</svg>
+              </div>
+              <span class="siet-sp-batch">Batch 2026</span>
+            </div>
+
+            <!-- Student 3 -->
+            <div class="siet-sp-card">
+              <div class="siet-sp-ctc-wrap">
+                <span class="siet-sp-ctc-lbl">ANNUAL PACKAGE</span>
+                <div class="siet-sp-ctc-ribbon">₹9.5 LPA</div>
+              </div>
+              <div class="siet-sp-img-box">
+                <img src="/brand/achievers/priya-dharshini-r.jpg" alt="Priya Dharshini R" loading="lazy">
+              </div>
+              <h3 class="siet-sp-name">Priya Dharshini R</h3>
+              <p class="siet-sp-dept">Electronics and Communication</p>
+              <div class="siet-sp-company-box">
+                <svg viewBox="0 0 100 28" xmlns="http://www.w3.org/2000/svg">${getRecruiterSvg('wipro')}</svg>
+              </div>
+              <span class="siet-sp-batch">Batch 2026</span>
+            </div>
+          </div>
+
+          <!-- Centered Floating Pagination Pill -->
+          <div class="siet-sp-footer-wrap">
+            <div class="siet-sp-footer-band">
+              <button type="button" class="siet-sp-nav-arrow" id="siet-sp-prev" aria-label="Previous achiever">‹</button>
+              <div class="siet-sp-dashes">
+                <span class="siet-sp-dash is-active" data-page="0"></span>
+                <span class="siet-sp-dash" data-page="1"></span>
+                <span class="siet-sp-dash" data-page="2"></span>
+              </div>
+              <button type="button" class="siet-sp-nav-arrow" id="siet-sp-next" aria-label="Next achiever">›</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════
+           2. YEAR-WISE HIGHLIGHTS & GROWTH RECORD (Sri Shakthi Theme)
+           ══════════════════════════════════════════════════════════ -->
+      <section class="siet-yw-section">
+        <div class="siet-sp-lower-shell">
+          <!-- Section Header -->
+        <div class="siet-sp-section-head">
+          <div class="siet-sp-section-kicker"><i></i> ANNUAL PLACEMENT RECORD</div>
+          <h2 class="siet-sp-section-title">Year-Wise <em>Highlights &amp; Growth</em></h2>
+          <p class="siet-sp-section-subtitle">Consistent multi-year placement performance, expanding top-tier recruiter partnerships, and escalating package milestones.</p>
+        </div>
+
+        <div class="siet-tmpl-row1">
+          <!-- Left: Year-Wise Placement Highlights Card -->
+          <div class="siet-tmpl-highlights-card">
+            <div class="siet-tmpl-hl-top">
+              <div class="siet-tmpl-hl-meta">
+                <p class="siet-vm-kicker-sm"><i></i> COHORT PERFORMANCE AUDIT</p>
+                <span class="siet-tmpl-verified-tag">✓ NIRF &amp; NBA Verified</span>
+              </div>
+              <div class="siet-tmpl-year-tabs">
+                ${tabsHtml}
+              </div>
+            </div>
+
+            <div class="siet-tmpl-stats-grid">
+              <!-- Item 1: Students Placed -->
+              <div class="siet-tmpl-stat-card">
+                <div class="siet-tmpl-sc-header">
+                  <div class="siet-tmpl-sitem-icon">
+                    <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 3s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                  </div>
+                  <span class="siet-tmpl-trend-pill is-green" id="tmpl-tag-placed">↑ 14% YoY</span>
+                </div>
+                <div class="siet-tmpl-sc-content">
+                  <span class="siet-tmpl-sitem-lbl">Students Placed</span>
+                  <span class="siet-tmpl-sitem-val" id="tmpl-val-placed">285</span>
+                </div>
+              </div>
+
+              <!-- Item 2: Companies Visited -->
+              <div class="siet-tmpl-stat-card">
+                <div class="siet-tmpl-sc-header">
+                  <div class="siet-tmpl-sitem-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                  </div>
+                  <span class="siet-tmpl-trend-pill is-gold" id="tmpl-tag-companies">Tier-1 &amp; MNCs</span>
+                </div>
+                <div class="siet-tmpl-sc-content">
+                  <span class="siet-tmpl-sitem-lbl">Companies Visited</span>
+                  <span class="siet-tmpl-sitem-val" id="tmpl-val-companies">120+</span>
+                </div>
+              </div>
+
+              <!-- Item 3: Highest Package -->
+              <div class="siet-tmpl-stat-card is-highlight">
+                <div class="siet-tmpl-sc-header">
+                  <div class="siet-tmpl-sitem-icon" style="background:#fff8e1;color:#b87e00;">
+                    <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                  </div>
+                  <span class="siet-tmpl-trend-pill is-gold" id="tmpl-tag-highest">Marquee Offer</span>
+                </div>
+                <div class="siet-tmpl-sc-content">
+                  <span class="siet-tmpl-sitem-lbl">Highest Package</span>
+                  <span class="siet-tmpl-sitem-val" id="tmpl-val-highest" style="color:#005a39;">₹12 LPA</span>
+                </div>
+              </div>
+
+              <!-- Item 4: Average Package -->
+              <div class="siet-tmpl-stat-card">
+                <div class="siet-tmpl-sc-header">
+                  <div class="siet-tmpl-sitem-icon">
+                    <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                  </div>
+                  <span class="siet-tmpl-trend-pill is-green" id="tmpl-tag-average">Core &amp; IT Mix</span>
+                </div>
+                <div class="siet-tmpl-sc-content">
+                  <span class="siet-tmpl-sitem-lbl">Average Package</span>
+                  <span class="siet-tmpl-sitem-val" id="tmpl-val-average">₹5.2 LPA</span>
+                </div>
+              </div>
+
+              <!-- Item 5: Multiple Offers -->
+              <div class="siet-tmpl-stat-card">
+                <div class="siet-tmpl-sc-header">
+                  <div class="siet-tmpl-sitem-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+                  </div>
+                  <span class="siet-tmpl-trend-pill is-blue" id="tmpl-tag-multiple">Dual Offers</span>
+                </div>
+                <div class="siet-tmpl-sc-content">
+                  <span class="siet-tmpl-sitem-lbl">Multiple Offers</span>
+                  <span class="siet-tmpl-sitem-val" id="tmpl-val-multiple">45</span>
+                </div>
+              </div>
+
+              <!-- Item 6: Placement Rate -->
+              <div class="siet-tmpl-stat-card">
+                <div class="siet-tmpl-sc-header">
+                  <div class="siet-tmpl-sitem-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  </div>
+                  <span class="siet-tmpl-trend-pill is-green" id="tmpl-tag-rate">Eligible Cohort</span>
+                </div>
+                <div class="siet-tmpl-sc-content">
+                  <span class="siet-tmpl-sitem-lbl">Placement Rate</span>
+                  <span class="siet-tmpl-sitem-val" id="tmpl-val-rate">94%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footnote -->
+            <div class="siet-tmpl-card-footer-note">
+              <span class="siet-tmpl-cf-dot"></span>
+              <span>Training &amp; Placement Cell audits verified campus recruitment figures annually.</span>
+            </div>
+          </div>
+
+          <!-- Right: Growth Chart Card -->
+          <div class="siet-tmpl-chart-card">
+            <div class="siet-tmpl-chart-top">
+              <div class="siet-tmpl-ct-title-box">
+                <span class="siet-tmpl-chart-title">Placement Growth <span class="siet-vm-em">(Last 4 Years)</span></span>
+                <span class="siet-tmpl-chart-sub">Sustained multi-year growth in recruitment &amp; company participation</span>
+              </div>
+              <div class="siet-chart-badge-wrap">
+                <span class="siet-chart-growth-pill">↑ +58.3% 4-Yr Surge</span>
+              </div>
+            </div>
+
+            <!-- Legend Bar -->
+            <div class="siet-tmpl-chart-legend">
+              <span class="siet-legend-item"><i style="background:linear-gradient(180deg,#00854a,#00462b)"></i> Students Placed</span>
+              <span class="siet-legend-item"><i style="background:linear-gradient(180deg,#ffd23f,#df9e00)"></i> Companies Visited</span>
+              <span class="siet-legend-item"><i style="background:#00a859;height:3px;border-radius:2px;"></i> Growth Spline</span>
+            </div>
+
+            <!-- High-Resolution Enhanced SVG Bar & Spline Chart -->
+            <div class="siet-chart-svg-wrap">
+              <svg viewBox="0 0 500 220" class="siet-chart-svg" preserveAspectRatio="xMidYMid meet" aria-label="Placement Growth Chart">
+                <defs>
+                  <linearGradient id="sietBarGreenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#00854a"/>
+                    <stop offset="100%" stop-color="#00462b"/>
+                  </linearGradient>
+                  <linearGradient id="sietBarActiveGreenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#00b364"/>
+                    <stop offset="100%" stop-color="#005a39"/>
+                  </linearGradient>
+                  <linearGradient id="sietBarGoldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stop-color="#ffd23f"/>
+                    <stop offset="100%" stop-color="#df9e00"/>
+                  </linearGradient>
+                  <linearGradient id="chartSplineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#00854a"/>
+                    <stop offset="70%" stop-color="#00b364"/>
+                    <stop offset="100%" stop-color="#f3c515"/>
+                  </linearGradient>
+                  <filter id="sietGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#003824" flood-opacity="0.15"/>
+                  </filter>
+                </defs>
+
+                <!-- Y-Axis Grid Lines and Reference Labels -->
+                <text x="32" y="19" font-size="9" fill="#7a9284" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-weight="600">400</text>
+                <line x1="42" y1="15" x2="480" y2="15" stroke="#edf3ef" stroke-width="1" stroke-dasharray="3,3"/>
+
+                <text x="32" y="59" font-size="9" fill="#7a9284" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-weight="600">300</text>
+                <line x1="42" y1="55" x2="480" y2="55" stroke="#edf3ef" stroke-width="1" stroke-dasharray="3,3"/>
+
+                <text x="32" y="99" font-size="9" fill="#7a9284" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-weight="600">200</text>
+                <line x1="42" y1="95" x2="480" y2="95" stroke="#edf3ef" stroke-width="1" stroke-dasharray="3,3"/>
+
+                <text x="32" y="139" font-size="9" fill="#7a9284" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-weight="600">100</text>
+                <line x1="42" y1="135" x2="480" y2="135" stroke="#edf3ef" stroke-width="1" stroke-dasharray="3,3"/>
+
+                <!-- Base Line -->
+                <line x1="42" y1="175" x2="480" y2="175" stroke="#c9dacd" stroke-width="1.5"/>
+
+                <!-- ── YEAR 1: 2022 - 23 (Center x = 100) ── -->
+                <g class="siet-chart-col-group" data-year="2022 - 23" cursor="pointer">
+                  <rect class="siet-chart-col-bg" x="54" y="15" width="92" height="185" rx="8" fill="transparent"/>
+                  <!-- Student Bar: 180 -->
+                  <rect x="68" y="103" width="26" height="72" fill="url(#sietBarGreenGrad)" rx="4" filter="url(#sietGlow)" class="siet-cbar-student"/>
+                  <!-- Company Bar: 75 -->
+                  <rect x="100" y="145" width="26" height="30" fill="url(#sietBarGoldGrad)" rx="4" class="siet-cbar-company"/>
+                  <!-- Val Labels -->
+                  <text x="81" y="95" font-size="10" fill="#005a39" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">180</text>
+                  <text x="113" y="139" font-size="9.5" fill="#a06d00" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">75</text>
+                  <!-- Year Label -->
+                  <text x="97" y="196" font-size="10.5" fill="#507060" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700">2022 - 23</text>
+                </g>
+
+                <!-- ── YEAR 2: 2023 - 24 (Center x = 205) ── -->
+                <g class="siet-chart-col-group" data-year="2023 - 24" cursor="pointer">
+                  <rect class="siet-chart-col-bg" x="159" y="15" width="92" height="185" rx="8" fill="transparent"/>
+                  <!-- Student Bar: 210 -->
+                  <rect x="173" y="91" width="26" height="84" fill="url(#sietBarGreenGrad)" rx="4" filter="url(#sietGlow)" class="siet-cbar-student"/>
+                  <!-- Company Bar: 90 -->
+                  <rect x="205" y="139" width="26" height="36" fill="url(#sietBarGoldGrad)" rx="4" class="siet-cbar-company"/>
+                  <!-- Val Labels -->
+                  <text x="186" y="83" font-size="10" fill="#005a39" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">210</text>
+                  <text x="218" y="133" font-size="9.5" fill="#a06d00" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">90</text>
+                  <!-- Year Label -->
+                  <text x="202" y="196" font-size="10.5" fill="#507060" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700">2023 - 24</text>
+                </g>
+
+                <!-- ── YEAR 3: 2024 - 25 (Center x = 310) ── -->
+                <g class="siet-chart-col-group" data-year="2024 - 25" cursor="pointer">
+                  <rect class="siet-chart-col-bg" x="264" y="15" width="92" height="185" rx="8" fill="transparent"/>
+                  <!-- Student Bar: 250 -->
+                  <rect x="278" y="75" width="26" height="100" fill="url(#sietBarGreenGrad)" rx="4" filter="url(#sietGlow)" class="siet-cbar-student"/>
+                  <!-- Company Bar: 110 -->
+                  <rect x="310" y="131" width="26" height="44" fill="url(#sietBarGoldGrad)" rx="4" class="siet-cbar-company"/>
+                  <!-- Val Labels -->
+                  <text x="291" y="67" font-size="10" fill="#005a39" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">250</text>
+                  <text x="323" y="125" font-size="9.5" fill="#a06d00" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">110</text>
+                  <!-- Year Label -->
+                  <text x="307" y="196" font-size="10.5" fill="#507060" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700">2024 - 25</text>
+                </g>
+
+                <!-- ── YEAR 4: 2025 - 26 (Center x = 415) ACTIVE/CURRENT ── -->
+                <g class="siet-chart-col-group is-active" data-year="2025 - 26" cursor="pointer">
+                  <rect class="siet-chart-col-bg" x="369" y="15" width="92" height="185" rx="8" fill="rgba(0, 133, 74, 0.08)" stroke="rgba(0, 133, 74, 0.25)" stroke-width="1.5"/>
+                  <!-- Student Bar: 285 -->
+                  <rect x="383" y="61" width="26" height="114" fill="url(#sietBarActiveGreenGrad)" rx="4" filter="url(#sietGlow)" class="siet-cbar-student"/>
+                  <!-- Company Bar: 120 -->
+                  <rect x="415" y="127" width="26" height="48" fill="url(#sietBarGoldGrad)" rx="4" class="siet-cbar-company"/>
+                  <!-- Val Labels -->
+                  <text x="396" y="53" font-size="11" fill="#00854a" text-anchor="middle" font-weight="900" font-family="'Plus Jakarta Sans',sans-serif">285</text>
+                  <text x="428" y="121" font-size="10" fill="#a06d00" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">120</text>
+                  <!-- Year Label -->
+                  <text x="412" y="196" font-size="11" fill="#00281b" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800">2025 - 26 ★</text>
+                </g>
+
+                <!-- ── Growth Spline Connecting Placement Peaks ── -->
+                <path d="M 81 103 C 133 97, 134 91, 186 91 C 238 91, 239 75, 291 75 C 343 75, 344 61, 396 61" fill="none" stroke="url(#chartSplineGrad)" stroke-width="3" stroke-linecap="round"/>
+
+                <!-- Spline Vertex Dots -->
+                <circle cx="81" cy="103" r="4.5" fill="#ffffff" stroke="#00854a" stroke-width="2.5"/>
+                <circle cx="186" cy="91" r="4.5" fill="#ffffff" stroke="#00854a" stroke-width="2.5"/>
+                <circle cx="291" cy="75" r="4.5" fill="#ffffff" stroke="#00854a" stroke-width="2.5"/>
+                <circle cx="396" cy="61" r="6" fill="#f3c515" stroke="#00281b" stroke-width="2.5"/>
+              </svg>
+            </div>
+
+            <!-- Bottom Highlights Strip -->
+            <div class="siet-chart-kpi-ribbon">
+              <div class="siet-chart-kpi-chip">
+                <span class="siet-chart-kpi-dot" style="background:#00854a;"></span>
+                <span class="siet-chart-kpi-lbl">Highest CTC:</span>
+                <strong class="siet-chart-kpi-val">₹12 LPA</strong>
+              </div>
+              <div class="siet-chart-kpi-chip">
+                <span class="siet-chart-kpi-dot" style="background:#f3c515;"></span>
+                <span class="siet-chart-kpi-lbl">Recruiter Partners:</span>
+                <strong class="siet-chart-kpi-val">120+ Visited</strong>
+              </div>
+              <div class="siet-chart-kpi-chip">
+                <span class="siet-chart-kpi-dot" style="background:#005a39;"></span>
+                <span class="siet-chart-kpi-lbl">Placement Success:</span>
+                <strong class="siet-chart-kpi-val">94% of Cohort</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      <!-- ══════════════════════════════════════════════════════════
+           3. TOP RECRUITERS & INDUSTRY PARTNERS (Interactive Showcase)
+           ══════════════════════════════════════════════════════════ -->
+      <section class="siet-tr-section">
+        <div class="siet-tr-shell">
+          <!-- Header -->
+          <div class="siet-tr-header-box">
+            <div class="siet-tr-kicker"><i></i> VALUED CORPORATE NETWORK</div>
+            <h2 class="siet-tr-title">Top <em>Recruiters &amp; Industry Partners</em></h2>
+            <p class="siet-tr-subtitle">Over 120+ multinational corporations, product engineering giants, and global IT consulting firms recruit every year from Sri Shakthi.</p>
+          </div>
+
+          <!-- Institutional Milestone Strip -->
+          <div class="siet-tr-stats-bar">
+            <div class="siet-tr-sbar-item">
+              <span class="siet-tr-sbar-num">120+</span>
+              <span class="siet-tr-sbar-lbl">Recruiter Partners</span>
+            </div>
+            <div class="siet-tr-sbar-sep"></div>
+            <div class="siet-tr-sbar-item">
+              <span class="siet-tr-sbar-num">15+</span>
+              <span class="siet-tr-sbar-lbl">Fortune 500 MNCs</span>
+            </div>
+            <div class="siet-tr-sbar-sep"></div>
+            <div class="siet-tr-sbar-item">
+              <span class="siet-tr-sbar-num">₹12 LPA</span>
+              <span class="siet-tr-sbar-lbl">Marquee CTC</span>
+            </div>
+            <div class="siet-tr-sbar-sep"></div>
+            <div class="siet-tr-sbar-item">
+              <span class="siet-tr-sbar-num">330+</span>
+              <span class="siet-tr-sbar-lbl">Campus Offers</span>
+            </div>
+          </div>
+
+          <!-- Dual Marquee Tracks with Hover Pause & Card Lift -->
+          <div class="siet-tr-marquee-container">
+            <!-- Row 1: Left Scroll -->
+            <div class="siet-tr-marquee-wrap" aria-label="Top Placement Recruiters Row 1">
+              <div class="siet-tr-track">
+                ${marqueeRow1Html}
+                ${marqueeRow1Html}
+              </div>
+            </div>
+
+            <!-- Row 2: Right Scroll (Opposite Direction) -->
+            <div class="siet-tr-marquee-wrap is-reverse" aria-label="Top Placement Recruiters Row 2">
+              <div class="siet-tr-track is-reverse">
+                ${marqueeRow2Html}
+                ${marqueeRow2Html}
+              </div>
+            </div>
+          </div>
+
+          <!-- Micro Hint -->
+          <div class="siet-tr-hint">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            <span>Hover over any company card to pause marquee and inspect hiring partner profile</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════════════════════
+           4. THE PLACEMENT JOURNEY (Structured Career Roadmap)
+           ══════════════════════════════════════════════════════════ -->
+      <section class="siet-pj-hero-section">
+        <div class="siet-pj-hero-grid"></div>
+        <div class="siet-pj-hero-orb-1"></div>
+        <div class="siet-pj-hero-orb-2"></div>
+        <div class="siet-pj-shell">
+          <div class="siet-pj-head">
+            <div class="siet-pj-kicker"><i></i> STRUCTURED CAREER ROADMAP</div>
+            <h2 class="siet-pj-title">The Placement <em>Journey</em></h2>
+            <p class="siet-pj-subtitle">Transforming raw potential into industry-ready leaders through our comprehensive 6-stage training and recruitment pipeline.</p>
+          </div>
+
+          <!-- 6-Stage Journey Cards Grid -->
+          <div class="siet-pj-steps-grid">
+            <div class="siet-pj-card">
+              <span class="siet-pj-step-num">01</span>
+              <div class="siet-pj-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/></svg>
+              </div>
+              <h3 class="siet-pj-card-title">Training &amp; Skills</h3>
+              <p class="siet-pj-card-desc">Domain foundations, core engineering concepts &amp; hands-on technical labs.</p>
+              <span class="siet-pj-pill">Semester 3–4</span>
+            </div>
+
+            <div class="siet-pj-card">
+              <span class="siet-pj-step-num">02</span>
+              <div class="siet-pj-icon">
+                <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+              </div>
+              <h3 class="siet-pj-card-title">Aptitude Prep</h3>
+              <p class="siet-pj-card-desc">Quantitative problem solving, logical reasoning &amp; soft skills mastery.</p>
+              <span class="siet-pj-pill">Semester 5</span>
+            </div>
+
+            <div class="siet-pj-card">
+              <span class="siet-pj-step-num">03</span>
+              <div class="siet-pj-icon">
+                <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+              </div>
+              <h3 class="siet-pj-card-title">Technical Mastery</h3>
+              <p class="siet-pj-card-desc">Advanced algorithms, system design, coding sprints &amp; project bootcamps.</p>
+              <span class="siet-pj-pill">Semester 6</span>
+            </div>
+
+            <div class="siet-pj-card">
+              <span class="siet-pj-step-num">04</span>
+              <div class="siet-pj-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+              </div>
+              <h3 class="siet-pj-card-title">Mock Interviews</h3>
+              <p class="siet-pj-card-desc">Simulated technical panels, HR rounds and individual feedback from industry leaders.</p>
+              <span class="siet-pj-pill">Semester 6–7</span>
+            </div>
+
+            <div class="siet-pj-card">
+              <span class="siet-pj-step-num">05</span>
+              <div class="siet-pj-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+              </div>
+              <h3 class="siet-pj-card-title">Company Drives</h3>
+              <p class="siet-pj-card-desc">On-campus recruitment drives by Fortune 500 &amp; top product tech companies.</p>
+              <span class="siet-pj-pill">Semester 7</span>
+            </div>
+
+            <div class="siet-pj-card is-final">
+              <span class="siet-pj-step-num">06</span>
+              <div class="siet-pj-icon" style="background:#f3c515;color:#00281b;">
+                <svg viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+              </div>
+              <h3 class="siet-pj-card-title">Career Success</h3>
+              <p class="siet-pj-card-desc">Offer rollouts, marquee salary packages &amp; global career journeys launched.</p>
+              <span class="siet-pj-pill" style="background:#f3c515;color:#00281b;font-weight:800;">Offer Rolled Out</span>
+            </div>
+          </div>
+
+          <!-- Bottom Action Buttons -->
+          <div class="siet-pj-actions">
+            <a href="#/admission-enquiry" class="siet-tmpl-btn-gold">View Full Placement Records →</a>
+            <a href="mailto:placements@siet.ac.in" class="siet-tmpl-btn-outline">Contact Placement Cell</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  `;
+}
+
+// Student cards sets for rotating pagination
+const starStudentPages = [
+  [
+    { name: 'Nithya Sri K', dept: 'Information Technology', company: 'TCS', ctc: '₹12 LPA', top: true, batch: 'Batch 2026', img: '/brand/achievers/nithya-sri-k.jpg' },
+    { name: 'Aravind S', dept: 'Computer Science and Engineering', company: 'Infosys', ctc: '₹10 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/aravind-s.jpg' },
+    { name: 'Priya Dharshini R', dept: 'Electronics and Communication', company: 'Wipro', ctc: '₹9.5 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/priya-dharshini-r.jpg' }
+  ],
+  [
+    { name: 'Karthik V', dept: 'Mechanical Engineering', company: 'Cognizant', ctc: '₹8.5 LPA', top: true, batch: 'Batch 2026', img: '/brand/achievers/karthik-v.jpg' },
+    { name: 'Sowmiya M', dept: 'Civil Engineering', company: 'Zoho', ctc: '₹7.5 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/sowmiya-m.jpg' },
+    { name: 'Nithya Sri K', dept: 'Information Technology', company: 'TCS', ctc: '₹12 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/nithya-sri-k.jpg' }
+  ],
+  [
+    { name: 'Aravind S', dept: 'Computer Science and Engineering', company: 'Infosys', ctc: '₹10 LPA', top: true, batch: 'Batch 2026', img: '/brand/achievers/aravind-s.jpg' },
+    { name: 'Priya Dharshini R', dept: 'Electronics and Communication', company: 'Wipro', ctc: '₹9.5 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/priya-dharshini-r.jpg' },
+    { name: 'Karthik V', dept: 'Mechanical Engineering', company: 'Cognizant', ctc: '₹8.5 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/karthik-v.jpg' }
+  ]
+];
+
+let currentStarPage = 0;
+
+function updateStarPlacements(pageIndex) {
+  currentStarPage = (pageIndex + starStudentPages.length) % starStudentPages.length;
+  const track = document.getElementById('siet-sp-cards-track');
+  if (!track) return;
+  const students = starStudentPages[currentStarPage];
+  track.innerHTML = students.map(s => `
+    <div class="siet-sp-card ${s.top ? 'is-top' : ''}">
+      <div class="siet-sp-ctc-wrap">
+        <span class="siet-sp-ctc-lbl">${s.top ? 'HIGHEST PACKAGE' : 'ANNUAL PACKAGE'}</span>
+        <div class="siet-sp-ctc-ribbon ${s.top ? 'is-gold' : ''}">${s.ctc}</div>
+      </div>
+      <div class="siet-sp-img-box">
+        <img src="${s.img}" alt="${s.name}" loading="lazy">
+      </div>
+      <h3 class="siet-sp-name">${s.name}</h3>
+      <p class="siet-sp-dept">${s.dept}</p>
+      <div class="siet-sp-company-box">
+        <svg viewBox="0 0 100 28" xmlns="http://www.w3.org/2000/svg">${getRecruiterSvg(s.company)}</svg>
+      </div>
+      <span class="siet-sp-batch">${s.batch}</span>
+    </div>
+  `).join('');
+
+  document.querySelectorAll('.siet-sp-dash').forEach((d, idx) => {
+    d.classList.toggle('is-active', idx === currentStarPage);
+  });
+}
+
+// Global click listener
+document.addEventListener('click', (e) => {
+  // 1. Year tabs & Graph column clicks
+  const yearTarget = e.target.closest('.siet-tmpl-ytab') || e.target.closest('.siet-chart-col-group');
+  if (yearTarget) {
+    const year = yearTarget.dataset.year;
+    if (!year) return;
+
+    // Update Year Tabs
+    document.querySelectorAll('.siet-tmpl-ytab').forEach(t => {
+      const isMatch = t.dataset.year === year;
+      t.classList.toggle('is-active', isMatch);
+      t.innerHTML = isMatch ? '<span class="siet-tmpl-ytab-dot"></span> ' + t.dataset.year : t.dataset.year;
+    });
+
+    // Update Chart Column highlight
+    document.querySelectorAll('.siet-chart-col-group').forEach(cg => {
+      const isMatch = cg.dataset.year === year;
+      cg.classList.toggle('is-active', isMatch);
+      const bg = cg.querySelector('.siet-chart-col-bg');
+      if (bg) {
+        bg.setAttribute('fill', isMatch ? 'rgba(0, 133, 74, 0.08)' : 'transparent');
+        bg.setAttribute('stroke', isMatch ? 'rgba(0, 133, 74, 0.25)' : 'none');
+        bg.setAttribute('stroke-width', isMatch ? '1.5' : '0');
+      }
+      const valTxt = cg.querySelectorAll('text');
+      if (valTxt.length >= 3) {
+        // highlight active year text
+        valTxt[2].setAttribute('fill', isMatch ? '#00281b' : '#507060');
+        valTxt[2].setAttribute('font-weight', isMatch ? '800' : '700');
+      }
+    });
+
+    // Update Stats & Tag badges with brief pulse animation
+    const data = placementDataYears[year];
+    if (data) {
+      const statsGrid = document.querySelector('.siet-tmpl-stats-grid');
+      if (statsGrid) {
+        statsGrid.style.opacity = '0.5';
+        setTimeout(() => {
+          statsGrid.style.opacity = '1';
+        }, 110);
+      }
+      const elPlaced = document.getElementById('tmpl-val-placed');
+      if (elPlaced) elPlaced.textContent = data.placed;
+      const elComp = document.getElementById('tmpl-val-companies');
+      if (elComp) elComp.textContent = data.companies;
+      const elHigh = document.getElementById('tmpl-val-highest');
+      if (elHigh) elHigh.textContent = data.highest;
+      const elAvg = document.getElementById('tmpl-val-average');
+      if (elAvg) elAvg.textContent = data.average;
+      const elMult = document.getElementById('tmpl-val-multiple');
+      if (elMult) elMult.textContent = data.multiple;
+      const elRate = document.getElementById('tmpl-val-rate');
+      if (elRate) elRate.textContent = data.rate;
+
+      if (data.tags) {
+        const tagPlaced = document.getElementById('tmpl-tag-placed');
+        if (tagPlaced) tagPlaced.textContent = data.tags.placed;
+        const tagComp = document.getElementById('tmpl-tag-companies');
+        if (tagComp) tagComp.textContent = data.tags.companies;
+        const tagHigh = document.getElementById('tmpl-tag-highest');
+        if (tagHigh) tagHigh.textContent = data.tags.highest;
+        const tagAvg = document.getElementById('tmpl-tag-average');
+        if (tagAvg) tagAvg.textContent = data.tags.average;
+        const tagMult = document.getElementById('tmpl-tag-multiple');
+        if (tagMult) tagMult.textContent = data.tags.multiple;
+        const tagRate = document.getElementById('tmpl-tag-rate');
+        if (tagRate) tagRate.textContent = data.tags.rate;
+      }
+    }
+    return;
+  }
+
+  // 2. Star placements arrows
+  if (e.target.closest('#siet-sp-prev')) {
+    updateStarPlacements(currentStarPage - 1);
+    return;
+  }
+  if (e.target.closest('#siet-sp-next')) {
+    updateStarPlacements(currentStarPage + 1);
+    return;
+  }
+
+  // 3. Star placements dashes
+  const dash = e.target.closest('.siet-sp-dash');
+  if (dash && dash.dataset.page !== undefined) {
+    updateStarPlacements(parseInt(dash.dataset.page, 10));
+    return;
+  }
+});
