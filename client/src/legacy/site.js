@@ -4565,6 +4565,7 @@ function bind() {
       document.title = "Civil Services & Government Careers | Sri Shakthi Institute of Engineering & Technology";
     } else {
       document.title = "Placements & Career Excellence | Sri Shakthi Institute of Engineering & Technology";
+      initPlacementsDynamicKpi();
     }
   }
 
@@ -5209,9 +5210,15 @@ async function submitForm(e) {
   }
 }
 function observe() { const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches; const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (!entry.isIntersecting) return; entry.target.classList.add('is-visible'); if (entry.target.classList.contains('js-counter')) animateCounter(entry.target); observer.unobserve(entry.target) }), { threshold: .18 }); $$('.reveal,.js-counter').forEach(el => reduce ? (el.classList.add('is-visible'), el.classList.contains('js-counter') && animateCounter(el)) : observer.observe(el)) }
-function animateCounter(el) { const to = Number(el.dataset.to), suffix = el.dataset.suffix || '', start = performance.now(), duration = 1500; function tick(now) { const p = Math.min((now - start) / duration, 1), v = Math.round(to * (1 - (1 - p) ** 3)); el.textContent = v.toLocaleString('en-IN') + suffix; if (p < 1) requestAnimationFrame(tick) } requestAnimationFrame(tick) }
+function animateCounter(el) { const to = Number(el.dataset.to), suffix = el.dataset.suffix || '', prefix = el.dataset.prefix || '', start = performance.now(), duration = 1500; function tick(now) { const p = Math.min((now - start) / duration, 1), v = Math.round(to * (1 - (1 - p) ** 3)); el.textContent = prefix + v.toLocaleString('en-IN') + suffix; if (p < 1) requestAnimationFrame(tick) } requestAnimationFrame(tick) }
 const handleEscape = e => {
   if (e.key === 'Escape') {
+    const recModal = document.getElementById('siet-records-modal');
+    if (recModal && recModal.style.display !== 'none') {
+      recModal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
     $('.video-close')?.click();
     $('.mobile-nav-close')?.click();
     $('.placement-modal-close')?.click();
@@ -5249,46 +5256,46 @@ export function mountSite(root) {
 
 const placementDataYears = {
   '2025 - 26': {
-    placed: 285,
-    companies: '120+',
-    highest: '₹12 LPA',
-    average: '₹5.2 LPA',
-    multiple: 45,
-    rate: '94%',
+    placed: 663,
+    companies: '213',
+    highest: '₹33 LPA',
+    average: '₹6.8 LPA',
+    multiple: 185,
+    rate: '98%',
     tags: {
-      placed: '↑ 14% YoY',
-      companies: 'Tier-1 & MNCs',
-      highest: 'Marquee Offer',
-      average: 'Core & IT Mix',
-      multiple: 'Dual Offers',
+      placed: '663 Campus Offers',
+      companies: '213 Visited',
+      highest: 'Trilogy · ₹33 LPA',
+      average: 'Consistent Rise',
+      multiple: 'Prime Platinum (10-33L)',
       rate: 'Eligible Cohort'
     }
   },
   '2024 - 25': {
-    placed: 250,
-    companies: '110+',
-    highest: '₹10 LPA',
-    average: '₹4.8 LPA',
-    multiple: 38,
-    rate: '92%',
+    placed: 580,
+    companies: '190+',
+    highest: '₹22 LPA',
+    average: '₹5.8 LPA',
+    multiple: 145,
+    rate: '95%',
     tags: {
-      placed: '↑ 19% YoY',
+      placed: '↑ 24% YoY',
       companies: 'Fortune 500s',
-      highest: 'Product Tier',
-      average: 'Consistent Rise',
-      multiple: 'Super Dream',
+      highest: 'Super Dream',
+      average: 'Steady Rise',
+      multiple: 'Multi-Offers',
       rate: 'NBA Accredited'
     }
   },
   '2023 - 24': {
-    placed: 210,
-    companies: '90+',
-    highest: '₹9 LPA',
-    average: '₹4.5 LPA',
-    multiple: 32,
-    rate: '90%',
+    placed: 460,
+    companies: '165+',
+    highest: '₹18 LPA',
+    average: '₹5.2 LPA',
+    multiple: 110,
+    rate: '92%',
     tags: {
-      placed: '↑ 16% YoY',
+      placed: '↑ 18% YoY',
       companies: 'Global Recruits',
       highest: 'Tier-1 Marquee',
       average: 'Benchmark Level',
@@ -5297,82 +5304,241 @@ const placementDataYears = {
     }
   },
   '2022 - 23': {
-    placed: 180,
-    companies: '75+',
-    highest: '₹8 LPA',
-    average: '₹4.1 LPA',
-    multiple: 27,
-    rate: '88%',
+    placed: 390,
+    companies: '140+',
+    highest: '₹14 LPA',
+    average: '₹4.6 LPA',
+    multiple: 85,
+    rate: '90%',
     tags: {
-      placed: 'Foundation Year',
+      placed: 'Solid Growth',
       companies: 'National Drives',
       highest: 'Top Tier',
-      average: 'Steady Growth',
+      average: 'Foundation Phase',
       multiple: 'Multiple Drives',
       rate: 'Strong Benchmark'
     }
   }
 };
 
-// All Featured Star Achievers
-const starAchievers = [
-  { name: 'Nithya Sri K', dept: 'Information Technology', company: 'TCS', ctc: '₹12 LPA', top: true, batch: 'Batch 2026', img: '/brand/achievers/nithya-sri-k.jpg' },
-  { name: 'Aravind S', dept: 'Computer Science and Engineering', company: 'Infosys', ctc: '₹10 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/aravind-s.jpg' },
-  { name: 'Priya Dharshini R', dept: 'Electronics and Communication', company: 'Wipro', ctc: '₹9.5 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/priya-dharshini-r.jpg' },
-  { name: 'Karthik V', dept: 'Mechanical Engineering', company: 'Cognizant', ctc: '₹8.5 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/karthik-v.jpg' },
-  { name: 'Sowmiya M', dept: 'Civil Engineering', company: 'Zoho', ctc: '₹7.5 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/sowmiya-m.jpg' }
+// All 43 Authentic Placement Superstars (Season 2025 - 2026 Official Banner Data)
+const allSuperstarsData = [
+  // ── ₹33 LPA CLUB (Prime Platinum · Marquee Record) ──
+  { name: 'Gowtham G', dept: 'Cyber Security (CYS)', company: 'Trilogy', ctc: '₹33 LPA', tier: '33', top: true, batch: 'Batch 2026', img: '/brand/achievers/gowtham-g.jpg' },
+  { name: 'Siv Raam Krishnan K V', dept: 'AI & Data Science (AI DS)', company: 'Trilogy', ctc: '₹33 LPA', tier: '33', top: true, batch: 'Batch 2026', img: '/brand/achievers/siv-raam-krishnan-k-v.jpg' },
+
+  // ── ₹22 LPA CLUB (Super Dream Offers · Increff) ──
+  { name: 'Prakash Dass R', dept: 'AI & Machine Learning (AI ML)', company: 'Increff', ctc: '₹22 LPA', tier: '22', top: true, batch: 'Batch 2026', img: '/brand/achievers/prakash-dass-r.jpg' },
+  { name: 'Dilip Kumar N', dept: 'Information Technology (IT)', company: 'Increff', ctc: '₹22 LPA', tier: '22', top: true, batch: 'Batch 2026', img: '/brand/achievers/dilip-kumar-n.jpg' },
+  { name: 'Anupama R', dept: 'AI & Data Science (AI DS)', company: 'Increff', ctc: '₹22 LPA', tier: '22', top: true, batch: 'Batch 2026', img: '/brand/achievers/anupama-r.jpg' },
+  { name: 'Dharaneesh B', dept: 'AI & Machine Learning (AI ML)', company: 'Increff', ctc: '₹22 LPA', tier: '22', top: true, batch: 'Batch 2026', img: '/brand/achievers/dharaneesh-b.jpg' },
+  { name: 'Dinesh J', dept: 'AI & Machine Learning (AI ML)', company: 'Increff', ctc: '₹22 LPA', tier: '22', top: true, batch: 'Batch 2026', img: '/brand/achievers/dinesh-j.jpg' },
+
+  // ── ₹13 LPA & ₹12 LPA CLUB (Product & Cloud Tier) ──
+  { name: 'Seema Maglin S', dept: 'AI & Data Science (AI DS)', company: 'Presidio', ctc: '₹13 LPA', tier: '13-12', top: false, batch: 'Batch 2026', img: '/brand/achievers/seema-maglin-s.jpg' },
+  { name: 'Dharun J', dept: 'Cyber Security (CYS)', company: 'Zenx AI', ctc: '₹12 LPA', tier: '13-12', top: false, batch: 'Batch 2026', img: '/brand/achievers/dharun-j.jpg' },
+  { name: 'Mithun Raaj S', dept: 'Electronics & Comm. (ECE)', company: 'Hyperverge', ctc: '₹12 LPA', tier: '13-12', top: false, batch: 'Batch 2026', img: '/brand/achievers/mithun-raaj-s.jpg' },
+
+  // ── ₹10 LPA CLUB (Tier-1 Tech Giants & Product Leaders) ──
+  { name: 'Janarthanan A', dept: 'Electronics & Comm. (ECE)', company: 'TCS', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/janarthanan-a.jpg' },
+  { name: 'Hiba Fathima N', dept: 'Computer Science (CSE)', company: 'TCS', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/hiba-fathima-n.jpg' },
+  { name: 'Jefrin Peter M', dept: 'Cyber Security (CYS)', company: 'Tiger Analytics', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/jefrin-peter-m.jpg' },
+  { name: 'Dhana Varshini S', dept: 'AI & Data Science (AI DS)', company: 'Tiger Analytics', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/dhana-varshini-s.jpg' },
+  { name: 'Eshwar K', dept: 'AI & Data Science (AI DS)', company: 'Tiger Analytics', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/eshwar-k.jpg' },
+  { name: 'Aswin Raj S', dept: 'AI & Data Science (AI DS)', company: 'Tiger Analytics', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/aswin-raj-s.jpg' },
+  { name: 'Muthuraja M', dept: 'AI & Machine Learning (AI ML)', company: 'Tiger Analytics', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/muthuraja-m.jpg' },
+  { name: 'Boopathi K', dept: 'Information Technology (IT)', company: 'Reltio', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/boopathi-k.jpg' },
+  { name: 'Vishal S', dept: 'Cyber Security (CYS)', company: 'Reltio', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/vishal-s.jpg' },
+  { name: 'Sangamithra G', dept: 'Biomedical Engg. (BME)', company: 'Reltio', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/sangamithra-g.jpg' },
+  { name: 'Gowthama Raj K M', dept: 'Electronics & Comm. (ECE)', company: 'Mr. Cooper', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/gowthama-raj-k-m.jpg' },
+  { name: 'Deepak Kumaran RM G', dept: 'AI & Machine Learning (AI ML)', company: 'Mr. Cooper', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/deepak-kumaran-rm-g.jpg' },
+  { name: 'Mugesh Ram Sundar G S', dept: 'AI & Data Science (AI DS)', company: 'Mr. Cooper', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/mugesh-ram-sundar-g-s.jpg' },
+  { name: 'Abishek S', dept: 'Information Technology (IT)', company: 'Mr. Cooper', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/abishek-s.jpg' },
+  { name: 'Akilesh Prabhu S', dept: 'Information Technology (IT)', company: 'Mr. Cooper', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/akilesh-prabhu-s.jpg' },
+  { name: 'Gowthaman N', dept: 'Information Technology (IT)', company: 'Mr. Cooper', ctc: '₹10 LPA', tier: '10', top: false, batch: 'Batch 2026', img: '/brand/achievers/gowthaman-n.jpg' },
+
+  // ── ₹9 LPA CLUB (DeepTech, AI Labs & Global IT) ──
+  { name: 'Mohammed Asan I', dept: 'Computer Science (CSE)', company: 'InCorp', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/mohammed-asan-i.jpg' },
+  { name: 'Raja Imaya Bharathi J', dept: 'Information Technology (IT)', company: 'InCorp', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/raja-imaya-bharathi-j.jpg' },
+  { name: 'Nithya Prakash M', dept: 'AI & Data Science (AI DS)', company: 'Aansena', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/nithya-prakash-m.jpg' },
+  { name: 'Divya J', dept: 'AI & Data Science (AI DS)', company: 'CTS', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/divya-j.jpg' },
+  { name: 'Rahul R N', dept: 'AI & Machine Learning (AI ML)', company: 'Centillion Labs', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/rahul-r-n.jpg' },
+  { name: 'Siddarth D', dept: 'Computer Science (CSE)', company: 'Centillion Labs', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/siddarth-d.jpg' },
+  { name: 'Suriyavel M', dept: 'Computer Science (CSE)', company: 'Centillion Labs', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/suriyavel-m.jpg' },
+  { name: 'Sailesh R', dept: 'Computer Science (CSE)', company: 'Centillion Labs', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/sailesh-r.jpg' },
+  { name: 'Sanjay J', dept: 'AI & Data Science (AI DS)', company: 'Centillion Labs', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/sanjay-j.jpg' },
+  { name: 'Gokul Sriram', dept: 'AI & Machine Learning (AI ML)', company: 'Centillion Labs', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/gokul-sriram.jpg' },
+  { name: 'Sai Subin', dept: 'Information Technology (IT)', company: 'Centillion Labs', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/sai-subin.jpg' },
+  { name: 'Naveen N', dept: 'Computer Science (CSE)', company: 'Centillion Labs', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/naveen-n.jpg' },
+  { name: 'Rahul Nisanth M', dept: 'Computer Science (CSE)', company: 'Centillion Labs', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/rahul-nisanth-m.jpg' },
+  { name: 'Soorya Akilesh C', dept: 'AI & Data Science (AI DS)', company: 'Centillion Labs', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/soorya-akilesh-c.jpg' },
+  { name: 'Arun Krishna S', dept: 'Cyber Security (CYS)', company: 'Centillion Labs', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/arun-krishna-s.jpg' },
+  { name: 'Nivash M', dept: 'Cyber Security (CYS)', company: 'Centillion Labs', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/nivash-m.jpg' },
+  { name: 'Afsal Ahamad', dept: 'AI & Machine Learning (AI ML)', company: 'Centillion Labs', ctc: '₹9 LPA', tier: '9', top: false, batch: 'Batch 2026', img: '/brand/achievers/afsal-ahamad.jpg' }
 ];
 
-// Top Recruiters Row 1 (Product Leaders, Cloud & Enterprise IT)
-const topRecruitersRow1 = [
+const starAchievers = allSuperstarsData;
+
+// All Top Recruiters (Comprehensive Single-Line Showcase)
+const allTopRecruiters = [
   { name: 'ZOHO', type: 'img', src: '/brand/placement-company-logo/line-2/zoho-logo.png', category: 'Product & SaaS' },
-  { name: 'J.P.Morgan', type: 'custom', html: '<text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="18" fill="#2d2926">J.P.Morgan</text>', category: 'Investment Bank' },
-  { name: 'AUTODESK', type: 'custom', html: '<text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="17" letter-spacing="1.5" fill="#0696d7">▲ AUTODESK</text>', category: '3D Design Tech' },
-  { name: 'JUSPAY', type: 'custom', html: '<circle cx="20" cy="14" r="6" fill="#0077ff"/><text x="62%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="17" letter-spacing="0.5" fill="#172a3a">JUSPAY</text>', category: 'FinTech Unicorn' },
-  { name: 'TCS', type: 'svg', category: 'Global IT Leader' },
-  { name: 'Cognizant', type: 'img', src: '/brand/placement-company-logo/line-1/Cognizant-logo.png', category: 'Digital Solutions' },
-  { name: 'ServiceNow', type: 'img', src: '/brand/placement-company-logo/line-2/servicenow-logo.png', category: 'Enterprise Cloud' },
-  { name: 'Presidio', type: 'img', src: '/brand/placement-company-logo/line-2/Presido-logo.png', category: 'Cyber Security' },
-  { name: 'ConverSight', type: 'img', src: '/brand/placement-company-logo/line-1/Conver-sight-logo.png', category: 'AI & Analytics' },
-  { name: 'Abluva', type: 'img', src: '/brand/placement-company-logo/line-1/Abluva-logo.png', category: 'Data Security AI' },
-  { name: 'Retail AI', type: 'img', src: '/brand/placement-company-logo/line-1/Retail-ai-logo.png', category: 'Autonomous Tech' }
-];
-
-// Top Recruiters Row 2 (Global MNCs, Core Engineering & DeepTech)
-const topRecruitersRow2 = [
   { name: 'Infosys', type: 'svg', category: 'Technology Consulting' },
+  { name: 'J.P.Morgan', type: 'custom', html: '<text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="22" fill="#2d2926">J.P.Morgan</text>', category: 'Investment Bank' },
   { name: 'Amazon', type: 'svg', category: 'Cloud & Tech Giant' },
+  { name: 'AUTODESK', type: 'custom', html: '<text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="20" letter-spacing="1.5" fill="#0696d7">▲ AUTODESK</text>', category: '3D Design Tech' },
+  { name: 'TCS', type: 'svg', category: 'Global IT Leader' },
   { name: 'Accenture', type: 'svg', category: 'Strategy & Consulting' },
+  { name: 'JUSPAY', type: 'custom', html: '<circle cx="20" cy="16" r="7" fill="#0077ff"/><text x="62%" y="60%" dominant-baseline="middle" text-anchor="middle" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="21" letter-spacing="0.5" fill="#172a3a">JUSPAY</text>', category: 'FinTech Unicorn' },
+  { name: 'Cognizant', type: 'img', src: '/brand/placement-company-logo/line-1/Cognizant-logo.png', category: 'Digital Solutions' },
   { name: 'Wipro', type: 'svg', category: 'Global IT Enterprise' },
+  { name: 'ServiceNow', type: 'img', src: '/brand/placement-company-logo/line-2/servicenow-logo.png', category: 'Enterprise Cloud' },
   { name: 'ITC Limited', type: 'img', src: '/brand/placement-company-logo/line-2/ITC-limited-logo.png', category: 'Conglomerate & FMCG' },
+  { name: 'Presidio', type: 'img', src: '/brand/placement-company-logo/line-2/Presido-logo.png', category: 'Cyber Security' },
   { name: 'Zentron Labs', type: 'img', src: '/brand/placement-company-logo/line-2/Zentron-labs-logo.png', category: 'Robotics & Vision' },
+  { name: 'ConverSight', type: 'img', src: '/brand/placement-company-logo/line-1/Conver-sight-logo.png', category: 'AI & Analytics' },
   { name: 'Zynerd', type: 'img', src: '/brand/placement-company-logo/line-2/Zynerd-logo.png', category: 'EdTech Platform' },
+  { name: 'Abluva', type: 'img', src: '/brand/placement-company-logo/line-1/Abluva-logo.png', category: 'Data Security AI' },
   { name: 'Vakilsearch', type: 'img', src: '/brand/placement-company-logo/line-1/Vakil-search-logo.png', category: 'LegalTech & FinTech' },
   { name: 'Conserve', type: 'img', src: '/brand/placement-company-logo/line-2/conserve-logo.png', category: 'Green Engineering' },
   { name: 'Nallas', type: 'img', src: '/brand/placement-company-logo/line-1/nallas-logo.png', category: 'Enterprise IT' },
+  { name: 'Retail AI', type: 'img', src: '/brand/placement-company-logo/line-1/Retail-ai-logo.png', category: 'Autonomous Tech' },
   { name: 'nference', type: 'img', src: '/brand/placement-company-logo/line-1/nference-logo.png', category: 'BioMedical AI' }
 ];
 
 function getRecruiterSvg(name) {
+  if (name === 'Trilogy') {
+    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="900" font-size="19" letter-spacing="1.5" fill="#0d1b2a">▲ TRILOGY</text>`;
+  }
+  if (name === 'Increff') {
+    return `<circle cx="16" cy="14" r="6" fill="#e63946"/><text x="16" y="17" text-anchor="middle" font-size="9" font-weight="900" fill="#fff">i</text><text x="64%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="17" fill="#e63946">INCREFF</text>`;
+  }
+  if (name === 'Presidio') {
+    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="18" letter-spacing="1" fill="#0077b6">PRESIDIO</text>`;
+  }
+  if (name === 'Zenx AI' || name === 'Hasura') {
+    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="18" fill="#3a0ca3">ZENX AI</text>`;
+  }
+  if (name === 'Hyperverge') {
+    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="16" letter-spacing="0.5" fill="#4361ee">HYPERVERGE</text>`;
+  }
+  if (name === 'Tiger Analytics') {
+    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="14.5" letter-spacing="0.5" fill="#d9480f">TIGER ANALYTICS</text>`;
+  }
+  if (name === 'Reltio') {
+    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="18" fill="#168aad">Reltio</text>`;
+  }
+  if (name === 'Mr. Cooper' || name === 'Cooper') {
+    return `<text x="50%" y="42%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-size="9" fill="#005a39" font-weight="700">mr.</text><text x="50%" y="72%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="900" font-size="19" fill="#00b4d8">cooper</text>`;
+  }
+  if (name === 'InCorp') {
+    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="18" fill="#2b2d42">In.Corp</text>`;
+  }
+  if (name === 'Aansena') {
+    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="17" fill="#0077b6">AANSENA</text>`;
+  }
+  if (name === 'CTS' || name === 'Cognizant') {
+    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="18" fill="#003580">Cognizant</text>`;
+  }
+  if (name === 'Centillion Labs' || name === 'Centillion') {
+    return `<rect x="10" y="6" width="16" height="16" rx="3" fill="#00854a"/><text x="64%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="14" fill="#003824">CENTILLION</text>`;
+  }
   if (name === 'TCS') {
-    return `<text x="50%" y="42%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="900" font-size="14" fill="#e61c24">tcs </text><text x="50%" y="76%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="8" fill="#1f4277">CONSULTANCY</text>`;
+    return `<text x="50%" y="42%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="900" font-size="19" fill="#e61c24">tcs </text><text x="50%" y="78%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="10.5" fill="#1f4277">CONSULTANCY</text>`;
   }
   if (name === 'Infosys') {
-    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="17" fill="#007cc3">Infosys</text>`;
+    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="23" fill="#007cc3">Infosys</text>`;
   }
   if (name === 'wipro') {
-    return `<circle cx="20" cy="14" r="5" fill="#f3c515"/><circle cx="28" cy="14" r="3.5" fill="#e61c24"/><text x="64%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="16" fill="#341f97">wipro</text>`;
+    return `<circle cx="22" cy="15" r="6" fill="#f3c515"/><circle cx="32" cy="15" r="4.2" fill="#e61c24"/><text x="64%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="22" fill="#341f97">wipro</text>`;
   }
   if (name === 'accenture') {
-    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="15" fill="#000000">accenture<tspan fill="#a100ff" font-weight="900">&gt;</tspan></text>`;
+    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="21" fill="#000000">accenture<tspan fill="#a100ff" font-weight="900">&gt;</tspan></text>`;
   }
   if (name === 'ZOHO') {
-    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="900" font-size="18" letter-spacing="2" fill="#cc2427">ZO<tspan fill="#00854a">H</tspan><tspan fill="#f3c515">O</tspan></text>`;
+    return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="900" font-size="24" letter-spacing="2" fill="#cc2427">ZO<tspan fill="#00854a">H</tspan><tspan fill="#f3c515">O</tspan></text>`;
   }
   if (name === 'amazon') {
-    return `<text x="50%" y="48%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="16" fill="#232f3e">amazon</text><path d="M 24 20 Q 50 27 76 20" stroke="#ff9900" stroke-width="2" fill="none"/>`;
+    return `<text x="50%" y="46%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="22" fill="#232f3e">amazon</text><path d="M 20 22 Q 55 31 90 22" stroke="#ff9900" stroke-width="2.5" fill="none"/>`;
   }
-  return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="15" fill="#005a39">${name}</text>`;
+  return `<text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="21" fill="#005a39">${name}</text>`;
+}
+
+function renderStudentCompanyBadge(name) {
+  if (name === 'Centillion Labs' || name === 'Centillion') {
+    return `<span class="siet-co-icon" style="display:inline-block;width:12px;height:12px;border-radius:3px;background:#00854a;flex-shrink:0;"></span><span class="siet-co-text" style="font-weight:800;font-size:13px;letter-spacing:0.04em;color:#003824;">CENTILLION</span>`;
+  }
+  if (name === 'Trilogy') {
+    return `<span class="siet-co-icon" style="color:#0d1b2a;font-size:11px;line-height:1;margin-right:2px;">▲</span><span class="siet-co-text" style="font-weight:900;font-size:13.5px;letter-spacing:0.08em;color:#0d1b2a;">TRILOGY</span>`;
+  }
+  if (name === 'Increff') {
+    return `<span class="siet-co-icon" style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;background:#e63946;color:#fff;font-size:9.5px;font-weight:900;line-height:1;flex-shrink:0;">i</span><span class="siet-co-text" style="font-weight:800;font-size:13.5px;letter-spacing:0.04em;color:#e63946;">INCREFF</span>`;
+  }
+  if (name === 'Tiger Analytics') {
+    return `<span class="siet-co-text" style="font-weight:800;font-size:12.5px;letter-spacing:0.04em;color:#d9480f;">TIGER ANALYTICS</span>`;
+  }
+  if (name === 'Hyperverge') {
+    return `<span class="siet-co-text" style="font-weight:800;font-size:13px;letter-spacing:0.05em;color:#4361ee;">HYPERVERGE</span>`;
+  }
+  if (name === 'Presidio') {
+    return `<span class="siet-co-text" style="font-weight:800;font-size:13.5px;letter-spacing:0.06em;color:#0077b6;">PRESIDIO</span>`;
+  }
+  if (name === 'Zenx AI' || name === 'Hasura') {
+    return `<span class="siet-co-text" style="font-weight:800;font-size:13.5px;letter-spacing:0.05em;color:#3a0ca3;">ZENX AI</span>`;
+  }
+  if (name === 'Reltio') {
+    return `<span class="siet-co-text" style="font-weight:800;font-size:14px;letter-spacing:0.03em;color:#168aad;">Reltio</span>`;
+  }
+  if (name === 'Mr. Cooper' || name === 'Cooper') {
+    return `<span class="siet-co-text" style="font-weight:700;font-size:11px;color:#005a39;margin-right:2px;">mr.</span><span class="siet-co-text" style="font-weight:900;font-size:14px;color:#00b4d8;">cooper</span>`;
+  }
+  if (name === 'InCorp') {
+    return `<span class="siet-co-text" style="font-weight:800;font-size:14px;letter-spacing:0.03em;color:#2b2d42;">In.Corp</span>`;
+  }
+  if (name === 'Aansena') {
+    return `<span class="siet-co-text" style="font-weight:800;font-size:13.5px;letter-spacing:0.04em;color:#0077b6;">AANSENA</span>`;
+  }
+  if (name === 'CTS' || name === 'Cognizant') {
+    return `<span class="siet-co-text" style="font-weight:800;font-size:13.5px;color:#003580;">Cognizant</span>`;
+  }
+  if (name === 'TCS') {
+    return `<span class="siet-co-text" style="font-weight:900;font-size:14px;color:#e61c24;">tcs</span><span class="siet-co-text" style="font-weight:700;font-size:10.5px;color:#1f4277;margin-left:3px;letter-spacing:0.04em;">CONSULTANCY</span>`;
+  }
+  return `<span class="siet-co-text" style="font-weight:800;font-size:13px;color:#005a39;">${name}</span>`;
+}
+
+function renderSuperstarCard(s) {
+  let tierBadge = '';
+  if (s.tier === '33') {
+    tierBadge = '<span class="siet-sp-tier-pill is-33">Highest Record</span>';
+  } else if (s.tier === '22') {
+    tierBadge = '<span class="siet-sp-tier-pill is-22">Super Dream</span>';
+  } else if (s.tier === '13-12') {
+    tierBadge = '<span class="siet-sp-tier-pill is-12">Product Tier</span>';
+  } else if (s.tier === '10') {
+    tierBadge = '<span class="siet-sp-tier-pill is-10">Prime Platinum</span>';
+  } else {
+    tierBadge = '<span class="siet-sp-tier-pill is-9">DeepTech Tier</span>';
+  }
+
+  const ribbonClass = s.top ? 'is-marquee' : (s.tier === '22' ? 'is-superdream' : '');
+
+  return `
+    <div class="siet-sp-card ${s.top ? 'is-top' : ''}" data-tier="${s.tier}">
+      <div class="siet-sp-ctc-wrap">
+        <div class="siet-sp-ctc-top-row">
+          <span class="siet-sp-ctc-lbl">${s.top ? 'MARQUEE RECORD' : (s.tier === '22' ? 'SUPER DREAM' : 'ANNUAL PACKAGE')}</span>
+          ${tierBadge}
+        </div>
+        <div class="siet-sp-ctc-ribbon ${ribbonClass}">${s.ctc}</div>
+      </div>
+      <h3 class="siet-sp-name">${s.name}</h3>
+      <p class="siet-sp-dept">${s.dept}</p>
+      <div class="siet-sp-company-box">
+        ${renderStudentCompanyBadge(s.company)}
+      </div>
+      <span class="siet-sp-batch">${s.batch}</span>
+    </div>
+  `;
 }
 
 function renderRecruiterCard(r) {
@@ -5380,9 +5546,9 @@ function renderRecruiterCard(r) {
   if (r.type === 'img') {
     logoContent = `<img src="${r.src}" alt="${r.name} logo" loading="lazy">`;
   } else if (r.type === 'custom') {
-    logoContent = `<svg viewBox="0 0 130 28" xmlns="http://www.w3.org/2000/svg">${r.html}</svg>`;
+    logoContent = `<svg viewBox="0 0 140 32" xmlns="http://www.w3.org/2000/svg">${r.html}</svg>`;
   } else {
-    logoContent = `<svg viewBox="0 0 110 28" xmlns="http://www.w3.org/2000/svg">${getRecruiterSvg(r.name)}</svg>`;
+    logoContent = `<svg viewBox="0 0 130 32" xmlns="http://www.w3.org/2000/svg">${getRecruiterSvg(r.name)}</svg>`;
   }
   return `
     <div class="siet-tr-logo-card" title="${r.name} · ${r.category}">
@@ -5396,6 +5562,19 @@ function renderRecruiterCard(r) {
       </div>
     </div>
   `;
+}
+
+function getSuperstarMarqueeHtml(filter = 'all') {
+  const filtered = (filter === 'all')
+    ? allSuperstarsData
+    : allSuperstarsData.filter(s => s.tier === filter);
+
+  let baseList = [...filtered];
+  while (baseList.length < 10) {
+    baseList = baseList.concat(filtered);
+  }
+  const doubleList = baseList.concat(baseList);
+  return doubleList.map(renderSuperstarCard).join('');
 }
 
 function placementsDashboardPage(route) {
@@ -5503,9 +5682,8 @@ function placementsDashboardPage(route) {
     `;
   }
 
-  // 1. Top Recruiters Marquee Cards (Dual Tracks)
-  const marqueeRow1Html = topRecruitersRow1.map(renderRecruiterCard).join('');
-  const marqueeRow2Html = topRecruitersRow2.map(renderRecruiterCard).join('');
+  // 1. Top Recruiters Marquee Cards (Single Continuous Line)
+  const marqueeSingleHtml = allTopRecruiters.map(renderRecruiterCard).join('');
 
   // 2. Year Tabs
   const tabsHtml = Object.keys(placementDataYears).map((year, i) => `
@@ -5515,98 +5693,129 @@ function placementsDashboardPage(route) {
     </button>
   `).join('');
 
+  // 3. Superstars Running Single Slide Marquee HTML
+  const initialSuperstarsMarqueeHtml = getSuperstarMarqueeHtml('all');
+
   return `
     <main class="siet-pe-page">
 
       <!-- ══════════════════════════════════════════════════════════
-           1. TOP PLACEMENT ACHIEVERS (Featured Students)
+           1. SUPERSTARS OF PLACEMENT SEASON 2025 - 2026 (Official Banner Data)
            ══════════════════════════════════════════════════════════ -->
-      <section class="siet-sp-section">
-        <!-- Full-width Blended Header Bar touching navbar directly -->
-        <div class="siet-sp-header-bar">
-          <div class="siet-sp-header-inner">
-            <div class="siet-sp-header-left">
-              <div class="siet-sp-thumb-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
-              </div>
-              <div class="siet-sp-title-group">
-                <span class="siet-sp-kicker">SRI SHAKTHI PRIDE · CLASS OF 2026</span>
-                <h2 class="siet-sp-banner-title"><i></i> TOP PLACEMENT ACHIEVERS</h2>
-              </div>
-            </div>
+      <!-- Institutional Placement Hero Header (Matching About Design Language) -->
+      <section class="siet-sp-hero">
+        <div class="siet-sp-hero-grid"></div>
+        <div class="siet-sp-hero-orb orb-one"></div>
+        <div class="siet-sp-hero-orb orb-two"></div>
+        <div class="siet-sp-hero-rings" aria-hidden="true"></div>
+        <div class="siet-sp-hero-inner">
+          <div class="siet-sp-hero-top-row">
+            <p class="siet-sp-kicker"><i></i> SRI SHAKTHI PRIDE · TNEA CODE 2727 · CLASS OF 2026</p>
             <div class="siet-sp-tag-badge">
               <span class="siet-sp-tag-dot"></span>
-              <span>TIER-1 RECRUITS &amp; MARQUEE OFFERS</span>
+              <span>663 OFFERS · 213 COMPANIES · ₹33 LPA PEAK</span>
             </div>
-            <div class="siet-sp-header-accent-line"></div>
           </div>
+          <h1 class="siet-sp-hero-title">Placement <em>Superstars</em> &amp; Career Milestones</h1>
+          <p class="siet-sp-hero-intro">Celebrating 663 campus offers and peak compensation of ₹33 LPA secured by our graduating engineering cohort across leading multinational technology corporations and product innovators.</p>
         </div>
+      </section>
 
+      <!-- 1. SUPERSTARS OF PLACEMENT SEASON 2025 - 2026 (Official Banner Data) -->
+      <section class="siet-sp-section">
         <div class="siet-sp-shell">
-          <div class="siet-sp-students-row" id="siet-sp-cards-track">
-            <!-- Student 1 (Top) -->
-            <div class="siet-sp-card is-top">
-              <div class="siet-sp-ctc-wrap">
-                <span class="siet-sp-ctc-lbl">HIGHEST PACKAGE</span>
-                <div class="siet-sp-ctc-ribbon is-gold">₹12 LPA</div>
-              </div>
-              <div class="siet-sp-img-box">
-                <img src="/brand/achievers/nithya-sri-k.jpg" alt="Nithya Sri K" loading="lazy">
-              </div>
-              <h3 class="siet-sp-name">Nithya Sri K</h3>
-              <p class="siet-sp-dept">Information Technology</p>
-              <div class="siet-sp-company-box">
-                <svg viewBox="0 0 100 28" xmlns="http://www.w3.org/2000/svg">${getRecruiterSvg('TCS')}</svg>
-              </div>
-              <span class="siet-sp-batch">Batch 2026</span>
-            </div>
 
-            <!-- Student 2 -->
-            <div class="siet-sp-card">
-              <div class="siet-sp-ctc-wrap">
-                <span class="siet-sp-ctc-lbl">ANNUAL PACKAGE</span>
-                <div class="siet-sp-ctc-ribbon">₹10 LPA</div>
-              </div>
-              <div class="siet-sp-img-box">
-                <img src="/brand/achievers/aravind-s.jpg" alt="Aravind S" loading="lazy">
-              </div>
-              <h3 class="siet-sp-name">Aravind S</h3>
-              <p class="siet-sp-dept">Computer Science and Engineering</p>
-              <div class="siet-sp-company-box">
-                <svg viewBox="0 0 100 28" xmlns="http://www.w3.org/2000/svg">${getRecruiterSvg('Infosys')}</svg>
-              </div>
-              <span class="siet-sp-batch">Batch 2026</span>
+          <!-- 1. SUPERSTARS RUNNING SHOWCASE (Single Continuous Slide) -->
+          <div class="siet-sp-gallery-controls">
+            <div class="siet-sp-gallery-title-group">
+              <span class="siet-sp-gallery-kicker"><i></i> INDIVIDUAL STUDENT RECRUITMENT RECORDS</span>
+              <h2 class="siet-sp-gallery-title">Meet Our <em>43 Placement Superstars</em></h2>
             </div>
-
-            <!-- Student 3 -->
-            <div class="siet-sp-card">
-              <div class="siet-sp-ctc-wrap">
-                <span class="siet-sp-ctc-lbl">ANNUAL PACKAGE</span>
-                <div class="siet-sp-ctc-ribbon">₹9.5 LPA</div>
-              </div>
-              <div class="siet-sp-img-box">
-                <img src="/brand/achievers/priya-dharshini-r.jpg" alt="Priya Dharshini R" loading="lazy">
-              </div>
-              <h3 class="siet-sp-name">Priya Dharshini R</h3>
-              <p class="siet-sp-dept">Electronics and Communication</p>
-              <div class="siet-sp-company-box">
-                <svg viewBox="0 0 100 28" xmlns="http://www.w3.org/2000/svg">${getRecruiterSvg('wipro')}</svg>
-              </div>
-              <span class="siet-sp-batch">Batch 2026</span>
+            <div class="siet-sp-filter-tabs" id="siet-sp-tier-filters">
+              <button type="button" class="siet-sp-filter-tab is-active" data-tier="all">
+                <span class="siet-sp-ftab-dot"></span> All Superstars (43)
+              </button>
+              <button type="button" class="siet-sp-filter-tab" data-tier="33">₹33 LPA · Trilogy (2)</button>
+              <button type="button" class="siet-sp-filter-tab" data-tier="22">₹22 LPA · Increff (5)</button>
+              <button type="button" class="siet-sp-filter-tab" data-tier="13-12">₹13–12 LPA (3)</button>
+              <button type="button" class="siet-sp-filter-tab" data-tier="10">₹10 LPA (16)</button>
+              <button type="button" class="siet-sp-filter-tab" data-tier="9">₹9 LPA (17)</button>
             </div>
           </div>
 
-          <!-- Centered Floating Pagination Pill -->
-          <div class="siet-sp-footer-wrap">
-            <div class="siet-sp-footer-band">
-              <button type="button" class="siet-sp-nav-arrow" id="siet-sp-prev" aria-label="Previous achiever">‹</button>
-              <div class="siet-sp-dashes">
-                <span class="siet-sp-dash is-active" data-page="0"></span>
-                <span class="siet-sp-dash" data-page="1"></span>
-                <span class="siet-sp-dash" data-page="2"></span>
-              </div>
-              <button type="button" class="siet-sp-nav-arrow" id="siet-sp-next" aria-label="Next achiever">›</button>
+          <!-- Single Slide Running Track (Continuous Marquee with Image Hover & Pause) -->
+          <div class="siet-sp-marquee-wrapper" id="siet-sp-marquee-wrapper">
+            <div class="siet-sp-marquee-track" id="siet-sp-cards-track">
+              ${initialSuperstarsMarqueeHtml}
             </div>
+          </div>
+
+          <!-- Official Placement Key Metrics Grid (Matching Home/About Stat Grid) -->
+          <div class="siet-sp-stats-wrapper" id="siet-kpi-interactive-area">
+            <div class="siet-sp-stats-grid">
+              
+              <!-- 01. Campus Offers -->
+              <article class="siet-sp-stat-box js-kpi-card is-active" data-kpi="offers" data-filter="all" title="Click to view all campus offers" tabindex="0">
+                <span class="stat-index">01</span>
+                <span class="stat-icon" aria-hidden="true">${icon('chart')}</span>
+                <h3><span class="js-counter" data-to="663" data-suffix="+">0+</span></h3>
+                <p>Campus Offers</p>
+                <span class="stat-subtitle">Class of 2026 Cohort</span>
+                <span class="stat-bottom-line" aria-hidden="true"></span>
+              </article>
+
+              <!-- 02. Recruiting Companies -->
+              <article class="siet-sp-stat-box js-kpi-card" data-kpi="companies" data-filter="all" title="Click to inspect recruiter partnerships" tabindex="0">
+                <span class="stat-index">02</span>
+                <span class="stat-icon" aria-hidden="true">${icon('industry')}</span>
+                <h3><span class="js-counter" data-to="213" data-suffix="+">0+</span></h3>
+                <p>Recruiting Companies</p>
+                <span class="stat-subtitle">Tier-1 &amp; Core Partners</span>
+                <span class="stat-bottom-line" aria-hidden="true"></span>
+              </article>
+
+              <!-- 03. Highest CTC -->
+              <article class="siet-sp-stat-box js-kpi-card is-highlight" data-kpi="highest" data-filter="33" title="Click to filter ₹33 LPA superstars" tabindex="0">
+                <span class="stat-index">03</span>
+                <span class="stat-icon" aria-hidden="true">${icon('trophy')}</span>
+                <h3 class="highlight-val"><span class="js-counter" data-prefix="₹" data-to="33" data-suffix=" LPA">₹0 LPA</span></h3>
+                <p>Highest CTC (Trilogy)</p>
+                <span class="stat-subtitle">Marquee Peak Package</span>
+                <span class="stat-bottom-line" aria-hidden="true"></span>
+              </article>
+
+              <!-- 04. Prime Platinum -->
+              <article class="siet-sp-stat-box js-kpi-card" data-kpi="platinum" data-filter="22" title="Click to filter ₹10–33 LPA offers" tabindex="0">
+                <span class="stat-index">04</span>
+                <span class="stat-icon" aria-hidden="true">${icon('crown')}</span>
+                <h3><span class="js-counter" data-to="26">0</span></h3>
+                <p>Prime Platinum</p>
+                <span class="stat-subtitle">₹10 – ₹33 LPA Super Dream</span>
+                <span class="stat-bottom-line" aria-hidden="true"></span>
+              </article>
+
+              <!-- 05. Dazzling Diamond -->
+              <article class="siet-sp-stat-box js-kpi-card" data-kpi="diamond" data-filter="10" title="Click to filter ₹6–10 LPA offers" tabindex="0">
+                <span class="stat-index">05</span>
+                <span class="stat-icon" aria-hidden="true">${icon('chip')}</span>
+                <h3><span class="js-counter" data-to="98">0</span></h3>
+                <p>Dazzling Diamond</p>
+                <span class="stat-subtitle">₹6 – ₹10 LPA Product Tier</span>
+                <span class="stat-bottom-line" aria-hidden="true"></span>
+              </article>
+
+              <!-- 06. Precious Pearl -->
+              <article class="siet-sp-stat-box js-kpi-card" data-kpi="pearl" data-filter="9" title="Click to filter ₹4–6 LPA offers" tabindex="0">
+                <span class="stat-index">06</span>
+                <span class="stat-icon" aria-hidden="true">${icon('connect')}</span>
+                <h3><span class="js-counter" data-to="272">0</span></h3>
+                <p>Precious Pearl</p>
+                <span class="stat-subtitle">₹4 – ₹6 LPA Core IT Tier</span>
+                <span class="stat-bottom-line" aria-hidden="true"></span>
+              </article>
+
+            </div>
+            <div class="bottom-gold-line" aria-hidden="true"></div>
           </div>
         </div>
       </section>
@@ -5616,269 +5825,290 @@ function placementsDashboardPage(route) {
            ══════════════════════════════════════════════════════════ -->
       <section class="siet-yw-section">
         <div class="siet-sp-lower-shell">
-          <!-- Section Header -->
-        <div class="siet-sp-section-head">
-          <div class="siet-sp-section-kicker"><i></i> ANNUAL PLACEMENT RECORD</div>
-          <h2 class="siet-sp-section-title">Year-Wise <em>Highlights &amp; Growth</em></h2>
-          <p class="siet-sp-section-subtitle">Consistent multi-year placement performance, expanding top-tier recruiter partnerships, and escalating package milestones.</p>
-        </div>
-
-        <div class="siet-tmpl-row1">
-          <!-- Left: Year-Wise Placement Highlights Card -->
-          <div class="siet-tmpl-highlights-card">
-            <div class="siet-tmpl-hl-top">
-              <div class="siet-tmpl-hl-meta">
-                <p class="siet-vm-kicker-sm"><i></i> COHORT PERFORMANCE AUDIT</p>
-                <span class="siet-tmpl-verified-tag">✓ NIRF &amp; NBA Verified</span>
-              </div>
-              <div class="siet-tmpl-year-tabs">
-                ${tabsHtml}
-              </div>
-            </div>
-
-            <div class="siet-tmpl-stats-grid">
-              <!-- Item 1: Students Placed -->
-              <div class="siet-tmpl-stat-card">
-                <div class="siet-tmpl-sc-header">
-                  <div class="siet-tmpl-sitem-icon">
-                    <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 3s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-                  </div>
-                  <span class="siet-tmpl-trend-pill is-green" id="tmpl-tag-placed">↑ 14% YoY</span>
-                </div>
-                <div class="siet-tmpl-sc-content">
-                  <span class="siet-tmpl-sitem-lbl">Students Placed</span>
-                  <span class="siet-tmpl-sitem-val" id="tmpl-val-placed">285</span>
-                </div>
-              </div>
-
-              <!-- Item 2: Companies Visited -->
-              <div class="siet-tmpl-stat-card">
-                <div class="siet-tmpl-sc-header">
-                  <div class="siet-tmpl-sitem-icon">
-                    <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
-                  </div>
-                  <span class="siet-tmpl-trend-pill is-gold" id="tmpl-tag-companies">Tier-1 &amp; MNCs</span>
-                </div>
-                <div class="siet-tmpl-sc-content">
-                  <span class="siet-tmpl-sitem-lbl">Companies Visited</span>
-                  <span class="siet-tmpl-sitem-val" id="tmpl-val-companies">120+</span>
-                </div>
-              </div>
-
-              <!-- Item 3: Highest Package -->
-              <div class="siet-tmpl-stat-card is-highlight">
-                <div class="siet-tmpl-sc-header">
-                  <div class="siet-tmpl-sitem-icon" style="background:#fff8e1;color:#b87e00;">
-                    <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
-                  </div>
-                  <span class="siet-tmpl-trend-pill is-gold" id="tmpl-tag-highest">Marquee Offer</span>
-                </div>
-                <div class="siet-tmpl-sc-content">
-                  <span class="siet-tmpl-sitem-lbl">Highest Package</span>
-                  <span class="siet-tmpl-sitem-val" id="tmpl-val-highest" style="color:#005a39;">₹12 LPA</span>
-                </div>
-              </div>
-
-              <!-- Item 4: Average Package -->
-              <div class="siet-tmpl-stat-card">
-                <div class="siet-tmpl-sc-header">
-                  <div class="siet-tmpl-sitem-icon">
-                    <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
-                  </div>
-                  <span class="siet-tmpl-trend-pill is-green" id="tmpl-tag-average">Core &amp; IT Mix</span>
-                </div>
-                <div class="siet-tmpl-sc-content">
-                  <span class="siet-tmpl-sitem-lbl">Average Package</span>
-                  <span class="siet-tmpl-sitem-val" id="tmpl-val-average">₹5.2 LPA</span>
-                </div>
-              </div>
-
-              <!-- Item 5: Multiple Offers -->
-              <div class="siet-tmpl-stat-card">
-                <div class="siet-tmpl-sc-header">
-                  <div class="siet-tmpl-sitem-icon">
-                    <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
-                  </div>
-                  <span class="siet-tmpl-trend-pill is-blue" id="tmpl-tag-multiple">Dual Offers</span>
-                </div>
-                <div class="siet-tmpl-sc-content">
-                  <span class="siet-tmpl-sitem-lbl">Multiple Offers</span>
-                  <span class="siet-tmpl-sitem-val" id="tmpl-val-multiple">45</span>
-                </div>
-              </div>
-
-              <!-- Item 6: Placement Rate -->
-              <div class="siet-tmpl-stat-card">
-                <div class="siet-tmpl-sc-header">
-                  <div class="siet-tmpl-sitem-icon">
-                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                  </div>
-                  <span class="siet-tmpl-trend-pill is-green" id="tmpl-tag-rate">Eligible Cohort</span>
-                </div>
-                <div class="siet-tmpl-sc-content">
-                  <span class="siet-tmpl-sitem-lbl">Placement Rate</span>
-                  <span class="siet-tmpl-sitem-val" id="tmpl-val-rate">94%</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Footnote -->
-            <div class="siet-tmpl-card-footer-note">
-              <span class="siet-tmpl-cf-dot"></span>
-              <span>Training &amp; Placement Cell audits verified campus recruitment figures annually.</span>
-            </div>
+          <!-- Section Header (Matching About / Vision & Mission Intro) -->
+          <div class="siet-vm-section-intro reveal" style="text-align:center;max-width:800px;margin:0 auto 36px;">
+            <p style="color:#00854a;font-weight:800;letter-spacing:0.18em;margin-bottom:8px;font-size:12px;">ANNUAL PLACEMENT RECORD</p>
+            <h2 style="font:800 clamp(28px,3.2vw,44px)/1.15 'Plus Jakarta Sans',sans-serif;color:#00281b;letter-spacing:-0.03em;margin:0 0 10px;">Year-Wise <em style="font-family:'Playfair Display',Georgia,serif;font-weight:600;font-style:italic;color:#00854a;">Highlights &amp; Growth</em></h2>
+            <span style="font-size:15px;color:#507060;line-height:1.6;font-weight:500;">Consistent multi-year placement performance, expanding top-tier recruiter partnerships, and escalating package milestones.</span>
           </div>
 
-          <!-- Right: Growth Chart Card -->
-          <div class="siet-tmpl-chart-card">
-            <div class="siet-tmpl-chart-top">
-              <div class="siet-tmpl-ct-title-box">
-                <span class="siet-tmpl-chart-title">Placement Growth <span class="siet-vm-em">(Last 4 Years)</span></span>
-                <span class="siet-tmpl-chart-sub">Sustained multi-year growth in recruitment &amp; company participation</span>
+          <div class="siet-vm-card-grid siet-yw-vm-grid">
+
+            <!-- Card 1: Cohort Performance Highlights (Vision Card Template) -->
+            <article class="siet-vm-card siet-vm-card-vision siet-yw-card-audit reveal">
+              <div class="siet-vm-card-pattern"></div>
+              <div class="siet-vm-card-top">
+                <span class="siet-vm-card-icon">${vmIcon('eye')}</span>
+                <div class="siet-yw-card-top-right">
+                  <span class="siet-tmpl-verified-tag">✓ NIRF &amp; NBA Verified</span>
+                  <span class="siet-vm-card-number">01 / HIGHLIGHTS</span>
+                </div>
               </div>
-              <div class="siet-chart-badge-wrap">
-                <span class="siet-chart-growth-pill">↑ +58.3% 4-Yr Surge</span>
+              <div class="siet-vm-card-copy siet-yw-copy">
+                <p class="siet-vm-card-label">COHORT PERFORMANCE AUDIT</p>
+                <h2>Validated Campus <em>Milestones.</em></h2>
+                <p class="siet-yw-card-desc">Annual audited metrics verified by the Training &amp; Placement Cell across all eligible departments.</p>
+
+                <!-- Year Tabs -->
+                <div class="siet-tmpl-year-tabs">
+                  ${tabsHtml}
+                </div>
+
+                <!-- 6-Metric Stat Tiles Grid -->
+                <div class="siet-tmpl-stats-grid">
+                  <!-- Item 1: Students Placed / Total Offers -->
+                  <div class="siet-tmpl-stat-card">
+                    <div class="siet-tmpl-sc-header">
+                      <div class="siet-tmpl-sitem-icon">
+                        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 3s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                      </div>
+                      <span class="siet-tmpl-trend-pill is-green" id="tmpl-tag-placed">663 Campus Offers</span>
+                    </div>
+                    <div class="siet-tmpl-sc-content">
+                      <span class="siet-tmpl-sitem-lbl">Total Campus Offers</span>
+                      <span class="siet-tmpl-sitem-val" id="tmpl-val-placed">663</span>
+                    </div>
+                  </div>
+
+                  <!-- Item 2: Companies Visited -->
+                  <div class="siet-tmpl-stat-card">
+                    <div class="siet-tmpl-sc-header">
+                      <div class="siet-tmpl-sitem-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                      </div>
+                      <span class="siet-tmpl-trend-pill is-gold" id="tmpl-tag-companies">213 Visited</span>
+                    </div>
+                    <div class="siet-tmpl-sc-content">
+                      <span class="siet-tmpl-sitem-lbl">Companies Visited</span>
+                      <span class="siet-tmpl-sitem-val" id="tmpl-val-companies">213</span>
+                    </div>
+                  </div>
+
+                  <!-- Item 3: Highest Package -->
+                  <div class="siet-tmpl-stat-card is-highlight">
+                    <div class="siet-tmpl-sc-header">
+                      <div class="siet-tmpl-sitem-icon" style="background:#fff8e1;color:#b87e00;">
+                        <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                      </div>
+                      <span class="siet-tmpl-trend-pill is-gold" id="tmpl-tag-highest">Trilogy Record</span>
+                    </div>
+                    <div class="siet-tmpl-sc-content">
+                      <span class="siet-tmpl-sitem-lbl">Highest Package</span>
+                      <span class="siet-tmpl-sitem-val" id="tmpl-val-highest" style="color:#005a39;">₹33 LPA</span>
+                    </div>
+                  </div>
+
+                  <!-- Item 4: Average Package -->
+                  <div class="siet-tmpl-stat-card">
+                    <div class="siet-tmpl-sc-header">
+                      <div class="siet-tmpl-sitem-icon">
+                        <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
+                      </div>
+                      <span class="siet-tmpl-trend-pill is-green" id="tmpl-tag-average">Core &amp; IT Mix</span>
+                    </div>
+                    <div class="siet-tmpl-sc-content">
+                      <span class="siet-tmpl-sitem-lbl">Average Package</span>
+                      <span class="siet-tmpl-sitem-val" id="tmpl-val-average">₹6.8 LPA</span>
+                    </div>
+                  </div>
+
+                  <!-- Item 5: Multiple Offers -->
+                  <div class="siet-tmpl-stat-card">
+                    <div class="siet-tmpl-sc-header">
+                      <div class="siet-tmpl-sitem-icon">
+                        <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+                      </div>
+                      <span class="siet-tmpl-trend-pill is-blue" id="tmpl-tag-multiple">Prime &amp; Dual</span>
+                    </div>
+                    <div class="siet-tmpl-sc-content">
+                      <span class="siet-tmpl-sitem-lbl">Multiple Offers</span>
+                      <span class="siet-tmpl-sitem-val" id="tmpl-val-multiple">185</span>
+                    </div>
+                  </div>
+
+                  <!-- Item 6: Placement Rate -->
+                  <div class="siet-tmpl-stat-card">
+                    <div class="siet-tmpl-sc-header">
+                      <div class="siet-tmpl-sitem-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                      </div>
+                      <span class="siet-tmpl-trend-pill is-green" id="tmpl-tag-rate">Eligible Cohort</span>
+                    </div>
+                    <div class="siet-tmpl-sc-content">
+                      <span class="siet-tmpl-sitem-lbl">Placement Rate</span>
+                      <span class="siet-tmpl-sitem-val" id="tmpl-val-rate">98%</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <!-- Legend Bar -->
-            <div class="siet-tmpl-chart-legend">
-              <span class="siet-legend-item"><i style="background:linear-gradient(180deg,#00854a,#00462b)"></i> Students Placed</span>
-              <span class="siet-legend-item"><i style="background:linear-gradient(180deg,#ffd23f,#df9e00)"></i> Companies Visited</span>
-              <span class="siet-legend-item"><i style="background:#00a859;height:3px;border-radius:2px;"></i> Growth Spline</span>
-            </div>
-
-            <!-- High-Resolution Enhanced SVG Bar & Spline Chart -->
-            <div class="siet-chart-svg-wrap">
-              <svg viewBox="0 0 500 220" class="siet-chart-svg" preserveAspectRatio="xMidYMid meet" aria-label="Placement Growth Chart">
-                <defs>
-                  <linearGradient id="sietBarGreenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#00854a"/>
-                    <stop offset="100%" stop-color="#00462b"/>
-                  </linearGradient>
-                  <linearGradient id="sietBarActiveGreenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#00b364"/>
-                    <stop offset="100%" stop-color="#005a39"/>
-                  </linearGradient>
-                  <linearGradient id="sietBarGoldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#ffd23f"/>
-                    <stop offset="100%" stop-color="#df9e00"/>
-                  </linearGradient>
-                  <linearGradient id="chartSplineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#00854a"/>
-                    <stop offset="70%" stop-color="#00b364"/>
-                    <stop offset="100%" stop-color="#f3c515"/>
-                  </linearGradient>
-                  <filter id="sietGlow" x="-20%" y="-20%" width="140%" height="140%">
-                    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#003824" flood-opacity="0.15"/>
-                  </filter>
-                </defs>
-
-                <!-- Y-Axis Grid Lines and Reference Labels -->
-                <text x="32" y="19" font-size="9" fill="#7a9284" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-weight="600">400</text>
-                <line x1="42" y1="15" x2="480" y2="15" stroke="#edf3ef" stroke-width="1" stroke-dasharray="3,3"/>
-
-                <text x="32" y="59" font-size="9" fill="#7a9284" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-weight="600">300</text>
-                <line x1="42" y1="55" x2="480" y2="55" stroke="#edf3ef" stroke-width="1" stroke-dasharray="3,3"/>
-
-                <text x="32" y="99" font-size="9" fill="#7a9284" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-weight="600">200</text>
-                <line x1="42" y1="95" x2="480" y2="95" stroke="#edf3ef" stroke-width="1" stroke-dasharray="3,3"/>
-
-                <text x="32" y="139" font-size="9" fill="#7a9284" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-weight="600">100</text>
-                <line x1="42" y1="135" x2="480" y2="135" stroke="#edf3ef" stroke-width="1" stroke-dasharray="3,3"/>
-
-                <!-- Base Line -->
-                <line x1="42" y1="175" x2="480" y2="175" stroke="#c9dacd" stroke-width="1.5"/>
-
-                <!-- ── YEAR 1: 2022 - 23 (Center x = 100) ── -->
-                <g class="siet-chart-col-group" data-year="2022 - 23" cursor="pointer">
-                  <rect class="siet-chart-col-bg" x="54" y="15" width="92" height="185" rx="8" fill="transparent"/>
-                  <!-- Student Bar: 180 -->
-                  <rect x="68" y="103" width="26" height="72" fill="url(#sietBarGreenGrad)" rx="4" filter="url(#sietGlow)" class="siet-cbar-student"/>
-                  <!-- Company Bar: 75 -->
-                  <rect x="100" y="145" width="26" height="30" fill="url(#sietBarGoldGrad)" rx="4" class="siet-cbar-company"/>
-                  <!-- Val Labels -->
-                  <text x="81" y="95" font-size="10" fill="#005a39" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">180</text>
-                  <text x="113" y="139" font-size="9.5" fill="#a06d00" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">75</text>
-                  <!-- Year Label -->
-                  <text x="97" y="196" font-size="10.5" fill="#507060" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700">2022 - 23</text>
-                </g>
-
-                <!-- ── YEAR 2: 2023 - 24 (Center x = 205) ── -->
-                <g class="siet-chart-col-group" data-year="2023 - 24" cursor="pointer">
-                  <rect class="siet-chart-col-bg" x="159" y="15" width="92" height="185" rx="8" fill="transparent"/>
-                  <!-- Student Bar: 210 -->
-                  <rect x="173" y="91" width="26" height="84" fill="url(#sietBarGreenGrad)" rx="4" filter="url(#sietGlow)" class="siet-cbar-student"/>
-                  <!-- Company Bar: 90 -->
-                  <rect x="205" y="139" width="26" height="36" fill="url(#sietBarGoldGrad)" rx="4" class="siet-cbar-company"/>
-                  <!-- Val Labels -->
-                  <text x="186" y="83" font-size="10" fill="#005a39" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">210</text>
-                  <text x="218" y="133" font-size="9.5" fill="#a06d00" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">90</text>
-                  <!-- Year Label -->
-                  <text x="202" y="196" font-size="10.5" fill="#507060" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700">2023 - 24</text>
-                </g>
-
-                <!-- ── YEAR 3: 2024 - 25 (Center x = 310) ── -->
-                <g class="siet-chart-col-group" data-year="2024 - 25" cursor="pointer">
-                  <rect class="siet-chart-col-bg" x="264" y="15" width="92" height="185" rx="8" fill="transparent"/>
-                  <!-- Student Bar: 250 -->
-                  <rect x="278" y="75" width="26" height="100" fill="url(#sietBarGreenGrad)" rx="4" filter="url(#sietGlow)" class="siet-cbar-student"/>
-                  <!-- Company Bar: 110 -->
-                  <rect x="310" y="131" width="26" height="44" fill="url(#sietBarGoldGrad)" rx="4" class="siet-cbar-company"/>
-                  <!-- Val Labels -->
-                  <text x="291" y="67" font-size="10" fill="#005a39" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">250</text>
-                  <text x="323" y="125" font-size="9.5" fill="#a06d00" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">110</text>
-                  <!-- Year Label -->
-                  <text x="307" y="196" font-size="10.5" fill="#507060" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700">2024 - 25</text>
-                </g>
-
-                <!-- ── YEAR 4: 2025 - 26 (Center x = 415) ACTIVE/CURRENT ── -->
-                <g class="siet-chart-col-group is-active" data-year="2025 - 26" cursor="pointer">
-                  <rect class="siet-chart-col-bg" x="369" y="15" width="92" height="185" rx="8" fill="rgba(0, 133, 74, 0.08)" stroke="rgba(0, 133, 74, 0.25)" stroke-width="1.5"/>
-                  <!-- Student Bar: 285 -->
-                  <rect x="383" y="61" width="26" height="114" fill="url(#sietBarActiveGreenGrad)" rx="4" filter="url(#sietGlow)" class="siet-cbar-student"/>
-                  <!-- Company Bar: 120 -->
-                  <rect x="415" y="127" width="26" height="48" fill="url(#sietBarGoldGrad)" rx="4" class="siet-cbar-company"/>
-                  <!-- Val Labels -->
-                  <text x="396" y="53" font-size="11" fill="#00854a" text-anchor="middle" font-weight="900" font-family="'Plus Jakarta Sans',sans-serif">285</text>
-                  <text x="428" y="121" font-size="10" fill="#a06d00" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">120</text>
-                  <!-- Year Label -->
-                  <text x="412" y="196" font-size="11" fill="#00281b" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800">2025 - 26 ★</text>
-                </g>
-
-                <!-- ── Growth Spline Connecting Placement Peaks ── -->
-                <path d="M 81 103 C 133 97, 134 91, 186 91 C 238 91, 239 75, 291 75 C 343 75, 344 61, 396 61" fill="none" stroke="url(#chartSplineGrad)" stroke-width="3" stroke-linecap="round"/>
-
-                <!-- Spline Vertex Dots -->
-                <circle cx="81" cy="103" r="4.5" fill="#ffffff" stroke="#00854a" stroke-width="2.5"/>
-                <circle cx="186" cy="91" r="4.5" fill="#ffffff" stroke="#00854a" stroke-width="2.5"/>
-                <circle cx="291" cy="75" r="4.5" fill="#ffffff" stroke="#00854a" stroke-width="2.5"/>
-                <circle cx="396" cy="61" r="6" fill="#f3c515" stroke="#00281b" stroke-width="2.5"/>
-              </svg>
-            </div>
-
-            <!-- Bottom Highlights Strip -->
-            <div class="siet-chart-kpi-ribbon">
-              <div class="siet-chart-kpi-chip">
-                <span class="siet-chart-kpi-dot" style="background:#00854a;"></span>
-                <span class="siet-chart-kpi-lbl">Highest CTC:</span>
-                <strong class="siet-chart-kpi-val">₹12 LPA</strong>
+              <div class="siet-vm-card-footer">
+                <span>Audited by Training &amp; Placement Cell. Verified annually.</span>
+                <i></i>
               </div>
-              <div class="siet-chart-kpi-chip">
-                <span class="siet-chart-kpi-dot" style="background:#f3c515;"></span>
-                <span class="siet-chart-kpi-lbl">Recruiter Partners:</span>
-                <strong class="siet-chart-kpi-val">120+ Visited</strong>
+            </article>
+
+            <!-- Card 2: Placement Growth Chart (Mission Card Template) -->
+            <article class="siet-vm-card siet-vm-card-mission siet-yw-card-growth reveal">
+              <div class="siet-vm-mission-lines"></div>
+              <div class="siet-vm-card-top">
+                <span class="siet-vm-card-icon siet-yw-gold-icon">${vmIcon('spark')}</span>
+                <div class="siet-yw-card-top-right">
+                  <span class="siet-chart-growth-pill">↑ +70.0% Surge</span>
+                  <span class="siet-vm-card-number siet-yw-gold-num">02 / GROWTH</span>
+                </div>
               </div>
-              <div class="siet-chart-kpi-chip">
-                <span class="siet-chart-kpi-dot" style="background:#005a39;"></span>
-                <span class="siet-chart-kpi-lbl">Placement Success:</span>
-                <strong class="siet-chart-kpi-val">94% of Cohort</strong>
+              <div class="siet-vm-card-copy siet-yw-copy">
+                <p class="siet-vm-card-label">TREND ANALYSIS (LAST 4 YEARS)</p>
+                <h2 style="color:#ffffff;">Placement Growth <em>&amp; Trajectory.</em></h2>
+                <p class="siet-yw-card-desc" style="color:rgba(255,255,255,0.85);">Sustained upward progression in multi-tier recruiting partnerships and offer volumes.</p>
+
+                <!-- Legend Bar -->
+                <div class="siet-tmpl-chart-legend siet-yw-chart-legend">
+                  <span class="siet-legend-item"><i style="background:linear-gradient(180deg,#00e676,#00854a)"></i> Campus Offers</span>
+                  <span class="siet-legend-item"><i style="background:linear-gradient(180deg,#ffd54f,#f59e0b)"></i> Companies Visited</span>
+                  <span class="siet-legend-item"><i style="background:#69f0ae;height:3px;border-radius:2px;"></i> Growth Spline</span>
+                </div>
+
+                <!-- High-Resolution Enhanced SVG Bar & Spline Chart -->
+                <div class="siet-chart-svg-wrap">
+                  <svg viewBox="0 0 500 220" class="siet-chart-svg" preserveAspectRatio="xMidYMid meet" aria-label="Placement Growth Chart">
+                    <defs>
+                      <linearGradient id="sietBarGreenGradDark" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#00e676"/>
+                        <stop offset="100%" stop-color="#00854a"/>
+                      </linearGradient>
+                      <linearGradient id="sietBarActiveGreenGradDark" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#69f0ae"/>
+                        <stop offset="100%" stop-color="#00b364"/>
+                      </linearGradient>
+                      <linearGradient id="sietBarGoldGradDark" x1="0%" y1="0%" x2="0%" y2="100%">
+                        <stop offset="0%" stop-color="#ffd54f"/>
+                        <stop offset="100%" stop-color="#f59e0b"/>
+                      </linearGradient>
+                      <linearGradient id="chartSplineGradDark" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#00e676"/>
+                        <stop offset="65%" stop-color="#69f0ae"/>
+                        <stop offset="100%" stop-color="#f3c515"/>
+                      </linearGradient>
+                      <filter id="sietGlowDark" x="-20%" y="-20%" width="140%" height="140%">
+                        <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.35"/>
+                      </filter>
+                      <filter id="sietSplineGlowDark" x="-20%" y="-20%" width="140%" height="140%">
+                        <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#69f0ae" flood-opacity="0.7"/>
+                      </filter>
+                    </defs>
+
+                    <!-- Y-Axis Grid Lines and Reference Labels -->
+                    <text x="32" y="19" font-size="9" fill="#a3d9b5" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-weight="600">700</text>
+                    <line x1="42" y1="15" x2="480" y2="15" stroke="rgba(255,255,255,0.14)" stroke-width="1" stroke-dasharray="3,3"/>
+
+                    <text x="32" y="59" font-size="9" fill="#a3d9b5" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-weight="600">500</text>
+                    <line x1="42" y1="55" x2="480" y2="55" stroke="rgba(255,255,255,0.14)" stroke-width="1" stroke-dasharray="3,3"/>
+
+                    <text x="32" y="99" font-size="9" fill="#a3d9b5" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-weight="600">300</text>
+                    <line x1="42" y1="95" x2="480" y2="95" stroke="rgba(255,255,255,0.14)" stroke-width="1" stroke-dasharray="3,3"/>
+
+                    <text x="32" y="139" font-size="9" fill="#a3d9b5" text-anchor="end" font-family="'Plus Jakarta Sans',sans-serif" font-weight="600">100</text>
+                    <line x1="42" y1="135" x2="480" y2="135" stroke="rgba(255,255,255,0.14)" stroke-width="1" stroke-dasharray="3,3"/>
+
+                    <!-- Base Line -->
+                    <line x1="42" y1="175" x2="480" y2="175" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+
+                    <!-- ── YEAR 1: 2022 - 23 (Center x = 100) ── -->
+                    <g class="siet-chart-col-group" data-year="2022 - 23" cursor="pointer">
+                      <rect class="siet-chart-col-bg" x="54" y="15" width="92" height="185" rx="8" fill="transparent"/>
+                      <!-- Student Bar: 390 -->
+                      <rect x="68" y="100" width="26" height="75" fill="url(#sietBarGreenGradDark)" rx="4" filter="url(#sietGlowDark)" class="siet-cbar-student"/>
+                      <!-- Company Bar: 140 -->
+                      <rect x="100" y="145" width="26" height="30" fill="url(#sietBarGoldGradDark)" rx="4" class="siet-cbar-company"/>
+                      <!-- Val Labels -->
+                      <text x="81" y="92" font-size="10" fill="#a7f3d0" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">390</text>
+                      <text x="113" y="139" font-size="9.5" fill="#fde047" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">140</text>
+                      <!-- Year Label -->
+                      <text x="97" y="196" font-size="10.5" fill="rgba(255,255,255,0.8)" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700">2022 - 23</text>
+                    </g>
+
+                    <!-- ── YEAR 2: 2023 - 24 (Center x = 205) ── -->
+                    <g class="siet-chart-col-group" data-year="2023 - 24" cursor="pointer">
+                      <rect class="siet-chart-col-bg" x="159" y="15" width="92" height="185" rx="8" fill="transparent"/>
+                      <!-- Student Bar: 460 -->
+                      <rect x="173" y="85" width="26" height="90" fill="url(#sietBarGreenGradDark)" rx="4" filter="url(#sietGlowDark)" class="siet-cbar-student"/>
+                      <!-- Company Bar: 165 -->
+                      <rect x="205" y="138" width="26" height="37" fill="url(#sietBarGoldGradDark)" rx="4" class="siet-cbar-company"/>
+                      <!-- Val Labels -->
+                      <text x="186" y="77" font-size="10" fill="#a7f3d0" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">460</text>
+                      <text x="218" y="132" font-size="9.5" fill="#fde047" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">165</text>
+                      <!-- Year Label -->
+                      <text x="202" y="196" font-size="10.5" fill="rgba(255,255,255,0.8)" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700">2023 - 24</text>
+                    </g>
+
+                    <!-- ── YEAR 3: 2024 - 25 (Center x = 310) ── -->
+                    <g class="siet-chart-col-group" data-year="2024 - 25" cursor="pointer">
+                      <rect class="siet-chart-col-bg" x="264" y="15" width="92" height="185" rx="8" fill="transparent"/>
+                      <!-- Student Bar: 580 -->
+                      <rect x="278" y="62" width="26" height="113" fill="url(#sietBarGreenGradDark)" rx="4" filter="url(#sietGlowDark)" class="siet-cbar-student"/>
+                      <!-- Company Bar: 190 -->
+                      <rect x="310" y="132" width="26" height="43" fill="url(#sietBarGoldGradDark)" rx="4" class="siet-cbar-company"/>
+                      <!-- Val Labels -->
+                      <text x="291" y="54" font-size="10" fill="#a7f3d0" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">580</text>
+                      <text x="323" y="126" font-size="9.5" fill="#fde047" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">190</text>
+                      <!-- Year Label -->
+                      <text x="307" y="196" font-size="10.5" fill="rgba(255,255,255,0.8)" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700">2024 - 25</text>
+                    </g>
+
+                    <!-- ── YEAR 4: 2025 - 26 (Center x = 415) ACTIVE/CURRENT ── -->
+                    <g class="siet-chart-col-group is-active" data-year="2025 - 26" cursor="pointer">
+                      <rect class="siet-chart-col-bg" x="369" y="15" width="92" height="185" rx="8" fill="rgba(255,255,255,0.12)" stroke="rgba(243,197,21,0.5)" stroke-width="1.5"/>
+                      <!-- Student Bar: 663 -->
+                      <rect x="383" y="38" width="26" height="137" fill="url(#sietBarActiveGreenGradDark)" rx="4" filter="url(#sietGlowDark)" class="siet-cbar-student"/>
+                      <!-- Company Bar: 213 -->
+                      <rect x="415" y="126" width="26" height="49" fill="url(#sietBarGoldGradDark)" rx="4" class="siet-cbar-company"/>
+                      <!-- Val Labels -->
+                      <text x="396" y="30" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="900" font-family="'Plus Jakarta Sans',sans-serif">663</text>
+                      <text x="428" y="120" font-size="10" fill="#f3c515" text-anchor="middle" font-weight="800" font-family="'Plus Jakarta Sans',sans-serif">213</text>
+                      <!-- Year Label -->
+                      <text x="412" y="196" font-size="11" fill="#ffffff" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800">2025 - 26 ★</text>
+                    </g>
+
+                    <!-- ── Growth Spline Connecting Placement Peaks ── -->
+                    <path d="M 81 100 C 133 94, 134 85, 186 85 C 238 85, 239 62, 291 62 C 343 62, 344 38, 396 38" fill="none" stroke="url(#chartSplineGradDark)" stroke-width="3.5" stroke-linecap="round" filter="url(#sietSplineGlowDark)"/>
+
+                    <!-- Spline Vertex Dots -->
+                    <circle cx="81" cy="100" r="4.5" fill="#ffffff" stroke="#00b364" stroke-width="2.5"/>
+                    <circle cx="186" cy="85" r="4.5" fill="#ffffff" stroke="#00b364" stroke-width="2.5"/>
+                    <circle cx="291" cy="62" r="4.5" fill="#ffffff" stroke="#00b364" stroke-width="2.5"/>
+                    <circle cx="396" cy="38" r="6.5" fill="#f3c515" stroke="#ffffff" stroke-width="2.5"/>
+                  </svg>
+                </div>
+
+                <!-- Bottom Highlights Strip -->
+                <div class="siet-chart-kpi-ribbon siet-yw-kpi-ribbon">
+                  <div class="siet-chart-kpi-chip">
+                    <span class="siet-chart-kpi-dot" style="background:#55eb99;"></span>
+                    <span class="siet-chart-kpi-lbl">Highest CTC:</span>
+                    <strong class="siet-chart-kpi-val">₹33 LPA</strong>
+                  </div>
+                  <div class="siet-chart-kpi-chip">
+                    <span class="siet-chart-kpi-dot" style="background:#f3c515;"></span>
+                    <span class="siet-chart-kpi-lbl">Recruiter Partners:</span>
+                    <strong class="siet-chart-kpi-val">213 Visited</strong>
+                  </div>
+                  <div class="siet-chart-kpi-chip">
+                    <span class="siet-chart-kpi-dot" style="background:#69f0ae;"></span>
+                    <span class="siet-chart-kpi-lbl">Total Campus Offers:</span>
+                    <strong class="siet-chart-kpi-val">663 Offers</strong>
+                  </div>
+                </div>
               </div>
-            </div>
+              <div class="siet-vm-card-footer">
+                <span>Escalating multi-year institutional recruitment milestones.</span>
+                <i></i>
+              </div>
+            </article>
+
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       <!-- ══════════════════════════════════════════════════════════
            3. TOP RECRUITERS & INDUSTRY PARTNERS (Interactive Showcase)
@@ -5889,13 +6119,13 @@ function placementsDashboardPage(route) {
           <div class="siet-tr-header-box">
             <div class="siet-tr-kicker"><i></i> VALUED CORPORATE NETWORK</div>
             <h2 class="siet-tr-title">Top <em>Recruiters &amp; Industry Partners</em></h2>
-            <p class="siet-tr-subtitle">Over 120+ multinational corporations, product engineering giants, and global IT consulting firms recruit every year from Sri Shakthi.</p>
+            <p class="siet-tr-subtitle">Over 213+ multinational corporations, product engineering giants, and global IT consulting firms recruit every year from Sri Shakthi.</p>
           </div>
 
           <!-- Institutional Milestone Strip -->
           <div class="siet-tr-stats-bar">
             <div class="siet-tr-sbar-item">
-              <span class="siet-tr-sbar-num">120+</span>
+              <span class="siet-tr-sbar-num">213</span>
               <span class="siet-tr-sbar-lbl">Recruiter Partners</span>
             </div>
             <div class="siet-tr-sbar-sep"></div>
@@ -5905,40 +6135,26 @@ function placementsDashboardPage(route) {
             </div>
             <div class="siet-tr-sbar-sep"></div>
             <div class="siet-tr-sbar-item">
-              <span class="siet-tr-sbar-num">₹12 LPA</span>
+              <span class="siet-tr-sbar-num">₹33 LPA</span>
               <span class="siet-tr-sbar-lbl">Marquee CTC</span>
             </div>
             <div class="siet-tr-sbar-sep"></div>
             <div class="siet-tr-sbar-item">
-              <span class="siet-tr-sbar-num">330+</span>
+              <span class="siet-tr-sbar-num">663</span>
               <span class="siet-tr-sbar-lbl">Campus Offers</span>
             </div>
           </div>
 
-          <!-- Dual Marquee Tracks with Hover Pause & Card Lift -->
+          <!-- Single Marquee Track with Hover Pause & Card Lift -->
           <div class="siet-tr-marquee-container">
-            <!-- Row 1: Left Scroll -->
-            <div class="siet-tr-marquee-wrap" aria-label="Top Placement Recruiters Row 1">
+            <div class="siet-tr-marquee-wrap" aria-label="Top Placement Recruiters Showcase">
               <div class="siet-tr-track">
-                ${marqueeRow1Html}
-                ${marqueeRow1Html}
-              </div>
-            </div>
-
-            <!-- Row 2: Right Scroll (Opposite Direction) -->
-            <div class="siet-tr-marquee-wrap is-reverse" aria-label="Top Placement Recruiters Row 2">
-              <div class="siet-tr-track is-reverse">
-                ${marqueeRow2Html}
-                ${marqueeRow2Html}
+                ${marqueeSingleHtml}
+                ${marqueeSingleHtml}
               </div>
             </div>
           </div>
 
-          <!-- Micro Hint -->
-          <div class="siet-tr-hint">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-            <span>Hover over any company card to pause marquee and inspect hiring partner profile</span>
-          </div>
         </div>
       </section>
 
@@ -6021,68 +6237,272 @@ function placementsDashboardPage(route) {
 
           <!-- Bottom Action Buttons -->
           <div class="siet-pj-actions">
-            <a href="#/admission-enquiry" class="siet-tmpl-btn-gold">View Full Placement Records →</a>
+            <button type="button" class="siet-tmpl-btn-gold js-open-records-sheet" data-sheet="0">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7l-3 3.72L9 13l-3 4h12l-4-5z"/></svg>
+              <span>View Full Placement Records →</span>
+            </button>
             <a href="mailto:placements@siet.ac.in" class="siet-tmpl-btn-outline">Contact Placement Cell</a>
           </div>
         </div>
-      </section>
+      </section>     <!-- Interactive Lightbox Modal for All 5 Placement Record Sheets -->
+      <div class="siet-records-modal" id="siet-records-modal" style="display:none;" role="dialog" aria-modal="true">
+        <div class="siet-records-modal-backdrop js-close-records-modal"></div>
+        <div class="siet-records-modal-dialog">
+          <div class="siet-records-modal-header">
+            <div class="siet-records-modal-title-box">
+              <span class="siet-records-modal-sub">SRI SHAKTHI INSTITUTE OF ENGINEERING &amp; TECHNOLOGY (TNEA CODE 2727)</span>
+              <h3 id="siet-modal-sheet-title">Sheet 1: Prime Platinum &amp; High Diamond Offers (₹10 – ₹33 LPA)</h3>
+            </div>
+            <div class="siet-records-modal-actions">
+              <a href="/brand/placement-records/sheet-1-prime-offers-10-33-lpa.jpg" id="siet-modal-open-newtab" target="_blank" rel="noopener noreferrer" class="siet-records-modal-action-btn" title="Open full-resolution image in new tab">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                <span>Full Resolution</span>
+              </a>
+              <button type="button" class="siet-records-modal-close js-close-records-modal" aria-label="Close modal">✕</button>
+            </div>
+          </div>
 
-    </main>
+          <!-- Sheet Switcher Tabs -->
+          <div class="siet-records-modal-nav">
+            <button type="button" class="siet-records-modal-tab is-active" data-sheet-idx="0">Sheet 1 (₹10–33L)</button>
+            <button type="button" class="siet-records-modal-tab" data-sheet-idx="1">Sheet 2 (₹6–10L)</button>
+            <button type="button" class="siet-records-modal-tab" data-sheet-idx="2">Sheet 3 (₹4–6L Pt.1)</button>
+            <button type="button" class="siet-records-modal-tab" data-sheet-idx="3">Sheet 4 (₹4–6L Pt.2)</button>
+            <button type="button" class="siet-records-modal-tab" data-sheet-idx="4">Sheet 5 (213 Companies)</button>
+          </div>
+
+          <!-- Modal Image Body with Prev/Next Controls -->
+          <div class="siet-records-modal-body">
+            <button type="button" class="siet-records-nav-btn is-prev" id="siet-modal-prev-btn" aria-label="Previous Sheet">‹</button>
+            <div class="siet-records-img-container">
+              <img id="siet-modal-active-img" src="/brand/placement-records/sheet-1-prime-offers-10-33-lpa.jpg" alt="Official Placement Record Sheet">
+            </div>
+            <button type="button" class="siet-records-nav-btn is-next" id="siet-modal-next-btn" aria-label="Next Sheet">›</button>
+          </div>
+
+          <!-- Modal Footer Meta -->
+          <div class="siet-records-modal-footer">
+            <p id="siet-modal-sheet-desc">Contains S.No 1 to 62: Gowtham G (Trilogy ₹33L), Siv Raam Krishnan (Trilogy ₹33L), Increff (₹22L · 5 Offers), Presidio, Zenx AI, Hyperverge, TCS, Aivar Innovation, Mr. Cooper, Reltio, Linarc, Centillion Labs, etc.</p>
+            <span class="siet-records-counter" id="siet-modal-sheet-counter">Sheet 1 of 5</span>
+          </div>
+        </div>
+      </div>
+      </main>
   `;
 }
 
-// Student cards sets for rotating pagination
-const starStudentPages = [
-  [
-    { name: 'Nithya Sri K', dept: 'Information Technology', company: 'TCS', ctc: '₹12 LPA', top: true, batch: 'Batch 2026', img: '/brand/achievers/nithya-sri-k.jpg' },
-    { name: 'Aravind S', dept: 'Computer Science and Engineering', company: 'Infosys', ctc: '₹10 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/aravind-s.jpg' },
-    { name: 'Priya Dharshini R', dept: 'Electronics and Communication', company: 'Wipro', ctc: '₹9.5 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/priya-dharshini-r.jpg' }
-  ],
-  [
-    { name: 'Karthik V', dept: 'Mechanical Engineering', company: 'Cognizant', ctc: '₹8.5 LPA', top: true, batch: 'Batch 2026', img: '/brand/achievers/karthik-v.jpg' },
-    { name: 'Sowmiya M', dept: 'Civil Engineering', company: 'Zoho', ctc: '₹7.5 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/sowmiya-m.jpg' },
-    { name: 'Nithya Sri K', dept: 'Information Technology', company: 'TCS', ctc: '₹12 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/nithya-sri-k.jpg' }
-  ],
-  [
-    { name: 'Aravind S', dept: 'Computer Science and Engineering', company: 'Infosys', ctc: '₹10 LPA', top: true, batch: 'Batch 2026', img: '/brand/achievers/aravind-s.jpg' },
-    { name: 'Priya Dharshini R', dept: 'Electronics and Communication', company: 'Wipro', ctc: '₹9.5 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/priya-dharshini-r.jpg' },
-    { name: 'Karthik V', dept: 'Mechanical Engineering', company: 'Cognizant', ctc: '₹8.5 LPA', top: false, batch: 'Batch 2026', img: '/brand/achievers/karthik-v.jpg' }
-  ]
-];
+// State for Superstars Gallery (Season 2025 - 2026)
+let currentSuperstarFilter = 'all';
 
-let currentStarPage = 0;
-
-function updateStarPlacements(pageIndex) {
-  currentStarPage = (pageIndex + starStudentPages.length) % starStudentPages.length;
+function updateSuperstarsMarquee(tier) {
+  currentSuperstarFilter = tier || 'all';
   const track = document.getElementById('siet-sp-cards-track');
-  if (!track) return;
-  const students = starStudentPages[currentStarPage];
-  track.innerHTML = students.map(s => `
-    <div class="siet-sp-card ${s.top ? 'is-top' : ''}">
-      <div class="siet-sp-ctc-wrap">
-        <span class="siet-sp-ctc-lbl">${s.top ? 'HIGHEST PACKAGE' : 'ANNUAL PACKAGE'}</span>
-        <div class="siet-sp-ctc-ribbon ${s.top ? 'is-gold' : ''}">${s.ctc}</div>
-      </div>
-      <div class="siet-sp-img-box">
-        <img src="${s.img}" alt="${s.name}" loading="lazy">
-      </div>
-      <h3 class="siet-sp-name">${s.name}</h3>
-      <p class="siet-sp-dept">${s.dept}</p>
-      <div class="siet-sp-company-box">
-        <svg viewBox="0 0 100 28" xmlns="http://www.w3.org/2000/svg">${getRecruiterSvg(s.company)}</svg>
-      </div>
-      <span class="siet-sp-batch">${s.batch}</span>
-    </div>
-  `).join('');
+  if (track) {
+    track.innerHTML = getSuperstarMarqueeHtml(currentSuperstarFilter);
+    track.style.animation = 'none';
+    track.offsetHeight; /* trigger reflow */
+    track.style.animation = '';
+  }
+}
 
-  document.querySelectorAll('.siet-sp-dash').forEach((d, idx) => {
-    d.classList.toggle('is-active', idx === currentStarPage);
-  });
+// Backward compatibility alias
+function updateStarPlacements(pageIndex) {
+  // no-op for single slide marquee
 }
 
 // Global click listener
+
+
+// ── Placement Key Metrics Dynamic Animation & Sync ──
+function initPlacementsDynamicKpi() {
+  const kpiEl = document.getElementById('siet-kpi-interactive-area');
+  if (!kpiEl) return;
+
+  // Trigger counters when scrolled into view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.js-counter').forEach(el => {
+          if (typeof animateCounter === 'function') {
+            animateCounter(el);
+          }
+        });
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.15 });
+  observer.observe(kpiEl);
+}
+
+// ── Official Placement Record Sheets Modal Logic ──
+const placementRecordSheets = [
+  {
+    title: 'Sheet 1: Prime Platinum & High Diamond Offers (₹10 – ₹33 LPA)',
+    desc: 'Contains S.No 1 to 62: Gowtham G (Trilogy ₹33L), Siv Raam Krishnan (Trilogy ₹33L), Increff (₹22L · 5 Offers), Presidio, Zenx AI, Hyperverge, TCS, Aivar Innovation, Mr. Cooper, Reltio, Linarc, Centillion Labs, AboveCloud9.ai, etc.',
+    src: '/brand/placement-records/sheet-1-prime-offers-10-33-lpa.jpg'
+  },
+  {
+    title: 'Sheet 2: Dazzling Diamond & Precious Pearl (₹6 – ₹10 LPA & ₹4 – ₹6 LPA)',
+    desc: 'Contains S.No 63 to 125 & 126 to 189: Rently, Vymo, Adaya.ai, Kovai.co, TCS, Grootan Tech, Centillion Labs, Tarka Labs, Abluva, Innoventees, Digiledge, Zoho, Ge Ram Soft Tech, InCorp India, Vendasta, Appviewx, Ziffity, Movidu, etc.',
+    src: '/brand/placement-records/sheet-2-diamond-offers-6-10-lpa.jpg'
+  },
+  {
+    title: 'Sheet 3: Precious Pearl Offers Part 1 (₹4 – ₹6 LPA · 226 Offers)',
+    desc: 'Contains S.No 126 to 253: Zoho, Responsive.io, Sekel, Intimetec, Sedin Tech, Profitstory.ai, Divum, Visai Labs, Bluebird, Livetag Tech, Arcadia, Novintix, Suntec, Wiemera, Dalmia Cements, Ajira, Izeon, Pentl.ai, Softcell, etc.',
+    src: '/brand/placement-records/sheet-3-pearl-offers-part-1.jpg'
+  },
+  {
+    title: 'Sheet 4: Precious Pearl Offers Part 2 (₹4 – ₹6 LPA · 226 Offers)',
+    desc: 'Contains S.No 380 to 507: Jeyam Auto, Popular Systems, Benco Thermal, Aggregate Intelligence, PRS Semiconductor, Brysa, Freedom Software, Tihan IIT, Vinpro Tech, Hirotec, Bull Machines, Middel East Fuji, Swish, Gomathy Engg, Crux Medical, LECS, etc.',
+    src: '/brand/placement-records/sheet-4-pearl-offers-part-2.jpg'
+  },
+  {
+    title: 'Sheet 5: Recruiter Summary & Multi-Offer Tiers (213 Companies Visited)',
+    desc: 'Contains S.No 444 to 507 & Grand Totals: Addictronz, G5 Switchgear, Zealev, Genn Automation, Levim Biotech, Hiox Software, Mindnotix, RND Soft, Adz4Need, Webnox, Virtual Tech Gurus, Sacra, Sartorius, MyLapay, Ecometrix, Flowtrack, NCR Alteos, etc.',
+    src: '/brand/placement-records/sheet-5-recruitment-records-213-companies.jpg'
+  }
+];
+
+let activeRecordSheetIdx = 0;
+
+function switchPlacementRecordSheet(idx) {
+  idx = (idx + placementRecordSheets.length) % placementRecordSheets.length;
+  activeRecordSheetIdx = idx;
+  const sheet = placementRecordSheets[idx];
+
+  const modal = document.getElementById('siet-records-modal');
+  if (!modal) return;
+
+  const titleEl = document.getElementById('siet-modal-sheet-title');
+  const descEl = document.getElementById('siet-modal-sheet-desc');
+  const imgEl = document.getElementById('siet-modal-active-img');
+  const newtabEl = document.getElementById('siet-modal-open-newtab');
+  const counterEl = document.getElementById('siet-modal-sheet-counter');
+
+  if (titleEl) titleEl.textContent = sheet.title;
+  if (descEl) descEl.textContent = sheet.desc;
+  if (imgEl) {
+    imgEl.style.opacity = '0.35';
+    imgEl.src = sheet.src;
+    imgEl.onload = () => { imgEl.style.opacity = '1'; };
+  }
+  if (newtabEl) newtabEl.href = sheet.src;
+  if (counterEl) counterEl.textContent = `Sheet ${idx + 1} of ${placementRecordSheets.length}`;
+
+  document.querySelectorAll('.siet-records-modal-tab').forEach((tab, i) => {
+    tab.classList.toggle('is-active', i === idx);
+  });
+}
+
 document.addEventListener('click', (e) => {
-  // 1. Year tabs & Graph column clicks
+  // Placement Stat Card Click Handler (filters superstars marquee)
+  const kpiCard = e.target.closest('.js-kpi-card');
+  if (kpiCard) {
+    const filterTier = kpiCard.dataset.filter;
+
+    // Update active KPI card state
+    document.querySelectorAll('.js-kpi-card').forEach(c => c.classList.remove('is-active'));
+    kpiCard.classList.add('is-active');
+
+    // If card corresponds to a tier, filter the superstars marquee above
+    if (filterTier) {
+      if (filterTier === 'all') {
+        const allTab = document.querySelector('.siet-sp-filter-tab[data-tier="all"]');
+        if (allTab) allTab.click();
+      } else {
+        const matchingTab = document.querySelector(`.siet-sp-filter-tab[data-tier="${filterTier}"]`);
+        if (matchingTab) {
+          matchingTab.click();
+        } else {
+          updateSuperstarsMarquee(filterTier);
+        }
+      }
+    }
+    return;
+  }
+
+  // Open Placement Record Sheet Modal
+  const openSheetBtn = e.target.closest('.js-open-records-sheet');
+  if (openSheetBtn) {
+    const sheetIdx = parseInt(openSheetBtn.dataset.sheet || '0', 10);
+    const modal = document.getElementById('siet-records-modal');
+    if (modal) {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      switchPlacementRecordSheet(sheetIdx);
+    }
+    return;
+  }
+
+  // Close Placement Record Sheet Modal
+  if (e.target.closest('.js-close-records-modal')) {
+    const modal = document.getElementById('siet-records-modal');
+    if (modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    return;
+  }
+
+  // Switch Sheet via Tabs
+  const modalTab = e.target.closest('.siet-records-modal-tab');
+  if (modalTab) {
+    const idx = parseInt(modalTab.dataset.sheetIdx || '0', 10);
+    switchPlacementRecordSheet(idx);
+    return;
+  }
+
+  // Prev / Next Buttons
+  if (e.target.closest('#siet-modal-prev-btn')) {
+    switchPlacementRecordSheet(activeRecordSheetIdx - 1);
+    return;
+  }
+  if (e.target.closest('#siet-modal-next-btn')) {
+    switchPlacementRecordSheet(activeRecordSheetIdx + 1);
+    return;
+  }
+
+  // 1. Banner Modal Lightbox: Open & Close
+  if (e.target.closest('.js-open-banner-modal')) {
+    const modal = document.getElementById('siet-banner-modal');
+    if (modal) {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    return;
+  }
+  if (e.target.closest('.js-close-banner-modal')) {
+    const modal = document.getElementById('siet-banner-modal');
+    if (modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    return;
+  }
+
+  // 2. Superstar Tier Filter Tabs
+  const ftab = e.target.closest('.siet-sp-filter-tab');
+  if (ftab) {
+    const tier = ftab.dataset.tier;
+    if (!tier) return;
+    document.querySelectorAll('.siet-sp-filter-tab').forEach(t => {
+      const isMatch = t.dataset.tier === tier;
+      t.classList.toggle('is-active', isMatch);
+      if (isMatch) {
+        if (!t.querySelector('.siet-sp-ftab-dot')) {
+          t.insertAdjacentHTML('afterbegin', '<span class="siet-sp-ftab-dot"></span> ');
+        }
+      } else {
+        const dot = t.querySelector('.siet-sp-ftab-dot');
+        if (dot) dot.remove();
+      }
+    });
+    updateSuperstarsMarquee(tier);
+    return;
+  }
+
+
+  // 5. Year tabs & Graph column clicks
   const yearTarget = e.target.closest('.siet-tmpl-ytab') || e.target.closest('.siet-chart-col-group');
   if (yearTarget) {
     const year = yearTarget.dataset.year;
@@ -6101,14 +6521,14 @@ document.addEventListener('click', (e) => {
       cg.classList.toggle('is-active', isMatch);
       const bg = cg.querySelector('.siet-chart-col-bg');
       if (bg) {
-        bg.setAttribute('fill', isMatch ? 'rgba(0, 133, 74, 0.08)' : 'transparent');
+        bg.setAttribute('fill', isMatch ? 'rgba(255, 255, 255, 0.14)' : 'transparent');
+        bg.setAttribute('stroke', isMatch ? 'rgba(243, 197, 21, 0.5)' : 'none');
         bg.setAttribute('stroke', isMatch ? 'rgba(0, 133, 74, 0.25)' : 'none');
         bg.setAttribute('stroke-width', isMatch ? '1.5' : '0');
       }
       const valTxt = cg.querySelectorAll('text');
       if (valTxt.length >= 3) {
-        // highlight active year text
-        valTxt[2].setAttribute('fill', isMatch ? '#00281b' : '#507060');
+        valTxt[2].setAttribute('fill', isMatch ? '#ffffff' : 'rgba(255, 255, 255, 0.8)');
         valTxt[2].setAttribute('font-weight', isMatch ? '800' : '700');
       }
     });
@@ -6153,21 +6573,15 @@ document.addEventListener('click', (e) => {
     }
     return;
   }
+});
 
-  // 2. Star placements arrows
-  if (e.target.closest('#siet-sp-prev')) {
-    updateStarPlacements(currentStarPage - 1);
-    return;
-  }
-  if (e.target.closest('#siet-sp-next')) {
-    updateStarPlacements(currentStarPage + 1);
-    return;
-  }
-
-  // 3. Star placements dashes
-  const dash = e.target.closest('.siet-sp-dash');
-  if (dash && dash.dataset.page !== undefined) {
-    updateStarPlacements(parseInt(dash.dataset.page, 10));
-    return;
+// Escape key to close modal
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const modal = document.getElementById('siet-banner-modal');
+    if (modal && modal.style.display !== 'none') {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
   }
 });
