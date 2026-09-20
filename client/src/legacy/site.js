@@ -3457,57 +3457,1985 @@ function departmentPage(dept) {
   }).join('')}</article></div></main>`;
 }
 
+const internalPageData = {
+  "campus-life": {
+    "category": "Campus Experience",
+    "breadcrumbs": [
+      "Campus",
+      "Campus Life"
+    ],
+    "heroPills": [
+      {
+        "icon": "leaf",
+        "label": "45-Acre Eco Campus"
+      },
+      {
+        "icon": "runner",
+        "label": "26+ Sports & Clubs"
+      },
+      {
+        "icon": "wifi",
+        "label": "High-Speed Wi-Fi"
+      },
+      {
+        "icon": "grad",
+        "label": "Autonomous Hub"
+      }
+    ],
+    "title": "Student Life & Campus Community",
+    "subtitle": "A vibrant 45-acre eco-friendly smart campus empowering holistic leadership, cultural dynamism, and engineering breakthroughs.",
+    "overviewLead": "At Sri Shakthi, campus life is an enriching journey that extends far beyond lecture halls and laboratories. Our vibrant 45-acre eco-friendly campus in Coimbatore fosters a multidisciplinary environment where academic rigor meets cultural creativity, competitive athletics, maker culture, and strong community bonds.",
+    "featuredImage": "/brand/campus-life/student-life.png",
+    "featuredBadge": "45-Acre Green Campus",
+    "featuredStat": "5,000+ Engaged Learners",
+    "pillars": [
+      {
+        "icon": "masks",
+        "tag": "VIBRANT COMMUNITY",
+        "title": "Student Life & Cultural Guilds",
+        "desc": "Over 26 student-led clubs, cultural fests, music ensembles, drama troupes, and hackathons create an active atmosphere for personal expression, leadership, and lifelong friendships."
+      },
+      {
+        "icon": "leaf",
+        "tag": "SUSTAINABLE LIVING",
+        "title": "45-Acre Eco-Conscious Campus",
+        "desc": "Designed with extensive botanical gardens, solar energy installations, rainwater harvesting lakes, and pedestrian-first walkways promoting wellness and environmental mindfulness."
+      },
+      {
+        "icon": "runner",
+        "tag": "CHAMPIONSHIP ATHLETICS",
+        "title": "Sports & Recreational Arena",
+        "desc": "Olympic-dimension outdoor stadium, 400m synthetic running track, floodlit basketball and tennis courts, plus indoor badminton arenas cultivating peak physical fitness and team spirit."
+      },
+      {
+        "icon": "cube",
+        "tag": "MAKER CULTURE",
+        "title": "24/7 Innovation & Ideation Hubs",
+        "desc": "Collaborative maker spaces, student startup incubators, and high-performance computing studios where bold engineering concepts transform into tangible prototypes."
+      }
+    ],
+    "runningGallery": [
+      {
+        "img": "/brand/campus-life/student-life.png",
+        "title": "Dynamic Student Commons",
+        "tag": "COMMUNITY",
+        "caption": "Lively community lounges and collaborative open-air study areas."
+      },
+      {
+        "img": "/brand/campus-life/cultural.png",
+        "title": "Cultural Celebrations & Fests",
+        "tag": "CULTURE",
+        "caption": "Annual mega fests featuring national music artists and performing arts ensembles."
+      },
+      {
+        "img": "/brand/campus-life/innovation.png",
+        "title": "Maker Spaces & Labs",
+        "tag": "INNOVATION",
+        "caption": "Round-the-clock technical incubation workspaces and prototype hardware suites."
+      },
+      {
+        "img": "/brand/campus-life/learning-growth.png",
+        "title": "Collaborative Learning Hub",
+        "tag": "ACADEMICS",
+        "caption": "Interactive study commons and multidisciplinary peer mentoring forums."
+      },
+      {
+        "img": "/brand/campus-life/sports-team.png",
+        "title": "Varsity Athletic Champions",
+        "tag": "ATHLETICS",
+        "caption": "Championship teams competing in regional and national university meets."
+      },
+      {
+        "img": "/brand/campus-arch.jpg",
+        "title": "45-Acre Eco Campus",
+        "tag": "GREEN SPACES",
+        "caption": "Lush botanical gardens, wide avenues, and eco-sustainable smart architecture."
+      },
+      {
+        "img": "/brand/events/event-sangamam-clean.jpg",
+        "title": "Sangamam Cultural Fest",
+        "tag": "FESTIVAL",
+        "caption": "A celebration of tradition, contemporary performing arts, and collegiate harmony."
+      },
+      {
+        "img": "/brand/techpark-hd.jpg",
+        "title": "Tech Park Academic Complex",
+        "tag": "CAMPUS",
+        "caption": "Modern research hubs and collaborative digital centers."
+      }
+    ],
+    "gallery": [
+      {
+        "img": "/brand/campus-life/student-life.png",
+        "title": "Dynamic Student Commons",
+        "caption": "Lively community lounges and collaborative open-air study areas."
+      },
+      {
+        "img": "/brand/campus-life/cultural.png",
+        "title": "Cultural Celebrations & Fests",
+        "caption": "Annual mega fests featuring national music artists and performing arts ensembles."
+      },
+      {
+        "img": "/brand/campus-life/innovation.png",
+        "title": "Maker Spaces & Labs",
+        "caption": "Round-the-clock technical incubation workspaces and prototype hardware suites."
+      },
+      {
+        "img": "/brand/campus-life/learning-growth.png",
+        "title": "Collaborative Learning Hub",
+        "caption": "Interactive study commons and multidisciplinary peer mentoring forums."
+      }
+    ],
+    "metrics": [
+      {
+        "val": "45",
+        "suffix": "+",
+        "label": "Acres of Green Campus"
+      },
+      {
+        "val": "26",
+        "suffix": "+",
+        "label": "Active Student Clubs"
+      },
+      {
+        "val": "100",
+        "suffix": "+",
+        "label": "Annual Campus Events"
+      },
+      {
+        "val": "100",
+        "suffix": "%",
+        "label": "Ragging-Free Safe Haven"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Annual Cultural Festival - DHRUVA",
+        "desc": "Inter-college mega celebration featuring music, choreography, drama, fashion, and national celebrity performances."
+      },
+      {
+        "title": "Student Leadership Council",
+        "desc": "Elected student body representing learner interests, organizing outreach, and spearheading peer mentorship programs."
+      },
+      {
+        "title": "Multi-Cuisine Food Courts",
+        "desc": "Hygienic cafeterias serving fresh South Indian, North Indian, and continental options with strict quality monitoring."
+      },
+      {
+        "title": "Campus Security & Surveillance",
+        "desc": "Round-the-clock security personnel, 250+ CCTV cameras, and biometric access points guaranteeing 100% safety."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the daily schedule like on campus?",
+        "a": "Academic sessions typically run from 8:45 AM to 4:45 PM, followed by club activities, sports practices, and library study hours until 7:30 PM."
+      },
+      {
+        "q": "Are there mentorship programs for freshers?",
+        "a": "Yes, every first-year student is assigned a senior student mentor and a dedicated faculty counselor for personalized guidance throughout their journey."
+      }
+    ],
+    "ctaTitle": "Ready to Experience Life at Sri Shakthi?",
+    "ctaSubtitle": "Schedule a guided campus tour or connect with our student ambassadors today."
+  },
+  "facilities": {
+    "category": "Infrastructure",
+    "breadcrumbs": [
+      "Campus",
+      "Facilities"
+    ],
+    "heroPills": [
+      {
+        "icon": "tech",
+        "label": "50+ Specialized Labs"
+      },
+      {
+        "icon": "wifi",
+        "label": "1 Gbps Dedicated Fiber"
+      },
+      {
+        "icon": "grad",
+        "label": "1,500+ Compute Nodes"
+      },
+      {
+        "icon": "sun",
+        "label": "100% Green Energy"
+      }
+    ],
+    "title": "Modern Facilities & Advanced Labs",
+    "subtitle": "Engineered for high-impact hands-on learning with next-gen labs, smart seminar halls, and high-speed campus fiber connectivity.",
+    "overviewLead": "Sri Shakthi provides cutting-edge research facilities, world-class compute centers, and collaborative academic infrastructure that prepare aspiring engineers for modern industry environments and global breakthroughs.",
+    "featuredImage": "/brand/techpark-hd.jpg",
+    "featuredBadge": "Next-Gen Research Labs",
+    "featuredStat": "1 Gbps High-Speed Net",
+    "pillars": [
+      {
+        "icon": "tech",
+        "tag": "HIGH PERFORMANCE",
+        "title": "High-Performance Computing & AI",
+        "desc": "Dedicated GPU clusters for AI/ML training, computer vision models, data analytics, and enterprise database simulations."
+      },
+      {
+        "icon": "grad",
+        "tag": "INTERACTIVE",
+        "title": "Digital Smart Classrooms",
+        "desc": "Acoustically tuned lecture halls equipped with interactive smart panels, hybrid streaming, and ergonomic seating."
+      },
+      {
+        "icon": "cube",
+        "tag": "R&D HUBS",
+        "title": "Central Research Facility",
+        "desc": "Precision analytical instruments, embedded hardware analyzers, RF testbeds, and rapid 3D prototyping suites."
+      },
+      {
+        "icon": "masks",
+        "tag": "AUDITORIUMS",
+        "title": "Convention & Seminar Halls",
+        "desc": "Fully air-conditioned 1,200-capacity auditorium and tiered symposium chambers for global conferences."
+      }
+    ],
+    "runningGallery": [
+      {
+        "img": "/brand/techpark-hd.jpg",
+        "title": "Tech Park Academic Complex",
+        "tag": "COMPLEX",
+        "caption": "Flagship academic infrastructure housing modern tech labs and departments."
+      },
+      {
+        "img": "/brand/special-labs/lab-ai-hd.jpg",
+        "title": "Artificial Intelligence Lab",
+        "tag": "AI & ML",
+        "caption": "High-compute workstations configured for machine learning and AI research."
+      },
+      {
+        "img": "/brand/special-labs/lab-robotics-hd.jpg",
+        "title": "Robotics & Automation Suite",
+        "tag": "HARDWARE",
+        "caption": "Industrial robotic arms, mechatronics stations, and autonomous kits."
+      },
+      {
+        "img": "/brand/special-labs/lab-iot-hd.jpg",
+        "title": "IoT & Embedded Systems Lab",
+        "tag": "EMBEDDED",
+        "caption": "Sensors, microcontrollers, and wireless development testbeds."
+      },
+      {
+        "img": "/brand/special-labs/lab-ar-vr-hd.jpg",
+        "title": "AR/VR Experiential Studio",
+        "tag": "SPATIAL",
+        "caption": "Virtual reality headsets and immersive metaverse application labs."
+      },
+      {
+        "img": "/brand/special-labs/lab-cyber-cloud-hd.jpg",
+        "title": "Cyber Security & Cloud Hub",
+        "tag": "SECURITY",
+        "caption": "Enterprise simulation network testbeds and vulnerability testing suites."
+      },
+      {
+        "img": "/brand/library-study-hall.jpg",
+        "title": "Central Knowledge Repository",
+        "tag": "LIBRARY",
+        "caption": "Digital cataloging, e-journals, and silent research lounges."
+      },
+      {
+        "img": "/brand/campus-arch.jpg",
+        "title": "Advanced Campus Framework",
+        "tag": "CAMPUS",
+        "caption": "Architecturally engineered facilities surrounded by green landscape."
+      }
+    ],
+    "gallery": [
+      {
+        "img": "/brand/techpark-hd.jpg",
+        "title": "Tech Park Academic Complex",
+        "caption": "Flagship academic infrastructure housing modern tech labs and departments."
+      },
+      {
+        "img": "/brand/special-labs/lab-ai-hd.jpg",
+        "title": "Artificial Intelligence Lab",
+        "caption": "High-compute workstations configured for machine learning and AI research."
+      },
+      {
+        "img": "/brand/special-labs/lab-robotics-hd.jpg",
+        "title": "Robotics & Automation Suite",
+        "caption": "Industrial robotic arms, mechatronics stations, and autonomous kits."
+      },
+      {
+        "img": "/brand/special-labs/lab-iot-hd.jpg",
+        "title": "IoT & Embedded Systems Lab",
+        "caption": "Sensors, microcontrollers, and wireless development testbeds."
+      }
+    ],
+    "metrics": [
+      {
+        "val": "50",
+        "suffix": "+",
+        "label": "Specialized Tech Labs"
+      },
+      {
+        "val": "1",
+        "suffix": " Gbps",
+        "label": "High-Speed Fiber Net"
+      },
+      {
+        "val": "1500",
+        "suffix": "+",
+        "label": "Modern Compute Nodes"
+      },
+      {
+        "val": "100",
+        "suffix": "%",
+        "label": "Power Backup & Solar"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Industry-Sponsored Centers of Excellence",
+        "desc": "Collaborative labs supported by leading tech giants for direct real-world skill development."
+      },
+      {
+        "title": "Campus-wide Gigabit Wi-Fi",
+        "desc": "Seamless high-throughput wireless coverage spanning hostels, classrooms, courtyards, and cafeterias."
+      },
+      {
+        "title": "Green Energy Infrastructure",
+        "desc": "Rooftop solar installations delivering sustainable power to labs and central computing infrastructure."
+      },
+      {
+        "title": "24/7 ATM & Banking Services",
+        "desc": "On-campus nationalized bank branch and multiple 24-hour ATM kiosks for student convenience."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can students access labs after regular college hours?",
+        "a": "Yes, project teams and research students have special access permissions for specialized labs up to 8:00 PM with faculty approval."
+      },
+      {
+        "q": "Is high-speed internet available in hostel rooms?",
+        "a": "Yes, both Wi-Fi access points and Ethernet ports are available throughout residential blocks."
+      }
+    ],
+    "ctaTitle": "Explore Our Advanced Research Facilities",
+    "ctaSubtitle": "Take a virtual tour or visit our research incubators and centers of excellence."
+  },
+  "hostel": {
+    "category": "Student Living",
+    "breadcrumbs": [
+      "Campus",
+      "Hostels"
+    ],
+    "heroPills": [
+      {
+        "icon": "home",
+        "label": "2,500+ Bed Capacity"
+      },
+      {
+        "icon": "shield",
+        "label": "24/7 Warden & Security"
+      },
+      {
+        "icon": "cup",
+        "label": "Nutritious Dining"
+      },
+      {
+        "icon": "leaf",
+        "label": "Green Surroundings"
+      }
+    ],
+    "title": "Hostel Accommodation & Student Residences",
+    "subtitle": "Secure, clean, and comfortable residential blocks providing a serene study atmosphere, nutritious dining, and round-the-clock security.",
+    "overviewLead": "Our campus hostels are a genuine home away from home. Designed for safety, camaraderie, and peaceful study, residences feature spacious rooms, modern hygienic dining halls, dedicated recreation corners, and 24/7 healthcare support.",
+    "featuredImage": "/brand/campus-arch.jpg",
+    "featuredBadge": "Separate Boys & Girls Blocks",
+    "featuredStat": "2,500+ Resident Scholars",
+    "pillars": [
+      {
+        "icon": "home",
+        "tag": "COMFORT",
+        "title": "Furnished Living Quarters",
+        "desc": "Spacious 2, 3, and 4-sharing rooms equipped with ergonomic study desks, wardrobes, and private balconies."
+      },
+      {
+        "icon": "cup",
+        "tag": "NUTRITION",
+        "title": "Hygienic Dining Halls",
+        "desc": "FSSAI-certified central kitchens serving balanced, appetizing vegetarian and non-vegetarian menus."
+      },
+      {
+        "icon": "book",
+        "tag": "ACADEMICS",
+        "title": "Resident Study Lounges",
+        "desc": "Quiet late-night study halls, TV lounges, indoor table tennis, and chess recreation spaces."
+      },
+      {
+        "icon": "shield",
+        "tag": "SECURITY",
+        "title": "Safety & Health Protocol",
+        "desc": "Round-the-clock resident wardens, female security staff for girls blocks, and on-call medical doctors."
+      }
+    ],
+    "runningGallery": [
+      {
+        "img": "/brand/campus-arch.jpg",
+        "title": "Residential Complex & Courtyard",
+        "tag": "HOSTEL",
+        "caption": "Lush residential avenues with quiet courtyards for relaxation."
+      },
+      {
+        "img": "/brand/campus-life/student-life.png",
+        "title": "Student Community Lounges",
+        "tag": "LIVING",
+        "caption": "Dedicated areas for peer study, group discussions, and unwinding."
+      },
+      {
+        "img": "/brand/library-study-hall.jpg",
+        "title": "Late Evening Study Hall",
+        "tag": "STUDY",
+        "caption": "Quiet air-conditioned reading halls open late for resident boarders."
+      },
+      {
+        "img": "/brand/campus-life/cultural.png",
+        "title": "Hostel Day & Cultural Dinners",
+        "tag": "FELLOWSHIP",
+        "caption": "Annual hostel night with traditional banquets and musical entertainment."
+      },
+      {
+        "img": "/brand/campus-life/learning-growth.png",
+        "title": "Resident Mentoring Circles",
+        "tag": "SUPPORT",
+        "caption": "Senior student guides and faculty residential advisors on campus."
+      },
+      {
+        "img": "/brand/campus-life/campus-generated.png",
+        "title": "Serene Residential Grounds",
+        "tag": "GREENS",
+        "caption": "Peaceful walking paths and tree-canopied residential surroundings."
+      },
+      {
+        "img": "/brand/campus-life/sports.png",
+        "title": "Evening Recreational Playgrounds",
+        "tag": "SPORTS",
+        "caption": "Courts adjacent to hostels for evening volleyball and badminton."
+      },
+      {
+        "img": "/brand/techpark-hd.jpg",
+        "title": "Secure Gated Campus Zone",
+        "tag": "SECURITY",
+        "caption": "Biometric entry checkpoints and round-the-clock professional security."
+      }
+    ],
+    "gallery": [
+      {
+        "img": "/brand/campus-arch.jpg",
+        "title": "Residential Complex & Courtyard",
+        "caption": "Lush residential avenues with quiet courtyards for relaxation."
+      },
+      {
+        "img": "/brand/campus-life/student-life.png",
+        "title": "Student Community Lounges",
+        "caption": "Dedicated areas for peer study, group discussions, and unwinding."
+      },
+      {
+        "img": "/brand/library-study-hall.jpg",
+        "title": "Late Evening Study Hall",
+        "caption": "Quiet air-conditioned reading halls open late for resident boarders."
+      },
+      {
+        "img": "/brand/campus-life/cultural.png",
+        "title": "Hostel Day & Cultural Dinners",
+        "caption": "Annual hostel night with traditional banquets and musical entertainment."
+      }
+    ],
+    "metrics": [
+      {
+        "val": "2500",
+        "suffix": "+",
+        "label": "Resident Capacity"
+      },
+      {
+        "val": "4",
+        "suffix": " Times",
+        "label": "Nutritious Meals Daily"
+      },
+      {
+        "val": "24",
+        "suffix": "/7",
+        "label": "Security & Wardens"
+      },
+      {
+        "val": "100",
+        "suffix": "%",
+        "label": "Solar Water Heating"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "RO Purified Drinking Water",
+        "desc": "Multi-stage reverse osmosis water purifiers with chiller units installed on every floor."
+      },
+      {
+        "title": "Commercial Laundry Services",
+        "desc": "Fast, automated laundry and iron facilities available within the residential complex."
+      },
+      {
+        "title": "High-Speed Wi-Fi Connectivity",
+        "desc": "Dedicated hostel network routers ensuring uninterrupted project research and streaming."
+      },
+      {
+        "title": "Fitness Gym in Residence",
+        "desc": "Modern fitness equipment and yoga spaces exclusively accessible to resident boarders."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the procedure to apply for hostel accommodation?",
+        "a": "Students can opt for hostel residency during the admission counseling process. Room allotment is processed on a first-come, first-served basis."
+      },
+      {
+        "q": "What are the hostel in-time rules?",
+        "a": "All students are required to report to their respective blocks by 7:30 PM. Outings require parental authorization via our digital parent portal."
+      }
+    ],
+    "ctaTitle": "Apply for Residential Accommodation",
+    "ctaSubtitle": "Secure your comfortable stay at Sri Shakthi residences with world-class facilities and caring wardens."
+  },
+  "transport": {
+    "category": "Logistics & Safety",
+    "breadcrumbs": [
+      "Campus",
+      "Transport"
+    ],
+    "heroPills": [
+      {
+        "icon": "bus",
+        "label": "60+ Modern Bus Fleet"
+      },
+      {
+        "icon": "compass",
+        "label": "50+ Commute Routes"
+      },
+      {
+        "icon": "shield",
+        "label": "GPS Real-Time Tracking"
+      },
+      {
+        "icon": "check",
+        "label": "Certified Drivers"
+      }
+    ],
+    "title": "Comprehensive Transport Network",
+    "subtitle": "Connecting students and faculty across Coimbatore, Tirupur, Pollachi, and Palakkad with 60+ modern GPS-tracked buses.",
+    "overviewLead": "Sri Shakthi operates one of the most comprehensive collegiate bus transit networks in Western Tamil Nadu. Our fleet of 60+ GPS-tracked vehicles ensures punctual, comfortable, and safe daily transportation for thousands of day scholars.",
+    "featuredImage": "/brand/campus-life/transport-fleet.jpg",
+    "featuredBadge": "60+ GPS Bus Fleet",
+    "featuredStat": "50+ Daily Routes",
+    "pillars": [
+      {
+        "icon": "clock",
+        "tag": "PUNCTUALITY",
+        "title": "Punctual Daily Service",
+        "desc": "Strictly scheduled morning arrivals and evening departures synchronized with academic timetables."
+      },
+      {
+        "icon": "compass",
+        "tag": "TELEMATICS",
+        "title": "Real-Time GPS Tracking",
+        "desc": "Mobile tracking app allowing students and parents to view bus coordinates and stop arrival times."
+      },
+      {
+        "icon": "shield",
+        "tag": "SAFETY",
+        "title": "Rigorous Safety Compliance",
+        "desc": "Speed governors, emergency exits, first-aid kits, and regular RTO fitness inspections on every vehicle."
+      },
+      {
+        "icon": "pin",
+        "tag": "COVERAGE",
+        "title": "Broad Regional Coverage",
+        "desc": "Key stops across Coimbatore city, Annur, Avinashi, Palladam, Tirupur, and neighboring arterial corridors."
+      }
+    ],
+    "runningGallery": [
+      {
+        "img": "/brand/campus-life/transport-fleet.jpg",
+        "title": "Sri Shakthi Dedicated Bus Fleet",
+        "tag": "FLEET",
+        "caption": "Modern, well-maintained bus fleet parked at the central boarding depot."
+      },
+      {
+        "img": "/brand/campus-arch.jpg",
+        "title": "Main Terminal & Boarding Bay",
+        "tag": "TERMINAL",
+        "caption": "Orderly, dedicated bays facilitating easy morning and evening transit."
+      },
+      {
+        "img": "/brand/campus-life/campus-generated.png",
+        "title": "Arrival & Departure Avenue",
+        "tag": "AVENUES",
+        "caption": "Wide, tree-lined roads providing smooth entry and exit for buses."
+      },
+      {
+        "img": "/brand/techpark-hd.jpg",
+        "title": "Campus Road Network",
+        "tag": "TRANSIT",
+        "caption": "Connected internal roadways linking academic complexes and transit points."
+      },
+      {
+        "img": "/brand/campus-life/student-life.png",
+        "title": "Punctual Day Scholar Commute",
+        "tag": "COMMUTE",
+        "caption": "Comfortable air-cushioned transit for thousands of day scholars daily."
+      },
+      {
+        "img": "/brand/campus-life/sports.png",
+        "title": "Campus Perimeter Connectivity",
+        "tag": "ROUTES",
+        "caption": "Seamless highway connectivity to Avinashi Road and L&T Bypass."
+      }
+    ],
+    "gallery": [
+      {
+        "img": "/brand/campus-life/transport-fleet.jpg",
+        "title": "Sri Shakthi Dedicated Bus Fleet",
+        "caption": "Modern, well-maintained bus fleet parked at the central boarding depot."
+      },
+      {
+        "img": "/brand/campus-arch.jpg",
+        "title": "Main Terminal & Boarding Bay",
+        "caption": "Orderly, dedicated bays facilitating easy morning and evening transit."
+      },
+      {
+        "img": "/brand/campus-life/campus-generated.png",
+        "title": "Arrival & Departure Avenue",
+        "caption": "Wide, tree-lined roads providing smooth entry and exit for buses."
+      },
+      {
+        "img": "/brand/techpark-hd.jpg",
+        "title": "Campus Road Network",
+        "caption": "Connected internal roadways linking academic complexes and transit points."
+      }
+    ],
+    "metrics": [
+      {
+        "val": "60",
+        "suffix": "+",
+        "label": "GPS-Tracked Buses"
+      },
+      {
+        "val": "50",
+        "suffix": "+",
+        "label": "Daily Commute Routes"
+      },
+      {
+        "val": "4000",
+        "suffix": "+",
+        "label": "Students Commuting Daily"
+      },
+      {
+        "val": "100",
+        "suffix": "%",
+        "label": "Certified Drivers"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Dedicated Special Buses for Evening Labs",
+        "desc": "Special transport runs for students participating in late lab hours, sports practice, or library study."
+      },
+      {
+        "title": "Experienced Driver Workforce",
+        "desc": "Drivers undergo bi-annual defensive driving refresher workshops and comprehensive health checkups."
+      },
+      {
+        "title": "Contactless Bus Passes",
+        "desc": "Digital QR-enabled smart cards allowing swift boarding without physical ticket hassles."
+      },
+      {
+        "title": "Emergency Roadside Assistance",
+        "desc": "Dedicated maintenance van and backup fleet on standby across all major commute sectors."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How can I register for the college bus facility?",
+        "a": "Transport registration opens at the start of each semester via the Student Portal or at the Transport Office counter in Admin Block."
+      },
+      {
+        "q": "Can day-scholars change their bus stop mid-year?",
+        "a": "Yes, stop change requests can be submitted to the Transport Coordinator with appropriate route seat verification."
+      }
+    ],
+    "ctaTitle": "Find Your Bus Route & Commute Timetable",
+    "ctaSubtitle": "Download the route map and get in touch with our transport cell for route allocations."
+  },
+  "sports": {
+    "category": "Athletics & Fitness",
+    "breadcrumbs": [
+      "Campus",
+      "Sports & Athletics"
+    ],
+    "heroPills": [
+      {
+        "icon": "trophy",
+        "label": "Championship Winning Teams"
+      },
+      {
+        "icon": "runner",
+        "label": "400m Athletic Track"
+      },
+      {
+        "icon": "medal",
+        "label": "Sports Scholarships"
+      },
+      {
+        "icon": "shield",
+        "label": "Certified Coaches"
+      }
+    ],
+    "title": "Sports, Physical Fitness & Games",
+    "subtitle": "Nurturing champions and promoting physical fitness with Olympic-standard tracks, multi-sport courts, and professional coaching.",
+    "overviewLead": "Physical fitness and team sports form a cornerstone of character development at Sri Shakthi. From zonal championships to all-India inter-university trophies, our athletes consistently bring pride to the institution.",
+    "featuredImage": "/brand/campus-life/sports-team.png",
+    "featuredBadge": "Championship Teams",
+    "featuredStat": "15+ Sports Disciplines",
+    "pillars": [
+      {
+        "icon": "runner",
+        "tag": "OUTDOOR ARENA",
+        "title": "Multi-Sport Outdoor Arena",
+        "desc": "Regulation cricket pitch, standard football ground, 400m athletic track, and synthetic basketball courts."
+      },
+      {
+        "icon": "trophy",
+        "tag": "INDOORS",
+        "title": "Indoor Sports Complex",
+        "desc": "Multi-court badminton stadium with wooden flooring, table tennis arena, and chess training center."
+      },
+      {
+        "icon": "cube",
+        "tag": "CONDITIONING",
+        "title": "Modern Conditioning Gym",
+        "desc": "Heavy resistance machines, cardio treadmills, cross-trainers, and qualified strength coaches."
+      },
+      {
+        "icon": "medal",
+        "tag": "SPONSORSHIP",
+        "title": "Tournament Sponsorship",
+        "desc": "Full institutional travel, accommodation, and kit support for university, zonal, and national championships."
+      }
+    ],
+    "runningGallery": [
+      {
+        "img": "/brand/campus-life/sports-team.png",
+        "title": "Varsity Champions & Squads",
+        "tag": "CHAMPIONS",
+        "caption": "Our victorious university championship teams across cricket, athletics, and basketball."
+      },
+      {
+        "img": "/brand/campus-life/sports.png",
+        "title": "Athletic Track & Field Grounds",
+        "tag": "TRACK",
+        "caption": "Olympic standard 400-meter track surrounded by green campus vistas."
+      },
+      {
+        "img": "/brand/events/event-sports-meet-clean.jpg",
+        "title": "Annual Sports Meet & Honors",
+        "tag": "SPORTS MEET",
+        "caption": "Grand athletic meet with march-past honors and championship trophy ceremonies."
+      },
+      {
+        "img": "/brand/campus-life/student-life.png",
+        "title": "Active Student Recreation",
+        "tag": "FITNESS",
+        "caption": "Daily evening recreational sports matches fostering collegiate camaraderie."
+      },
+      {
+        "img": "/brand/campus-life/cultural.png",
+        "title": "Sports Gala Celebrations",
+        "tag": "AWARDS",
+        "caption": "Intense inter-department sports tournaments and athletic awards ceremony."
+      },
+      {
+        "img": "/brand/campus-arch.jpg",
+        "title": "10+ Acre Sports Arena",
+        "tag": "STADIUM",
+        "caption": "Sprawling grass fields, floodlit basketball arenas, and fitness complexes."
+      }
+    ],
+    "gallery": [
+      {
+        "img": "/brand/campus-life/sports-team.png",
+        "title": "Varsity Champions & Squads",
+        "caption": "Our victorious university championship teams across cricket, athletics, and basketball."
+      },
+      {
+        "img": "/brand/campus-life/sports.png",
+        "title": "Athletic Track & Field Grounds",
+        "caption": "Olympic standard 400-meter track surrounded by green campus vistas."
+      },
+      {
+        "img": "/brand/campus-life/student-life.png",
+        "title": "Active Student Recreation",
+        "caption": "Daily evening recreational sports matches fostering collegiate camaraderie."
+      },
+      {
+        "img": "/brand/campus-life/cultural.png",
+        "title": "Annual Sports Day Celebrations",
+        "caption": "Intense inter-department sports tournaments and track awards ceremony."
+      }
+    ],
+    "metrics": [
+      {
+        "val": "10",
+        "suffix": "+",
+        "label": "Acres Sports Arena"
+      },
+      {
+        "val": "45",
+        "suffix": "+",
+        "label": "State & Zonal Trophies"
+      },
+      {
+        "val": "15",
+        "suffix": "+",
+        "label": "Sport Disciplines"
+      },
+      {
+        "val": "100",
+        "suffix": "%",
+        "label": "Sports Scholarships"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Annual Inter-College Sports Fest",
+        "desc": "Welcomes 80+ collegiate teams from across southern states for high-stakes athletic showdowns."
+      },
+      {
+        "title": "Special Sports Quota & Fee Concessions",
+        "desc": "Generous tuition fee waivers and sports kits awarded to state and national level medalists."
+      },
+      {
+        "title": "Floodlit Evening Sports Facilities",
+        "desc": "Modern LED floodlighting enabling extended practice matches after regular classroom hours."
+      },
+      {
+        "title": "Physiotherapy & Sports Rehab",
+        "desc": "Immediate medical assistance and injury rehabilitation support for competing athletes."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Are beginner coaching classes available for students?",
+        "a": "Yes, our Department of Physical Education conducts beginner sessions in badminton, cricket, volleyball, and yoga every morning and evening."
+      },
+      {
+        "q": "What sports quota scholarships are offered?",
+        "a": "Students representing state or national tournaments receive up to 100% tuition and hostel fee waivers based on performance."
+      }
+    ],
+    "ctaTitle": "Join the Champion Sri Shakthi Sports Squad",
+    "ctaSubtitle": "Connect with our physical directors to attend trials and varsity team selections."
+  },
+  "clubs": {
+    "category": "Co-Curriculars",
+    "breadcrumbs": [
+      "Campus",
+      "Student Clubs"
+    ],
+    "heroPills": [
+      {
+        "icon": "code",
+        "label": "26+ Student Clubs"
+      },
+      {
+        "icon": "masks",
+        "label": "1,800+ Active Members"
+      },
+      {
+        "icon": "globe",
+        "label": "National Chapters"
+      },
+      {
+        "icon": "star",
+        "label": "Annual Club Grants"
+      }
+    ],
+    "title": "Student Clubs & Technical Societies",
+    "subtitle": "Over 26 student-governed technical, cultural, social, and literary clubs providing platforms to lead, code, create, and inspire.",
+    "overviewLead": "Clubs at Sri Shakthi are vibrant launchpads where students turn passions into projects, discover collaborative leadership, organize nationwide hackathons, and forge lifelong creative connections.",
+    "featuredImage": "/brand/campus-life/clubs.png",
+    "featuredBadge": "26+ Student-Run Clubs",
+    "featuredStat": "1,800+ Active Members",
+    "pillars": [
+      {
+        "icon": "code",
+        "tag": "INNOVATION",
+        "title": "Technical Innovations Clubs",
+        "desc": "Coding clubs, AI research circles, IEEE student branch, robotics consortium, and web development guilds."
+      },
+      {
+        "icon": "masks",
+        "tag": "PERFORMING ARTS",
+        "title": "Cultural & Performing Arts",
+        "desc": "Music bands, Western & classical dance troupes, street theatre societies, and fine art communities."
+      },
+      {
+        "icon": "book",
+        "tag": "DISCOURSE",
+        "title": "Literary & Public Speaking",
+        "desc": "Debate society, Model United Nations (MUN) delegation, English quiz club, and Tamil Mandram."
+      },
+      {
+        "icon": "leaf",
+        "tag": "COMMUNITY",
+        "title": "Social Outreach & Green Clubs",
+        "desc": "Rotaract Club, Eco-warriors initiative, community health drives, and village educational programs."
+      }
+    ],
+    "runningGallery": [
+      {
+        "img": "/brand/campus-life/clubs.png",
+        "title": "Club Exhibitions & Project Demos",
+        "tag": "CLUBS",
+        "caption": "Student societies demonstrating live hardware and software innovations."
+      },
+      {
+        "img": "/brand/campus-life/cultural.png",
+        "title": "Music & Performing Arts Ensemble",
+        "tag": "CULTURAL",
+        "caption": "College orchestra and dance troupes performing live on festival stages."
+      },
+      {
+        "img": "/brand/campus-life/innovation.png",
+        "title": "Hackathons & Coding Challenges",
+        "tag": "TECH",
+        "caption": "Overnight hackathons and competitive programming challenges."
+      },
+      {
+        "img": "/brand/campus-life/learning-growth.png",
+        "title": "Student Seminars & Workshops",
+        "tag": "LEARNING",
+        "caption": "Peer-to-peer technical learning seminars and guest tech talks."
+      },
+      {
+        "img": "/brand/events/event-sangamam-clean.jpg",
+        "title": "Sangamam Cultural Guilds",
+        "tag": "ARTS",
+        "caption": "Cross-cultural arts celebrations uniting students across batches."
+      },
+      {
+        "img": "/brand/events/featured-technovate.jpg",
+        "title": "Technovate Flagship Symposium",
+        "tag": "FLAGSHIP",
+        "caption": "National level tech symposium with paper presentations and design expos."
+      }
+    ],
+    "gallery": [
+      {
+        "img": "/brand/campus-life/clubs.png",
+        "title": "Club Exhibitions & Showcase",
+        "caption": "Student societies demonstrating live hardware and software innovations."
+      },
+      {
+        "img": "/brand/campus-life/cultural.png",
+        "title": "Music & Performing Arts Ensemble",
+        "caption": "College orchestra and dance troupes performing live on festival stages."
+      },
+      {
+        "img": "/brand/campus-life/innovation.png",
+        "title": "Hackathon & Coding Competitions",
+        "caption": "Overnight hackathons and competitive programming challenges."
+      },
+      {
+        "img": "/brand/campus-life/learning-growth.png",
+        "title": "Student Seminars & Workshops",
+        "caption": "Peer-to-peer technical learning seminars and guest tech talks."
+      }
+    ],
+    "metrics": [
+      {
+        "val": "26",
+        "suffix": "+",
+        "label": "Active Student Clubs"
+      },
+      {
+        "val": "1800",
+        "suffix": "+",
+        "label": "Student Members"
+      },
+      {
+        "val": "75",
+        "suffix": "+",
+        "label": "Workshops & Hackathons"
+      },
+      {
+        "val": "12",
+        "suffix": "+",
+        "label": "National Chapters"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Annual Club Recruitment Expo",
+        "desc": "Freshers get direct hands-on demonstrations from every club at the beginning of the academic year."
+      },
+      {
+        "title": "Student Club Funding & Grants",
+        "desc": "The college allocates dedicated annual innovation budgets to fund student projects and external competitions."
+      },
+      {
+        "title": "Global Society Affiliations",
+        "desc": "Active affiliations with IEEE, ACM, CSI, IETE, SAE India, and Indian Society for Technical Education."
+      },
+      {
+        "title": "Leadership Certification",
+        "desc": "Club office bearers receive formal leadership certificates and credits toward their co-curricular honors."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How many clubs can a student join?",
+        "a": "Students are encouraged to join up to two clubs (one technical and one cultural or social) to maintain academic-life balance."
+      },
+      {
+        "q": "Can students start a new club?",
+        "a": "Yes, any group of 15+ students with a designated faculty mentor can submit a charter proposal to the Student Affairs Council."
+      }
+    ],
+    "ctaTitle": "Ignite Your Passion with Sri Shakthi Clubs",
+    "ctaSubtitle": "Explore our clubs directory or register online for the upcoming Club Induction Week."
+  },
+  "ncc": {
+    "category": "National Service",
+    "breadcrumbs": [
+      "Campus",
+      "NCC & NSS"
+    ],
+    "heroPills": [
+      {
+        "icon": "shield",
+        "label": "NCC Army Wing"
+      },
+      {
+        "icon": "star",
+        "label": "NSS Community Unit"
+      },
+      {
+        "icon": "medal",
+        "label": "B & C Certification"
+      },
+      {
+        "icon": "runner",
+        "label": "Direct SSB Mentorship"
+      }
+    ],
+    "title": "National Cadet Corps (NCC) & NSS Units",
+    "subtitle": "Fostering patriotism, unwavering discipline, leadership acumen, and selfless community service among youth.",
+    "overviewLead": "Our NCC and NSS detachments instill the highest standards of integrity, resilience, and nation-building. Under expert military instructors and dedicated officers, cadets undergo comprehensive training and lead impactful societal service missions.",
+    "featuredImage": "/brand/campus-life/ncc-cadets.jpg",
+    "featuredBadge": "Army Wing & NSS Unit",
+    "featuredStat": "100% C-Cert Pass Rate",
+    "pillars": [
+      {
+        "icon": "shield",
+        "tag": "DISCIPLINE",
+        "title": "NCC Military Training",
+        "desc": "Drill training, weapon handling, map reading, obstacle courses, and firing range certifications."
+      },
+      {
+        "icon": "star",
+        "tag": "CAMPS",
+        "title": "National Integration Camps",
+        "desc": "Selection to Republic Day Parade (RDC), Thal Sainik Camp (TSC), and National Youth Festivals."
+      },
+      {
+        "icon": "leaf",
+        "tag": "COMMUNITY",
+        "title": "NSS Community Outreach",
+        "desc": "Adopting local villages for sanitation awareness, literacy drives, and environmental conservation."
+      },
+      {
+        "icon": "compass",
+        "tag": "CAREERS",
+        "title": "Armed Forces Mentorship",
+        "desc": "Direct guidance from defense veterans for CDS, AFCAT, and SSB interview preparation."
+      }
+    ],
+    "runningGallery": [
+      {
+        "img": "/brand/campus-life/ncc-cadets.jpg",
+        "title": "NCC Cadets Ceremonial Parade",
+        "tag": "PARADE",
+        "caption": "Impeccable squad drill and saluting guard presented on campus."
+      },
+      {
+        "img": "/brand/campus-life/sports-team.png",
+        "title": "Physical Endurance & Drill Regimen",
+        "tag": "ENDURANCE",
+        "caption": "Early morning conditioning runs and obstacle course training."
+      },
+      {
+        "img": "/brand/campus-life/cultural.png",
+        "title": "NSS Community Service Drive",
+        "tag": "OUTREACH",
+        "caption": "Cadets and volunteers organizing rural sanitation and medical awareness camps."
+      },
+      {
+        "img": "/brand/campus-arch.jpg",
+        "title": "Independence Day Honors",
+        "tag": "PATRIOTISM",
+        "caption": "Patriotic ceremonial assembly at the main institutional flag mast."
+      },
+      {
+        "img": "/brand/campus-life/student-life.png",
+        "title": "National Integration Training",
+        "tag": "TRAINING",
+        "caption": "Comprehensive leadership modules building character and confidence."
+      },
+      {
+        "img": "/brand/campus-life/sports.png",
+        "title": "Field Training & Obstacle Courses",
+        "tag": "DRILL",
+        "caption": "Rigorous outdoor fitness and obstacle clearance regimens."
+      }
+    ],
+    "gallery": [
+      {
+        "img": "/brand/campus-life/ncc-cadets.jpg",
+        "title": "NCC Cadets Ceremonial Parade",
+        "caption": "Impeccable squad drill and saluting guard presented on campus."
+      },
+      {
+        "img": "/brand/campus-life/sports-team.png",
+        "title": "Physical Endurance & Drill Regimen",
+        "caption": "Early morning conditioning runs and obstacle course training."
+      },
+      {
+        "img": "/brand/campus-life/cultural.png",
+        "title": "NSS Community Service Drive",
+        "caption": "Cadets and volunteers organizing rural sanitation and medical awareness camps."
+      },
+      {
+        "img": "/brand/campus-arch.jpg",
+        "title": "Independence Day Honors",
+        "caption": "Patriotic ceremonial assembly at the main institutional flag mast."
+      }
+    ],
+    "metrics": [
+      {
+        "val": "160",
+        "suffix": "+",
+        "label": "Enrolled Cadets & Volunteers"
+      },
+      {
+        "val": "100",
+        "suffix": "%",
+        "label": "C-Certificate Pass Rate"
+      },
+      {
+        "val": "12",
+        "suffix": "+",
+        "label": "Rural Service Camps"
+      },
+      {
+        "val": "15",
+        "suffix": "+",
+        "label": "Blood Donation Drives"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Defense Services SSB Guidance",
+        "desc": "Dedicated training sessions that have helped our cadets secure direct commissions into the Indian Armed Forces."
+      },
+      {
+        "title": "Special Camps & Treks",
+        "desc": "Annual trekking expeditions, leadership camps, and disaster management rescue training modules."
+      },
+      {
+        "title": "Extensive Blood Donation Camps",
+        "desc": "Over 500 units of blood collected annually in collaboration with government hospital blood banks."
+      },
+      {
+        "title": "College Tree Plantation Mission",
+        "desc": "Over 2,000 saplings planted in and around neighboring villages by our active NSS volunteers."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What are the career benefits of obtaining an NCC C-Certificate?",
+        "a": "NCC \"C\" Certificate holders with high grades receive exemptions from written tests for defense officer selection exams like CDS and direct SSB calls."
+      },
+      {
+        "q": "Can both boys and girls enroll in NCC?",
+        "a": "Yes! Both boys and girls can enroll in our mixed-cadre Army wings with equal training and leadership opportunities."
+      }
+    ],
+    "ctaTitle": "Step Up to Serve the Nation",
+    "ctaSubtitle": "Join our prestigious NCC Army Wing or NSS volunteer force at the start of the academic term."
+  },
+  "academics": {
+    "category": "Academics",
+    "breadcrumbs": [
+      "Academics",
+      "Overview"
+    ],
+    "heroPills": [
+      {
+        "icon": "grad",
+        "label": "Autonomous Curriculum"
+      },
+      {
+        "icon": "tech",
+        "label": "14+ UG Disciplines"
+      },
+      {
+        "icon": "star",
+        "label": "NBA Accredited"
+      },
+      {
+        "icon": "check",
+        "label": "Choice-Based Credits"
+      }
+    ],
+    "title": "Academic Framework & Learning Model",
+    "subtitle": "Autonomous curriculum aligned with Industry 4.0, fostering experiential mastery, research-driven innovation, and global career readiness.",
+    "overviewLead": "Sri Shakthi combines autonomous academic freedom with strict academic excellence. Our curriculum offers choice-based credit systems, specialized minor tracks, experiential laboratory projects, and mentorship from distinguished faculty.",
+    "featuredImage": "/brand/curriculum-hero.jpg",
+    "featuredBadge": "Autonomous Anna Univ Affiliated",
+    "featuredStat": "14 UG & 7 PG Programs",
+    "pillars": [
+      {
+        "icon": "book",
+        "tag": "FLEXIBILITY",
+        "title": "Choice Based Credit System (CBCS)",
+        "desc": "Flexibility to choose cross-disciplinary electives, minor specializations, and honors degrees."
+      },
+      {
+        "icon": "tech",
+        "tag": "EXPERIENTIAL",
+        "title": "Project-Based Learning",
+        "desc": "Hands-on capstone projects every semester addressing real industrial and societal challenges."
+      },
+      {
+        "icon": "star",
+        "tag": "SCHOLARSHIP",
+        "title": "Distinguished Faculty",
+        "desc": "Accomplished professors with doctoral credentials, patents, and high-impact peer-reviewed publications."
+      },
+      {
+        "icon": "medal",
+        "tag": "GLOBAL CREDENTIALS",
+        "title": "Global Skill Certifications",
+        "desc": "Integrated AWS, Cisco, RedHat, and NVIDIA deep learning certifications embedded in the course."
+      }
+    ],
+    "runningGallery": [
+      {
+        "img": "/brand/curriculum-hero.jpg",
+        "title": "Interactive Lecture Environment",
+        "tag": "CLASSROOM",
+        "caption": "Technology-enabled classrooms supporting active group discussions and presentations."
+      },
+      {
+        "img": "/brand/library-study-hall.jpg",
+        "title": "Central Knowledge Repository",
+        "tag": "LIBRARY",
+        "caption": "Over 50,000 volumes, international journals, and digital research access."
+      },
+      {
+        "img": "/brand/special-labs/lab-ai-hd.jpg",
+        "title": "Supercomputing AI Lab",
+        "tag": "AI & ML",
+        "caption": "Dedicated NVIDIA GPU workstations for artificial intelligence projects."
+      },
+      {
+        "img": "/brand/techpark-hd.jpg",
+        "title": "Modern Engineering Campus",
+        "tag": "CAMPUS",
+        "caption": "Interconnected academic complexes designed for focused technical exploration."
+      },
+      {
+        "img": "/brand/departments-campus.jpg",
+        "title": "Academic Departments Wing",
+        "tag": "DEPARTMENTS",
+        "caption": "Home to 14 accredited undergraduate and postgraduate disciplines."
+      },
+      {
+        "img": "/brand/special-labs/lab-robotics-hd.jpg",
+        "title": "Robotics Research Suite",
+        "tag": "ROBOTICS",
+        "caption": "Cutting-edge automation platforms and embedded development kits."
+      }
+    ],
+    "gallery": [
+      {
+        "img": "/brand/curriculum-hero.jpg",
+        "title": "Interactive Lecture Environment",
+        "caption": "Technology-enabled classrooms supporting active group discussions and presentations."
+      },
+      {
+        "img": "/brand/library-study-hall.jpg",
+        "title": "Central Knowledge Repository",
+        "caption": "Over 50,000 volumes, international journals, and digital research access."
+      },
+      {
+        "img": "/brand/special-labs/lab-ai-hd.jpg",
+        "title": "Supercomputing AI Lab",
+        "caption": "Dedicated NVIDIA GPU workstations for artificial intelligence projects."
+      },
+      {
+        "img": "/brand/techpark-hd.jpg",
+        "title": "Modern Engineering Campus",
+        "caption": "Interconnected academic complexes designed for focused technical exploration."
+      }
+    ],
+    "metrics": [
+      {
+        "val": "14",
+        "suffix": "+",
+        "label": "Academic Programs"
+      },
+      {
+        "val": "1:15",
+        "suffix": "",
+        "label": "Faculty to Student Ratio"
+      },
+      {
+        "val": "85",
+        "suffix": "%+",
+        "label": "Distinction & First Class"
+      },
+      {
+        "val": "45",
+        "suffix": "+",
+        "label": "Curriculum Partners"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Industry Co-Designed Syllabi",
+        "desc": "Curriculum curated in partnership with tech leaders to reflect today’s real workforce demands."
+      },
+      {
+        "title": "Mandatory Industrial Internships",
+        "desc": "Students gain 8-12 weeks of immersive industrial experience before their final year."
+      },
+      {
+        "title": "Research Incubation Center",
+        "desc": "Seed funding and patent filing assistance provided for student-led patentable innovations."
+      },
+      {
+        "title": "Honors and Minor Degree Tracks",
+        "desc": "Earn a specialized minor in Artificial Intelligence, FinTech, or Cyber Security alongside your core B.E."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Is Sri Shakthi an autonomous institution?",
+        "a": "Yes, Sri Shakthi operates as an autonomous institution affiliated with Anna University, Chennai, with curriculum freedom approved by UGC."
+      },
+      {
+        "q": "What is the evaluation pattern?",
+        "a": "Assessment is balanced between Continuous Internal Evaluation (40%) and End Semester Examinations (60%) emphasizing practical competence."
+      }
+    ],
+    "ctaTitle": "Explore Our Academic Programs",
+    "ctaSubtitle": "Discover our departments, course syllabi, and undergraduate engineering offerings."
+  },
+  "scholarships": {
+    "category": "Admissions & Aid",
+    "breadcrumbs": [
+      "Admissions",
+      "Scholarships"
+    ],
+    "heroPills": [
+      {
+        "icon": "medal",
+        "label": "₹2.5 Cr+ Annual Aid"
+      },
+      {
+        "icon": "star",
+        "label": "Merit Fee Waivers"
+      },
+      {
+        "icon": "trophy",
+        "label": "Sports Quota Grants"
+      },
+      {
+        "icon": "leaf",
+        "label": "First Gen Graduate Aid"
+      }
+    ],
+    "title": "Scholarships & Institutional Financial Aid",
+    "subtitle": "Over ₹2.5 Crores awarded annually in merit, sports, rural student, and government scholarships ensuring no bright mind is left behind.",
+    "overviewLead": "Sri Shakthi believes that financial constraints should never stand in the way of academic ambition. Through our comprehensive institutional trust funds and government welfare schemes, over 1,200 scholars receive fee waivers annually.",
+    "featuredImage": "/brand/campus-life/learning-growth.png",
+    "featuredBadge": "₹2.5 Cr+ Annual Aid Disbursed",
+    "featuredStat": "1,200+ Scholars Supported",
+    "pillars": [
+      {
+        "icon": "star",
+        "tag": "MERIT AWARDS",
+        "title": "Academic Merit Scholarships",
+        "desc": "Up to 100% tuition waiver for high scorers in HSC board exams and top Anna University counseling ranks."
+      },
+      {
+        "icon": "trophy",
+        "tag": "ATHLETICS",
+        "title": "Sports Quota Grants",
+        "desc": "Complete tuition and residential concessions for state and national sports medalists and athletes."
+      },
+      {
+        "icon": "grad",
+        "tag": "FIRST GENERATION",
+        "title": "First Generation Graduate Aid",
+        "desc": "Government-supported fee concessions for students who are the first in their families to attend college."
+      },
+      {
+        "icon": "leaf",
+        "tag": "NEED-BASED",
+        "title": "Economic Need Assistance",
+        "desc": "Need-based institutional trust stipends ensuring underprivileged students complete their degrees uninterrupted."
+      }
+    ],
+    "runningGallery": [
+      {
+        "img": "/brand/campus-life/learning-growth.png",
+        "title": "Empowering Student Scholars",
+        "tag": "SCHOLARS",
+        "caption": "Recognition ceremony for institutional academic scholarship recipients."
+      },
+      {
+        "img": "/brand/campus-life/student-life.png",
+        "title": "Bright Minds on Campus",
+        "tag": "CAMPUS",
+        "caption": "A collaborative, inclusive learning environment for aspiring engineers."
+      },
+      {
+        "img": "/brand/campus-life/sports-team.png",
+        "title": "Sports Quota Awardees",
+        "tag": "ATHLETICS",
+        "caption": "Athletes receiving special equipment, training grants, and academic support."
+      },
+      {
+        "img": "/brand/curriculum-hero.jpg",
+        "title": "Academic Excellence Honors",
+        "tag": "EXCELLENCE",
+        "caption": "Top rankers honored with certificate of honors and research grants."
+      },
+      {
+        "img": "/brand/campus-arch.jpg",
+        "title": "Merit Admissions Guidance",
+        "tag": "COUNSELING",
+        "caption": "One-on-one scholarship assessment and immediate fee sanction desk."
+      },
+      {
+        "img": "/brand/techpark-hd.jpg",
+        "title": "Institutional Trust Office",
+        "tag": "FINANCE",
+        "caption": "Transparent financial aid processing and documentation support."
+      }
+    ],
+    "gallery": [
+      {
+        "img": "/brand/campus-life/learning-growth.png",
+        "title": "Empowering Student Scholars",
+        "caption": "Recognition ceremony for institutional academic scholarship recipients."
+      },
+      {
+        "img": "/brand/campus-life/student-life.png",
+        "title": "Bright Minds on Campus",
+        "caption": "A collaborative, inclusive learning environment for aspiring engineers."
+      },
+      {
+        "img": "/brand/campus-life/sports-team.png",
+        "title": "Sports Quota Awardees",
+        "caption": "Athletes receiving special equipment, training grants, and academic support."
+      },
+      {
+        "img": "/brand/curriculum-hero.jpg",
+        "title": "Academic Excellence Honors",
+        "caption": "Top rankers honored with certificate of honors and research grants."
+      }
+    ],
+    "metrics": [
+      {
+        "val": "2.5",
+        "suffix": " Cr+",
+        "label": "Annual Scholarship Fund"
+      },
+      {
+        "val": "1200",
+        "suffix": "+",
+        "label": "Students Benefiting"
+      },
+      {
+        "val": "100",
+        "suffix": "%",
+        "label": "Max Tuition Fee Waiver"
+      },
+      {
+        "val": "5",
+        "suffix": "+",
+        "label": "Scholarship Categories"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Cut-off Based Tuition Waivers",
+        "desc": "HSC cut-offs above 190 receive 100% tuition concession; 180-189 receive 50% concession."
+      },
+      {
+        "title": "Single Window Verification",
+        "desc": "Streamlined desk in the Admissions Office assists students in applying for central & state post-matric schemes."
+      },
+      {
+        "title": "Alumni Endowed Scholarships",
+        "desc": "Distinguished alumni contribute annual financial support to deserving final-year research projects."
+      },
+      {
+        "title": "Zero Hassle Renewal",
+        "desc": "Scholarships remain renewed across all four years upon maintaining good academic standing."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "How can I apply for merit scholarship during admission?",
+        "a": "Present your 12th standard mark sheets during admission counseling. Eligibility will be calculated and granted directly."
+      },
+      {
+        "q": "Can government scholarship and college fee concessions be combined?",
+        "a": "Students can claim eligible government welfare schemes along with institutional support subject to statutory guidelines."
+      }
+    ],
+    "ctaTitle": "Check Your Scholarship Eligibility",
+    "ctaSubtitle": "Use our scholarship calculator or contact our financial aid counselors for immediate guidance."
+  },
+  "eligibility": {
+    "category": "Admissions",
+    "breadcrumbs": [
+      "Admissions",
+      "Eligibility Criteria"
+    ],
+    "heroPills": [
+      {
+        "icon": "check",
+        "label": "TNEA Code: 2764"
+      },
+      {
+        "icon": "grad",
+        "label": "HSC PCM Pathways"
+      },
+      {
+        "icon": "tech",
+        "label": "Lateral Entry Available"
+      },
+      {
+        "icon": "shield",
+        "label": "AICTE & Anna Univ"
+      }
+    ],
+    "title": "Eligibility Criteria & Entry Requirements",
+    "subtitle": "Comprehensive criteria for B.E. / B.Tech first year admissions, lateral entry, and postgraduate engineering programs.",
+    "overviewLead": "Sri Shakthi admits students through Tamil Nadu Engineering Admissions (TNEA Single Window Counselling - College Code 2764) as well as through institutional Merit Management Quota in compliance with Anna University norms.",
+    "featuredImage": "/brand/techpark-hd.jpg",
+    "featuredBadge": "TNEA Counseling Code: 2764",
+    "featuredStat": "Anna Univ & AICTE Approved",
+    "pillars": [
+      {
+        "icon": "grad",
+        "tag": "UNDERGRADUATE",
+        "title": "First Year B.E. / B.Tech",
+        "desc": "Passed 10+2 with Physics, Chemistry, and Mathematics as mandatory subjects with requisite minimum pass marks."
+      },
+      {
+        "icon": "tech",
+        "tag": "LATERAL ENTRY",
+        "title": "Lateral Entry (2nd Year)",
+        "desc": "Passed 3-year diploma in engineering/technology or B.Sc. with mathematics with minimum 45% (40% for reserved)."
+      },
+      {
+        "icon": "star",
+        "tag": "POSTGRADUATE",
+        "title": "Postgraduate (M.E. / MBA)",
+        "desc": "Recognized bachelor degree in relevant engineering branch or discipline with valid TANCET / GATE score."
+      },
+      {
+        "icon": "globe",
+        "tag": "INTERNATIONAL",
+        "title": "International & NRI Quota",
+        "desc": "Equivalent 10+2 qualification certified by AIU with physics, chemistry, and mathematics background."
+      }
+    ],
+    "runningGallery": [
+      {
+        "img": "/brand/techpark-hd.jpg",
+        "title": "Admissions & Counseling Center",
+        "tag": "ADMISSIONS",
+        "caption": "Dedicated counseling desk for student enrollment and document verification."
+      },
+      {
+        "img": "/brand/campus-arch.jpg",
+        "title": "Main Administration Block",
+        "tag": "ADMIN",
+        "caption": "Central institutional administrative chambers and registrar desk."
+      },
+      {
+        "img": "/brand/curriculum-hero.jpg",
+        "title": "Classroom Experience",
+        "tag": "LEARNING",
+        "caption": "Modern multimedia lecture theaters engineered for collaborative learning."
+      },
+      {
+        "img": "/brand/campus-life/student-life.png",
+        "title": "Student Life Overview",
+        "tag": "COMMUNITY",
+        "caption": "Vibrant student community welcoming candidates from all over India."
+      },
+      {
+        "img": "/brand/library-study-hall.jpg",
+        "title": "Knowledge Centers",
+        "tag": "RESOURCES",
+        "caption": "Comprehensive reference libraries supporting academic rigor."
+      },
+      {
+        "img": "/brand/campus-life/learning-growth.png",
+        "title": "Academic Orientation",
+        "tag": "ORIENTATION",
+        "caption": "Induction programs preparing first-year students for engineering success."
+      }
+    ],
+    "gallery": [
+      {
+        "img": "/brand/techpark-hd.jpg",
+        "title": "Admissions & Counseling Center",
+        "caption": "Dedicated counseling desk for student enrollment and document verification."
+      },
+      {
+        "img": "/brand/campus-arch.jpg",
+        "title": "Main Administration Block",
+        "caption": "Central institutional administrative chambers and registrar desk."
+      },
+      {
+        "img": "/brand/curriculum-hero.jpg",
+        "title": "Classroom Experience",
+        "caption": "Modern multimedia lecture theaters engineered for collaborative learning."
+      },
+      {
+        "img": "/brand/campus-life/student-life.png",
+        "title": "Student Life Overview",
+        "caption": "Vibrant student community welcoming candidates from all over India."
+      }
+    ],
+    "metrics": [
+      {
+        "val": "45",
+        "suffix": "%+",
+        "label": "Min PCM Aggregate for Gen"
+      },
+      {
+        "val": "40",
+        "suffix": "%+",
+        "label": "Reserved Categories Min"
+      },
+      {
+        "val": "3",
+        "suffix": " Yrs",
+        "label": "Diploma for Lateral Entry"
+      },
+      {
+        "val": "2764",
+        "suffix": "",
+        "label": "TNEA Counseling Code"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "TNEA Counseling Code: 2764",
+        "desc": "Use college code 2764 during government single window counseling rounds."
+      },
+      {
+        "title": "Document Verification Desk",
+        "desc": "Original certificates, community certificates, and transfer certificates verified swiftly on counseling day."
+      },
+      {
+        "title": "Direct Management Admissions",
+        "desc": "Deserving candidates can apply through the institutional merit ranking quota by registering online."
+      },
+      {
+        "title": "Career Guidance Sessions",
+        "desc": "Free one-on-one branch selection counseling with senior professors to help pick the right career path."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What is the age limit for admission?",
+        "a": "No upper age limit is stipulated by the Directorate of Technical Education, Tamil Nadu for undergraduate engineering admissions."
+      },
+      {
+        "q": "Can other-state students apply for admission?",
+        "a": "Yes, students from any state in India can apply through management quota or national admission pools."
+      }
+    ],
+    "ctaTitle": "Ready to Apply for the 2026-27 Session?",
+    "ctaSubtitle": "Register online now or visit our admission cell for counseling and seat reservation."
+  },
+  "fees": {
+    "category": "Admissions & Finance",
+    "breadcrumbs": [
+      "Admissions",
+      "Fee Structure"
+    ],
+    "heroPills": [
+      {
+        "icon": "shield",
+        "label": "Govt. Regulated Fees"
+      },
+      {
+        "icon": "check",
+        "label": "No Capitation / Donation"
+      },
+      {
+        "icon": "card",
+        "label": "Installment Options"
+      },
+      {
+        "icon": "home",
+        "label": "Bank Loan Assistance"
+      }
+    ],
+    "title": "Fee Structure & Transparent Policies",
+    "subtitle": "Affordable, government-regulated fee schedules with convenient installment options and zero hidden charges.",
+    "overviewLead": "Sri Shakthi maintains a transparent fee structure aligned strictly with the Fee Fixation Committee of the Government of Tamil Nadu. We offer flexible payment plans, rapid bank loan processing letters, and direct merit fee concessions.",
+    "featuredImage": "/brand/techpark-hd.jpg",
+    "featuredBadge": "Affordable & Transparent",
+    "featuredStat": "Easy Installment Facilities",
+    "pillars": [
+      {
+        "icon": "shield",
+        "tag": "DOTE APPROVED",
+        "title": "Regulated Tuition Schedules",
+        "desc": "Tuition fees adhere strictly to the Fee Fixation Committee set by the Government of Tamil Nadu."
+      },
+      {
+        "icon": "home",
+        "tag": "FINANCIAL AID",
+        "title": "Bank Loan Assistance",
+        "desc": "Official bona fide and fee projection letters provided promptly for swift education loan approvals."
+      },
+      {
+        "icon": "card",
+        "tag": "DIGITAL",
+        "title": "Digital Payment Gateway",
+        "desc": "Pay securely online via UPI, NetBanking, RTGS/NEFT, or credit/debit cards with instant PDF receipts."
+      },
+      {
+        "icon": "cube",
+        "tag": "MODULAR",
+        "title": "Modular Amenities Options",
+        "desc": "Hostel, mess, and bus services are billed independently based on individual student requirements."
+      }
+    ],
+    "runningGallery": [
+      {
+        "img": "/brand/techpark-hd.jpg",
+        "title": "Accounts & Finance Wing",
+        "tag": "FINANCE",
+        "caption": "Streamlined finance office with digital billing and loan verification desks."
+      },
+      {
+        "img": "/brand/campus-arch.jpg",
+        "title": "Main Institutional Complex",
+        "tag": "CAMPUS",
+        "caption": "Administrative center handling student accounts and scholarships."
+      },
+      {
+        "img": "/brand/campus-life/learning-growth.png",
+        "title": "Student Service Center",
+        "tag": "SUPPORT",
+        "caption": "Guidance and advisory support for scholarship and installment approvals."
+      },
+      {
+        "img": "/brand/campus-life/student-life.png",
+        "title": "Campus Amenities",
+        "tag": "AMENITIES",
+        "caption": "Transparent amenities fees covering campus high-speed Wi-Fi and facilities."
+      },
+      {
+        "img": "/brand/campus-arch.jpg",
+        "title": "Administration Chambers",
+        "tag": "ADMIN",
+        "caption": "Prompt issuance of bonafide certificates for bank loan processing."
+      },
+      {
+        "img": "/brand/curriculum-hero.jpg",
+        "title": "Academic Facilities",
+        "tag": "LABS",
+        "caption": "Comprehensive lab consumables and examination access included."
+      }
+    ],
+    "gallery": [
+      {
+        "img": "/brand/techpark-hd.jpg",
+        "title": "Accounts & Finance Wing",
+        "caption": "Streamlined finance office with digital billing and loan verification desks."
+      },
+      {
+        "img": "/brand/campus-arch.jpg",
+        "title": "Main Institutional Complex",
+        "caption": "Administrative center handling student accounts and scholarships."
+      },
+      {
+        "img": "/brand/campus-life/learning-growth.png",
+        "title": "Student Service Center",
+        "caption": "Guidance and advisory support for scholarship and installment approvals."
+      },
+      {
+        "img": "/brand/campus-life/student-life.png",
+        "title": "Campus Amenities",
+        "caption": "Transparent amenities fees covering campus high-speed Wi-Fi and facilities."
+      }
+    ],
+    "metrics": [
+      {
+        "val": "100",
+        "suffix": "%",
+        "label": "Receipt-Backed Payments"
+      },
+      {
+        "val": "0",
+        "suffix": "%",
+        "label": "Hidden Maintenance Fees"
+      },
+      {
+        "val": "Multiple",
+        "suffix": "",
+        "label": "Installment Options"
+      },
+      {
+        "val": "Tie-ups",
+        "suffix": "",
+        "label": "National Bank Loans"
+      }
+    ],
+    "highlights": [
+      {
+        "title": "Approved Tuition Structure",
+        "desc": "Standard Government counseling tuition as per Tamil Nadu norms for accredited autonomous colleges."
+      },
+      {
+        "title": "Zero Donation Policy",
+        "desc": "Admissions are conducted strictly on merit without any capitation fees or hidden levies."
+      },
+      {
+        "title": "Education Loan Help Desk",
+        "desc": "On-campus liaison team coordinates with SBI, Canara Bank, and Indian Bank for rapid education loan processing."
+      },
+      {
+        "title": "Transparent Fee Breakdown",
+        "desc": "Detailed breakdown covering tuition, university exam fees, lab consumables, and library access."
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Can semester fees be paid in installments?",
+        "a": "Yes, parents can request installment options by submitting a written request to the Finance Officer."
+      },
+      {
+        "q": "Which banks provide educational loans for Sri Shakthi?",
+        "a": "All public and private scheduled banks recognize Sri Shakthi for educational loans under the Vidya Lakshmi scheme."
+      }
+    ],
+    "ctaTitle": "Get the Detailed Fee Breakdown",
+    "ctaSubtitle": "Download our comprehensive fee handbook or discuss payment options with our admissions office."
+  }
+};
+
+
+function getInternalPageMeta(route, data) {
+  if (internalPageData[route]) {
+    return internalPageData[route];
+  }
+  let cat = 'Explore';
+  for (const g of pageGroups) {
+    if (g.items.some(([slug]) => slug === route)) {
+      cat = g.label;
+      break;
+    }
+  }
+  return {
+    category: cat,
+    breadcrumbs: [cat, data[0]],
+    heroPills: [
+      { icon: 'leaf', label: 'Autonomous Institution' },
+      { icon: 'grad', label: 'Anna University Affiliated' },
+      { icon: 'crown', label: "NAAC 'A+' Grade" },
+      { icon: 'star', label: 'NBA Accredited UG Programmes' }
+    ],
+    title: data[0],
+    subtitle: data[1],
+    overviewLead: data[2] || `Sri Shakthi Institute of Engineering and Technology provides outcome-driven education, advanced laboratory infrastructure, and comprehensive student support to ensure continuous excellence in ${data[0].toLowerCase()}.`,
+    featuredImage: '/brand/campus-arch.jpg',
+    featuredBadge: 'Autonomous & NAAC A+',
+    featuredStat: 'Outcome-Driven Excellence',
+    pillars: [
+      { icon: 'star', tag: 'EXCELLENCE', title: 'Autonomous Academic Rigour', desc: 'Industry-aligned curriculum and hands-on laboratory experiences tailored to meet modern global engineering demands.' },
+      { icon: 'connect', tag: 'ENGAGEMENT', title: 'Practical & Applied Focus', desc: 'Real-world project work, domain certifications, and multidisciplinary lab environments fostering high-impact skills.' },
+      { icon: 'leaf', tag: 'ENVIRONMENT', title: '45-Acre Sustainable Campus', desc: 'Green spaces, modern amenities, high-speed digital networks, and welcoming student living communities.' },
+      { icon: 'target', tag: 'OUTCOMES', title: 'Career & Industry Readiness', desc: 'Systematic technical training, entrepreneurship incubation, and proven placement tracks with leading global recruiters.' }
+    ],
+    runningGallery: [
+      { img: '/brand/techpark-hd.jpg', title: 'Campus Academic Complex', tag: 'CAMPUS', caption: 'Modern academic architecture and advanced learning spaces.' },
+      { img: '/brand/campus-arch.jpg', title: 'Green Campus Grounds', tag: 'GREENS', caption: 'Lush 45-acre eco-friendly campus environment.' },
+      { img: '/brand/curriculum-hero.jpg', title: 'Interactive Learning Spaces', tag: 'CLASSROOMS', caption: 'Multimedia-enabled classrooms and seminar halls.' },
+      { img: '/brand/campus-life/student-life.png', title: 'Student Community', tag: 'COMMUNITY', caption: 'Active peer collaboration and collegiate life.' },
+      { img: '/brand/special-labs/lab-ai-hd.jpg', title: 'AI & Research Labs', tag: 'RESEARCH', caption: 'State-of-the-art supercomputing and automation suites.' },
+      { img: '/brand/campus-life/sports-team.png', title: 'Athletic Arena', tag: 'SPORTS', caption: 'Varsity sports complexes and tournament grounds.' }
+    ],
+    gallery: [
+      { img: '/brand/techpark-hd.jpg', title: 'Campus Academic Complex', caption: 'Modern academic architecture and advanced learning spaces.' },
+      { img: '/brand/campus-arch.jpg', title: 'Green Campus Grounds', caption: 'Lush 45-acre eco-friendly campus environment.' },
+      { img: '/brand/curriculum-hero.jpg', title: 'Interactive Learning Spaces', caption: 'Multimedia-enabled classrooms and seminar halls.' },
+      { img: '/brand/campus-life/student-life.png', title: 'Student Community', caption: 'Active peer collaboration and collegiate life.' }
+    ],
+    metrics: [
+      { val: '100', suffix: '%', label: 'Dedicated Faculty' },
+      { val: '45', suffix: '+', label: 'Green Campus Acres' },
+      { val: '30', suffix: '+', label: 'Advanced Laboratories' },
+      { val: '100', suffix: '%', label: 'Outcome-Based Learning' }
+    ],
+    highlights: [
+      { title: 'Autonomous Innovation Framework', desc: 'Curricula continuously updated in collaboration with industry advisory councils.' },
+      { title: 'Holistic Student Experience', desc: 'Co-curricular sports, cultural societies, and technical clubs developing well-rounded engineers.' },
+      { title: 'Global Mentorship & Industry Alliances', desc: 'Strategic partnerships with top tier technology firms for hands-on skill development.' },
+      { title: 'State-of-the-Art Physical Infrastructure', desc: 'High-speed campus-wide fiber internet, air-conditioned auditoriums, and smart seminar halls.' }
+    ],
+    faqs: [
+      { q: `How can I get more information about ${data[0]}?`, a: 'You can contact the Sri Shakthi Admissions & Academic Office through the enquiry form or call +91 73737 44444.' },
+      { q: 'Are campus tours available for prospective students?', a: 'Yes, parents and students are welcome to visit our Chinniyampalayam campus Monday through Saturday for personalized guided tours.' }
+    ],
+    ctaTitle: `Ready to Experience ${data[0]} at Sri Shakthi?`,
+    ctaSubtitle: 'Explore admission pathways, merit scholarships, and autonomous engineering curriculum designed for real-world impact.'
+  };
+}
+
 function internalPage(route) {
   if (route.startsWith('placements')) {
     return placementsDashboardPage(route);
   }
-
   const isDept = route.startsWith('department/');
   const deptName = isDept ? titleCase(route.slice(11).replaceAll('-', ' ')).replaceAll(' And ', ' & ') : '';
   if (isDept && typeof departmentPage === 'function') return departmentPage(deptName);
   const data = isDept ? [deptName, `Department of ${deptName}`, 'Build strong engineering foundations through expert teaching, practical laboratories, industry exposure, projects, research and collaborative learning.'] : (pageCopy[route] || ['Sri Shakthi', 'Institutional information', 'Explore Sri Shakthi Institute of Engineering and Technology.']);
   const isDepts = route === 'departments';
-
-  let sidebarHtml = '';
-  if (route === 'program-outcomes' || route === 'core-values' || route === 'philosophy') {
-    sidebarHtml = AboutSidebar(route);
-  } else {
-    sidebarHtml = `<aside class="sidebar reveal">
-    <div class="sidebar-box quick-links-box">
-      <span class="sidebar-kicker">EXPLORE SRI SHAKTHI</span>
-      <h3>Quick Navigation</h3>
-      <nav class="sidebar-nav">
-        <a href="#/programmes">UG &amp; PG Programmes <span>â†’</span></a>
-        <a href="#/departments">All Departments <span>â†’</span></a>
-        <a href="#/eligibility">Admission Eligibility <span>â†’</span></a>
-        <a href="#/scholarships">Scholarship Pathways <span>â†’</span></a>
-        <a href="#/campus-life">Campus Life &amp; Facilities <span>â†’</span></a>
-        <a href="#/placements">Placement Highlights <span>â†’</span></a>
-        <a href="#/research">Research &amp; Innovation <span>â†’</span></a>
-      </nav>
-    </div>
-    <div class="sidebar-box contact-card-box">
-      <span class="sidebar-kicker">ADMISSIONS HELPLINE</span>
-      <h3>Plan Your Journey</h3>
-      <p>Speak directly with our academic counsellors for programme guidance and scholarships.</p>
-      <div class="sidebar-contact-info">
-        <strong>â˜Ž +91 422 2369900</strong>
-        <small>âœ‰ info@siet.ac.in</small>
-        <small>ðŸ“ L&amp;T Bypass, Chinniyampalayam, Coimbatore</small>
-      </div>
-      <a href="#/admission-enquiry" class="button sidebar-btn">Enquire for Admission ${icon('arrow')}</a>
-    </div>
-    <div class="sidebar-box badges-card-box">
-      <span class="sidebar-kicker">ACCREDITATIONS</span>
-      <div class="sidebar-badges">
-        <span>NBA Accredited</span>
-        <span>NAAC 'A' Grade</span>
-        <span>Autonomous</span>
-        <span>AICTE Approved</span>
-      </div>
-    </div>
-  </aside>`;
-  }
+  const isCampus = ['campus-life', 'facilities', 'hostel', 'transport', 'sports', 'clubs', 'ncc'].includes(route);
+  const isAcademics = ['academics', 'departments', 'curriculum', 'academic-calendar', 'library'].includes(route);
+  const isAdmissions = ['programmes', 'admission-enquiry', 'apply', 'admission-referral', 'referral', 'eligibility', 'scholarships', 'fees'].includes(route);
+  const pageMeta = getInternalPageMeta(route, data);
 
   const deptExtras = isDepts ? `
   <div class="dept-quick-summary-grid">
@@ -3539,43 +5467,329 @@ function internalPage(route) {
       <div class="dept-lab-item"><b>Project &amp; Prototype Studio</b><p>Embedded systems, IoT testbeds, sensors and robotics testing facilities.</p></div>
       <div class="dept-lab-item"><b>Industry Collaboration Center</b><p>Dedicated workspaces co-developed with leading technology partners.</p></div>
     </div>
-  </div>`: '';
+  </div>` : '';
 
-  return `<main class="internal-page ${isDepts ? 'departments-page departments-index-page' : ''}">
-    ${(isDepts ? sietHudHeader('Departments', 'Departments') : `<section class="page-hero">
-      <img class="page-crest" src="/brand/siet-logo.png" alt="">
-      <div class="eyebrow"><span></span> SRI SHAKTHI</div>
-      <h1 class="reveal">${data[0]}</h1>
-      <p>${data[1]}</p>
-    </section>`)}
-    <section class="page-content">
-      <div class="reveal">
-        <div class="section-no">OVERVIEW</div>
-        <h2>${data[1]}</h2>
-        <p>${data[2]}</p>
+  function getPageHeaderHtml() {
+    if (route === 'placements') {
+      return `<section class="placement-showcase-section" style="padding: 24px 20px 0;"><div class="ps-shell"><div class="placement-v2-panel ps-right-card reveal" style="max-width: 1180px; margin: 0 auto;">${placementHighlightsCardInner()}</div></div></section>${placementMarqueeSection()}`;
+    }
+    if (isAcademics) {
+      return sietHudHeader(data[0], data[0], 'Academics', '#/academics', 'SYSTEM ONLINE / ACADEMIC PROFILE / SIET-OS');
+    }
+    if (isAdmissions) {
+      return sietHudHeader(data[0], data[0], 'Admissions', '#/programmes', 'SYSTEM ONLINE / ADMISSION PROFILE / SIET-OS');
+    }
+    if (isCampus) {
+      return sietHudHeader(data[0], data[0], 'Campus', '#/campus-life', 'SYSTEM ONLINE / CAMPUS PROFILE / SIET-OS');
+    }
+    return `
+      <section class="page-hero enhanced-page-hero">
+        <div class="hero-backdrop-pattern" aria-hidden="true"></div>
+        <div class="hero-radial-glow" aria-hidden="true"></div>
+        
+        <div class="hero-inner-container">
+          <img class="page-crest" src="/brand/siet-logo.png" alt="Sri Shakthi Emblem" width="320" height="320">
+          <nav class="hero-breadcrumbs" aria-label="Breadcrumb">
+            <a href="#/">Home</a>
+            <span class="bc-sep">/</span>
+            <span>${pageMeta.category}</span>
+            <span class="bc-sep">/</span>
+            <strong class="bc-current">${data[0]}</strong>
+          </nav>
+
+          <div class="eyebrow enhanced-eyebrow">
+            <span class="eyebrow-accent-line"></span>
+            <span class="eyebrow-tag">SRI SHAKTHI</span>
+            <span class="eyebrow-bullet">•</span>
+            <span class="eyebrow-kicker">${pageMeta.category.toUpperCase()}</span>
+          </div>
+
+          <h1 class="page-hero-title reveal">${data[0].toUpperCase()}</h1>
+          <p class="page-hero-subtitle">${data[1]}</p>
+
+          <div class="hero-pills-row reveal">
+            ${(pageMeta.heroPills || []).map(p => `
+              <div class="hero-pill-badge">
+                <span class="pill-icon">${icon(p.icon || 'leaf')}</span>
+                <span class="pill-text">${p.label}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </section>
+      <div class="hero-gold-trim-bar" aria-hidden="true"></div>
+    `;
+  }
+
+  return `<main class="internal-page enhanced-template-page ${isDepts ? 'departments-page departments-index-page' : ''}">
+    ${getPageHeaderHtml()}
+
+    <section class="page-content enhanced-page-content">
+      <div class="template-main-column reveal">
+        
+        <!-- 1. Interactive Split Overview Hero (Narrative + Visual Showcase Card) -->
+        <article class="template-card template-overview-card template-split-hero">
+          <div class="t-hero-narrative">
+            <div class="section-tag-pill">
+              <span class="tag-dot"></span>
+              <span>${pageMeta.category ? pageMeta.category.toUpperCase() : 'OVERVIEW'}</span>
+            </div>
+            <h2 class="overview-heading">${pageMeta.title || data[1]}</h2>
+            <p class="overview-highlight-text">${pageMeta.subtitle || data[2]}</p>
+            <p class="overview-narrative-text">${pageMeta.overviewLead}</p>
+            <div class="template-pills-row">
+              ${(pageMeta.heroPills || []).map(p => `
+                <span class="template-pill-chip">
+                  <span class="pill-chip-icon">${icon(p.icon || 'star')}</span>
+                  <span>${p.label}</span>
+                </span>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="t-hero-visual-col">
+            <div class="thv-card">
+              <img src="${pageMeta.featuredImage || '/brand/campus-arch.jpg'}" alt="${data[0]}" class="thv-img" loading="eager" onerror="this.src='/brand/campus-arch.jpg'" />
+              <div class="thv-overlay"></div>
+              <div class="thv-floating-badge">
+                <span class="thv-pulse-dot"></span>
+                <span>${pageMeta.featuredBadge || 'Autonomous Excellence'}</span>
+              </div>
+              <div class="thv-bottom-ribbon">
+                <span class="thv-ribbon-icon">${icon('crown')}</span>
+                <div class="thv-ribbon-text">
+                  <strong>${pageMeta.featuredStat || 'SIET Campus Standard'}</strong>
+                  <small>Excellence in Engineering &amp; Innovation</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Running Left-to-Right Moving Image Gallery -->
+        <div class="template-running-gallery-block">
+          <div class="running-gallery-header-row">
+            <div>
+              <div class="section-tag-pill">
+                <span class="tag-dot"></span>
+                <span>CAMPUS IN MOTION // LIVE PHOTOGRAPHIC REEL</span>
+              </div>
+              <h3 class="section-subheading">Visual Campus Life &amp; Facilities</h3>
+            </div>
+            <div class="running-gallery-badge">
+              <span class="rg-badge-pulse"></span>
+              <span>RUNNING GALLERY • HOVER TO PAUSE</span>
+            </div>
+          </div>
+          
+          <div class="running-gallery-viewport" aria-label="Campus visual reel">
+            <div class="running-gallery-track">
+              <div class="running-gallery-group">
+                ${(pageMeta.runningGallery || pageMeta.gallery || []).map(item => `
+                  <div class="running-gallery-card">
+                    <div class="rg-image-box">
+                      <img src="${item.img}" alt="${item.title}" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
+                      <div class="rg-card-overlay"></div>
+                      <span class="rg-pill-tag">${item.tag || pageMeta.category || 'CAMPUS'}</span>
+                      <div class="rg-card-meta">
+                        <h5 class="rg-card-title">${item.title}</h5>
+                        <p class="rg-card-desc">${item.caption}</p>
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+              <div class="running-gallery-group" aria-hidden="true">
+                ${(pageMeta.runningGallery || pageMeta.gallery || []).map(item => `
+                  <div class="running-gallery-card">
+                    <div class="rg-image-box">
+                      <img src="${item.img}" alt="${item.title}" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
+                      <div class="rg-card-overlay"></div>
+                      <span class="rg-pill-tag">${item.tag || pageMeta.category || 'CAMPUS'}</span>
+                      <div class="rg-card-meta">
+                        <h5 class="rg-card-title">${item.title}</h5>
+                        <p class="rg-card-desc">${item.caption}</p>
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Core Pillars (4 Feature Cards Grid) -->
+        <div class="template-section-block">
+          <div class="section-tag-pill">
+            <span class="tag-dot"></span>
+            <span>KEY HIGHLIGHTS &amp; PILLARS</span>
+          </div>
+          <h3 class="section-subheading">What Distinguishes Sri Shakthi</h3>
+          <div class="template-pillars-grid">
+            ${pageMeta.pillars.map((pil) => `
+              <div class="pillar-card">
+                <div class="pillar-top">
+                  <span class="pillar-icon-wrap">${icon(pil.icon || 'star')}</span>
+                  <span class="pillar-badge">${pil.tag}</span>
+                </div>
+                <h4 class="pillar-title">${pil.title}</h4>
+                <p class="pillar-desc">${pil.desc}</p>
+                <div class="pillar-accent-line"></div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- 4. Photo Showcase Grid (Every page has authentic gallery photos) -->
+        ${pageMeta.gallery && pageMeta.gallery.length ? `
+          <div class="template-section-block">
+            <div class="section-tag-pill">
+              <span class="tag-dot"></span>
+              <span>PHOTO TOUR &amp; CAMPUS SPACES</span>
+            </div>
+            <h3 class="section-subheading">Visual Showcase &amp; Environment</h3>
+            <div class="template-gallery-grid">
+              ${pageMeta.gallery.map(g => `
+                <div class="template-photo-card">
+                  <div class="photo-card-media">
+                    <img src="${g.img}" alt="${g.title}" loading="lazy" onerror="this.src='/brand/campus-arch.jpg'">
+                    <span class="photo-card-tag">${pageMeta.category || 'Campus'}</span>
+                  </div>
+                  <div class="photo-card-info">
+                    <h5>${g.title}</h5>
+                    <p>${g.caption}</p>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- 5. Key Metrics Strip -->
+        <div class="template-section-block">
+          <div class="template-stats-strip">
+            ${pageMeta.metrics.map(m => `
+              <div class="template-stat-item">
+                <div class="stat-number-wrap">
+                  <span class="stat-val">${m.val}</span>
+                  <span class="stat-sfx">${m.suffix}</span>
+                </div>
+                <span class="stat-lbl">${m.label}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- 6. Highlights Grid -->
+        ${pageMeta.highlights && pageMeta.highlights.length ? `
+          <div class="template-section-block">
+            <div class="section-tag-pill">
+              <span class="tag-dot"></span>
+              <span>SPECIAL HIGHLIGHTS</span>
+            </div>
+            <h3 class="section-subheading">What Sets Our Experience Apart</h3>
+            <div class="template-highlights-grid">
+              ${pageMeta.highlights.map(h => `
+                <div class="highlight-detail-card">
+                  <div class="hdc-top">
+                    <span class="hdc-icon-wrap">${icon('check')}</span>
+                    <h4 class="hdc-title">${h.title}</h4>
+                  </div>
+                  <p class="hdc-desc">${h.desc}</p>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- 7. Interactive FAQs -->
+        ${pageMeta.faqs && pageMeta.faqs.length ? `
+          <div class="template-section-block">
+            <div class="section-tag-pill">
+              <span class="tag-dot"></span>
+              <span>FREQUENTLY ASKED QUESTIONS</span>
+            </div>
+            <h3 class="section-subheading">Common Inquiries</h3>
+            <div class="template-faq-list">
+              ${pageMeta.faqs.map((faq, i) => `
+                <details class="template-faq-item" ${i === 0 ? 'open' : ''}>
+                  <summary class="faq-summary">
+                    <span class="faq-question">${faq.q}</span>
+                    <span class="faq-toggle-icon" aria-hidden="true">+</span>
+                  </summary>
+                  <div class="faq-answer">
+                    <p>${faq.a}</p>
+                  </div>
+                </details>
+              `).join('')}
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- 8. Department Extras if departments route -->
         ${deptExtras}
-        ${route === 'contact' ? '<div class="contact-panel"><b>Sri Shakthi Institute of Engineering & Technology</b><p>Sri Shakthi Nagar, L&T By-Pass, Chinniyampalayam, Coimbatore â€“ 641062</p><p>+91 422 2369900 Â· info@siet.ac.in</p></div>' : ''}
-        <div style="margin-top: 32px;"><a class="button" href="#/admission-enquiry">Enquire now ${icon('arrow')}</a></div>
+
+        <!-- 9. Contact Panel if contact route -->
+        ${route === 'contact' ? `
+          <div class="contact-details-grid">
+            <div class="contact-detail-card">
+              <span class="cd-icon">${icon('pin')}</span>
+              <b>Campus Address</b>
+              <p>Sri Shakthi Nagar, L&amp;T By-Pass, Chinniyampalayam, Coimbatore – 641062, Tamil Nadu, India</p>
+            </div>
+            <div class="contact-detail-card">
+              <span class="cd-icon">${icon('connect')}</span>
+              <b>Helpline &amp; Email</b>
+              <p>Phone: +91 422 2369900<br>Mobile: +91 73737 44444<br>Email: info@siet.ac.in</p>
+            </div>
+            <div class="contact-detail-card">
+              <span class="cd-icon">${icon('clock')}</span>
+              <b>Office Working Hours</b>
+              <p>Monday to Saturday: 8:30 AM – 5:00 PM<br>Admissions Desk open on all working days.</p>
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- 10. Bottom CTA Banner -->
+        <div class="template-cta-banner">
+          <div class="cta-inner-glow"></div>
+          <span class="cta-kicker">JOIN OUR COMMUNITY</span>
+          <h3>${pageMeta.ctaTitle || 'Ready to Experience Sri Shakthi?'}</h3>
+          <p>${pageMeta.ctaSubtitle || 'Explore admission pathways, merit scholarships, and autonomous engineering curriculum designed for real-world impact.'}</p>
+          <div class="cta-btn-group">
+            <a href="#/admission-enquiry" class="button cta-primary-btn">Enquire for Admission ${icon('arrow')}</a>
+            <a href="#/programmes" class="button cta-secondary-btn">Explore Programmes ↗</a>
+          </div>
+        </div>
+
       </div>
-      ${sidebarHtml}
     </section>
-    ${['departments', 'programmes'].includes(route) ? `<section class="page-content programme-content"><div class="section-no">PROGRAMMES &amp; DEPARTMENTS</div><div>${programs.map(([n, d, img]) => `<a class="flip-card" href="#/department/${slugify(n)}"><span class="flip-card-inner"><span class="flip-front"><small>DEPARTMENT</small><b>${n}</b><p>${d}</p><span>Explore department â†’</span></span><span class="flip-back" style="background-image:linear-gradient(180deg,transparent,rgba(3,45,27,.94)),url('${img}')"><b>${n}</b></span></span></a>`).join('')}</div></section>` : ''}
+
+    ${['departments', 'programmes'].includes(route) ? `<section class="page-content programme-content"><div class="section-no">PROGRAMMES &amp; DEPARTMENTS</div><div>${programs.map(([n, d, img]) => `<a class="flip-card" href="#/department/${slugify(n)}"><span class="flip-card-inner"><span class="flip-front"><small>DEPARTMENT</small><b>${n}</b><p>${d}</p><span>Explore department →</span></span><span class="flip-back" style="background-image:linear-gradient(180deg,transparent,rgba(3,45,27,.94)),url('${img}')"><b>${n}</b></span></span></a>`).join('')}</div></section>` : ''}
   </main>`;
 }
+
+
 const titleCase = s => s.replace(/\b\w/g, c => c.toUpperCase());
 
 function sietPageHeader(title, subtitle = '', kicker = 'SRI SHAKTHI') {
   return `<section class="page-hero"><img class="page-crest" src="/brand/siet-logo.png" alt="Sri Shakthi emblem"><div class="eyebrow"><span></span> ${kicker}</div><h1 class="reveal">${title.toUpperCase()}</h1>${subtitle ? `<p>${subtitle}</p>` : ''}</section>`;
 }
-function sietHudHeader(title, breadcrumbName = title) {
-  return `<section class="department-detail-header siet-hud-header">
+function sietHudHeader(title, breadcrumbName = title, section = 'Departments', sectionHref = '#/departments', kicker = '') {
+  if (!kicker) {
+    if (section === 'Admissions') kicker = 'SYSTEM ONLINE / ADMISSION PROFILE / SIET-OS';
+    else if (section === 'Campus') kicker = 'SYSTEM ONLINE / CAMPUS PROFILE / SIET-OS';
+    else kicker = 'SYSTEM ONLINE / ACADEMIC PROFILE / SIET-OS';
+  }
+  const kickerAttr = ` data-kicker="${kicker}"`;
+  return `<section class="department-detail-header siet-hud-header"${kickerAttr}>
     <div class="department-detail-title">
       <div class="hud-title-group">
-        <span class="hud-diamond" aria-hidden="true">â—ˆ</span>
+        <span class="hud-diamond" aria-hidden="true">◈</span>
         <h1>${title.toUpperCase()}</h1>
       </div>
       <div class="department-breadcrumb">
-        <a href="#/">Home</a><span>/</span><a href="#/departments">Departments</a><span>/</span><b>${breadcrumbName}</b>
+        <a href="#/">Home</a><span>/</span><a href="${sectionHref}">${section}</a><span>/</span><b>${breadcrumbName}</b>
       </div>
     </div>
   </section>`;
@@ -3801,7 +6015,7 @@ function departmentsPage() {
   </main>`;
 }
 
-function referralPage() { return `<main class="enquiry-page-v3 referral-page">${sietPageHeader('Admission Referral', 'Recommend an aspiring student for admissions to Sri Shakthi Institute of Engineering & Technology.', 'SRI SHAKTHI &bull; REFERRAL PROGRAMME')}<section class="enquiry-main-v3"><div class="enquiry-heading-v3"><small>REFERRAL PROGRAMME</small><h1>STUDENT ADMISSION REFERRAL</h1><p style="color:#52695c;margin-top:6px;font-size:15px;line-height:1.5">Alumni, students, parents, faculty, and well-wishers can refer candidates for undergraduate and postgraduate engineering admissions.</p></div><form class="enquiry-form-v3 js-form"><div style="font-weight:700;color:#0b3d20;font-size:15px;border-bottom:2px solid #e0ece4;padding-bottom:8px;margin-bottom:14px;letter-spacing:0.02em">REFERRER DETAILS (YOUR INFORMATION)</div><div class="enquiry-fields-v3">${field('Your Full Name', 'referrer_name', 'text', 'Enter your full name')}${field('Your Mobile Number', 'referrer_phone', 'tel', 'Enter your 10 digit mobile number')}${field('Your Email Address', 'referrer_email', 'email', 'Enter your email address')}${selectField('Your Relationship with SIET', 'referrer_relation', ['Alumni', 'Current Student', 'Faculty / Staff', 'Parent', 'Industry Partner', 'Well-wisher'])}<label id="referrer-reg-no-wrapper" class="referral-reg-no-field" style="display:none">Current Student Register Number <b>*</b><input type="text" name="referrer_reg_no" id="referrer_reg_no" placeholder="Enter current student register number" autocomplete="off"></label></div><div style="font-weight:700;color:#0b3d20;font-size:15px;border-bottom:2px solid #e0ece4;padding-bottom:8px;margin-top:18px;margin-bottom:14px;letter-spacing:0.02em">CANDIDATE DETAILS (STUDENT BEING REFERRED)</div><div class="enquiry-fields-v3">${field('Candidate Full Name', 'candidate_name', 'text', 'Enter candidate\'s full name')}${field('Candidate Mobile Number', 'candidate_phone', 'tel', 'Enter candidate\'s 10 digit mobile number')}${field('Candidate Email Address', 'candidate_email', 'email', 'Enter candidate\'s email')} ${selectField('Preferred Course Level', 'candidate_level', ['UG', 'PG'])}${programSelectHtml('Preferred Department', 'candidate_course')}${field('Current Qualification / School', 'candidate_qualification', 'text', 'Class 12 / Diploma / Degree')}</div><label>Message / Reason for Referral<textarea name="remarks" rows="3" placeholder="Tell us about the candidate's achievements, interests, or any specific guidance needed..."></textarea></label><button class="button" type="submit">Submit Referral â†’</button><p class="status" aria-live="polite"></p></form></section></main>` }
+function referralPage() { return `<main class="enquiry-page-v3 referral-page">${sietHudHeader('Admission Referral', 'Referral', 'Admissions', '#/admission-referral', 'SYSTEM ONLINE / ADMISSION PROFILE / SIET-OS')}<section class="enquiry-main-v3"><div class="enquiry-heading-v3"><small>REFERRAL PROGRAMME</small><h1>STUDENT ADMISSION REFERRAL</h1><p style="color:#52695c;margin-top:6px;font-size:15px;line-height:1.5">Alumni, students, parents, faculty, and well-wishers can refer candidates for undergraduate and postgraduate engineering admissions.</p></div><form class="enquiry-form-v3 js-form"><div style="font-weight:700;color:#0b3d20;font-size:15px;border-bottom:2px solid #e0ece4;padding-bottom:8px;margin-bottom:14px;letter-spacing:0.02em">REFERRER DETAILS (YOUR INFORMATION)</div><div class="enquiry-fields-v3">${field('Your Full Name', 'referrer_name', 'text', 'Enter your full name')}${field('Your Mobile Number', 'referrer_phone', 'tel', 'Enter your 10 digit mobile number')}${field('Your Email Address', 'referrer_email', 'email', 'Enter your email address')}${selectField('Your Relationship with SIET', 'referrer_relation', ['Alumni', 'Current Student', 'Faculty / Staff', 'Parent', 'Industry Partner', 'Well-wisher'])}<label id="referrer-reg-no-wrapper" class="referral-reg-no-field" style="display:none">Current Student Register Number <b>*</b><input type="text" name="referrer_reg_no" id="referrer_reg_no" placeholder="Enter current student register number" autocomplete="off"></label></div><div style="font-weight:700;color:#0b3d20;font-size:15px;border-bottom:2px solid #e0ece4;padding-bottom:8px;margin-top:18px;margin-bottom:14px;letter-spacing:0.02em">CANDIDATE DETAILS (STUDENT BEING REFERRED)</div><div class="enquiry-fields-v3">${field('Candidate Full Name', 'candidate_name', 'text', 'Enter candidate\'s full name')}${field('Candidate Mobile Number', 'candidate_phone', 'tel', 'Enter candidate\'s 10 digit mobile number')}${field('Candidate Email Address', 'candidate_email', 'email', 'Enter candidate\'s email')} ${selectField('Preferred Course Level', 'candidate_level', ['UG', 'PG'])}${programSelectHtml('Preferred Department', 'candidate_course')}${field('Current Qualification / School', 'candidate_qualification', 'text', 'Class 12 / Diploma / Degree')}</div><label>Message / Reason for Referral<textarea name="remarks" rows="3" placeholder="Tell us about the candidate's achievements, interests, or any specific guidance needed..."></textarea></label><button class="button" type="submit">Submit Referral â†’</button><p class="status" aria-live="polite"></p></form></section></main>` }
 
 const libIcons = {
   search: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>`,
@@ -4507,12 +6721,33 @@ function academicCalendarPage() {
 </main>`;
 }
 
-function enquiryPage(apply = false) { return `<main class="enquiry-page-v3"><section class="enquiry-hero-v3"><img src="/brand/siet-logo.png" alt=""><div class="eyebrow"><span></span> SRI SHAKTHI</div><h1>${apply ? 'Apply for Sri Shakthi' : 'Admission Enquiry'}</h1><h2>Letâ€™s plan your <em>next step.</em></h2><p>Share your interests and contact details. Our admissions team will guide you in choosing the right programme.</p></section><section class="enquiry-main-v3"><div class="enquiry-heading-v3"><small>ENQUIRY FORM</small><h1>Start your engineering journey with SIET</h1></div><form class="enquiry-form-v3 js-form"><div class="enquiry-fields-v3">${field('Full Name', 'name', 'text', 'Enter your full name')}${field('Mobile Number', 'phone', 'tel', 'Enter 10 digit mobile number')}${field('Email Address', 'email', 'email', 'Enter your email address')}${selectField('Course Level', 'level', ['UG', 'PG'])}${programSelectHtml('Preferred Department', 'course')}${field('Academic Qualification / Marks', 'qualification', 'text', 'Qualification and marks')}</div><label>Message / Any Specific Query <b>*</b><textarea name="message" rows="4" required minlength="10"></textarea></label><button class="button" type="submit">${apply ? 'Submit Application' : 'Send Enquiry'} â†’</button><p class="status" aria-live="polite"></p></form></section></main>` }
-const field = (label, name, type, placeholder) => `<label>${label} <b>*</b><input type="${type}" name="${name}" placeholder="${placeholder}" required></label>`;
-const selectField = (label, name, opts) => `<label>${label} <b>*</b><select name="${name}" required><option value="">Select ${label}</option>${opts.map(o => `<option>${o}</option>`).join('')}</select></label>`;
-function careersPage() {
-  const unit = careerUnits.college;
-  return `<main class="careers-page"><section class="career-hero"><small>WORK WITH US</small><h1>Faculty Recruitment</h1><h2>Build careers that <em>shape futures.</em></h2><p>Join a community of educators, researchers and professionals committed to powering the youth and empowering the nation.</p></section><section class="career-main"><div class="career-tabs"><button class="active" data-unit="college" type="button">Engineering College</button><button data-unit="school" type="button">CBSE School</button><button data-unit="lab" type="button">Food Testing Lab</button></div><div class="career-intro"><img src="/brand/siet-logo.png" alt=""><div><small>${unit.subtitle}</small><h2>Sri Shakthi ${unit.name}</h2><p>${unit.desc}</p></div></div><div class="career-application-layout"><form class="career-form js-form"><div class="career-form-head"><small>APPLICATION FORM</small><h2>Faculty &amp; Professional Recruitment</h2></div><div class="career-fields">${field('Full Name', 'name', 'text', 'Enter your full name')}${field('Mobile Number', 'phone', 'tel', 'Enter mobile number')}${field('Email Address', 'email', 'email', 'Enter email')}${selectField('Application Category', 'category', unit.cats.map(c => c[0]))}${field('Position', 'position', 'text', 'Position you would like to apply')}${field('Highest Qualification', 'qualification', 'text', 'Enter highest degree')}<label class="career-wide">Why are you looking for a change?<textarea name="message" rows="4"></textarea></label><label class="career-wide career-file">Upload Resume <b>*</b><input type="file" name="resume" accept=".pdf,.doc,.docx,.rtf" required></label></div><button class="career-submit" type="submit">Submit Application â†’</button><p class="status" aria-live="polite"></p></form><aside class="career-categories"><div class="career-side-title"><small>EXPLORE OPENINGS</small><h2>${unit.name} Openings</h2></div>${unit.cats.map((c, i) => `<details ${i === 0 ? 'open' : ''}><summary>${c[0]} ${icon('down')}</summary><div>${c[1].map(r => `<span>â†’ ${r}</span>`).join('')}</div></details>`).join('')}<div class="career-contact"><small>RECRUITMENT QUERIES</small><h3>Letâ€™s build the future together.</h3><a href="mailto:careers@siet.ac.in">careers@siet.ac.in</a></div></aside></div></section></main>`;
+function enquiryPage(apply = false) {
+  const pageTitle = apply ? 'Apply for Sri Shakthi' : 'Admission Enquiry';
+  const pageBreadcrumb = apply ? 'Apply' : 'Enquiry';
+  return `<main class="enquiry-page-v3">
+    ${sietHudHeader(pageTitle, pageBreadcrumb, 'Admissions', '#/admission-enquiry', 'SYSTEM ONLINE / ADMISSION PROFILE / SIET-OS')}
+    <section class="enquiry-main-v3">
+      <div class="enquiry-heading-v3">
+        <small>ENQUIRY FORM</small>
+        <h1>Start your engineering journey with SIET</h1>
+      </div>
+      <form class="enquiry-form-v3 js-form">
+        <div class="enquiry-fields-v3">
+          ${field('Full Name', 'name', 'text', 'Enter your full name')}
+          ${field('Mobile Number', 'phone', 'tel', 'Enter 10 digit mobile number')}
+          ${field('Email Address', 'email', 'email', 'Enter your email address')}
+          ${selectField('Course Level', 'level', ['UG', 'PG'])}
+          ${programSelectHtml('Preferred Department', 'course')}
+          ${field('Academic Qualification / Marks', 'qualification', 'text', 'Qualification and marks')}
+        </div>
+        <label>Message / Any Specific Query <b>*</b>
+          <textarea name="message" rows="4" required minlength="10"></textarea>
+        </label>
+        <button class="button" type="submit">${apply ? 'Submit Application' : 'Send Enquiry'} →</button>
+        <p class="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>`;
 }
 
 function videoModal() { return `<div class="video-modal" role="dialog" aria-modal="true"><div class="video-shell portrait"><button class="video-close" aria-label="Close video">Ã—</button><div class="video-frame"><video controls autoplay playsinline poster="/brand/techpark-hd.jpg"><source src="/brand/siet-campus-video.mp4" type="video/mp4"></video></div></div></div>` }
