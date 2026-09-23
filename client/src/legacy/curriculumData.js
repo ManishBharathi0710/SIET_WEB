@@ -1,4 +1,4 @@
-// Comprehensive Curriculum Dataset for all 14 Departments (Regulations 2024)
+// Comprehensive Curriculum Dataset for all 13 UG Departments (Regulations 2024)
 // Anna University Autonomous R2024 Framework (168 Total Credits)
 
 export const allDepartments = [
@@ -14,8 +14,7 @@ export const allDepartments = [
   { id: 'biotech', code: 'BIOTECH', degree: 'B.Tech.', name: 'Biotechnology', desc: 'Interdisciplinary curriculum integrating genetic engineering, molecular bioprocessing, immunology, downstream separation and bioinformatics.' },
   { id: 'bme', code: 'BME', degree: 'B.E.', name: 'Biomedical Engineering', desc: 'Healthcare engineering programme combining physiological monitoring, diagnostic ultrasound/MRI systems, biomaterials, telemedicine and medical robotics.' },
   { id: 'agri', code: 'AGRI', degree: 'B.E.', name: 'Agricultural Engineering', desc: 'Pioneering agricultural engineering syllabus covering farm mechanization, precision irrigation hydraulics, drone agro-sensing, and post-harvest technology.' },
-  { id: 'food', code: 'FOOD', degree: 'B.Tech.', name: 'Food Technology', desc: 'Comprehensive food science curriculum addressing food preservation, dairy processing, industrial packaging, safety certifications and food chemistry.' },
-  { id: 'vlsi', code: 'VLSI', degree: 'B.E.', name: 'VLSI Design and Technology', desc: 'Semiconductor-intensive curriculum specializing in digital/analog CMOS circuit design, FPGA synthesis, verification methodologies and System-on-Chip (SoC).' }
+  { id: 'food', code: 'FOOD', degree: 'B.Tech.', name: 'Food Technology', desc: 'Comprehensive food science curriculum addressing food preservation, dairy processing, industrial packaging, safety certifications and food chemistry.' }
 ];
 
 // Reusable standard First Year (Semester 1 & 2) generators with domain tailoring
@@ -1205,9 +1204,9 @@ export const departmentCurricula = {
     }
   },
 
-  // 14. VLSI Design and Technology
+  // 14. VLSI Design (Offered under ECE)
   'vlsi': {
-    ...allDepartments[13],
+    id: 'vlsi', code: 'VLSI', degree: 'M.E.', name: 'VLSI Design', desc: 'Specialized postgraduate microelectronics curriculum focusing on digital/analog CMOS IC design, FPGA synthesis, and SoC architecture.',
     semesters: {
       1: getSem1('VL', 'Physics for Semiconductor Devices', 'Chemistry for Microelectronics'),
       2: getSem2('VL3251', 'Electronic Circuits and Semiconductor Physics', 'Physics for Semiconductors', true),
@@ -1310,6 +1309,6 @@ export function getDeptCurriculum(idOrName = 'cse') {
   if (key.includes('biotech')) return departmentCurricula['biotech'];
   if (key.includes('agri')) return departmentCurricula['agri'];
   if (key.includes('food')) return departmentCurricula['food'];
-  if (key.includes('vlsi')) return departmentCurricula['vlsi'];
+  if (key.includes('vlsi')) return departmentCurricula['ece'];
   return departmentCurricula['cse'];
 }
