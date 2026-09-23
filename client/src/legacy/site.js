@@ -1,4 +1,5 @@
 import { allDepartments, departmentCurricula, getDeptCurriculum } from './curriculumData.js';
+import { entrepreneurshipPage, initEntrepreneurshipEvents } from './entrepreneurship.js';
 const $ = (selector, root = document) => root?.querySelector?.(selector) || null;
 const $$ = (selector, root = document) => root?.querySelectorAll ? [...root.querySelectorAll(selector)] : [];
 let appRoot;
@@ -4526,7 +4527,7 @@ function routeParams() {
   if (qIndex === -1) return new URLSearchParams();
   return new URLSearchParams(raw.slice(qIndex + 1));
 }
-function render() { if (!appRoot) return; const r = route(); let content = !r ? homePage() : r === 'vision-mission' || r === 'about' ? visionPage() : r === 'core-beliefs' ? coreBeliefsPage() : r === 'program-outcomes' ? programOutcomesPage() : r === 'core-values' ? coreValuesPage() : r === 'philosophy' ? philosophyPage() : r === 'chairman' ? chairmanPage() : r === 'principal' ? principalPage() : r === 'admission-enquiry' || r === 'apply' ? enquiryPage(r === 'apply') : r === 'admission-referral' || r === 'referral' ? referralPage() : r === 'programmes' ? programmesPage() : r === 'departments' ? departmentsPage() : r === 'careers' ? careersPage() : r === 'library' ? libraryPage() : r === 'curriculum' ? curriculumPage() : r === 'academic-calendar' ? academicCalendarPage() : internalPage(r); appRoot.innerHTML = header() + content + footer(); document.title = `${r ? titleCase(r.replaceAll('-', ' ')) : 'Sri Shakthi'} | SIET`; bind(); scrollTo(0, 0) }
+function render() { if (!appRoot) return; const r = route(); let content = !r ? homePage() : r === 'vision-mission' || r === 'about' ? visionPage() : r === 'core-beliefs' ? coreBeliefsPage() : r === 'program-outcomes' ? programOutcomesPage() : r === 'core-values' ? coreValuesPage() : r === 'philosophy' ? philosophyPage() : r === 'chairman' ? chairmanPage() : r === 'principal' ? principalPage() : r === 'admission-enquiry' || r === 'apply' ? enquiryPage(r === 'apply') : r === 'admission-referral' || r === 'referral' ? referralPage() : r === 'programmes' ? programmesPage() : r === 'departments' ? departmentsPage() : r === 'careers' ? careersPage() : r === 'library' ? libraryPage() : r === 'curriculum' ? curriculumPage() : r === 'academic-calendar' ? academicCalendarPage() : (r === 'entrepreneurship' || r === 'career-support/entrepreneurship' || r === 'placements/entrepreneurship') ? entrepreneurshipPage() : (r === 'entrepreneurship' || r === 'career-support/entrepreneurship' || r === 'placements/entrepreneurship') ? entrepreneurshipPage() : internalPage(r); appRoot.innerHTML = header() + content + footer(); document.title = `${r ? titleCase(r.replaceAll('-', ' ')) : 'Sri Shakthi'} | SIET`; bind(); scrollTo(0, 0) }
 
 function bind() {
   if (route() === 'chairman') {
@@ -4555,10 +4556,11 @@ function bind() {
   if (route() === 'programmes') {
     document.title = "UG & PG Programmes | Sri Shakthi Institute of Engineering & Technology";
   }
-  if (route()?.startsWith('placements')) {
+  if (route()?.startsWith('placements') || route() === 'entrepreneurship' || route() === 'career-support/entrepreneurship') {
     const r = route();
-    if (r === 'placements/entrepreneurship') {
+    if (r === 'placements/entrepreneurship' || r === 'entrepreneurship' || r === 'career-support/entrepreneurship') {
       document.title = "Entrepreneurship & Incubation | Sri Shakthi Institute of Engineering & Technology";
+      initEntrepreneurshipEvents();
     } else if (r === 'placements/higher-education') {
       document.title = "Higher Education & Global Admissions | Sri Shakthi Institute of Engineering & Technology";
     } else if (r === 'placements/government-services') {
@@ -5585,50 +5587,24 @@ function placementsDashboardPage(route) {
 
   // Subpage: Entrepreneurship
   if (isEnt) {
-    return `
-      <main class="siet-pe-page">
-        <section class="siet-pj-hero-section">
-          <div class="siet-pj-hero-grid"></div>
-          <div class="siet-pj-hero-orb-1"></div>
-          <div class="siet-pj-hero-orb-2"></div>
-          <div class="siet-pj-shell">
-            <h1 class="siet-pj-title">Entrepreneurship <em>&amp; Startups</em></h1>
-            <p class="siet-pj-subtitle">Nurturing student entrepreneurs, deep-tech venture incubation, and patent commercialization at Sri Shakthi.</p>
-          </div>
-        </section>
-        <div class="siet-sp-lower-shell">
-          <div class="siet-tmpl-sub-grid">
-            <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
-              <div class="siet-vm-card-pattern"></div>
-              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('spark')}</span><span class="siet-vm-card-number">01 / INCUBATOR</span></div>
-              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">MSME APPROVED INCUBATOR</p><h2>Shakthi Innovation &amp; Techpark</h2><p>Dedicated co-working spaces, fabrication equipment, IoT testbeds, and cloud resources accessible 24/7 for student founders.</p></div>
-              <div class="siet-vm-card-footer"><span>25+ Startups Incubated</span><i></i></div>
-            </article>
-            <article class="siet-vm-card siet-vm-card-mission reveal" style="min-height:240px;padding:22px;">
-              <div class="siet-vm-mission-lines"></div>
-              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('target')}</span><span class="siet-vm-card-number">02 / CAPITAL</span></div>
-              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">SEED FUNDING CORPUS</p><h2>₹50 Lakhs Institutional Seed Fund</h2><p>Direct equity-free grants and early prototyping seed capital provided by Management to validate proofs-of-concept.</p></div>
-              <div class="siet-vm-card-footer"><span>Venture Capital Mentorship</span><i></i></div>
-            </article>
-          </div>
-        </div>
-      </main>
-    `;
+    return entrepreneurshipPage();
   }
 
   // Subpage: Higher Education
   if (isHigh) {
     return `
-      <main class="siet-pe-page">
-        <section class="siet-pj-hero-section">
-          <div class="siet-pj-hero-grid"></div>
-          <div class="siet-pj-hero-orb-1"></div>
-          <div class="siet-pj-hero-orb-2"></div>
-          <div class="siet-pj-shell">
-            <h1 class="siet-pj-title">Higher Education <em>&amp; Admissions</em></h1>
-            <p class="siet-pj-subtitle">Guiding graduates towards post-graduate admissions at premier international universities and Indian institutes.</p>
+      <main class="siet-vm-page">
+        <section class="siet-vm-hero">
+          <div class="siet-vm-hero-grid"></div>
+          <div class="siet-vm-hero-orb orb-one"></div>
+          <div class="siet-vm-hero-orb orb-two"></div>
+          <div class="siet-vm-shell siet-vm-hero-content reveal">
+            <p class="siet-vm-kicker"><i></i> HIGHER EDUCATION</p>
+            <h1>Higher Education <em>&amp; Admissions</em></h1>
+            <p class="siet-vm-intro">Guiding graduates towards post-graduate admissions at premier international universities and Indian institutes.</p>
           </div>
         </section>
+
         <div class="siet-sp-lower-shell">
           <div class="siet-tmpl-sub-grid">
             <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
@@ -5643,6 +5619,42 @@ function placementsDashboardPage(route) {
               <div class="siet-vm-card-copy"><p class="siet-vm-card-label">INDIAN EXCELLENCE</p><h2>IISc, IITs, NITs &amp; IIMs</h2><p>Our students consistently qualify GATE and CAT to enter M.Tech, MS, and MBA programs at IISc Bangalore, IIT Madras, and top NITs.</p></div>
               <div class="siet-vm-card-footer"><span>National Top-Rankers</span><i></i></div>
             </article>
+
+            <!-- INTERNATIONAL EDUCATION CARDS -->
+            <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
+              <div class="siet-vm-card-pattern"></div>
+              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('compass')}</span><span class="siet-vm-card-number">03 / USA</span></div>
+              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">POST GRADUATE COURSES</p><h2>United States</h2><p>Counselling provided for post graduate courses in Ivy League &amp; Top Tech Institutes.</p></div>
+              <div class="siet-vm-card-footer"><span>Global Exposure</span><i></i></div>
+            </article>
+
+            <article class="siet-vm-card siet-vm-card-mission reveal" style="min-height:240px;padding:22px;">
+              <div class="siet-vm-mission-lines"></div>
+              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('compass')}</span><span class="siet-vm-card-number">04 / UK</span></div>
+              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">POST GRADUATE COURSES</p><h2>United Kingdom</h2><p>Counselling provided for post graduate courses in Russell Group Universities.</p></div>
+              <div class="siet-vm-card-footer"><span>Global Exposure</span><i></i></div>
+            </article>
+
+            <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
+              <div class="siet-vm-card-pattern"></div>
+              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('compass')}</span><span class="siet-vm-card-number">05 / CANADA</span></div>
+              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">POST GRADUATE COURSES</p><h2>Canada</h2><p>Counselling provided for post graduate courses in Leading Research Academies.</p></div>
+              <div class="siet-vm-card-footer"><span>Global Exposure</span><i></i></div>
+            </article>
+
+            <article class="siet-vm-card siet-vm-card-mission reveal" style="min-height:240px;padding:22px;">
+              <div class="siet-vm-mission-lines"></div>
+              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('compass')}</span><span class="siet-vm-card-number">06 / AUSTRALIA</span></div>
+              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">POST GRADUATE COURSES</p><h2>Australia</h2><p>Counselling provided for post graduate courses in Group of Eight (Go8) Universities.</p></div>
+              <div class="siet-vm-card-footer"><span>Global Exposure</span><i></i></div>
+            </article>
+
+            <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
+              <div class="siet-vm-card-pattern"></div>
+              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('compass')}</span><span class="siet-vm-card-number">07 / GERMANY</span></div>
+              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">POST GRADUATE COURSES</p><h2>Germany</h2><p>Counselling provided for post graduate courses in TU9 Engineering Excellence institutes.</p></div>
+              <div class="siet-vm-card-footer"><span>Global Exposure</span><i></i></div>
+            </article>
           </div>
         </div>
       </main>
@@ -5652,14 +5664,46 @@ function placementsDashboardPage(route) {
   // Subpage: Government Services
   if (isGov) {
     return `
-      <main class="siet-pe-page">
-        <section class="siet-pj-hero-section">
-          <div class="siet-pj-hero-grid"></div>
-          <div class="siet-pj-hero-orb-1"></div>
-          <div class="siet-pj-hero-orb-2"></div>
-          <div class="siet-pj-shell">
-            <h1 class="siet-pj-title">Civil Services <em>&amp; Public Sector</em></h1>
-            <p class="siet-pj-subtitle">Mentoring disciplined graduates for careers in Indian administrative services, defense research, and public enterprises.</p>
+      <main class="siet-vm-page">
+        <section class="siet-vm-hero">
+          <div class="siet-vm-hero-grid"></div>
+          <div class="siet-vm-hero-orb orb-one"></div>
+          <div class="siet-vm-hero-orb orb-two"></div>
+          <div class="siet-vm-shell siet-vm-hero-content reveal">
+            <p class="siet-vm-kicker"><i></i> GOVERNMENT SERVICES</p>
+            <h1>Civil Services <em>&amp; Public Sector</em></h1>
+            <p class="siet-vm-intro">Mentoring disciplined graduates for careers in Indian administrative services, defense research, and public enterprises.</p>
+          </div>
+        </section>
+
+        <!-- NEW ALS IAS COACHING SECTION -->
+        <section class="siet-he-intl-section reveal" style="background:#fff; border-bottom:1px solid #eef5f0; padding:60px 20px;">
+          <div class="siet-he-intl-container" style="max-width: 1000px; text-align: center; margin: 0 auto;">
+            <h2 class="siet-he-quote-text" style="color:#138a36; margin-bottom:40px; font-size:22px; font-weight:800; text-transform:uppercase; letter-spacing:0.5px;">
+              COACHING FOR CIVIL SERVICES EXAMINATIONS PROVIDED IN PARTNERSHIP WITH ALS
+            </h2>
+            
+            <div style="background:#fff; border-radius:12px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); overflow:hidden; border:2px solid #e5001a;">
+              <div style="background:#e5001a; color:#fff; padding:12px 24px; text-align:left; font-weight:bold; font-size:18px;">
+                Top IAS Coaching in Delhi
+              </div>
+              <div style="display:flex; align-items:center; padding:30px; flex-wrap:wrap; gap:20px;">
+                <div style="flex:1; min-width:150px; border-right:2px solid #eee; padding-right:20px; text-align:center;">
+                  <span style="display:block; color:#0033a0; font-size:24px; font-weight:bold; font-style:italic;">Rank</span>
+                  <span style="display:block; font-size:80px; font-weight:900; line-height:1; color:#0033a0; text-shadow:2px 2px 0px #fff, 4px 4px 0px rgba(0,51,160,0.1);">5</span>
+                </div>
+                <div style="flex:3; min-width:300px; padding:0 30px; text-align:center;">
+                  <div style="background:#e5001a; display:inline-block; padding:20px 40px;">
+                    <span style="display:block; font-family:Georgia, serif; font-size:80px; color:#fff; font-weight:bold; line-height:1;">ALS</span>
+                    <span style="display:block; color:#fff; font-size:16px; margin-top:10px; border-top:1px solid rgba(255,255,255,0.5); padding-top:10px;">Training Steel pillars For the Nation</span>
+                  </div>
+                </div>
+                <div style="flex:2; min-width:200px; text-align:left; padding-left:20px;">
+                  <span style="display:block; color:#0033a0; font-size:24px; font-weight:bold; margin-bottom:8px;">ALS IAS Academy</span>
+                  <a href="http://www.alsias.net" target="_blank" rel="noopener" style="color:#0033a0; font-size:18px; font-weight:bold; text-decoration:none;">www.alsias.net</a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <div class="siet-sp-lower-shell">
@@ -6301,7 +6345,7 @@ function updateSuperstarsMarquee(tier) {
     track.innerHTML = getSuperstarMarqueeHtml(currentSuperstarFilter);
     track.style.animation = 'none';
     track.offsetHeight; /* trigger reflow */
-    track.style.animation = '';
+    track.style.animation = 'sietSuperstarsMarquee 60s linear infinite';
   }
 }
 
