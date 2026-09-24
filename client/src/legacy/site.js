@@ -1,4 +1,10 @@
 import { allDepartments, departmentCurricula, getDeptCurriculum } from './curriculumData.js';
+import {
+  renderTransportCreativePage,
+  initTransportCreativePage,
+  renderNccNssCreativePage,
+  initNccNssCreativePage
+} from './creativeCampusPages.js';
 const $ = (selector, root = document) => root?.querySelector?.(selector) || null;
 const $$ = (selector, root = document) => root?.querySelectorAll ? [...root.querySelectorAll(selector)] : [];
 let appRoot;
@@ -3794,6 +3800,7 @@ const campusMarqueeItems = [
 
 /* Campus pages deliberately use separate compositions. These are not theme swaps of
    one card layout: each page mirrors the character of the experience it describes. */
+
 function campusExperiencePage(route, meta, title) {
   const pills = (meta.heroPills || []).map(p => `<span>${icon(p.icon || 'star')} ${p.label}</span>`).join('');
   const metrics = (meta.metrics || []).map(m => `<div><b>${m.val}<sup>${m.suffix}</sup></b><small>${m.label}</small></div>`).join('');
@@ -4054,6 +4061,12 @@ function internalPage(route) {
   const pageMeta = getInternalPageMeta(route, data);
 
   if (isCampus && internalPageData[route]) {
+    if (route === 'transport') {
+      return `<main class="internal-page campus-template-page campus-template-transport siet-fullwidth-template">${sietHudHeader('Transport Fleet & Mobility Network', 'Transport', 'Campus', '#/campus-life', 'SYSTEM ONLINE / LOGISTICS & MOBILITY / SIET-TRANSIT')}${renderTransportCreativePage(internalPageData[route], data[0])}</main>`;
+    }
+    if (route === 'ncc') {
+      return `<main class="internal-page campus-template-page campus-template-ncc siet-fullwidth-template">${sietHudHeader('NCC Army Wing & NSS Corps', 'NCC & NSS', 'Campus', '#/campus-life', 'SYSTEM ONLINE / NATIONAL SERVICE & DEFENCE / SIET-REGIMENTAL')}${renderNccNssCreativePage(internalPageData[route], data[0])}</main>`;
+    }
     return `<main class="internal-page campus-template-page campus-template-${route}">${sietHudHeader(data[0], data[0], 'Campus', '#/campus-life', 'SYSTEM ONLINE / CAMPUS PROFILE / SIET-OS')}${campusExperiencePage(route, internalPageData[route], data[0])}</main>`;
   }
 
@@ -5409,6 +5422,14 @@ function bind() {
   }
   if (route() === 'programmes') {
     document.title = "UG & PG Programmes | Sri Shakthi Institute of Engineering & Technology";
+  }
+  if (route() === 'transport') {
+    document.title = "Transport & Fleet Mobility Network | Sri Shakthi Institute of Engineering & Technology";
+    initTransportCreativePage();
+  }
+  if (route() === 'ncc') {
+    document.title = "NCC Army Wing & NSS National Service Corps | Sri Shakthi Institute of Engineering & Technology";
+    initNccNssCreativePage();
   }
 
   // Filter tabs on Programmes page
