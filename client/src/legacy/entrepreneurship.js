@@ -153,8 +153,8 @@ export const startupsData = [
     location: 'Coimbatore',
     product: 'Renewable Solar Thermal Water Bottle',
     dept: 'Electrical & Electronics Engineering (EEE)',
-    category: 'cleantech',
-    categoryLabel: 'CleanTech & Water',
+    category: 'hardware',
+    categoryLabel: 'Hardware',
     verbatimHtml: `<strong>SOLAR WATER BOTTLE</strong> - Design and fabrication of a bottle with compact size and producing hot water in the non polluting manner by using renewable resource (Solar energy)- incubated at <strong>Department of Electrical and Electronics Engineering</strong> - <strong>Nelson Muthuraj and Sathiyaseelan R</strong> final year <strong>EEE</strong>.`,
     highlight: 'Zero-Pollution Solar Energy Thermal Device'
   },
@@ -165,8 +165,8 @@ export const startupsData = [
     location: 'Coimbatore',
     product: 'Water & Power Conservation Shower System',
     dept: 'Electrical & Electronics Engineering (EEE)',
-    category: 'cleantech',
-    categoryLabel: 'CleanTech & Water',
+    category: 'hardware',
+    categoryLabel: 'Hardware',
     verbatimHtml: `<strong>TECH SHOWER</strong> - To reduce power consumption by stopping unnecessary wastage of water and conserve it for the coming generations- incubated at <strong>Department of Electrical and Electronics Engineering</strong> - <strong>Ms.TEJASWINI P and Ms.KEERTHANA K</strong>, final year <strong>EEE</strong>.`,
     highlight: 'Resource Conservation Technology'
   },
@@ -178,7 +178,7 @@ export const startupsData = [
     product: 'Cutting tools and Fixtures customized based',
     dept: 'Mechanical Engineering',
     category: 'hardware',
-    categoryLabel: 'Hardware & Manufacturing',
+    categoryLabel: 'Hardware',
     verbatimHtml: `<strong>Sanfin Toolings, No 24/2 ,Maruthanaicken Thottam, Near Shanthi Gears Foundry Division, Coimbatore – 641402</strong> - specialized on Cutting tools and Fixtures are customized based - <strong>Gowtham .B</strong> -2013 Passed out student of <strong>MECH</strong>`,
     highlight: 'Custom Cutting Tools & Precision Fixtures'
   },
@@ -226,7 +226,7 @@ export const startupsData = [
     product: 'Authorized Distributor for Vidiem Products',
     dept: 'Electronics & Communication Engineering (ECE)',
     category: 'commercial',
-    categoryLabel: 'Commercial & Distribution',
+    categoryLabel: 'Commercial',
     verbatimHtml: `<strong>Sree Kariya Kaaliamman Agency, No.176/1, New Extention Street, West Palladam, Palladam-641 554, Tirupur Dt</strong>- Authorized Distributor for Home Appliances of Vidiem Products - <strong>P.Gokul</strong> 2016 Passed out student of <strong>ECE</strong>`,
     highlight: 'Authorized Vidiem Products Distributor'
   },
@@ -238,7 +238,7 @@ export const startupsData = [
     product: 'Mass Media Advertisement Company',
     dept: 'Civil Engineering',
     category: 'commercial',
-    categoryLabel: 'Commercial & Media',
+    categoryLabel: 'Commercial',
     verbatimHtml: `<strong>Clap Out Media, 5/16 E, Santhana Lakshmi Nagar, Chinthamani Pudur, Coimbatore-641 103</strong> - Mass Media Advertisement Company - <strong>Amar Keerthi</strong>, 2017 Passed out student of <strong>Civil Engg.</strong>`,
     highlight: 'Mass Media Advertisement Agency'
   },
@@ -250,7 +250,7 @@ export const startupsData = [
     product: 'Eco-Friendly Plantable Pencil Manufacturer',
     dept: 'Information Technology (IT)',
     category: 'cleantech',
-    categoryLabel: 'CleanTech & Sustainable Products',
+    categoryLabel: 'CleanTech & Water',
     verbatimHtml: `<strong>Dreamcil - 1\\149 Ganesh Complex, Avinashi Road, Neelambur, Coimbatore</strong> - Eco Pencil Manufacturer - <strong>Sathish Kumar.N & Mohan Raj.G</strong> 2017 & 2018 passed out students of <strong>IT Dept.</strong>`,
     highlight: 'Eco-Friendly Plantable Pencil Manufacturer'
   }
@@ -808,7 +808,7 @@ export function entrepreneurshipPage() {
               <a class="siet-edc-side-tab ${isTabActive('about') ? 'is-active' : ''}" data-tab="about" href="#/placements/entrepreneurship?tab=about" ${isTabActive('about') ? 'aria-current="page"' : ''}>
                 <span class="siet-vm-nav-icon">${vmIcon('eye')}</span>
                 <b>About E-Cell</b>
-                <span class="siet-vm-arrow">&rarr;</span>
+                
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('startups') ? 'is-active' : ''}" data-tab="startups" href="#/placements/entrepreneurship?tab=startups" ${isTabActive('startups') ? 'aria-current="page"' : ''} aria-label="List of Start-ups">
@@ -826,37 +826,37 @@ export function entrepreneurshipPage() {
               <a class="siet-edc-side-tab ${isTabActive('team') ? 'is-active' : ''}" data-tab="team" href="#/placements/entrepreneurship?tab=team" ${isTabActive('team') ? 'aria-current="page"' : ''} aria-label="Our Team Members">
                 <span class="siet-vm-nav-icon">${vmIcon('users')}</span>
                 <b>Our Team Members</b>
-                <span class="siet-vm-arrow">&rarr;</span>
+                
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('achievements') ? 'is-active' : ''}" data-tab="achievements" href="#/placements/entrepreneurship?tab=achievements" ${isTabActive('achievements') ? 'aria-current="page"' : ''} aria-label="Achievements">
                 <span class="siet-vm-nav-icon">${vmIcon('target')}</span>
                 <b>Achievments</b>
-                <span class="siet-vm-arrow">&rarr;</span>
+                
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('register') ? 'is-active' : ''}" data-tab="register" href="#/placements/entrepreneurship?tab=register" ${isTabActive('register') ? 'aria-current="page"' : ''} aria-label="Registration Forms">
                 <span class="siet-vm-nav-icon">${vmIcon('spark')}</span>
                 <b>Registration Forms</b>
-                <span class="siet-vm-arrow">&rarr;</span>
+                
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('partnerships') ? 'is-active' : ''}" data-tab="partnerships" href="#/placements/entrepreneurship?tab=partnerships" ${isTabActive('partnerships') ? 'aria-current="page"' : ''} aria-label="Partnership">
                 <span class="siet-vm-nav-icon">${vmIcon('education')}</span>
                 <b>Partnership</b>
-                <span class="siet-vm-arrow">&rarr;</span>
+                
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('nisp') ? 'is-active' : ''}" data-tab="nisp" href="#/placements/entrepreneurship?tab=nisp" ${isTabActive('nisp') ? 'aria-current="page"' : ''} aria-label="NISP">
                 <span class="siet-vm-nav-icon">${vmIcon('eye')}</span>
                 <b>NISP</b>
-                <span class="siet-vm-arrow">&rarr;</span>
+                
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('ariia') ? 'is-active' : ''}" data-tab="ariia" href="#/placements/entrepreneurship?tab=ariia" ${isTabActive('ariia') ? 'aria-current="page"' : ''} aria-label="ARIIA">
                 <span class="siet-vm-nav-icon">${vmIcon('target')}</span>
                 <b>ARIIA</b>
-                <span class="siet-vm-arrow">&rarr;</span>
+                
               </a>
             </nav>
           </aside>
@@ -1004,8 +1004,21 @@ export function entrepreneurshipPage() {
 
               <!-- STARTUPS LIST (EACH CARD CONTAINS FULL VERBATIM CONTENT FROM SCREENSHOTS) -->
               <div class="siet-cb-list" id="edc-startups-container">
-                ${startupsData.map((s, index) => `
-                  <article class="siet-cb-card siet-startup-cb-card reveal" style="transition-delay:${(index % 6) * 0.04}s; cursor:pointer;" data-category="${s.category}" data-search="${(s.name + ' ' + s.product + ' ' + s.dept + ' ' + s.highlight).toLowerCase()}" tabindex="0" role="button" aria-label="View details for ${s.shortName}">
+                ${
+                  (() => {
+                    const grouped = {};
+                    startupsData.forEach(s => {
+                      if (!grouped[s.categoryLabel]) grouped[s.categoryLabel] = [];
+                      grouped[s.categoryLabel].push(s);
+                    });
+                    
+                    return Object.keys(grouped).map(catLabel => `
+                      <div class="siet-startup-category-group" data-category-group="${grouped[catLabel][0].category}">
+                        <h3 class="siet-dept-header reveal" style="font-size:16px; font-weight:800; color:#005a39; margin: 30px 0 15px; border-bottom: 2px solid #eef5f0; padding-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;">${catLabel}</h3>
+                        ${grouped[catLabel].map((s) => {
+                          const index = startupsData.indexOf(s);
+                          return `
+                  <article class="siet-cb-card siet-startup-cb-card reveal" style="transition-delay:${(index % 6) * 0.04}s; cursor:pointer;" data-category="${s.category}" data-search="${(s.name + ' ' + s.product + ' ' + s.dept + ' ' + s.highlight).replace(/"/g, '&quot;').toLowerCase()}" tabindex="0" role="button" aria-label="View details for ${s.shortName}">
                     <span class="siet-cb-accent-bar"></span>
                     <div class="siet-cb-indicator">
                       <div class="siet-cb-circle" aria-hidden="true">
@@ -1034,7 +1047,12 @@ export function entrepreneurshipPage() {
                       </div>
                     </div>
                   </article>
-                `).join('')}
+                          `;
+                        }).join('')}
+                      </div>
+                    `).join('');
+                  })()
+                }
               </div>
 
               <div id="edc-startups-empty" class="siet-edc-empty-state" style="display:none;">
@@ -1527,6 +1545,9 @@ export function initEntrepreneurshipEvents() {
     panels.forEach(p => {
       const isMatch = p.id === `edc-panel-${targetTab}`;
       p.classList.toggle('is-active', isMatch);
+      if (isMatch) {
+        p.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+      }
     });
   };
 
@@ -1605,7 +1626,7 @@ export function initEntrepreneurshipEvents() {
       const matchesSearch = !activeSearch || searchText.includes(activeSearch);
 
       const isVisible = matchesCat && matchesSearch;
-      item.style.display = isVisible ? 'flex' : 'none';
+      item.style.setProperty('display', isVisible ? 'flex' : 'none', 'important');
       if (isVisible) visibleCount++;
     });
 
@@ -1648,7 +1669,7 @@ export function initEntrepreneurshipEvents() {
       const matchesSearch = !activeEventSearch || searchText.includes(activeEventSearch);
 
       const isVisible = matchesYear && matchesSearch;
-      row.style.display = isVisible ? '' : 'none';
+      row.style.setProperty('display', isVisible ? 'table-row' : 'none', 'important');
       if (isVisible) visibleCount++;
     });
 

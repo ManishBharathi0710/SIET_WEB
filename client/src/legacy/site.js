@@ -5533,8 +5533,13 @@ function renderSuperstarCard(s) {
         </div>
         <div class="siet-sp-ctc-ribbon ${ribbonClass}">${s.ctc}</div>
       </div>
-      <h3 class="siet-sp-name">${s.name}</h3>
-      <p class="siet-sp-dept">${s.dept}</p>
+      <div style="width: 100%; height: 180px; margin: 16px 0; border-radius: 8px; overflow: hidden; background: #eef5f0; box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);">
+        <img src="${s.img}" alt="${s.name}" style="width: 100%; height: 100%; object-fit: cover; object-position: center 10%; display: block;">
+      </div>
+      <div style="text-align: center; margin-bottom: 16px;">
+        <h3 class="siet-sp-name" style="margin:0; font-size: 18px; font-weight: 800; color: #003d29; line-height: 1.2;">${s.name}</h3>
+        <p class="siet-sp-dept" style="margin:6px 0 0; font-size: 13px; color: #355343; font-weight: 600;">${s.dept}</p>
+      </div>
       <div class="siet-sp-company-box">
         ${renderStudentCompanyBadge(s.company)}
       </div>
@@ -5799,8 +5804,8 @@ function placementsDashboardPage(route) {
             <div class="siet-sp-stats-grid">
               
               <!-- 01. Campus Offers -->
-              <article class="siet-sp-stat-box js-kpi-card is-active" data-kpi="offers" data-filter="all" title="Click to view all campus offers" tabindex="0">
-                <span class="stat-index">01</span>
+              <article class="siet-sp-stat-box js-kpi-card" data-kpi="offers" data-filter="all" title="Click to view all campus offers" tabindex="0">
+                
                 <span class="stat-icon" aria-hidden="true">${icon('chart')}</span>
                 <h3><span class="js-counter" data-to="663" data-suffix="+">0+</span></h3>
                 <p>Campus Offers</p>
@@ -5810,7 +5815,7 @@ function placementsDashboardPage(route) {
 
               <!-- 02. Recruiting Companies -->
               <article class="siet-sp-stat-box js-kpi-card" data-kpi="companies" data-filter="all" title="Click to inspect recruiter partnerships" tabindex="0">
-                <span class="stat-index">02</span>
+                
                 <span class="stat-icon" aria-hidden="true">${icon('industry')}</span>
                 <h3><span class="js-counter" data-to="213" data-suffix="+">0+</span></h3>
                 <p>Recruiting Companies</p>
@@ -5820,7 +5825,7 @@ function placementsDashboardPage(route) {
 
               <!-- 03. Highest CTC -->
               <article class="siet-sp-stat-box js-kpi-card is-highlight" data-kpi="highest" data-filter="33" title="Click to filter ₹33 LPA superstars" tabindex="0">
-                <span class="stat-index">03</span>
+                
                 <span class="stat-icon" aria-hidden="true">${icon('trophy')}</span>
                 <h3 class="highlight-val"><span class="js-counter" data-prefix="₹" data-to="33" data-suffix=" LPA">₹0 LPA</span></h3>
                 <p>Highest CTC (Trilogy)</p>
@@ -5830,7 +5835,7 @@ function placementsDashboardPage(route) {
 
               <!-- 04. Prime Platinum -->
               <article class="siet-sp-stat-box js-kpi-card" data-kpi="platinum" data-filter="22" title="Click to filter ₹10–33 LPA offers" tabindex="0">
-                <span class="stat-index">04</span>
+                
                 <span class="stat-icon" aria-hidden="true">${icon('crown')}</span>
                 <h3><span class="js-counter" data-to="26">0</span></h3>
                 <p>Prime Platinum</p>
@@ -5840,7 +5845,7 @@ function placementsDashboardPage(route) {
 
               <!-- 05. Dazzling Diamond -->
               <article class="siet-sp-stat-box js-kpi-card" data-kpi="diamond" data-filter="10" title="Click to filter ₹6–10 LPA offers" tabindex="0">
-                <span class="stat-index">05</span>
+                
                 <span class="stat-icon" aria-hidden="true">${icon('chip')}</span>
                 <h3><span class="js-counter" data-to="98">0</span></h3>
                 <p>Dazzling Diamond</p>
@@ -5850,7 +5855,7 @@ function placementsDashboardPage(route) {
 
               <!-- 06. Precious Pearl -->
               <article class="siet-sp-stat-box js-kpi-card" data-kpi="pearl" data-filter="9" title="Click to filter ₹4–6 LPA offers" tabindex="0">
-                <span class="stat-index">06</span>
+                
                 <span class="stat-icon" aria-hidden="true">${icon('connect')}</span>
                 <h3><span class="js-counter" data-to="272">0</span></h3>
                 <p>Precious Pearl</p>
@@ -5985,9 +5990,11 @@ function placementsDashboardPage(route) {
                   </div>
                 </div>
               </div>
-              <div class="siet-vm-card-footer">
-                <span>Audited by Training &amp; Placement Cell. Verified annually.</span>
-                <i></i>
+              <div class="siet-vm-card-footer" style="padding-top: 15px; border-top: none;">
+                <button type="button" class="siet-tmpl-btn-gold js-open-records-sheet" data-sheet="0" style="margin-top:0;">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7l-3 3.72L9 13l-3 4h12l-4-5z"/></svg>
+                  <span>View Full Placement Records →</span>
+                </button>
               </div>
             </article>
 
@@ -6281,10 +6288,6 @@ function placementsDashboardPage(route) {
 
           <!-- Bottom Action Buttons -->
           <div class="siet-pj-actions">
-            <button type="button" class="siet-tmpl-btn-gold js-open-records-sheet" data-sheet="0">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7l-3 3.72L9 13l-3 4h12l-4-5z"/></svg>
-              <span>View Full Placement Records →</span>
-            </button>
             <a href="mailto:placements@siet.ac.in" class="siet-tmpl-btn-outline">Contact Placement Cell</a>
           </div>
         </div>
