@@ -324,7 +324,7 @@ export const edcProgramsData = [
   },
   {
     id: 9,
-    date: '08/01/2019 (2.00 PM)',
+    date: '08/01/2019',
     year: '2019',
     activity: 'SIET hostedFace book Live session - INDIA FIRST Leadership Talk',
     details: 'by Shri Anand Mahindra , Chairman, Mahindra Group organized by MHRD IIC',
@@ -332,7 +332,7 @@ export const edcProgramsData = [
   },
   {
     id: 10,
-    date: '10/01/2019 (10:30 am to 12.30 PM)',
+    date: '10/01/2019',
     year: '2019',
     activity: 'A Workshop on IPR for students and Faculty Members',
     details: 'IPR workshop was handled by Dr D.Balaji, Head – Centre for IPR KPRiET, organized by MHRD IIC',
@@ -340,7 +340,7 @@ export const edcProgramsData = [
   },
   {
     id: 11,
-    date: '10/01/2019 (1:30 pm to 3:30 PM)',
+    date: '10/01/2019',
     year: '2019',
     activity: 'SIET hosted Face book Live session by Central Expert for Workshop on IPR for students and Faculty Members',
     details: 'The session was handled by Ms. Shwetasree Majumder Principal, Fidus Law Chamber organized by MHRD IIC',
@@ -372,7 +372,7 @@ export const edcProgramsData = [
   },
   {
     id: 15,
-    date: '10/09/2019 (10.30 am to 12.30 noon)',
+    date: '10/09/2019',
     year: '2019',
     activity: 'Entrepreneurship Awareness Program',
     details: 'The programme was conducted by handled by E-Cell Manager for First, Second and Third year students of all Engineering departments',
@@ -444,7 +444,7 @@ export const edcProgramsData = [
   },
   {
     id: 24,
-    date: '15/10/2019 (10.30 am to 12.30 noon)',
+    date: '15/10/2019',
     year: '2019',
     activity: 'Session on Intellectual Property Rights (Patent, Trademarks and Copyrights)',
     details: 'Session on Intellectual Property Rights (Patent, Trademarks and Copyrights) was handled by E-Cell Manager for 1st year Bio Technology students.',
@@ -476,7 +476,7 @@ export const edcProgramsData = [
   },
   {
     id: 28,
-    date: '17/12/2019 (10.30 am to 12.30 noon)',
+    date: '17/12/2019',
     year: '2019',
     activity: 'Orientation Programme for 2nd year students',
     details: 'E-Cell Manager handled the session and students’ ambassadors were selected for their departments.',
@@ -752,25 +752,41 @@ export const edcPillars = [
   ['04', 'Guest talks and Industrial visits', 'Guest talks by distinguished entrepreneurs, industrial visits, and continuous hand-holding with startup mentors.']
 ];
 
-const vmIcon = (name) => {
+export const edcIcon = (name, size = 22, color = 'currentColor') => {
+  const s = size;
   const icons = {
-    eye: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg>',
-    target: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.2"/><path d="m15.5 8.5 5-5M16 3.5h4.5V8"/></svg>',
-    spark: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 2.8 6.4L21 11.2l-4.9 4.6 1.3 6.9-5.4-3.5-5.4 3.5 1.3-6.9L3 11.2l6.2-2.8L12 2Z"/></svg>',
-    compass: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polygon points="16.2 7.8 14.1 14.1 7.8 16.2 9.9 9.9 16.2 7.8"/></svg>',
-    education: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>',
-    calendar: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>',
-    users: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>'
+    home: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+    rocket: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>`,
+    calendar: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`,
+    users: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+    trophy: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.45 1-1 1H7.5"/><path d="M14 14.66V17c0 .55.45 1 1 1h1.5"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>`,
+    fileText: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/></svg>`,
+    handshake: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m11 17 2 2a1 1 0 0 0 1.42 0l4.24-4.24a1 1 0 0 0 0-1.42l-2-2a1 1 0 0 0-1.42 0L11 15.58"/><path d="m18 13 3.3-3.3a1 1 0 0 0 0-1.42l-2-2a1 1 0 0 0-1.42 0L14 10"/><path d="m14 14 1.5 1.5"/><path d="M3 11a1 1 0 0 1 0-1.41l5.5-5.5a1 1 0 0 1 1.42 0l3.8 3.8a1 1 0 0 1 0 1.42L7.9 15.1a1 1 0 0 1-1.42 0L3 11z"/><path d="m9 10 1.5 1.5"/></svg>`,
+    shield: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+    star: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+    arrow: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>`,
+    arrowRight: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>`,
+    sprout: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4.1 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4.1 1.1-4.9 2z"/></svg>`,
+    patent: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></svg>`,
+    badgeCheck: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>`,
+    award: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>`,
+    spark: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 2.8 6.4L21 11.2l-4.9 4.6 1.3 6.9-5.4-3.5-5.4 3.5 1.3-6.9L3 11.2l6.2-2.8L12 2Z"/></svg>`,
+    eye: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6Z"/><circle cx="12" cy="12" r="2.7"/></svg>`,
+    target: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.2"/><path d="m15.5 8.5 5-5M16 3.5h4.5V8"/></svg>`,
+    compass: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polygon points="16.2 7.8 14.1 14.1 7.8 16.2 9.9 9.9 16.2 7.8"/></svg>`,
+    education: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>`
   };
-  return icons[name] || icons.spark;
+  return icons[name] || icons.home;
 };
 
-export function entrepreneurshipPage() {
-  const startupsCount = startupsData.length;
-  const eventsCount = edcProgramsData.length;
+const vmIcon = (name) => edcIcon(name, 18, 'currentColor');
 
-  // Read initial tab from URL parameter (?tab=startups, ?tab=events, etc.)
-  let initialTab = 'about';
+export function entrepreneurshipPage() {
+  const startupsCount = 21;
+  const eventsCount = 35;
+
+  // Read initial tab from URL parameter (?tab=startups, ?tab=achievements, etc.)
+  let initialTab = 'achievements';
   if (typeof window !== 'undefined' && window.location.hash) {
     const m = window.location.hash.match(/\?tab=([a-z0-9_-]+)/);
     if (m && m[1]) {
@@ -782,7 +798,7 @@ export function entrepreneurshipPage() {
 
   return `
     <main class="siet-vm-page">
-      <!-- HERO COMPONENT 100% IDENTICAL TO THE ABOUT US / VISION & MISSION PAGE -->
+      <!-- HERO COMPONENT -->
       <section class="siet-vm-hero">
         <div class="siet-vm-hero-grid"></div>
         <div class="siet-vm-hero-orb orb-one"></div>
@@ -794,71 +810,122 @@ export function entrepreneurshipPage() {
         </div>
       </section>
 
-      <!-- CONTENT SHELL MATCHING ABOUT PAGE ARCHITECTURE -->
+      <!-- CONTENT SHELL -->
       <section class="siet-vm-content">
         <div class="siet-vm-shell siet-vm-layout">
           
-          <!-- LEFT SIDEBAR COMPONENT IDENTICAL TO ABOUT PAGE SIDEBAR -->
-          <aside class="siet-vm-sidebar reveal">
-            <div class="siet-vm-sidebar-head">
-              <span>CAREER SUPPORT</span>
-              <h2>Entrepreneurship</h2>
+          <!-- LEFT SIDEBAR: DARK FOREST GREEN WITH GOLD ACCENTS & CLEAN GEOMETRY -->
+          <aside class="siet-vm-sidebar siet-edc-sidebar reveal" id="siet-edc-sidebar">
+            <div class="siet-edc-sidebar-head">
+              <span class="siet-edc-sidebar-kicker">CAREER SUPPORT</span>
+              <h2 class="siet-edc-sidebar-title">
+                <span>Entrepreneurship</span>
+                <svg class="siet-edc-leaf-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FACC15" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+                </svg>
+              </h2>
             </div>
-            <nav aria-label="Entrepreneurship Navigation">
+
+            <!-- 9 MENU ITEMS ACCORDING TO SPECIFICATIONS -->
+            <nav aria-label="Entrepreneurship Navigation" class="siet-edc-nav">
               <a class="siet-edc-side-tab ${isTabActive('about') ? 'is-active' : ''}" data-tab="about" href="#/placements/entrepreneurship?tab=about" ${isTabActive('about') ? 'aria-current="page"' : ''}>
-                <span class="siet-vm-nav-icon">${vmIcon('eye')}</span>
-                <b>About E-Cell</b>
-                
+                <div class="siet-edc-tab-left">
+                  <span class="siet-edc-tab-icon">${edcIcon('home', 20)}</span>
+                  <span class="siet-edc-tab-label">About E-Cell</span>
+                </div>
+                <div class="siet-edc-tab-right">
+                  <span class="siet-edc-tab-arrow">${edcIcon('arrow', 18)}</span>
+                </div>
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('startups') ? 'is-active' : ''}" data-tab="startups" href="#/placements/entrepreneurship?tab=startups" ${isTabActive('startups') ? 'aria-current="page"' : ''} aria-label="List of Start-ups">
-                <span class="siet-vm-nav-icon">${vmIcon('spark')}</span>
-                <b>List of Start-ups</b>
-                <span class="siet-edc-side-pill">${startupsCount}</span>
+                <div class="siet-edc-tab-left">
+                  <span class="siet-edc-tab-icon">${edcIcon('rocket', 20)}</span>
+                  <span class="siet-edc-tab-label">List of Start-ups</span>
+                </div>
+                <div class="siet-edc-tab-right">
+                  <span class="siet-edc-badge">21</span>
+                </div>
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('events') ? 'is-active' : ''}" data-tab="events" href="#/placements/entrepreneurship?tab=events" ${isTabActive('events') ? 'aria-current="page"' : ''} aria-label="List of Events">
-                <span class="siet-vm-nav-icon">${vmIcon('calendar')}</span>
-                <b>List of Events</b>
-                <span class="siet-edc-side-pill">${eventsCount}</span>
+                <div class="siet-edc-tab-left">
+                  <span class="siet-edc-tab-icon">${edcIcon('calendar', 20)}</span>
+                  <span class="siet-edc-tab-label">List of Events</span>
+                </div>
+                <div class="siet-edc-tab-right">
+                  <span class="siet-edc-badge">35</span>
+                </div>
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('team') ? 'is-active' : ''}" data-tab="team" href="#/placements/entrepreneurship?tab=team" ${isTabActive('team') ? 'aria-current="page"' : ''} aria-label="Our Team Members">
-                <span class="siet-vm-nav-icon">${vmIcon('users')}</span>
-                <b>Our Team Members</b>
-                
+                <div class="siet-edc-tab-left">
+                  <span class="siet-edc-tab-icon">${edcIcon('users', 20)}</span>
+                  <span class="siet-edc-tab-label">Our Team Members</span>
+                </div>
+                <div class="siet-edc-tab-right">
+                  <span class="siet-edc-tab-arrow">${edcIcon('arrow', 18)}</span>
+                </div>
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('achievements') ? 'is-active' : ''}" data-tab="achievements" href="#/placements/entrepreneurship?tab=achievements" ${isTabActive('achievements') ? 'aria-current="page"' : ''} aria-label="Achievements">
-                <span class="siet-vm-nav-icon">${vmIcon('target')}</span>
-                <b>Achievments</b>
-                
+                <div class="siet-edc-tab-left">
+                  <span class="siet-edc-tab-icon">${edcIcon('trophy', 20)}</span>
+                  <span class="siet-edc-tab-label">Achievements</span>
+                </div>
+                <div class="siet-edc-tab-right">
+                  <span class="siet-edc-tab-arrow">${edcIcon('arrow', 18)}</span>
+                </div>
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('register') ? 'is-active' : ''}" data-tab="register" href="#/placements/entrepreneurship?tab=register" ${isTabActive('register') ? 'aria-current="page"' : ''} aria-label="Registration Forms">
-                <span class="siet-vm-nav-icon">${vmIcon('spark')}</span>
-                <b>Registration Forms</b>
-                
+                <div class="siet-edc-tab-left">
+                  <span class="siet-edc-tab-icon">${edcIcon('fileText', 20)}</span>
+                  <span class="siet-edc-tab-label">Registration Forms</span>
+                </div>
+                <div class="siet-edc-tab-right">
+                  <span class="siet-edc-tab-arrow">${edcIcon('arrow', 18)}</span>
+                </div>
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('partnerships') ? 'is-active' : ''}" data-tab="partnerships" href="#/placements/entrepreneurship?tab=partnerships" ${isTabActive('partnerships') ? 'aria-current="page"' : ''} aria-label="Partnership">
-                <span class="siet-vm-nav-icon">${vmIcon('education')}</span>
-                <b>Partnership</b>
-                
+                <div class="siet-edc-tab-left">
+                  <span class="siet-edc-tab-icon">${edcIcon('handshake', 20)}</span>
+                  <span class="siet-edc-tab-label">Partnership</span>
+                </div>
+                <div class="siet-edc-tab-right">
+                  <span class="siet-edc-tab-arrow">${edcIcon('arrow', 18)}</span>
+                </div>
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('nisp') ? 'is-active' : ''}" data-tab="nisp" href="#/placements/entrepreneurship?tab=nisp" ${isTabActive('nisp') ? 'aria-current="page"' : ''} aria-label="NISP">
-                <span class="siet-vm-nav-icon">${vmIcon('eye')}</span>
-                <b>NISP</b>
-                
+                <div class="siet-edc-tab-left">
+                  <span class="siet-edc-tab-icon">${edcIcon('shield', 20)}</span>
+                  <span class="siet-edc-tab-label">NISP</span>
+                </div>
+                <div class="siet-edc-tab-right">
+                  <span class="siet-edc-tab-arrow">${edcIcon('arrow', 18)}</span>
+                </div>
               </a>
 
               <a class="siet-edc-side-tab ${isTabActive('ariia') ? 'is-active' : ''}" data-tab="ariia" href="#/placements/entrepreneurship?tab=ariia" ${isTabActive('ariia') ? 'aria-current="page"' : ''} aria-label="ARIIA">
-                <span class="siet-vm-nav-icon">${vmIcon('target')}</span>
-                <b>ARIIA</b>
-                
+                <div class="siet-edc-tab-left">
+                  <span class="siet-edc-tab-icon">${edcIcon('star', 20)}</span>
+                  <span class="siet-edc-tab-label">ARIIA</span>
+                </div>
+                <div class="siet-edc-tab-right">
+                  <span class="siet-edc-tab-arrow">${edcIcon('arrow', 18)}</span>
+                </div>
               </a>
             </nav>
+
+            <div class="siet-edc-sidebar-deco" aria-hidden="true">
+              <svg width="84" height="84" viewBox="0 0 100 100" fill="none">
+                <path d="M15 85 C 20 45, 55 20, 88 12 C 88 48, 62 80, 15 85 Z" fill="#FACC15" fill-opacity="0.12"/>
+                <path d="M15 85 C 45 60, 65 40, 88 12" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="2"/>
+              </svg>
+            </div>
           </aside>
 
           <!-- RIGHT MAIN CONTAINER -->
@@ -1090,7 +1157,7 @@ export function entrepreneurshipPage() {
                   <table class="siet-events-table" id="edc-events-table">
                     <thead>
                       <tr>
-                        <th style="width:140px;">Date</th>
+                        <th style="width:165px;">Date</th>
                         <th style="width:38%;">Activities</th>
                         <th>Details</th>
                       </tr>
@@ -1159,105 +1226,205 @@ export function entrepreneurshipPage() {
                 </div>
               </div>
 
-              <!-- OFFICE-BEARERS SECTION FROM SCREENSHOT 2 -->
-              <div class="siet-vm-section-intro reveal" style="margin-top:20px;">
-                <p>STUDENT ENTREPRENEURSHIP LEADERSHIP</p>
-                <h2>OFFICE-BEARERS - <em>TEAM OF PASSIONATE INDIVIDUALS</em></h2>
-                <div class="siet-heading-green-line"></div>
-                <span>Who are serious about Entrepreneurship and want to create the start-up hub in this institute.</span>
-              </div>
+              <!-- NEW MODERN OFFICE BEARERS SECTION -->
+              <section class="siet-office-bearers-section reveal">
+                <div class="siet-ob-header">
+                  <h2 class="siet-ob-title">INDIVIDUALS</h2>
+                  <div class="siet-bc-divider">
+                    <span class="siet-bc-line"></span>
+                    <span class="siet-bc-dot"></span>
+                    <span class="siet-bc-line"></span>
+                  </div>
+                  <p class="siet-ob-desc">Who are serious about Entrepreneurship and want to create the start-up hub in this institute.</p>
+                </div>
+                
+                <div class="siet-ob-grid">
+                  ${[
+                    { role: 'PRESIDENT', name: 'Gowthaman.R', dept: 'Department of BIOTECH', icon: '<path d="M4 4h16v6a8 8 0 0 1-16 0z"/><path d="M12 22V10"/><path d="M8 22h8"/>' },
+                    { role: 'VICE PRESIDENT', name: 'Sree Nithin', dept: 'Department of Mech', icon: '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>' },
+                    { role: 'SECRETARY', name: 'Ram Nivas', dept: 'Department of IT', icon: '<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>' },
+                    { role: 'JOINT SECRETARY', name: 'Venkatesh', dept: 'Department of Mech', icon: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>' }
+                  ].map(b => `
+                    <div class="siet-ob-card">
+                      <div class="siet-ob-accent-line"></div>
+                      <div class="siet-ob-profile-icon">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                        </svg>
+                      </div>
+                      <div class="siet-ob-content">
+                        <div class="siet-ob-role-badge">
+                          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${b.icon}</svg>
+                          ${b.role}
+                        </div>
+                        <h3 class="siet-ob-name">${b.name}</h3>
+                        <div class="siet-bc-gold-line"></div>
+                        <p class="siet-ob-dept">${b.dept}</p>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </section>
 
-              <div class="siet-cv-grid" style="margin-bottom:34px;">
-                ${studentOfficeBearers.map(b => `
-                  <article class="siet-cv-card reveal">
-                    <span class="siet-cb-tag" style="margin-bottom:10px;">${b.role.toUpperCase()}</span>
-                    <h3 style="font-size:18px;margin-bottom:4px;color:#00281b;">${b.name}</h3>
-                    <p style="color:#00854a;font-weight:700;font-size:13.5px;margin:0;">Department of ${b.dept}</p>
-                    <span class="siet-cv-corner"></span>
-                  </article>
-                `).join('')}
-              </div>
-
-              <!-- DEPARTMENT COORDINATORS SECTION FROM SCREENSHOT 3 -->
-              <div class="siet-vm-section-intro reveal" style="margin-top:20px;">
-                <p>DEPARTMENTAL AMBASSADORS</p>
-                <h2>STUDENT <em>CO-ORDINATORS</em></h2>
-                <div class="siet-heading-green-line"></div>
-                <span>Departmental student network driving ideation, bootcamps, and hackathons across academic branches.</span>
-              </div>
-
-              <div class="siet-cv-grid" style="margin-bottom:34px;">
-                ${studentCoordinators.map(c => `
-                  <article class="siet-cv-card reveal" style="padding:22px;">
-                    <span class="siet-cb-kicker" style="color:#00854a;font-size:11px;letter-spacing:0.12em;">BRANCH COORDINATOR</span>
-                    <h3 style="font-size:16px;margin:6px 0 3px;color:#00281b;">${c.dept}</h3>
-                    <p style="font-weight:700;color:#173226;margin-bottom:4px;">${c.name}</p>
-                    <a href="tel:${c.phone}" style="color:#00854a;font-weight:700;font-size:13.5px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">
-                      <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                      ${c.phone}
-                    </a>
-                    <span class="siet-cv-corner"></span>
-                  </article>
-                `).join('')}
-              </div>
+              <!-- NEW MODERN BRANCH COORDINATORS SECTION -->
+              <section class="siet-branch-coordinators-section reveal">
+                <div class="siet-bc-header">
+                  <h2 class="siet-bc-title">BRANCH COORDINATORS</h2>
+                  <div class="siet-bc-divider">
+                    <span class="siet-bc-line"></span>
+                    <span class="siet-bc-dot"></span>
+                    <span class="siet-bc-line"></span>
+                  </div>
+                </div>
+                
+                <div class="siet-bc-grid">
+                  ${[
+                    { dept: 'AGRI', name: 'Aarthi', phone: '9487588417' },
+                    { dept: 'BIOTECH', name: 'Gowthaman', phone: '9994104941' },
+                    { dept: 'CSE', name: 'Kiran karthi', phone: '9629402383' },
+                    { dept: 'IT', name: 'Maheema', phone: '9487766198' },
+                    { dept: 'FOODTECH', name: 'Aakash', phone: '7397199903' },
+                    { dept: 'MECH', name: 'M Karthi', phone: '9500857587' }
+                  ].map(c => `
+                    <div class="siet-bc-card">
+                      <div class="siet-bc-badge">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                      </div>
+                      <div class="siet-bc-content">
+                        <h3 class="siet-bc-dept">${c.dept}</h3>
+                        <div class="siet-bc-gold-line"></div>
+                        <p class="siet-bc-name">${c.name}</p>
+                        <span class="siet-bc-role">BRANCH COORDINATOR</span>
+                        <hr class="siet-bc-hr" />
+                        <div class="siet-bc-phone-wrapper">
+                          <div class="siet-bc-phone-icon">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                          </div>
+                          <a href="tel:${c.phone}" class="siet-bc-phone-text">${c.phone}</a>
+                        </div>
+                      </div>
+                    </div>
+                  `).join('')}
+                </div>
+              </section>
             </div>
 
-            <!-- 5. TAB: ACHIEVEMENTS (FROM SCREENSHOT 4) -->
+            <!-- 5. TAB: ACHIEVEMENTS (PREMIUM INSTITUTIONAL BENCHMARKS DASHBOARD) -->
             <div class="siet-edc-panel ${isTabActive('achievements') ? 'is-active' : ''}" id="edc-panel-achievements">
-              <div class="siet-vm-section-intro reveal">
-                <p>INSTITUTIONAL BENCHMARKS</p>
-                <h2>SPECIAL <em>ACHIEVEMENTS</em></h2>
-                <div class="siet-heading-green-line"></div>
-                <span>Validated track record in venture acceleration, national design contests, and intellectual property creation.</span>
+              <div class="siet-ach-header-section reveal">
+                <div class="siet-ach-kicker-wrap">
+                  <span class="siet-ach-kicker-line"></span>
+                  <span class="siet-ach-kicker-text">INSTITUTIONAL BENCHMARKS</span>
+                  <span class="siet-ach-kicker-line"></span>
+                </div>
+                <h1 class="siet-ach-title">
+                  <span class="siet-ach-title-special">SPECIAL </span>
+                  <span class="siet-ach-title-achieve">ACHIEVEMENTS</span>
+                </h1>
+                <p class="siet-ach-subtitle">Validated track record in venture acceleration, national design contests, and intellectual property creation.</p>
               </div>
 
-              <!-- SUMMARY STATS TILES -->
-              <div class="siet-cv-grid" style="margin-bottom:28px;">
-                <article class="siet-cv-card reveal" style="text-align:center;padding:24px 16px;">
-                  <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:36px;font-weight:800;color:#00854a;line-height:1;display:block;margin-bottom:6px;">20+</span>
-                  <p style="font-weight:800;color:#00281b;margin:0;font-size:13.5px;letter-spacing:0.04em;">ACCELERATED STARTUPS</p>
-                  <span class="siet-cv-corner"></span>
-                </article>
+              <!-- FOUR STATISTICS CARDS (2x2 GRID, COMPLETELY CLEAN CORNERS, NO WAVE DECORATIONS) -->
+              <div class="siet-ach-stats-grid reveal">
+                <!-- CARD 1: 20+ ACCELERATED STARTUPS -->
+                <div class="siet-ach-stat-card stat-card-yellow-1">
+                  <div class="siet-ach-stat-icon-wrap stat-icon-circle-yellow">
+                    ${edcIcon('rocket', 36, '#064E3B')}
+                  </div>
+                  <div class="siet-ach-stat-details">
+                    <span class="siet-ach-stat-number">20+</span>
+                    <span class="siet-ach-stat-label">ACCELERATED STARTUPS</span>
+                  </div>
+                  <div class="siet-ach-stat-arrow">
+                    ${edcIcon('arrowRight', 22, '#064E3B')}
+                  </div>
+                </div>
 
-                <article class="siet-cv-card reveal" style="text-align:center;padding:24px 16px;">
-                  <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:36px;font-weight:800;color:#855d00;line-height:1;display:block;margin-bottom:6px;">₹25L+</span>
-                  <p style="font-weight:800;color:#00281b;margin:0;font-size:13.5px;letter-spacing:0.04em;">DST &amp; TI SEED GRANTS</p>
-                  <span class="siet-cv-corner"></span>
-                </article>
+                <!-- CARD 2: ₹25L+ DST & TI SEED GRANTS -->
+                <div class="siet-ach-stat-card stat-card-green-2">
+                  <div class="siet-ach-stat-icon-wrap stat-icon-circle-green">
+                    ${edcIcon('sprout', 36, '#064E3B')}
+                  </div>
+                  <div class="siet-ach-stat-details">
+                    <span class="siet-ach-stat-number">₹25L+</span>
+                    <span class="siet-ach-stat-label">DST &amp; TI SEED GRANTS</span>
+                  </div>
+                  <div class="siet-ach-stat-arrow">
+                    ${edcIcon('arrowRight', 22, '#064E3B')}
+                  </div>
+                </div>
 
-                <article class="siet-cv-card reveal" style="text-align:center;padding:24px 16px;">
-                  <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:36px;font-weight:800;color:#00854a;line-height:1;display:block;margin-bottom:6px;">34</span>
-                  <p style="font-weight:800;color:#00281b;margin:0;font-size:13.5px;letter-spacing:0.04em;">PATENTS FILED</p>
-                  <span class="siet-cv-corner"></span>
-                </article>
+                <!-- CARD 3: 34 PATENTS FILED -->
+                <div class="siet-ach-stat-card stat-card-green-3">
+                  <div class="siet-ach-stat-icon-wrap stat-icon-circle-yellow-light">
+                    ${edcIcon('patent', 36, '#064E3B')}
+                  </div>
+                  <div class="siet-ach-stat-details">
+                    <span class="siet-ach-stat-number">34</span>
+                    <span class="siet-ach-stat-label">PATENTS FILED</span>
+                  </div>
+                  <div class="siet-ach-stat-arrow">
+                    ${edcIcon('arrowRight', 22, '#064E3B')}
+                  </div>
+                </div>
 
-                <article class="siet-cv-card reveal" style="text-align:center;padding:24px 16px;">
-                  <span style="font-family:'Plus Jakarta Sans',sans-serif;font-size:36px;font-weight:800;color:#00854a;line-height:1;display:block;margin-bottom:6px;">40+</span>
-                  <p style="font-weight:800;color:#00281b;margin:0;font-size:13.5px;letter-spacing:0.04em;">COLLABORATIONS</p>
-                  <span class="siet-cv-corner"></span>
-                </article>
+                <!-- CARD 4: 40+ COLLABORATIONS -->
+                <div class="siet-ach-stat-card stat-card-yellow-4">
+                  <div class="siet-ach-stat-icon-wrap stat-icon-circle-yellow">
+                    ${edcIcon('users', 36, '#064E3B')}
+                  </div>
+                  <div class="siet-ach-stat-details">
+                    <span class="siet-ach-stat-number">40+</span>
+                    <span class="siet-ach-stat-label">COLLABORATIONS</span>
+                  </div>
+                  <div class="siet-ach-stat-arrow">
+                    ${edcIcon('arrowRight', 22, '#064E3B')}
+                  </div>
+                </div>
               </div>
 
-              <!-- VERBATIM SPECIAL ACHIEVEMENTS LIST MATCHING SCREENSHOT 4 -->
-              <div class="siet-cb-list">
-                ${specialAchievements.map((ach, idx) => `
-                  <article class="siet-cb-card reveal" style="transition-delay:${idx * 0.03}s;">
-                    <span class="siet-cb-accent-bar"></span>
-                    <div class="siet-cb-indicator">
-                      <div class="siet-cb-circle" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></div>
-                      <span class="siet-cb-num">${idx < 9 ? '0' + (idx + 1) : (idx + 1)}</span>
-                    </div>
-                    <div class="siet-cb-body">
-                      <div class="siet-cb-meta">
-                        <span class="siet-cb-kicker">RECORD ${idx + 1}</span>
-                        <span class="siet-cb-tag">${ach.badge}</span>
+              <!-- ACHIEVEMENT RECORDS SECTION -->
+              <div class="siet-ach-records-list">
+                ${specialAchievements.map((ach, idx) => {
+                  const isRecord1 = idx === 0;
+                  const isRecord2 = idx === 1;
+                  const numStr = idx < 9 ? '0' + (idx + 1) : (idx + 1);
+                  const iconCircleClass = isRecord1 ? 'record-icon-darkgreen' : (idx % 2 === 1 ? 'record-icon-yellow' : 'record-icon-lightgreen');
+                  const iconSvg = isRecord1 
+                    ? edcIcon('trophy', 22, '#FFFFFF') 
+                    : (isRecord2 ? edcIcon('badgeCheck', 22, '#064E3B') : edcIcon('award', 22, '#064E3B'));
+                  
+                  // Text for Record 1 & 2 tailored exactly to specification
+                  let descText = ach.text;
+                  if (isRecord1) {
+                    descText = '20+ startups operating across agriculture, biotechnology, water purification, healthcare, software, and engineering.';
+                  } else if (isRecord2) {
+                    descText = 'Received ₹25 lakhs grant under DST & TI Seed Grant for innovative ventures — Best Innovation Award for a biomedical student project (Oxyserve- Air purifier) by Texas Instruments with 5 lakhs cash award and 20 lakhs as seed fund From DST and Startup Support at IIM Bangalore.';
+                  }
+
+                  return `
+                    <article class="siet-ach-record-card reveal" style="transition-delay:${idx * 0.03}s;">
+                      <div class="siet-ach-record-left">
+                        <div class="siet-ach-record-icon-circle ${iconCircleClass}">
+                          ${iconSvg}
+                        </div>
+                        <span class="siet-ach-record-num">${numStr}</span>
                       </div>
-                      <p class="siet-startup-verbatim-text" style="padding-left:0;margin:0;font-size:15px;line-height:1.75;">
-                        ${ach.text}
-                      </p>
-                    </div>
-                  </article>
-                `).join('')}
+                      <div class="siet-ach-record-content">
+                        <div class="siet-ach-record-meta">
+                          <span class="siet-ach-record-kicker">RECORD ${idx + 1}</span>
+                          <span class="siet-ach-record-pill">${ach.badge}</span>
+                        </div>
+                        <p class="siet-ach-record-text">
+                          ${descText}
+                        </p>
+                      </div>
+                      <div class="siet-ach-record-right">
+                        <span class="siet-ach-record-arrow">${edcIcon('arrowRight', 20, '#064E3B')}</span>
+                      </div>
+                    </article>
+                  `;
+                }).join('')}
               </div>
             </div>
 
@@ -1278,7 +1445,7 @@ export function entrepreneurshipPage() {
                 </div>
                 <div class="siet-vm-card-copy" style="position:relative;z-index:2;">
                   <p class="siet-vm-card-label">APPLY FOR INCUBATION</p>
-                  <h2>Submit Your Venture Proposal</h2>
+                  <h2 style="color: #ffffff !important;">Submit Your Venture Proposal</h2>
                   <p>Students and young alumni can register innovative ideas for pre-incubation, intellectual property support, and prototype grants.</p>
                   
                   <form class="siet-edc-form-grid" onsubmit="event.preventDefault(); alert('Proposal received! The E-Cell incubation team will contact you within 48 hours.');">
@@ -1589,7 +1756,7 @@ export function initEntrepreneurshipEvents() {
     if (tabMatch && tabMatch[1]) {
       activateTab(tabMatch[1]);
     } else {
-      activateTab('about');
+      activateTab('achievements');
     }
   });
 
