@@ -5,6 +5,7 @@ import {
   renderNccNssCreativePage,
   initNccNssCreativePage
 } from './creativeCampusPages.js';
+import { entrepreneurshipPage, initEntrepreneurshipEvents } from './entrepreneurship.js';
 const $ = (selector, root = document) => root?.querySelector?.(selector) || null;
 const $$ = (selector, root = document) => root?.querySelectorAll ? [...root.querySelectorAll(selector)] : [];
 let appRoot;
@@ -59,6 +60,7 @@ const pageGroups = [
   { label: 'Academics', icon: 'book', items: [['academics', 'Academic Overview'], ['departments', 'Departments'], ['curriculum', 'Curriculum'], ['academic-calendar', 'Academic Calendar'], ['library', 'Library']] },
   { label: 'Admissions', icon: 'grad', items: [['programmes', 'UG & PG Programmes'], ['admission-enquiry', 'Admission Enquiry'], ['admission-referral', 'Admission Referral']] },
   { label: 'Campus', icon: 'building', items: [['campus-life', 'Campus Life'], ['facilities', 'Facilities'], ['hostel', 'Hostel'], ['transport', 'Transport'], ['sports', 'Sports'], ['clubs', 'Student Clubs'], ['ncc', 'NCC & NSS']] },
+  { label: 'Placements', icon: 'trend', items: [['placements', 'Job Placements'], ['placements/entrepreneurship', 'Entrepreneurship'], ['placements/higher-education', 'Higher Education'], ['placements/government-services', 'Government Services']] },
   { label: 'Quality & Excellence', icon: 'quality', items: [['centres-of-excellence', 'Centres of Excellence'], ['accreditations', 'NBA & NAAC'], ['examinations', 'Examinations'], ['iqac', 'IQAC']] },
   { label: 'Explore', icon: 'compass', items: [['training', 'Career Development'], ['research', 'Research & Development'], ['innovation', 'Innovation & Incubation'], ['alumni', 'Alumni'], ['contact', 'Contact Us']] }
 ];
@@ -4043,6 +4045,9 @@ function campusExperiencePage(route, meta, title) {
 }
 
 function internalPage(route) {
+  if (route.startsWith('placements')) {
+    return placementsDashboardPage(route);
+  }
   if (route.startsWith('club/')) {
     const clubSlug = route.slice(5);
     const club = (internalPageData.clubs.pillars || []).find(item => slugify(item.title) === clubSlug) || internalPageData.clubs.pillars[0];
@@ -5394,9 +5399,23 @@ function routeParams() {
   if (qIndex === -1) return new URLSearchParams();
   return new URLSearchParams(raw.slice(qIndex + 1));
 }
-function render() { if (!appRoot) return; const r = route(); let content = !r ? homePage() : r === 'vision-mission' || r === 'about' ? visionPage() : r === 'core-beliefs' ? coreBeliefsPage() : r === 'program-outcomes' ? programOutcomesPage() : r === 'core-values' ? coreValuesPage() : r === 'philosophy' ? philosophyPage() : r === 'chairman' ? chairmanPage() : r === 'principal' ? principalPage() : r === 'admission-enquiry' || r === 'apply' ? enquiryPage(r === 'apply') : r === 'admission-referral' || r === 'referral' ? referralPage() : r === 'programmes' ? programmesPage() : r === 'departments' ? departmentsPage() : r === 'careers' ? careersPage() : r === 'library' ? libraryPage() : r === 'curriculum' ? curriculumPage() : r === 'academic-calendar' ? academicCalendarPage() : internalPage(r); appRoot.innerHTML = header() + content + footer(); document.title = `${r ? titleCase(r.replaceAll('-', ' ')) : 'Sri Shakthi'} | SIET`; bind(); scrollTo(0, 0) }
+function render() { if (!appRoot) return; const r = route(); let content = !r ? homePage() : r === 'vision-mission' || r === 'about' ? visionPage() : r === 'core-beliefs' ? coreBeliefsPage() : r === 'program-outcomes' ? programOutcomesPage() : r === 'core-values' ? coreValuesPage() : r === 'philosophy' ? philosophyPage() : r === 'chairman' ? chairmanPage() : r === 'principal' ? principalPage() : r === 'admission-enquiry' || r === 'apply' ? enquiryPage(r === 'apply') : r === 'admission-referral' || r === 'referral' ? referralPage() : r === 'programmes' ? programmesPage() : r === 'departments' ? departmentsPage() : r === 'careers' ? careersPage() : r === 'library' ? libraryPage() : r === 'curriculum' ? curriculumPage() : r === 'academic-calendar' ? academicCalendarPage() : (r === 'entrepreneurship' || r === 'career-support/entrepreneurship' || r === 'placements/entrepreneurship') ? entrepreneurshipPage() : internalPage(r); appRoot.innerHTML = header() + content + footer(); document.title = `${r ? titleCase(r.replaceAll('-', ' ')) : 'Sri Shakthi'} | SIET`; bind(); scrollTo(0, 0) }
 
 function bind() {
+  if (route()?.startsWith('placements') || route() === 'entrepreneurship' || route() === 'career-support/entrepreneurship') {
+    const r = route();
+    if (r === 'placements/entrepreneurship' || r === 'entrepreneurship' || r === 'career-support/entrepreneurship') {
+      document.title = "Entrepreneurship & Incubation | Sri Shakthi Institute of Engineering & Technology";
+      initEntrepreneurshipEvents();
+    } else if (r === 'placements/higher-education') {
+      document.title = "Higher Education & Global Admissions | Sri Shakthi Institute of Engineering & Technology";
+    } else if (r === 'placements/government-services') {
+      document.title = "Civil Services & Government Careers | Sri Shakthi Institute of Engineering & Technology";
+    } else {
+      document.title = "Placements & Career Excellence | Sri Shakthi Institute of Engineering & Technology";
+      initPlacementsDynamicKpi();
+    }
+  }
   if (route() === 'chairman') {
     $('.siet-cd-kicker')?.replaceChildren("THE CHAIRMAN'S DESK");
     document.title = "The Chairman's Desk | SIET";
@@ -6083,6 +6102,11 @@ function observe() { const reduce = matchMedia('(prefers-reduced-motion:reduce)'
 function animateCounter(el) { const to = Number(el.dataset.to), suffix = el.dataset.suffix || '', start = performance.now(), duration = 1500; function tick(now) { const p = Math.min((now - start) / duration, 1), v = Math.round(to * (1 - (1 - p) ** 3)); el.textContent = v.toLocaleString('en-IN') + suffix; if (p < 1) requestAnimationFrame(tick) } requestAnimationFrame(tick) }
 const handleEscape = e => {
   if (e.key === 'Escape') {
+    const recModal = document.getElementById('siet-records-modal');
+    if (recModal && recModal.style.display !== 'none') {
+      recModal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
     $('.video-close')?.click();
     $('.mobile-nav-close')?.click();
     $('.placement-modal-close')?.click();
