@@ -3354,17 +3354,17 @@ const internalPageData = {
     category: 'Logistics & Safety',
     breadcrumbs: ['Campus', 'Transport'],
     heroPills: [
-      { icon: 'bus', label: '60+ Modern Bus Fleet' },
-      { icon: 'compass', label: '50+ Commute Routes' },
+      { icon: 'bus', label: '37 Modern Bus Fleet' },
+      { icon: 'compass', label: '37 Commute Routes' },
       { icon: 'shield', label: 'GPS Real-Time Tracking' },
       { icon: 'check', label: 'Certified Drivers' }
     ],
     title: 'Comprehensive Transport Network',
-    subtitle: 'Connecting students and faculty across Coimbatore, Tirupur, Pollachi, and Palakkad with 60+ modern GPS-tracked buses.',
-    overviewLead: 'Sri Shakthi operates one of the most comprehensive collegiate bus transit networks in Western Tamil Nadu. Our fleet of 60+ GPS-tracked vehicles ensures punctual, comfortable, and safe daily transportation for thousands of day scholars.',
+    subtitle: 'Connecting students and faculty across Coimbatore, Tirupur, Pollachi, and Palakkad with 37 modern GPS-tracked buses.',
+    overviewLead: 'Sri Shakthi operates one of the most comprehensive collegiate bus transit networks in Western Tamil Nadu. Our fleet of 37 GPS-tracked vehicles ensures punctual, comfortable, and safe daily transportation for thousands of day scholars.',
     featuredImage: '/brand/campus-life/transport-fleet.jpg',
-    featuredBadge: '60+ GPS Bus Fleet',
-    featuredStat: '50+ Daily Routes',
+    featuredBadge: '37 Dedicated Buses',
+    featuredStat: '37 Daily Routes',
     pillars: [
       { icon: 'clock', tag: 'PUNCTUALITY', title: 'Punctual Daily Service', desc: 'Strictly scheduled morning arrivals and evening departures synchronized with academic timetables.' },
       { icon: 'compass', tag: 'TELEMATICS', title: 'Real-Time GPS Tracking', desc: 'Mobile tracking app allowing students and parents to view bus coordinates and stop arrival times.' },
@@ -3384,7 +3384,7 @@ const internalPageData = {
       { val: '100', suffix: '%', label: 'Certified Drivers' }
     ],
     highlights: [
-      { title: 'Dedicated Special Buses for Evening Labs', desc: 'Special transport runs for students participating in late lab hours, sports practice, or library study.' },
+      { title: 'Dedicated Special Buses for Evening Classes', desc: 'Special transport runs for evening class students, special coaching sessions, sports practice, or library study.' },
       { title: 'Experienced Driver Workforce', desc: 'Drivers undergo bi-annual defensive driving refresher workshops and comprehensive health checkups.' },
       { title: 'Contactless Bus Passes', desc: 'Digital QR-enabled smart cards allowing swift boarding without physical ticket hassles.' },
       { title: 'Emergency Roadside Assistance', desc: 'Dedicated maintenance van and backup fleet on standby across all major commute sectors.' }
