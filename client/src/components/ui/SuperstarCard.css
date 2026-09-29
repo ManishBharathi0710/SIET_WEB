@@ -1,0 +1,766 @@
+/* ==========================================================================
+   SuperstarCard.css - Modular Stylesheet
+   ========================================================================== */
+
+.siet-sp-card {
+  position: relative;
+  background: #ffffff;
+  border: 1.5px solid rgba(0, 92, 58, 0.14);
+  border-radius: 18px;
+  padding: 20px 18px 16px;
+  text-align: center;
+  box-shadow: 0 10px 28px rgba(0, 24, 14, 0.25);
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 215px;
+  box-sizing: border-box;
+}
+
+.siet-sp-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 22px 50px rgba(0, 20, 10, 0.45), 0 0 20px rgba(243, 197, 21, 0.4);
+  border-color: #f3c515;
+}
+
+.siet-sp-card.is-top:hover {
+  box-shadow: 0 24px 56px rgba(243, 197, 21, 0.45), 0 0 0 2px #f3c515;
+}
+
+.siet-sp-ctc-top-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.siet-sp-ctc-lbl {
+  font: 800 10px 'Plus Jakarta Sans', sans-serif;
+  color: #005a39;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.siet-sp-tier-pill {
+  font: 750 9px 'Plus Jakarta Sans', sans-serif;
+  padding: 2px 7px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.siet-sp-ctc-ribbon {
+  background: linear-gradient(135deg, #005a39 0%, #00854a 100%);
+  color: #ffffff;
+  font: 900 16px/1 'Plus Jakarta Sans', sans-serif;
+  padding: 6px 20px;
+  border-radius: 4px;
+  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+  box-shadow: 0 4px 12px rgba(0, 90, 57, 0.2);
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(243, 197, 21, 0.4);
+}
+
+.siet-sp-card:hover .siet-sp-img-box img,
+.siet-sp-img-box:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.05) contrast(1.03);
+}
+
+.siet-sp-name {
+  font: 800 16.5px/1.25 'Plus Jakarta Sans', sans-serif;
+  color: #00281b;
+  margin: 0 0 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.015em;
+}
+
+.siet-sp-dept {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #00854a;
+  margin: 0 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.siet-sp-company-box {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 8px;
+  background: #f4faf5;
+  border: 1.5px solid rgba(0, 92, 58, 0.16);
+  border-radius: 8px;
+  padding: 4px 12px;
+  transition: all 0.25s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.siet-sp-card:hover .siet-sp-company-box {
+  background: #eaf7ed;
+  border-color: rgba(243, 197, 21, 0.8);
+  box-shadow: 0 4px 12px rgba(0, 90, 57, 0.12);
+}
+
+.siet-sp-batch {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #005a39;
+  letter-spacing: 0.04em;
+}
+
+.siet-sp-marquee-track .siet-sp-card {
+  width: 290px;
+  min-width: 290px;
+  max-width: 290px;
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.siet-sp-marquee-track .siet-sp-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0, 40, 20, 0.14), 0 0 16px rgba(243, 197, 21, 0.35);
+  border-color: #f3c515;
+}
+
+.siet-sp-card {
+  position: relative;
+  background: linear-gradient(180deg, #fffdf2 0%, #ffffff 50%, #f7fbf6 100%);
+  border: 1.5px solid #f3c515;
+  border-radius: 18px;
+  padding: 20px 18px 16px;
+  text-align: center;
+  box-shadow: 0 14px 34px rgba(243, 197, 21, 0.18), 0 8px 24px rgba(0, 24, 14, 0.08);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, background 0.35s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 215px;
+  box-sizing: border-box;
+}
+
+.siet-sp-card:hover,
+.siet-sp-card.is-top:hover {
+  transform: translateY(-8px) scale(1.025);
+  background: linear-gradient(180deg, #fffcf0 0%, #ffffff 40%, #f4fbf5 100%);
+  border-color: #f3c515;
+  box-shadow: 0 26px 58px rgba(243, 197, 21, 0.48), 0 0 24px rgba(243, 197, 21, 0.42), 0 0 0 2px #f3c515;
+}
+
+.siet-sp-card.is-top {
+  border: 2px solid #f3c515;
+  background: linear-gradient(180deg, #fffdf2 0%, #ffffff 50%, #f7fbf6 100%);
+  box-shadow: 0 14px 34px rgba(243, 197, 21, 0.24);
+}
+
+.siet-sp-ctc-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.siet-sp-ctc-lbl {
+  font: 800 10px 'Plus Jakarta Sans', sans-serif;
+  color: #005a39;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.35s ease;
+}
+
+.siet-sp-card:hover .siet-sp-ctc-lbl {
+  color: #00854a;
+}
+
+.siet-sp-tier-pill {
+  font: 800 9.5px 'Plus Jakarta Sans', sans-serif;
+  padding: 2px 7px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.siet-sp-card:hover .siet-sp-tier-pill {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.siet-sp-tier-pill.is-33 {
+  background: #fef4cd;
+  color: #946900;
+  border: 1px solid rgba(243, 197, 21, 0.4);
+}
+
+.siet-sp-tier-pill.is-22 {
+  background: #ffe5e7;
+  color: #d90429;
+  border: 1px solid rgba(217, 4, 41, 0.25);
+}
+
+.siet-sp-tier-pill.is-12 {
+  background: #e6f4ea;
+  color: #00854a;
+  border: 1px solid rgba(0, 133, 74, 0.25);
+}
+
+.siet-sp-tier-pill.is-10 {
+  background: #eaf2fc;
+  color: #1a62bf;
+  border: 1px solid rgba(26, 98, 191, 0.2);
+}
+
+.siet-sp-tier-pill.is-9 {
+  background: #f0f3f6;
+  color: #495057;
+  border: 1px solid rgba(73, 80, 87, 0.2);
+}
+
+.siet-sp-ctc-ribbon {
+  background: linear-gradient(135deg, #005a39 0%, #00854a 100%);
+  color: #ffffff;
+  font: 900 16px/1 'Plus Jakarta Sans', sans-serif;
+  padding: 6px 20px;
+  border-radius: 4px;
+  clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+  box-shadow: 0 4px 12px rgba(0, 90, 57, 0.2);
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(243, 197, 21, 0.4);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease, filter 0.35s ease;
+}
+
+.siet-sp-card:hover .siet-sp-ctc-ribbon {
+  transform: translateY(-2px) scale(1.04);
+  filter: brightness(1.05);
+}
+
+.siet-sp-card:hover .siet-sp-ctc-ribbon:not(.is-gold):not(.is-superdream) {
+  border-color: #f3c515;
+  box-shadow: 0 6px 18px rgba(0, 90, 57, 0.35), 0 0 14px rgba(243, 197, 21, 0.4);
+}
+
+.siet-sp-ctc-ribbon.is-gold,
+.siet-sp-card.is-top .siet-sp-ctc-ribbon {
+  background: linear-gradient(135deg, #f3c515 0%, #e5b200 100%);
+  color: #00281b;
+  border: none;
+  box-shadow: 0 4px 16px rgba(243, 197, 21, 0.4);
+}
+
+.siet-sp-card:hover .siet-sp-ctc-ribbon.is-gold,
+.siet-sp-card.is-top:hover .siet-sp-ctc-ribbon {
+  box-shadow: 0 6px 20px rgba(243, 197, 21, 0.65);
+}
+
+.siet-sp-ctc-ribbon.is-superdream {
+  background: linear-gradient(135deg, #e63946 0%, #c1121f 100%);
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 4px 14px rgba(230, 57, 70, 0.35);
+}
+
+.siet-sp-card:hover .siet-sp-ctc-ribbon.is-superdream {
+  box-shadow: 0 6px 20px rgba(230, 57, 70, 0.55);
+}
+
+.siet-sp-name {
+  font: 800 16.5px/1.25 'Plus Jakarta Sans', sans-serif;
+  color: #00281b;
+  margin: 0 0 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.015em;
+  transition: color 0.35s ease;
+}
+
+.siet-sp-card:hover .siet-sp-name {
+  color: #003824;
+}
+
+.siet-sp-dept {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #00854a;
+  margin: 0 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.35s ease;
+}
+
+.siet-sp-card:hover .siet-sp-dept {
+  color: #005a39;
+}
+
+.siet-sp-company-box {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 8px;
+  background: #f4faf5;
+  border: 1.5px solid rgba(0, 92, 58, 0.16);
+  border-radius: 8px;
+  padding: 4px 12px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.siet-sp-card:hover .siet-sp-company-box {
+  background: #fdfef7;
+  border-color: #f3c515;
+  box-shadow: 0 4px 14px rgba(243, 197, 21, 0.28);
+  transform: translateY(-1px);
+}
+
+.siet-sp-company-box .siet-co-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.siet-sp-company-box .siet-co-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+
+.siet-sp-batch {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #005a39;
+  letter-spacing: 0.04em;
+  transition: color 0.35s ease, font-weight 0.35s ease;
+}
+
+.siet-sp-card:hover .siet-sp-batch {
+  color: #00854a;
+  font-weight: 800;
+}
+
+.siet-sp-tier-pills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.siet-sp-tier-item {
+  border-radius: 12px;
+  padding: 12px 16px;
+  border-left: 4px solid #f3c515;
+  background: #ffffff;
+  border: 1px solid rgba(0, 92, 58, 0.1);
+  border-left-width: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  transition: all 0.22s ease;
+}
+
+.siet-sp-tier-item:hover {
+  transform: translateX(3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.siet-sp-tier-item.is-platinum {
+  background: #fffdf5;
+  border-left-color: #f3c515;
+}
+
+.siet-sp-tier-item.is-diamond {
+  background: #f4faf6;
+  border-left-color: #00854a;
+}
+
+.siet-sp-tier-item.is-pearl {
+  background: #f8f9fc;
+  border-left-color: #1a62bf;
+}
+
+.siet-sp-tier-item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.siet-sp-tier-badge {
+  font: 800 11px 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: 0.05em;
+  color: #00281b;
+}
+
+.siet-sp-tier-offers {
+  font: 800 13px 'Plus Jakarta Sans', sans-serif;
+  color: #00854a;
+}
+
+.siet-sp-tier-range {
+  font: 800 12px 'Plus Jakarta Sans', sans-serif;
+  color: #d97706;
+  margin-bottom: 3px;
+}
+
+.siet-sp-tier-item.is-diamond .siet-sp-tier-range {
+  color: #00854a;
+}
+
+.siet-sp-tier-item.is-pearl .siet-sp-tier-range {
+  color: #1a62bf;
+}
+
+.siet-sp-tier-partners {
+  font: 500 11.5px/1.45 'Plus Jakarta Sans', sans-serif;
+  color: #507060;
+  margin: 0;
+}
+
+.siet-sp-marquee-track .siet-sp-card {
+  width: 290px;
+  min-width: 290px;
+  max-width: 290px;
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, background 0.35s ease;
+}
+
+.siet-sp-marquee-track .siet-sp-card:hover {
+  transform: translateY(-8px) scale(1.025);
+  background: linear-gradient(180deg, #fffcf0 0%, #ffffff 40%, #f4fbf5 100%);
+  box-shadow: 0 26px 58px rgba(243, 197, 21, 0.48), 0 0 24px rgba(243, 197, 21, 0.42), 0 0 0 2px #f3c515;
+  border-color: #f3c515;
+}
+
+.siet-sp-ctc-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.siet-sp-tier-pill {
+  font: 800 10px 'Plus Jakarta Sans', sans-serif;
+  padding: 2px 8px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.siet-sp-tier-pill.is-33 {
+  background: #f3c515;
+  color: #00281b;
+}
+
+.siet-sp-tier-pill.is-22 {
+  background: #e63946;
+  color: #ffffff;
+}
+
+.siet-sp-tier-pill.is-12 {
+  background: #4361ee;
+  color: #ffffff;
+}
+
+.siet-sp-tier-pill.is-10 {
+  background: #00854a;
+  color: #ffffff;
+}
+
+.siet-sp-tier-pill.is-9 {
+  background: #003824;
+  color: #a3e635;
+}
+
+.siet-sp-ctc-ribbon.is-marquee {
+  background: linear-gradient(135deg, #f3c515 0%, #e5b200 100%);
+  color: #00281b;
+  border: none;
+  box-shadow: 0 4px 18px rgba(243, 197, 21, 0.5);
+}
+
+.siet-sp-ctc-ribbon.is-superdream {
+  background: linear-gradient(135deg, #b91c1c 0%, #dc2626 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+}
+
+.siet-tr-section {
+  background: #ffffff;
+  padding: 56px 24px 52px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 92, 58, 0.1);
+  border-bottom: 1px solid rgba(0, 92, 58, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.siet-tr-shell {
+  max-width: 1340px;
+  margin: 0 auto;
+}
+
+.siet-tr-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #00854a;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.siet-tr-kicker i {
+  display: inline-block;
+  width: 20px;
+  height: 2.5px;
+  background: #f3c515;
+  border-radius: 1px;
+}
+
+.siet-tr-title {
+  font: 800 clamp(28px, 2.8vw, 40px)/1.2 'Plus Jakarta Sans', sans-serif;
+  color: #00281b;
+  margin: 0 0 10px;
+  letter-spacing: -0.02em;
+}
+
+.siet-tr-title em {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  font-style: italic;
+  color: #00854a;
+}
+
+.siet-tr-subtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(13.5px, 1.1vw, 15.5px);
+  color: #507060;
+  line-height: 1.55;
+  margin: 0 auto;
+}
+
+.siet-tr-stats-bar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8faf8;
+  border: 1px solid rgba(0, 92, 58, 0.12);
+  border-radius: 30px;
+  padding: 10px 32px;
+  margin-bottom: 28px;
+  gap: 28px;
+  box-shadow: 0 4px 14px rgba(0, 50, 30, 0.04);
+  flex-wrap: wrap;
+}
+
+.siet-tr-sbar-item {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+
+.siet-tr-sbar-num {
+  font: 800 16px/1 'Plus Jakarta Sans', sans-serif;
+  color: #00281b;
+}
+
+.siet-tr-sbar-lbl {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11.5px;
+  color: #647b6e;
+  font-weight: 600;
+}
+
+.siet-tr-sbar-sep {
+  width: 1px;
+  height: 16px;
+  background: rgba(0, 92, 58, 0.15);
+}
+
+.siet-tr-marquee-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 6px 0;
+}
+
+.siet-tr-marquee-wrap {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 100px, #000 calc(100% - 100px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, #000 100px, #000 calc(100% - 100px), transparent 100%);
+}
+
+.siet-tr-track {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  animation: sietTopRecruiterScroll 58s linear infinite;
+  flex-shrink: 0;
+  will-change: transform;
+  padding: 6px 0;
+}
+
+.siet-tr-marquee-wrap:hover .siet-tr-track {
+  animation-play-state: paused;
+}
+
+.siet-tr-logo-card {
+  position: relative;
+  height: 140px;
+  min-width: 275px;
+  padding: 16px 26px 14px;
+  background: #ffffff;
+  border: 1.8px solid rgba(0, 92, 58, 0.14);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 8px 24px rgba(0, 45, 25, 0.05);
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  flex-shrink: 0;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.siet-tr-logo-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(0, 133, 74, 0.04) 0%, rgba(243, 197, 21, 0.07) 100%);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+  pointer-events: none;
+}
+
+.siet-tr-cat-tag {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #005a39;
+  background: #f0f7f2;
+  padding: 3px 11px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 92, 58, 0.12);
+  transition: all 0.25s ease;
+  align-self: flex-start;
+}
+
+.siet-tr-logo-inner {
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 2px 0;
+}
+
+.siet-tr-logo-inner img {
+  max-height: 60px;
+  max-width: 195px;
+  object-fit: contain;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.06));
+}
+
+.siet-tr-logo-inner svg {
+  max-height: 56px;
+  max-width: 195px;
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+
+.siet-tr-hover-bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  opacity: 0.95;
+  transition: opacity 0.25s ease;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.siet-tr-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00854a;
+  display: inline-block;
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(0, 133, 74, 0.4);
+}
+
+.siet-tr-co-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #00281b;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 220px;
+}
+
+.siet-tr-logo-card:hover {
+  transform: translateY(-6px);
+  border-color: #f3c515;
+  box-shadow: 0 16px 36px rgba(0, 45, 25, 0.1), 0 0 0 1px #f3c515;
+  background: #ffffff;
+}
+
+.siet-tr-logo-card:hover::before {
+  opacity: 1;
+}
+
+.siet-tr-logo-card:hover .siet-tr-cat-tag {
+  color: #005a39;
+  background: #eaf7ed;
+  border-color: rgba(0, 133, 74, 0.25);
+}
+
+.siet-tr-logo-card:hover .siet-tr-logo-inner img,
+.siet-tr-logo-card:hover .siet-tr-logo-inner svg {
+  transform: scale(1.08);
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.12));
+}
+
+.siet-tr-logo-card:hover .siet-tr-hover-bar {
+  opacity: 1;
+}
+
+.siet-tr-logo-card:hover .siet-tr-co-name {
+  color: #005a39;
+}

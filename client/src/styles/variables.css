@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Sri Shakthi Institute of Engineering & Technology (SIET)
+   Centralized Design System Tokens & Custom Properties
+   ========================================================================== */
+
+:root {
+  /* Brand Primary Colors */
+  --primary-color: #00643e;
+  --primary-dark: #003f2a;
+  --primary-deep: #00281b;
+  --primary-light: #075b36;
+  --primary-soft: #edf6e9;
+  --primary-muted: rgba(0, 100, 62, 0.08);
+
+  /* Accent & Gold Tones */
+  --accent-gold: #cca01d;
+  --accent-gold-light: #f3c515;
+  --accent-gold-soft: #fdf6d8;
+  --accent-yellow: #f4c400;
+  --accent-cream: #fbf8e8;
+
+  /* Neutral & Canvas Tones */
+  --bg-main: #fbfcf9;
+  --bg-card: #ffffff;
+  --bg-alt: #f4f7f2;
+  --bg-dark: #07291a;
+  --border-color: rgba(0, 100, 62, 0.12);
+  --border-gold: rgba(204, 160, 29, 0.35);
+
+  /* Typography Colors */
+  --text-primary: #123324;
+  --text-secondary: #355343;
+  --text-muted: #5d7469;
+  --text-soft: #6e887a;
+  --text-inverse: #ffffff;
+
+  /* Typography Font Stacks */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-script: 'Playfair Display', Georgia, cursive, serif;
+
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 40, 27, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 40, 27, 0.07);
+  --shadow-lg: 0 16px 40px rgba(0, 40, 27, 0.10);
+  --shadow-gold: 0 10px 30px rgba(204, 160, 29, 0.20);
+
+  /* Layout & Containers */
+  --container-max-width: 1540px;
+  --container-content-width: 1200px;
+  --header-height: 84px;
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Backward Compatibility Aliases */
+  --green: var(--primary-color);
+  --dark-green: var(--primary-dark);
+  --yellow: var(--accent-yellow);
+  --gold: var(--accent-gold);
+  --cream: var(--accent-cream);
+  --green-dark: var(--primary-dark);
+  --green-soft: var(--primary-soft);
+  --card: rgba(255, 255, 255, 0.9);
+  --campus-green: var(--primary-color);
+  --campus-dark: var(--primary-dark);
+  --campus-yellow: var(--accent-yellow);
+  --campus-gold: var(--accent-gold);
+  --campus-soft: var(--text-muted);
+  --s-green: var(--primary-light);
+  --s-dark: var(--primary-dark);
+  --s-gold: var(--accent-gold);
+  --s-yellow: var(--accent-yellow);
+  --deep: var(--primary-deep);
+}
+
+:root {
+  --navy: #075b36;
+  --deep: #043f27;
+  --blue: #0b7a48;
+  --mint: #dff3e5;
+  --paper: #fffef8;
+  --coral: #f3c515;
+  --ink: #173226
+}
+
+:root {
+  --edc-dark-green: #064E3B;
+  --edc-deep-green: #075E45;
+  --edc-primary-green: #087F4E;
+  --edc-bright-green: #16A34A;
+  --edc-light-green: #E7F5D5;
+  --edc-pale-green: #F1F9E8;
+  --edc-yellow: #FACC15;
+  --edc-bright-yellow: #FFD43B;
+  --edc-pale-yellow: #FFF7C7;
+  --edc-cream: #FFFDF2;
+  --edc-light-cream: #FAFAF0;
+  --edc-white: #FFFFFF;
+  --edc-dark-text: #063F2F;
+  --edc-secondary-text: #55756B;
+  --edc-border-green: #CDE5D0;
+  --edc-border-yellow: #F4D95B;
+}

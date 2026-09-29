@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Home Page Modular Stylesheet
+   Coordinates Hero, Programmes, About, Campus, Labs & Events sections
+   ========================================================================== */
+
+@import '../../sections/home/HeroSection.css';
+@import '../../sections/home/ProgrammesSection.css';
+@import '../../sections/home/AboutSection.css';
+@import '../../sections/home/CampusLifeSection.css';
+@import '../../sections/home/SpecialLabsSection.css';
+@import '../../sections/home/EventsSection.css';
+@import '../../sections/placements/PlacementMarqueeSection.css';

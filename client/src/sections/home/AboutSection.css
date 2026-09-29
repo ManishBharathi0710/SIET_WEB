@@ -1,0 +1,168 @@
+/* ==========================================================================
+   AboutSection.css - Modular Stylesheet
+   ========================================================================== */
+
+.about-premium {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(75px, 7vw, 120px) 7vw 0;
+  background: linear-gradient(140deg, #02281a 0%, #043b24 58%, #064b2e 100%);
+  color: #fff
+}
+
+.about-premium:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/brand/techpark-local.png') center/cover no-repeat;
+  opacity: .05;
+  pointer-events: none;
+  z-index: 1
+}
+
+.stat-box {
+  position: relative;
+  min-height: 285px;
+  padding: 35px clamp(22px, 2.2vw, 40px) 30px;
+  border-right: 1px solid #ffffff24;
+  transition: background .3s, transform .3s
+}
+
+.stat-box:hover,
+.featured-stat {
+  background: #ffffff0d
+}
+
+.stat-box:hover {
+  transform: translateY(-5px)
+}
+
+.about-premium .stat-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f3c719;
+  color: #043b28
+}
+
+.about-premium .stat-icon svg {
+  width: 23px
+}
+
+.stat-box h3 {
+  margin: 32px 0 8px;
+  font: 800 clamp(39px, 4vw, 68px)/1 'Plus Jakarta Sans';
+  letter-spacing: -.065em;
+  color: #fff
+}
+
+.stat-box h3 span {
+  font-variant-numeric: tabular-nums
+}
+
+.stat-box>p {
+  margin: 0 0 7px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff
+}
+
+.stat-box:hover .stat-bottom-line,
+.featured-stat .stat-bottom-line {
+  transform: scaleX(1)
+}
+
+.stat-main {
+  margin-bottom: 22px
+}
+
+.stat-main h2 {
+  margin-bottom: 8px;
+  font: 800 clamp(42px, 4vw, 60px)/.95 'Plus Jakarta Sans';
+  color: var(--campus-dark)
+}
+
+.stat-main h3 {
+  margin-bottom: 8px;
+  font-size: clamp(18px, 1.4vw, 22px);
+  color: var(--campus-dark)
+}
+
+.stat-main p {
+  max-width: 310px;
+  font-size: clamp(11px, .8vw, 13px);
+  line-height: 1.55;
+  color: rgba(0, 63, 42, .8)
+}
+
+.stat-extra {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  padding-top: 18px;
+  border-top: 1px dashed rgba(0, 63, 42, .25)
+}
+
+.stat-extra-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0
+}
+
+.stat-extra-icon {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffffffc7;
+  color: var(--campus-green)
+}
+
+.stat-extra-icon svg {
+  width: 18px
+}
+
+.stat-extra-box strong,
+.stat-extra-box span {
+  display: block
+}
+
+.stat-extra-box strong {
+  font-size: clamp(16px, 1.2vw, 20px);
+  color: var(--campus-dark)
+}
+
+.stat-extra-box span {
+  font-size: clamp(9px, .7vw, 11px);
+  color: rgba(0, 63, 42, .75)
+}
+
+.about-premium .stat-box {
+  background: transparent;
+  box-shadow: inset 0 0 0 2px transparent
+}
+
+.about-premium .stat-box.featured-stat {
+  background: transparent
+}
+
+.about-premium .stat-box .stat-bottom-line,
+.about-premium .stat-box.featured-stat .stat-bottom-line {
+  transform: scaleX(0)
+}
+
+.about-premium .stat-box:hover,
+.about-premium .stat-box:focus-within {
+  background: #ffffff0d;
+  box-shadow: inset 0 0 0 2px #f3c719
+}
+
+.about-premium .stat-box:hover .stat-bottom-line,
+.about-premium .stat-box:focus-within .stat-bottom-line {
+  transform: scaleX(1)
+}

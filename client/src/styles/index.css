@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Sans:wght@400;500;600&family=League+Spartan:wght@700;800;900&family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+/* 1. Core Tokens, Global Resets & Universal Utilities */
+@import './variables.css';
+@import './global.css';
+@import './utilities.css';
+
+/* 2. Reusable Layout & Component Styles */
+@import '../components/layout/Header.css';
+@import '../components/layout/Footer.css';
+@import '../components/common/VideoModal.css';
+@import '../components/common/PlacementModal.css';
+@import '../components/ui/PageHeader.css';
+@import '../components/ui/SuperstarCard.css';
+
+/* 3. High-Impact Page Section Styles (Home) */
+@import '../sections/home/HeroSection.css';
+@import '../sections/home/ProgrammesSection.css';
+@import '../sections/home/AboutSection.css';
+@import '../sections/home/CampusLifeSection.css';
+@import '../sections/home/SpecialLabsSection.css';
+@import '../sections/home/EventsSection.css';
+@import '../sections/placements/PlacementMarqueeSection.css';
+
+/* 4. Modular Page Styles */
+@import '../pages/about/About.css';
+@import '../pages/academics/Academics.css';
+@import '../pages/admissions/Admissions.css';
+@import '../pages/campus/Campus.css';
+@import '../pages/placements/Placements.css';
+@import '../pages/common/Careers.css';
+@import '../pages/common/InternalPage.css';

@@ -1,0 +1,183 @@
+/* ==========================================================================
+   utilities.css - Modular Stylesheet
+   ========================================================================== */
+
+.button {
+  border: 0;
+  background: var(--navy);
+  color: white;
+  border-radius: 3px;
+  padding: 15px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: .25s
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background: #087646
+}
+
+.button svg,
+.arrow-link svg {
+  width: 16px
+}
+
+.compact {
+  padding: 13px 17px
+}
+
+form .button {
+  width: 100%
+}
+
+.compact {
+  font-size: 15px;
+  padding: 15px 19px
+}
+
+.batch-grid .status-word {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #087a48;
+  font-size: clamp(38px, 3.3vw, 58px);
+  letter-spacing: -.04em
+}
+
+.batch-grid .status-word:before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #19ad63;
+  box-shadow: 0 0 0 7px #19ad6320;
+  animation: statusPulse 1.7s infinite
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .batch-grid .status-word:before {
+    animation: none
+  }
+}
+
+.batch-grid .status-word {
+  min-height: 62px
+}
+
+.pending-count .status-word {
+  font-size: clamp(38px, 3vw, 58px);
+  letter-spacing: .02em
+}
+
+.batch-grid article:hover .status-word {
+  color: #0b9858
+}
+
+#campus-intro .actions .button {
+  min-height: 56px;
+  padding: 16px 24px;
+  border-radius: 8px
+}
+
+.campus-intro-stage .btn-primary,
+.campus-intro-stage .btn-secondary {
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: 700;
+  display: inline-flex;
+  gap: 22px;
+  align-items: center;
+  transition: .25s
+}
+
+.campus-intro-stage .btn-primary {
+  background: #07683e;
+  color: #fff
+}
+
+.campus-intro-stage .btn-primary:hover {
+  background: #045630;
+  transform: translateY(-2px)
+}
+
+.campus-intro-stage .btn-secondary {
+  border: 1px solid #c99d24;
+  color: #174b37;
+  background: #fff
+}
+
+.campus-intro-stage .btn-secondary:hover {
+  background: #fff8df;
+  transform: translateY(-2px)
+}
+
+.campus-intro-stage .btn-primary svg,
+.campus-intro-stage .btn-secondary svg {
+  width: 17px
+}
+
+.ui-icon {
+  display: inline-grid;
+  place-items: center;
+  font: 700 1.35em/1 system-ui;
+  color: inherit
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2, .8, .2, 1)
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none
+}
+
+.status {
+  margin-top: 15px;
+  color: #087048;
+  font-weight: 800
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none
+  }
+}
+
+button.button.js-explore-campus {
+  font-family: inherit !important;
+}
+
+.section-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  background: #edf7f1;
+  color: var(--navy, #075b36);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid #d0e7d8;
+}
+
+.section-tag-pill .tag-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #075b36;
+  display: inline-block;
+}
