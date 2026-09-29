@@ -1,0 +1,938 @@
+/* ==========================================================================
+   SpecialLabsSection.css - Modular Stylesheet
+   ========================================================================== */
+
+.ncc-syllabus-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ncc-syllabus-list li {
+  position: relative;
+  padding: 6px 0 6px 20px;
+  font-size: 13px;
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+.ncc-syllabus-list li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  color: #d4af37;
+  font-size: 11px;
+}
+
+.ncc-field-group label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #d4af37;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.ncc-score-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+}
+
+label {
+  font-size: 10px;
+  font-weight: 700
+}
+
+.about-label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #ffe055;
+  font: 800 11px 'Plus Jakarta Sans';
+  letter-spacing: .18em
+}
+
+.about-label .line {
+  width: 62px;
+  height: 1px;
+  background: #f3c719
+}
+
+.about-label p {
+  margin: 0
+}
+
+.ps-stat-label {
+  font: 800 clamp(8px, 0.72vw, 9.5px)/1.2 'Montserrat', sans-serif;
+  letter-spacing: 1.4px;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: block;
+  white-space: nowrap;
+  opacity: 0.95;
+}
+
+.campus-video-btn .video-label-text {
+  font: 800 12px/1.25 'Montserrat', sans-serif;
+  color: #064e32;
+}
+
+.special-labs-section {
+  position: relative;
+  background: linear-gradient(180deg, #fbfdf9 0%, #f5faf5 45%, #ecf5ee 100%);
+  padding: clamp(64px, 7vw, 104px) clamp(20px, 3.5vw, 56px) 36px;
+  overflow: hidden;
+  border-top: 1px solid #e1efe5;
+}
+
+.labs-arc-circle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.labs-arc-circle.arc-1 {
+  top: -80px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(167, 243, 208, 0.45) 0%, rgba(209, 250, 229, 0.2) 60%, transparent 80%);
+}
+
+.labs-arc-circle.arc-2 {
+  top: -40px;
+  right: -40px;
+  width: 180px;
+  height: 180px;
+  background: rgba(167, 243, 208, 0.35);
+}
+
+.labs-vertical-tags {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font: 800 10.5px/1.2 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  color: #799a88;
+  z-index: 2;
+  text-align: right;
+}
+
+.labs-container {
+  position: relative;
+  z-index: 3;
+  max-width: 1480px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(300px, 370px) minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 52px);
+  align-items: start;
+}
+
+.labs-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 8px;
+}
+
+.labs-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  font: 800 13px 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+}
+
+.labs-eyebrow .eyebrow-num {
+  color: #d4a300;
+  font-weight: 900;
+}
+
+.labs-eyebrow .eyebrow-dash {
+  color: #d4a300;
+  font-weight: 800;
+}
+
+.labs-eyebrow .eyebrow-text {
+  color: #064e32;
+  font-weight: 800;
+}
+
+.labs-heading {
+  margin: 0 0 18px;
+  font: 900 clamp(38px, 3.8vw, 58px)/0.98 'Montserrat', 'League Spartan', sans-serif;
+  letter-spacing: -0.04em;
+  color: #064e32;
+}
+
+.labs-heading em {
+  display: block;
+  margin-top: 6px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  color: #d4a300;
+}
+
+.labs-desc {
+  max-width: 380px;
+  margin: 0 0 24px;
+  font: 550 clamp(14px, 1.02vw, 15.5px)/1.65 'Plus Jakarta Sans', sans-serif;
+  color: #4b6657;
+}
+
+.labs-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.labs-btn-primary {
+  min-height: 48px;
+  padding: 12px 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  border-radius: 8px;
+  background: #064e32;
+  color: #ffffff;
+  font: 800 13px 'Montserrat', sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(6, 78, 50, 0.28);
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.labs-btn-primary:hover {
+  transform: translateY(-2px);
+  background: #086641;
+  box-shadow: 0 12px 28px rgba(6, 78, 50, 0.36);
+}
+
+.labs-script-watermark {
+  font-family: 'Caveat', 'Dancing Script', cursive;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #7b9688;
+  transform: rotate(-6deg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-bottom: 24px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.labs-script-watermark .script-curve-line {
+  margin-top: 2px;
+}
+
+.labs-bottom-sketch-wrap {
+  margin-top: 10px;
+}
+
+.labs-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+}
+
+.labs-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.labs-filter-pills {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.lab-pill-btn {
+  border: 0;
+  background: transparent;
+  font: 750 12.5px 'Montserrat', sans-serif;
+  color: #3b5747;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.lab-pill-btn.active {
+  background: #064e32;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(6, 78, 50, 0.25);
+}
+
+.lab-pill-btn:hover:not(.active) {
+  background: #e2ede6;
+  color: #064e32;
+}
+
+.lab-filter-sep {
+  color: #b7d1c3;
+  font-size: 13px;
+  font-weight: 400;
+  user-select: none;
+}
+
+.labs-nav-arrows {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lab-arrow-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid #bdd7c9;
+  background: #ffffff;
+  color: #064e32;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.lab-arrow-btn:hover {
+  border-color: #064e32;
+  background: #064e32;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.labs-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(12px, 1.2vw, 16px);
+  width: 100%;
+}
+
+.lab-card {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 177 / 163;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #003f2a;
+  box-shadow: 0 10px 26px rgba(0, 45, 25, 0.1);
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  isolation: isolate;
+}
+
+.lab-card.card-01 {
+  border-radius: 56px 20px 20px 20px !important;
+}
+
+.lab-card.card-02,
+.lab-card.card-03,
+.lab-card.card-06,
+.lab-card.card-07 {
+  border-radius: 20px !important;
+}
+
+.lab-card.card-04 {
+  border-radius: 20px 56px 20px 20px !important;
+}
+
+.lab-card.card-05 {
+  border-radius: 20px 20px 20px 56px !important;
+}
+
+.lab-card.card-08 {
+  border-radius: 20px 20px 56px 20px !important;
+}
+
+.lab-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0, 45, 25, 0.2);
+}
+
+.lab-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.35s ease;
+}
+
+.lab-card:hover img {
+  transform: scale(1.06);
+  filter: saturate(1.08);
+}
+
+.lab-card .card-index,
+.lab-card .card-floating-badge,
+.lab-card .card-bottom-overlay {
+  display: none !important;
+}
+
+.lab-card .card-floating-badge {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  z-index: 4;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s ease;
+}
+
+.lab-card:hover .card-floating-badge {
+  transform: scale(1.08);
+}
+
+.lab-card .card-bottom-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 3;
+  padding: 24px 14px 14px;
+  background: linear-gradient(180deg, transparent 0%, rgba(2, 34, 21, 0.78) 42%, rgba(1, 24, 15, 0.98) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 8px;
+  color: #ffffff;
+}
+
+.lab-card.card-05 .card-bottom-overlay {
+  border-radius: 0 0 20px 56px;
+}
+
+.lab-card.card-08 .card-bottom-overlay {
+  border-radius: 0 0 56px 20px;
+}
+
+.lab-card .card-info-side {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.lab-card .card-title-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 3px;
+}
+
+.lab-card .card-title {
+  margin: 0;
+  font: 800 14px/1.2 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+.lab-card .card-subtitle {
+  margin: 0;
+  font: 550 11px/1.35 'Plus Jakarta Sans', sans-serif;
+  color: #dbebe2;
+  max-width: 170px;
+}
+
+.lab-card .card-circle-arrow {
+  width: 32px;
+  height: 32px;
+  flex: none;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 800;
+  transition: background 0.25s ease, transform 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.lab-card:hover .card-circle-arrow {
+  background: #ffc72c;
+  color: #064e32;
+  border-color: #ffc72c;
+  transform: translateX(2px);
+}
+
+.labs-bottom-row {
+  position: relative;
+  z-index: 4;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(14px, 2vw, 24px);
+  width: 100%;
+}
+
+.labs-stats-pill {
+  flex: 1;
+  min-width: 0;
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 12px clamp(16px, 2vw, 26px);
+  box-shadow: 0 10px 30px rgba(0, 45, 25, 0.08);
+  border: 1px solid #e2eee6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(10px, 1.5vw, 20px);
+}
+
+.lab-stat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.lab-stat-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.lab-stat-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.lab-stat-text strong {
+  font: 900 20px/1 'League Spartan', 'Montserrat', sans-serif;
+  color: #064e32;
+}
+
+.lab-stat-text small {
+  font: 700 11px/1.2 'Montserrat', sans-serif;
+  color: #5b7466;
+  margin-top: 2px;
+}
+
+.labs-cta-banner {
+  background: #064e32;
+  color: #ffffff;
+  padding: 11px 20px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  flex: none;
+  box-shadow: 0 8px 24px rgba(6, 78, 50, 0.22);
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.labs-cta-banner:hover {
+  transform: translateY(-2px);
+  background: #086641;
+  box-shadow: 0 12px 28px rgba(6, 78, 50, 0.3);
+}
+
+.labs-banner-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.labs-banner-copy strong {
+  font: 800 13px 'Montserrat', sans-serif;
+  color: #ffffff;
+}
+
+.labs-banner-copy span {
+  font: 600 11.5px 'Montserrat', sans-serif;
+  color: #a7f3d0;
+}
+
+.labs-banner-arrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  font-weight: 800;
+  transition: all 0.25s ease;
+}
+
+.labs-cta-banner:hover .labs-banner-arrow {
+  background: #ffc72c;
+  color: #064e32;
+  border-color: #ffc72c;
+  transform: translateX(3px);
+}
+
+@media (max-width: 1200px) {
+  .labs-container {
+    grid-template-columns: 1fr !important;
+  }
+
+  .labs-left {
+    max-width: 780px !important;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 1060px) {
+  .labs-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .labs-bottom-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .labs-stats-pill {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px) {
+  .labs-stats-pill {
+    flex-wrap: wrap;
+    border-radius: 20px;
+    padding: 16px 20px;
+    gap: 16px;
+  }
+
+  .labs-stats-pill .stats-item-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 580px) {
+  .labs-gallery-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .labs-stats-pill {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 18px;
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .labs-cta-banner {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.home-page .campus-card-v2 img,
+.home-page .lab-card img {
+  image-rendering: auto;
+  image-rendering: -webkit-optimize-contrast;
+  backface-visibility: hidden;
+}
+
+.home-page .campus-stats-pill,
+.home-page .labs-stats-pill {
+  box-sizing: border-box;
+  min-height: 66px;
+}
+
+.home-page .labs-container {
+  grid-template-columns: minmax(300px, 360px) minmax(0, 1fr) !important;
+  gap: clamp(40px, 4vw, 68px) !important;
+  align-items: start !important;
+}
+
+.home-page .labs-top-bar {
+  min-height: 48px;
+  margin-bottom: clamp(16px, 1.5vw, 22px);
+  padding-inline: 4px;
+}
+
+.home-page .labs-filter-pills {
+  flex: 1 1 auto;
+  justify-content: space-between;
+  gap: clamp(8px, 1vw, 16px);
+}
+
+.home-page .labs-gallery-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-auto-rows: 1fr;
+  gap: clamp(14px, 1.25vw, 20px) !important;
+  align-items: stretch;
+}
+
+.home-page .lab-card {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  min-height: 0;
+  aspect-ratio: 1 / 1;
+  align-self: stretch;
+}
+
+.home-page .lab-card img {
+  object-position: center;
+  filter: contrast(1.025) saturate(1.035);
+}
+
+.home-page .lab-card:hover img {
+  filter: contrast(1.035) saturate(1.08);
+}
+
+.home-page .labs-bottom-row {
+  margin-top: clamp(18px, 1.8vw, 26px);
+  align-items: stretch;
+}
+
+.home-page .labs-stats-pill {
+  flex: 1 1 auto;
+}
+
+.home-page .labs-cta-banner {
+  min-height: 66px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1060px) {
+  .home-page .labs-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .home-page .labs-filter-pills {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 580px) {
+
+  .home-page .campus-section,
+  .home-page .special-labs-section {
+    padding-inline: 14px !important;
+  }
+
+  .home-page .campus-container,
+  .home-page .labs-container {
+    gap: 24px !important;
+  }
+
+  .home-page .campus-content,
+  .home-page .labs-content {
+    padding: 10px;
+    border-radius: 18px;
+  }
+
+  .home-page .campus-gallery-v2,
+  .home-page .labs-gallery-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 14px !important;
+  }
+
+  .home-page .campus-card-v2 {
+    aspect-ratio: 1.48 / 1;
+  }
+
+  .home-page .lab-card {
+    aspect-ratio: 1 / 1;
+  }
+
+  .home-page .labs-top-bar {
+    align-items: flex-start;
+    padding-inline: 0;
+  }
+
+  .home-page .labs-filter-pills {
+    width: 100%;
+  }
+
+  .home-page .lab-pill-btn {
+    flex: 1 1 calc(50% - 8px);
+    text-align: center;
+  }
+
+  .home-page .lab-filter-sep {
+    display: none;
+  }
+}
+
+.home-page .labs-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.home-page .labs-gallery-grid {
+  margin-top: 0;
+}
+
+@media (max-width: 960px) {
+
+  .home-page .campus-container,
+  .home-page .labs-container {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 26px !important;
+    align-items: start !important;
+  }
+
+  .home-page .campus-left,
+  .home-page .labs-left {
+    width: min(100%, 760px);
+    max-width: 760px !important;
+    margin: 0 !important;
+  }
+
+  .home-page .labs-script-watermark,
+  .home-page .labs-bottom-sketch-wrap {
+    display: none;
+  }
+
+  .home-page .labs-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .home-page .labs-bottom-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-page .labs-cta-banner {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 720px) {
+  .home-page .labs-stats-pill {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-radius: 22px;
+    gap: 14px 8px;
+  }
+
+  .home-page .labs-stats-pill .stats-item-divider {
+    display: none;
+  }
+
+  .home-page .lab-stat-item {
+    min-width: 0;
+    white-space: normal;
+  }
+}
+
+.home-page .special-labs-section {
+  padding-inline: clamp(24px, 3vw, 52px) !important;
+}
+
+.home-page .labs-container {
+  width: min(100%, 1780px) !important;
+  max-width: 1780px !important;
+  grid-template-columns: minmax(320px, 390px) minmax(0, 1fr) !important;
+  gap: clamp(34px, 3vw, 52px) !important;
+}
+
+.home-page .labs-content {
+  width: 100%;
+  max-width: 100%;
+  padding: clamp(20px, 1.8vw, 30px) !important;
+  border-radius: 32px;
+}
+
+.home-page .labs-gallery-grid {
+  width: 100%;
+  gap: clamp(16px, 1.45vw, 24px) !important;
+}
+
+.home-page .lab-card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.home-page .labs-bottom-row {
+  margin-top: clamp(22px, 2vw, 30px);
+  gap: clamp(18px, 1.7vw, 26px);
+}
+
+@media (min-width: 961px) and (max-width: 1400px) {
+  .home-page .special-labs-section {
+    padding-inline: clamp(18px, 2vw, 32px) !important;
+  }
+
+  .home-page .labs-container {
+    grid-template-columns: minmax(255px, 295px) minmax(0, 1fr) !important;
+    gap: clamp(22px, 2.2vw, 34px) !important;
+  }
+
+  .home-page .labs-content {
+    padding: clamp(14px, 1.4vw, 20px) !important;
+    border-radius: 26px;
+  }
+
+  .home-page .labs-gallery-grid {
+    gap: clamp(12px, 1.2vw, 18px) !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .home-page .special-labs-section {
+    padding-inline: clamp(16px, 4vw, 30px) !important;
+  }
+
+  .home-page .labs-container {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .home-page .labs-content {
+    padding: clamp(16px, 3vw, 24px) !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .home-page .special-labs-section {
+    padding-inline: 12px !important;
+  }
+
+  .home-page .labs-content {
+    padding: 10px !important;
+    border-radius: 20px;
+  }
+
+  .home-page .labs-gallery-grid {
+    gap: 16px !important;
+  }
+}
+
+.siet-ach-stat-label {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #064E3B;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
