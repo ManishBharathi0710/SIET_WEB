@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Higher Education & Admissions | SIET</title>
+  <meta name="description" content="Higher Education & Admissions — Discover opportunities beyond borders." />
+
+  <!-- Google Fonts: Playfair Display + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Preload Critical Assets -->
+  <link rel="preload" href="higher-ed/clock-tower-art.jpg" as="image" />
+
+  <!-- D3 and TopoJSON for Dotted Geo Globe (Deferred so page renders instantly) -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js" defer></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       A) HERO SECTION
+       ========================================================================= -->
+  <section class="hero" id="hero">
+    <!-- Vision & Mission Style Background Grid & Layered Orbs -->
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-orb orb-one" aria-hidden="true"></div>
+    <div class="hero-orb orb-two" aria-hidden="true"></div>
+
+    <div class="container hero-layout">
+
+      <!-- Left Text Block -->
+      <div class="hero-left">
+        <!-- 1. Eyebrow Row -->
+        <div class="eyebrow-row">
+          <span class="gold-line"></span>
+          <span class="eyebrow-text">EXPLORE YOUR FUTURE</span>
+        </div>
+
+        <!-- 2. H1 Headline -->
+        <h1 class="hero-title">
+          <span class="title-line-1">Higher Education &amp;</span>
+          <span class="title-line-2">Admissions</span>
+        </h1>
+
+        <!-- 3. Subtitle -->
+        <p class="hero-subtext">Discover opportunities beyond borders.</p>
+
+        <!-- 5. Destination Link -->
+        <a href="#destinations" class="hero-dest-badge">
+          <svg class="dest-badge-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span>Explore 10+ Destinations</span>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Right Side: Dotted World-Map Globe with Canvas + Animated Flight Overlay -->
+    <div class="hero-globe-wrap" aria-hidden="true">
+      <canvas id="globe"></canvas>
+
+      <!-- Flight Path, Moving Plane & Location Pin Markers Overlay -->
+      <svg class="globe-overlay-svg" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <path id="flightTrajectory" d="M 170 380 C 230 190, 390 100, 520 180" />
+        </defs>
+
+        <!-- Primary Dashed Gold Trajectory -->
+        <path d="M 170 380 C 230 190, 390 100, 520 180" stroke="#f5b800" stroke-width="1.5" stroke-dasharray="3 5" fill="none" />
+        
+        <!-- Secondary Dashed Gold Arc from Middle to Lower Right Pin -->
+        <path d="M 370 210 Q 480 300 500 420" stroke="#f5b800" stroke-width="1.5" stroke-dasharray="3 5" fill="none" opacity="0.85" />
+
+        <!-- Top Right Map-Pin Marker with Pulsing Soft Glow -->
+        <g transform="translate(520, 180)">
+          <circle class="pin-glow-pulse" cx="0" cy="0" r="14" fill="#f5b800" />
+          <path d="M0 -15 C -4.5 -15 -7.5 -11.5 -7.5 -7.5 C -7.5 0 0 7.5 0 7.5 C 0 7.5 7.5 0 7.5 -7.5 C 7.5 -11.5 4.5 -15 0 -15 Z" fill="#f5b800" />
+          <circle cx="0" cy="-7.5" r="2.5" fill="#05382a" />
+        </g>
+
+        <!-- Lower Right Map-Pin Marker with Pulsing Soft Glow -->
+        <g transform="translate(500, 420)">
+          <circle class="pin-glow-pulse" cx="0" cy="0" r="14" fill="#f5b800" />
+          <path d="M0 -15 C -4.5 -15 -7.5 -11.5 -7.5 -7.5 C -7.5 0 0 7.5 0 7.5 C 0 7.5 7.5 0 7.5 -7.5 C 7.5 -11.5 4.5 -15 0 -15 Z" fill="#f5b800" />
+          <circle cx="0" cy="-7.5" r="2.5" fill="#05382a" />
+        </g>
+
+        <!-- Animated Gold Airplane (30px) traversing trajectory -->
+        <g class="animated-flight-plane">
+          <path d="M 0,-14 L 3.5,-3 L 13,2 L 13,4.5 L 2.5,3 L 2,9 L 5.5,12 L 5.5,14 L 0,12.5 L -5.5,14 L -5.5,12 L -2,9 L -2.5,3 L -13,4.5 L -13,2 L -3.5,-3 Z" fill="#f5b800" />
+          <animateMotion 
+            dur="8s" 
+            repeatCount="indefinite" 
+            rotate="auto" 
+            keyPoints="0;1" 
+            keyTimes="0;1" 
+            calcMode="linear"
+          >
+            <mpath href="#flightTrajectory"/>
+          </animateMotion>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+
+  <!-- =========================================================================
+       B) STATS ROW (Flat on Cream Background, No Card, 4 Columns with Dividers)
+       ========================================================================= -->
+  <section class="stats" id="stats">
+    <div class="container">
+      <div class="stats-row">
+
+        <!-- Stat 1: 07+ Countries -->
+        <div class="stat-item">
+          <div class="stat-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5b800" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+          </div>
+          <div class="stat-text-col">
+            <div class="stat-num js-stat-counter" data-target="7" data-prefix="0" data-suffix="+">07+</div>
+            <div class="stat-label">Countries</div>
+          </div>
+        </div>
+
+        <!-- Stat 2: 15+ Exams -->
+        <div class="stat-item">
+          <div class="stat-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5b800" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+          </div>
+          <div class="stat-text-col">
+            <div class="stat-num js-stat-counter" data-target="15" data-suffix="+">15+</div>
+            <div class="stat-label">Exams</div>
+          </div>
+        </div>
+
+        <!-- Stat 3: 25+ Programs -->
+        <div class="stat-item">
+          <div class="stat-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5b800" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            </svg>
+          </div>
+          <div class="stat-text-col">
+            <div class="stat-num js-stat-counter" data-target="25" data-suffix="+">25+</div>
+            <div class="stat-label">Programs</div>
+          </div>
+        </div>
+
+        <!-- Stat 4: ∞ Possibilities -->
+        <div class="stat-item">
+          <div class="stat-icon-circle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f5b800" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18.178 8c5.096 0 5.096 8 0 8-2.67 0-4.807-2.667-6.178-5-1.37-2.333-3.508-5-6.178-5-5.096 0-5.096 8 0 8 2.67 0 4.808-2.667 6.178-5 1.37-2.333 3.508-5 6.178-5z"></path>
+            </svg>
+          </div>
+          <div class="stat-text-col">
+            <div class="stat-num stat-infinity">∞</div>
+            <div class="stat-label">Possibilities</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       C) GLOBAL OPPORTUNITIES SECTION
+       ========================================================================= -->
+  <section class="opportunities" id="opportunities">
+    <div class="container">
+      <div class="opportunities-grid">
+        
+        <!-- Left Featured Card: International Admissions -->
+        <article class="card-featured-admissions">
+          <div class="featured-card-content">
+            <span class="card-eyebrow">GLOBAL OPPORTUNITIES</span>
+            <h2 class="featured-card-title">
+              International<br><span class="gold-word">Admissions</span>
+            </h2>
+            <p class="featured-card-desc">
+              Study at world-class universities across top destinations.
+            </p>
+            <a href="#destinations" class="btn-yellow">
+              <span>Explore Now</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- High-Detail Clock Tower Artwork -->
+          <img src="higher-ed/clock-tower-art.jpg" alt="University Campus Architecture" class="clocktower-art-img" aria-hidden="true" />
+        </article>
+
+        <!-- Right Stacked Cards: Admission Exams & Study Abroad -->
+        <div class="opportunities-right-stack">
+          <!-- Card 1: Admission Exams -->
+          <article class="card-opp-item">
+            <div class="card-icon-tile">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="8" y1="13" x2="13" y2="13"></line>
+                <line x1="8" y1="17" x2="16" y2="17"></line>
+                <path d="M18 13.5l2.5-2.5a1 1 0 0 0 0-1.4l-1.6-1.6a1 1 0 0 0-1.4 0L15 10.5l3 3z"></path>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Admission Exams</h3>
+              <p class="card-desc">GATE, GRE, CAT, IELTS, TOEFL and more.</p>
+              <a href="#exams" class="card-link">
+                <span>Explore Exams</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Study Abroad -->
+          <article class="card-opp-item">
+            <div class="card-icon-tile">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3.5c-.5-.5-2.5 0-4 1.5L13.5 8.5 5.3 6.7c-.8-.2-1.5.2-1.8.9l-.5 1.2 5.5 3.5-3.5 3.5-2.2-.5c-.5-.1-1 .1-1.3.5l-.5.7 3.2 2.2 2.2 3.2.7-.5c.4-.3.6-.8.5-1.3l-.5-2.2 3.5-3.5 3.5 5.5 1.2-.5c.7-.3 1.1-1 .9-1.8z"></path>
+              </svg>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Study Abroad</h3>
+              <p class="card-desc">Explore universities, scholarships and admissions worldwide.</p>
+              <a href="#destinations" class="card-link">
+                <span>Discover More</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

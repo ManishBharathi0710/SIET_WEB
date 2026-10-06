@@ -1,0 +1,17 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Dashed curved flight path with yellow airplane -->
+    <path d="M 30 170 Q 150 180 250 110 T 360 45" stroke="#F4C400" stroke-width="1.8" stroke-dasharray="5 5" opacity="0.6" fill="none" />
+    
+    <!-- Small dots along path -->
+    <circle cx="80" cy="172" r="1.5" fill="#F4C400" opacity="0.5" />
+    <circle cx="160" cy="165" r="1.5" fill="#F4C400" opacity="0.5" />
+    <circle cx="230" cy="125" r="1.5" fill="#F4C400" opacity="0.6" />
+    <circle cx="295" cy="80" r="1.5" fill="#F4C400" opacity="0.7" />
+    
+    <!-- Airplane near top-right pointing up-right -->
+    <g transform="translate(360, 45) rotate(35)">
+      <path d="M 0,-14 L 3.5,-3 L 13,2 L 13,4.5 L 2.5,3 L 2,9 L 5.5,12 L 5.5,14 L 0,12.5 L -5.5,14 L -5.5,12 L -2,9 L -2.5,3 L -13,4.5 L -13,2 L -3.5,-3 Z" fill="#F4C400" />
+    </g>
+  </g>
+</svg>

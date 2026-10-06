@@ -1,0 +1,23 @@
+<svg width="700" height="240" viewBox="0 0 700 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#F4C400" stroke-width="0.9" opacity="0.08" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Academic Campus Panorama & Colonnades -->
+    <rect x="80" y="80" width="540" height="150" />
+    <path d="M80 80 L350 20 L620 80" />
+    <circle cx="350" cy="55" r="14" />
+    <!-- Colonnade Columns -->
+    <line x1="120" y1="90" x2="120" y2="230" />
+    <line x1="160" y1="90" x2="160" y2="230" />
+    <line x1="200" y1="90" x2="200" y2="230" />
+    <line x1="240" y1="90" x2="240" y2="230" />
+    <line x1="280" y1="90" x2="280" y2="230" />
+    <line x1="320" y1="90" x2="320" y2="230" />
+    <line x1="360" y1="90" x2="360" y2="230" />
+    <line x1="400" y1="90" x2="400" y2="230" />
+    <line x1="440" y1="90" x2="440" y2="230" />
+    <line x1="480" y1="90" x2="480" y2="230" />
+    <line x1="520" y1="90" x2="520" y2="230" />
+    <line x1="560" y1="90" x2="560" y2="230" />
+    <line x1="600" y1="90" x2="600" y2="230" />
+    <line x1="0" y1="230" x2="700" y2="230" stroke-width="1.5" />
+  </g>
+</svg>

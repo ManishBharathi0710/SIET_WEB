@@ -1,0 +1,64 @@
+<svg width="400" height="340" viewBox="0 0 400 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#F4C400" stroke-width="1.3" opacity="0.4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Main Clock Tower -->
+    <rect x="230" y="80" width="70" height="240" />
+    <line x1="230" y1="120" x2="300" y2="120" />
+    <line x1="230" y1="180" x2="300" y2="180" />
+    <line x1="230" y1="240" x2="300" y2="240" />
+    
+    <!-- Buttresses -->
+    <line x1="222" y1="100" x2="230" y2="85" />
+    <line x1="222" y1="100" x2="222" y2="320" />
+    <line x1="308" y1="100" x2="300" y2="85" />
+    <line x1="308" y1="100" x2="308" y2="320" />
+    
+    <!-- Spire and Pinnacles -->
+    <path d="M230 80 L265 10 L300 80 Z" />
+    <line x1="265" y1="10" x2="265" y2="0" stroke-width="1.8" />
+    <circle cx="265" cy="0" r="2.5" fill="#F4C400" />
+    <!-- Corner Pinnacles -->
+    <path d="M222 100 L226 65 L230 100 Z" />
+    <path d="M300 100 L304 65 L308 100 Z" />
+    
+    <!-- Large Clock Face -->
+    <circle cx="265" cy="148" r="20" stroke-width="1.6" />
+    <circle cx="265" cy="148" r="2.5" fill="#F4C400" />
+    <line x1="265" y1="148" x2="265" y2="135" stroke-width="1.6" />
+    <line x1="265" y1="148" x2="276" y2="148" stroke-width="1.6" />
+    <!-- Roman numeral markings -->
+    <circle cx="265" cy="132" r="1" />
+    <circle cx="281" cy="148" r="1" />
+    <circle cx="265" cy="164" r="1" />
+    <circle cx="249" cy="148" r="1" />
+    
+    <!-- Gothic Arched Windows in Tower -->
+    <path d="M248 200 C248 188 282 188 282 200 V232 H248 Z" />
+    <line x1="265" y1="190" x2="265" y2="232" />
+    <path d="M252 260 C252 248 278 248 278 260 V300 H252 Z" />
+    
+    <!-- Long Arcaded Wing to the Left -->
+    <rect x="20" y="170" width="210" height="150" />
+    <path d="M20 170 L125 130 L230 170" />
+    <!-- Left building dormer roofs -->
+    <path d="M50 160 L65 142 L80 160 Z" />
+    <path d="M100 160 L115 142 L130 160 Z" />
+    <path d="M150 160 L165 142 L180 160 Z" />
+    
+    <!-- Arcaded Upper Windows -->
+    <path d="M38 195 C38 185 58 185 58 195 V225 H38 Z" />
+    <path d="M72 195 C72 185 92 185 92 195 V225 H72 Z" />
+    <path d="M106 195 C106 185 126 185 126 195 V225 H106 Z" />
+    <path d="M140 195 C140 185 160 185 160 195 V225 H140 Z" />
+    <path d="M174 195 C174 185 194 185 194 195 V225 H174 Z" />
+    
+    <!-- Lower Colonnade / Arches -->
+    <path d="M36 260 C36 242 60 242 60 260 V320 H36 Z" />
+    <path d="M70 260 C70 242 94 242 94 260 V320 H70 Z" />
+    <path d="M104 260 C104 242 128 242 128 260 V320 H104 Z" />
+    <path d="M138 260 C138 242 162 242 162 260 V320 H138 Z" />
+    <path d="M172 260 C172 242 196 242 196 260 V320 H172 Z" />
+    
+    <!-- Ground Baseline -->
+    <line x1="0" y1="320" x2="380" y2="320" stroke-width="1.8" />
+  </g>
+</svg>

@@ -31,6 +31,7 @@ import { LibraryPage, libModalData } from '../pages/academics/LibraryPage.js';
 import { careersPage } from '../pages/common/CareersPage.js';
 import { entrepreneurshipPage, initEntrepreneurshipEvents } from '../pages/placements/EntrepreneurshipPage.js';
 import { placementsDashboardPage, initPlacementsDynamicKpi } from '../pages/placements/PlacementsDashboardPage.js';
+import { HigherEducationPage, initHigherEducation } from '../pages/admissions/HigherEducationPage.js';
 import { internalPage } from '../pages/common/InternalPage.js';
 import { initTransportCreativePage, initNccNssCreativePage } from '../pages/campus/creativeCampusPages.js';
 
@@ -60,6 +61,15 @@ export function render() {
   if (!appRoot) return;
   const r = route();
   let content = '';
+
+  const isHigherEd = (
+    r === 'higher-education' ||
+    r === 'placements/higher-education' ||
+    r === 'explore/higher-education' ||
+    r === 'admissions/higher-education' ||
+    r === 'explore-higher-education' ||
+    r === 'explore'
+  );
 
   if (!r) {
     content = HomePage();
@@ -95,18 +105,37 @@ export function render() {
     content = AcademicCalendarPage();
   } else if (r === 'entrepreneurship' || r === 'career-support/entrepreneurship' || r === 'placements/entrepreneurship') {
     content = entrepreneurshipPage();
+  } else if (isHigherEd) {
+    content = HigherEducationPage();
   } else {
     content = internalPage(r);
   }
 
-  appRoot.innerHTML = Header() + content + Footer();
-  document.title = `${r ? titleCase(r.replaceAll('-', ' ')) : 'Sri Shakthi'} | SIET`;
+  // If HigherEducationPage is rendered, it includes the exact reference design footer.
+  // Standard site Header is always preserved at the top.
+  appRoot.innerHTML = isHigherEd ? (Header() + content) : (Header() + content + Footer());
+  document.title = isHigherEd 
+    ? 'Higher Education & Admissions | Sri Shakthi Institute of Engineering & Technology'
+    : `${r ? titleCase(r.replaceAll('-', ' ')) : 'Sri Shakthi'} | SIET`;
   bind();
   window.scrollTo(0, 0);
 }
 
 export function bind() {
   const r = route();
+
+  const isHigherEd = (
+    r === 'higher-education' ||
+    r === 'placements/higher-education' ||
+    r === 'explore/higher-education' ||
+    r === 'admissions/higher-education' ||
+    r === 'explore-higher-education' ||
+    r === 'explore'
+  );
+
+  if (isHigherEd) {
+    initHigherEducation();
+  }
 
   if (r?.startsWith('placements') || r === 'entrepreneurship' || r === 'career-support/entrepreneurship') {
     if (r === 'placements/entrepreneurship' || r === 'entrepreneurship' || r === 'career-support/entrepreneurship') {

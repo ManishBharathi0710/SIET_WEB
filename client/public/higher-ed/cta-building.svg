@@ -1,0 +1,57 @@
+<svg width="450" height="220" viewBox="0 0 450 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#F4C400" stroke-width="1.1" opacity="0.18" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Classical University Dome & Portico -->
+    <!-- Central Dome -->
+    <path d="M190 80 C190 35 260 35 260 80 Z" />
+    <line x1="225" y1="35" x2="225" y2="18" />
+    <circle cx="225" cy="16" r="2.5" fill="#F4C400" />
+    <ellipse cx="225" cy="80" rx="35" ry="6" />
+    
+    <!-- Triangular Pediment -->
+    <path d="M170 100 L225 75 L280 100 Z" />
+    
+    <!-- Classical Columns -->
+    <line x1="185" y1="100" x2="185" y2="190" stroke-width="1.5" />
+    <line x1="205" y1="100" x2="205" y2="190" stroke-width="1.5" />
+    <line x1="225" y1="100" x2="225" y2="190" stroke-width="1.5" />
+    <line x1="245" y1="100" x2="245" y2="190" stroke-width="1.5" />
+    <line x1="265" y1="100" x2="265" y2="190" stroke-width="1.5" />
+    
+    <!-- Steps / Plinth -->
+    <rect x="160" y="190" width="130" height="18" />
+    <line x1="150" y1="200" x2="300" y2="200" />
+    <line x1="140" y1="208" x2="310" y2="208" />
+    
+    <!-- Left Wing -->
+    <rect x="50" y="110" width="110" height="80" />
+    <path d="M50 110 L105 90 L160 110" />
+    <rect x="65" y="125" width="14" height="20" rx="6" />
+    <rect x="90" y="125" width="14" height="20" rx="6" />
+    <rect x="115" y="125" width="14" height="20" rx="6" />
+    <rect x="140" y="125" width="14" height="20" rx="6" />
+    <rect x="65" y="155" width="14" height="25" />
+    <rect x="90" y="155" width="14" height="25" />
+    <rect x="115" y="155" width="14" height="25" />
+    <rect x="140" y="155" width="14" height="25" />
+    
+    <!-- Right Wing -->
+    <rect x="290" y="110" width="110" height="80" />
+    <path d="M290 110 L345 90 L400 110" />
+    <rect x="305" y="125" width="14" height="20" rx="6" />
+    <rect x="330" y="125" width="14" height="20" rx="6" />
+    <rect x="355" y="125" width="14" height="20" rx="6" />
+    <rect x="380" y="125" width="14" height="20" rx="6" />
+    <rect x="305" y="155" width="14" height="25" />
+    <rect x="330" y="155" width="14" height="25" />
+    <rect x="355" y="155" width="14" height="25" />
+    <rect x="380" y="155" width="14" height="25" />
+    
+    <!-- Flanking Trees -->
+    <path d="M25 150 C10 130 40 110 30 90 C50 85 55 120 40 150 Z" />
+    <line x1="30" y1="150" x2="30" y2="190" stroke-width="2" />
+    <path d="M425 150 C410 130 440 110 430 90 C450 85 455 120 440 150 Z" />
+    <line x1="430" y1="150" x2="430" y2="190" stroke-width="2" />
+    
+    <line x1="0" y1="208" x2="450" y2="208" />
+  </g>
+</svg>

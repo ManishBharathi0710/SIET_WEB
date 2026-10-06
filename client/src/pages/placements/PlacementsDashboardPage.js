@@ -2,6 +2,7 @@ import { placementDataYears, allTopRecruiters, allSuperstarsData } from '../../d
 import { renderRecruiterCard, getSuperstarMarqueeHtml, renderSuperstarCard } from '../../components/ui/SuperstarCard.js';
 import { vmIcon } from '../about/VisionMissionPage.js';
 import { entrepreneurshipPage } from './EntrepreneurshipPage.js';
+import { HigherEducationPage } from '../admissions/HigherEducationPage.js';
 import { animateCounter } from '../../utils/domUtils.js';
 import { icon } from '../../utils/icons.js';
 import './Placements.css';
@@ -17,75 +18,9 @@ export function placementsDashboardPage(route) {
     return entrepreneurshipPage();
   }
 
-  // Subpage: Higher Education
+  // Subpage: Higher Education & Admissions
   if (isHigh) {
-    return `
-      <main class="siet-vm-page">
-        <section class="siet-vm-hero">
-          <div class="siet-vm-hero-grid"></div>
-          <div class="siet-vm-hero-orb orb-one"></div>
-          <div class="siet-vm-hero-orb orb-two"></div>
-          <div class="siet-vm-shell siet-vm-hero-content reveal">
-            <p class="siet-vm-kicker"><i></i> HIGHER EDUCATION</p>
-            <h1>Higher Education <em>&amp; Admissions</em></h1>
-            <p class="siet-vm-intro">Guiding graduates towards post-graduate admissions at premier international universities and Indian institutes.</p>
-          </div>
-        </section>
-
-        <div class="siet-sp-lower-shell">
-          <div class="siet-tmpl-sub-grid">
-            <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
-              <div class="siet-vm-card-pattern"></div>
-              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('education')}</span><span class="siet-vm-card-number">01 / ENTRANCE</span></div>
-              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">IN-HOUSE COACHING</p><h2>GATE, GRE, CAT &amp; IELTS</h2><p>Structured preparation integrated into student schedules with faculty mentors and external trainers for national and global exams.</p></div>
-              <div class="siet-vm-card-footer"><span>Comprehensive Exam Training</span><i></i></div>
-            </article>
-            <article class="siet-vm-card siet-vm-card-mission reveal" style="min-height:240px;padding:22px;">
-              <div class="siet-vm-mission-lines"></div>
-              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('target')}</span><span class="siet-vm-card-number">02 / PREMIER INSTITUTES</span></div>
-              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">INDIAN EXCELLENCE</p><h2>IISc, IITs, NITs &amp; IIMs</h2><p>Our students consistently qualify GATE and CAT to enter M.Tech, MS, and MBA programs at IISc Bangalore, IIT Madras, and top NITs.</p></div>
-              <div class="siet-vm-card-footer"><span>National Top-Rankers</span><i></i></div>
-            </article>
-
-            <!-- INTERNATIONAL EDUCATION CARDS -->
-            <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
-              <div class="siet-vm-card-pattern"></div>
-              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('compass')}</span><span class="siet-vm-card-number">03 / USA</span></div>
-              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">POST GRADUATE COURSES</p><h2>United States</h2><p>Counselling provided for post graduate courses in Ivy League &amp; Top Tech Institutes.</p></div>
-              <div class="siet-vm-card-footer"><span>Global Exposure</span><i></i></div>
-            </article>
-
-            <article class="siet-vm-card siet-vm-card-mission reveal" style="min-height:240px;padding:22px;">
-              <div class="siet-vm-mission-lines"></div>
-              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('compass')}</span><span class="siet-vm-card-number">04 / UK</span></div>
-              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">POST GRADUATE COURSES</p><h2>United Kingdom</h2><p>Counselling provided for post graduate courses in Russell Group Universities.</p></div>
-              <div class="siet-vm-card-footer"><span>Global Exposure</span><i></i></div>
-            </article>
-
-            <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
-              <div class="siet-vm-card-pattern"></div>
-              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('compass')}</span><span class="siet-vm-card-number">05 / CANADA</span></div>
-              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">POST GRADUATE COURSES</p><h2>Canada</h2><p>Counselling provided for post graduate courses in Leading Research Academies.</p></div>
-              <div class="siet-vm-card-footer"><span>Global Exposure</span><i></i></div>
-            </article>
-
-            <article class="siet-vm-card siet-vm-card-mission reveal" style="min-height:240px;padding:22px;">
-              <div class="siet-vm-mission-lines"></div>
-              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('compass')}</span><span class="siet-vm-card-number">06 / AUSTRALIA</span></div>
-              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">POST GRADUATE COURSES</p><h2>Australia</h2><p>Counselling provided for post graduate courses in Group of Eight (Go8) Universities.</p></div>
-              <div class="siet-vm-card-footer"><span>Global Exposure</span><i></i></div>
-            </article>
-
-            <article class="siet-vm-card siet-vm-card-vision reveal" style="min-height:240px;padding:22px;">
-              <div class="siet-vm-card-pattern"></div>
-              <div class="siet-vm-card-top"><span class="siet-vm-card-icon">${vmIcon('compass')}</span><span class="siet-vm-card-number">07 / GERMANY</span></div>
-              <div class="siet-vm-card-copy"><p class="siet-vm-card-label">POST GRADUATE COURSES</p><h2>Germany</h2><p>Counselling provided for post graduate courses in TU9 Engineering Excellence institutes.</p></div>
-              <div class="siet-vm-card-footer"><span>Global Exposure</span><i></i></div>
-            </article>
-          </div>
-        </div>
-      </main>
-    `;
+    return HigherEducationPage();
   }
 
   // Subpage: Government Services
